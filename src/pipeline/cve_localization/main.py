@@ -26,8 +26,8 @@ CÀI ĐẶT:
 """
 
 import sys, argparse, textwrap, logging
-from demo_setup import DemoSetup
-from orchestrator import VFArCHE
+from .demo_setup import DemoSetup
+from .orchestrator import VFArCHE
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s - %(message)s")
 logger = logging.getLogger("VFArCHE")

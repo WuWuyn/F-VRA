@@ -10,7 +10,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.pipeline import Pipeline
-from models import CVERecord
+from .models import CVERecord
 
 try:
     import nltk

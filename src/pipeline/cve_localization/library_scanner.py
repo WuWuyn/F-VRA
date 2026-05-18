@@ -1,7 +1,7 @@
 import ast, logging
 from pathlib import Path
 from typing import List, Dict, Optional
-from models import FunctionRecord
+from .models import FunctionRecord
 
 logger = logging.getLogger(__name__)
 

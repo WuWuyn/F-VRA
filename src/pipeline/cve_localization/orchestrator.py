@@ -1,13 +1,13 @@
 import json, logging
 from pathlib import Path
 from typing import Optional, List
-from models import CVERecord, FunctionRecord, MatchResult
-from input_loader import InputLoader
-from des_expansion import Module1
-from library_scanner import LibraryScanner
-from patch_present import PatchAnalyzer
-from patch_absent import PatchAbsentClassifier
-from swiss_ranker import LLMJudge, SwissSystemRanker
+from .models import CVERecord, FunctionRecord, MatchResult
+from .input_loader import InputLoader
+from .des_expansion import Module1
+from .library_scanner import LibraryScanner
+from .patch_present import PatchAnalyzer
+from .patch_absent import PatchAbsentClassifier
+from .swiss_ranker import LLMJudge, SwissSystemRanker
 
 logger = logging.getLogger(__name__)
 

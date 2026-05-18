@@ -1,8 +1,8 @@
 import re, logging
 from pathlib import Path
 from typing import List, Dict, Tuple, Set
-from models import FunctionRecord
-from library_scanner import LibraryScanner
+from .models import FunctionRecord
+from .library_scanner import LibraryScanner
 
 logger = logging.getLogger(__name__)
 

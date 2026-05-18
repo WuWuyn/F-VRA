@@ -98,41 +98,95 @@ pyshare eval     [--benchmark DIR] [--baseline sca|pycg|jarvis|all]
 
 ---
 
+## Running tests
+
+Install dev dependencies first (included in `pip install -e ".[dev]"`).
+
+```bash
+# Run all tests
+pytest
+
+# Verbose output with short tracebacks
+pytest -v
+
+# Unit tests only
+pytest tests/unit/
+
+# End-to-end CLI tests only
+pytest tests/e2e/
+
+# Single test file
+pytest tests/unit/test_models.py
+
+# Single test class or function
+pytest tests/e2e/test_cli.py::TestCLIHelp
+pytest tests/e2e/test_cli.py::TestCLIHelp::test_root_help
+
+# Stop on first failure
+pytest -x
+
+# Show stdout/stderr during tests
+pytest -s
+
+# Run with coverage report
+pytest --cov=src/pyshare --cov-report=term-missing
+
+# Generate HTML coverage report
+pytest --cov=src/pyshare --cov-report=html
+# then open: htmlcov/index.html
+
+# Run in CI mode (fail-fast, no colour)
+pytest --tb=short --no-header -q
+```
+
+---
+
 ## Project structure
 
 ```
-pyshare/
-├── cli/                  # Typer commands (presentation layer only)
-│   ├── main.py           # Root app, registers all sub-apps
-│   ├── index.py
-│   ├── localize.py
-│   ├── scan.py
-│   ├── status.py
-│   ├── eval.py
-│   └── _display.py       # Rich output helpers
+pyshare/              ← repo root (src/ is mapped as the pyshare package)
+├── src/              ← package root (installed as pyshare.*)
+│   ├── cli/          # Typer commands (presentation layer only)
+│   │   ├── main.py   # Root app, registers all sub-apps
+│   │   ├── index.py
+│   │   ├── localize.py
+│   │   ├── scan.py
+│   │   ├── status.py
+│   │   ├── eval.py
+│   │   └── _display.py       # Rich output helpers
+│   │
+│   ├── core/                 # Shared models & config
+│   │   ├── models.py         # CVERecord, FunctionNode, ScanResult
+│   │   ├── config.py         # Settings via pydantic-settings
+│   │   └── exceptions.py
+│   │
+│   ├── pipeline/             # Business logic (no CLI imports)
+│   │   ├── cve_localization/   # CVE → vulnerable function
+│   │   ├── callgraph_builder/  # Build library call graph GL
+│   │   ├── pcsg_indexer/       # Transitive closure → Si / So index
+│   │   ├── project_scanner/    # Scan project: UI(P,L) + GP
+│   │   └── reachability_query/ # Reachability query engine
+│   │
+│   ├── graph/                # Neo4j layer
+│   │   ├── library_graph.py
+│   │   ├── project_graph.py  # Incremental updates per git commit
+│   │   └── path_explainer.py # --explain call chains
+│   │
+│   ├── storage/              # File persistence (.npz, JSON cache)
+│   ├── llm/                  # LLM client, prompt templates, cache
+│   ├── benchmark/            # PyBM-Python dataset
+│   └── evaluation/           # Metrics, baselines, reporter
 │
-├── core/                 # Shared models & config
-│   ├── models.py         # CVERecord, FunctionNode, ScanResult
-│   ├── config.py         # Settings via pydantic-settings
-│   └── exceptions.py
+├── tests/
+│   ├── unit/                 # Fast, no I/O
+│   │   ├── test_models.py
+│   │   └── test_config.py
+│   └── e2e/                  # CLI integration tests (CliRunner)
+│       └── test_cli.py
 │
-├── pipeline/             # Business logic (no CLI imports)
-│   ├── cve_localization/ # CVE → vulnerable function
-│   ├── callgraph_builder/# Build library call graph GL
-│   ├── pcsg_indexer/     # Transitive closure → Si / So index
-│   ├── project_scanner/  # Scan project: UI(P,L) + GP
-│   └── reachability_query/ # Reachability query engine
-│
-├── graph/                # Neo4j layer
-│   ├── library_graph.py
-│   ├── project_graph.py  # Incremental updates per git commit
-│   └── path_explainer.py # --explain call chains
-│
-├── storage/              # File persistence (.npz, JSON cache)
-├── llm/                  # LLM client, prompt templates, cache
-├── benchmark/            # PyBM-Python dataset
-├── evaluation/           # Metrics, baselines, reporter
-└── tests/
+├── pyproject.toml
+├── .env.example
+└── README.md
 ```
 
 **Key rule:** `pipeline/` never imports from `cli/`. Business logic takes plain Python objects and returns plain Python objects — testable without any CLI machinery.

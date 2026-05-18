@@ -1,7 +1,7 @@
 import json, logging
 from pathlib import Path
 from typing import Optional, List
-from models import CVERecord
+from .models import CVERecord
 
 logger = logging.getLogger(__name__)
 

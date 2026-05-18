@@ -1,6 +1,6 @@
 import os, hashlib, logging
 from typing import List, Dict, Tuple, Set
-from models import CVERecord, FunctionRecord
+from .models import CVERecord, FunctionRecord
 
 try:
     import openai
