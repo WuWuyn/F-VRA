@@ -1,0 +1,15 @@
+# Example portfolio file for `pyshare scan --portfolio`.
+# Each entry lists a Python project root. PyShare will run reachability
+# analysis for the same CVE/vf across all of them and emit an aggregated
+# summary.
+#
+# Usage:
+#   pyshare scan --cve CVE-2024-X --portfolio examples/portfolio.yaml
+#
+# Or with a direct vf override (no CVE cache needed):
+#   pyshare scan --cve CVE-DEMO --portfolio examples/portfolio.yaml \
+#                --vf "aiohttp.web_ws.WebSocketResponse.prepare"
+
+projects:
+  - path: C:/Users/nguye/Downloads/operation-deploy
+  - path: C:/Users/nguye/Downloads/operation-deploy/operation-deploy
