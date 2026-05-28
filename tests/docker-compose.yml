@@ -1,0 +1,43 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: vfloc-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  app:
+    build: .
+    container_name: vfloc-app
+    depends_on:
+      - mongo
+    env_file:
+      - .env
+    environment:
+      MONGO_HOST: mongo
+      MONGO_PORT: "27017"
+      MONGO_DB: vfloc
+      REPO_DIR: /workspace/maven_repos/
+      MAX_CVE: "3"
+    volumes:
+      - .:/workspace/app
+      - repo_cache:/workspace/maven_repos
+      - hf_cache:/workspace/hf_cache
+    working_dir: /workspace/app
+    tty: true
+    stdin_open: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: ["python", "entry_tool.py"]
+
+volumes:
+  mongo_data:
+  repo_cache:
+  hf_cache:
