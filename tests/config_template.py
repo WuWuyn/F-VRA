@@ -1,50 +1,48 @@
-mongodb_host = 
-mongodb_port = 
-mongo_db = 
-MONGO_USER= ''
-MONGO_PWD = ''
-MONGO_AUTH = ''
-data_file = 
-repo_dir = 
-threshold= 0.1
+"""Runtime config for vfloc-py.
 
-repo_dir = '/workspace/maven_repos/'
-threshold = 0.5
-# re_rank_approach_choice = 'none'
-re_rank_approach_choice = 'wkg'
-# re_rank_approach_choice = 'blizzard'
-# re_rank_approach_choice = 'bert'
-# re_rank_approach_choice = 'knowledge graph'
-# re_rank_approach_choice = 'tf-idf'
-# re_rank_approach_choice = 'w2v'
-# re_rank_approach_choice = 'bm25'
-re_rank_approach_choice = 'openai'
-re_rank_approach_choice = 'unixcoder'
-re_rank_approach_choice = 'semanticflowgraph'
-re_rank_approach_choice = 'vulf'
+Reads .env (via python-dotenv) and exposes the constants that the rest of the
+package imports. CLI flags in vfloc.cli set LLM_MODEL_OVERRIDE / EMBEDDING_MODEL_OVERRIDE
+in the environment *before* importing this module, so we honour them here.
+"""
+from __future__ import annotations
 
+import os
+from pathlib import Path
 
-retrieval_approach_choice = 'no_filter'
-# retrieval_approach_choice = 'fine_tuned_bert'
-# retrieval_approach_choice = 'filter_first_patch_only'
-# retrieval_approach_choice = 'filter_first'
+from dotenv import load_dotenv
 
+load_dotenv(Path(__file__).parent / ".env")
 
-query_expansion_choice = 'description_only'
-# query_expansion_choice = 'concate'
-# query_expansion_choice = 'repeat'
-# dataset= 'real_world'
-dataset= 'benchmark'
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "openai").strip().lower()
 
-# dataset = None
-if dataset == 'real_world':
-    final_results_coll = retrieval_approach_choice+'__'+query_expansion_choice+'__'+re_rank_approach_choice+'__'+dataset
-    fine_tuned_bert_folder = 'real_world_results'
-    dataset_name = 'data/real-world.csv'
-elif dataset == 'benchmark':
-    final_results_coll = retrieval_approach_choice+'__'+query_expansion_choice+'__'+re_rank_approach_choice
-    fine_tuned_bert_folder = 'evaluation_results_function_1-100_big_top100'
-    dataset_name= 'data/filtered_cve_with_link.csv'
-working_dir = '.'
-javaparser_path = working_dir+'/libs/javaParser/rootCauseLocator/target/rootCauseLocator-1.0-SNAPSHOT-jar-with-dependencies.jar'
-blizzard_path = working_dir+'/other_tools/BLIZZARD-Replication-Package-ESEC-FSE2018-master/Corpus/ecf/'
+if LLM_PROVIDER == "openrouter":
+    LLM_API_KEY = os.environ.get("OPENROUTER_API_KEY", "").strip()
+    LLM_BASE_URL = os.environ.get("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1").strip()
+    _DEFAULT_MODEL = os.environ.get("OPENROUTER_MODEL", "openai/gpt-oss-120b:free").strip()
+    _DEFAULT_EMBEDDING = os.environ.get(
+        "OPENROUTER_EMBEDDING_MODEL", "nvidia/llama-nemotron-embed-vl-1b-v2:free"
+    ).strip()
+elif LLM_PROVIDER == "openai":
+    LLM_API_KEY = os.environ.get("OPENAI_API_KEY", "").strip()
+    LLM_BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1").strip()
+    _DEFAULT_MODEL = os.environ.get("OPENAI_MODEL", "gpt-4o-mini").strip()
+    _DEFAULT_EMBEDDING = os.environ.get("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small").strip()
+else:
+    raise RuntimeError(
+        f"LLM_PROVIDER='{LLM_PROVIDER}' không hợp lệ. Chỉ chấp nhận 'openai' hoặc 'openrouter'."
+    )
+
+LLM_MODEL = os.environ.get("LLM_MODEL_OVERRIDE", "").strip() or _DEFAULT_MODEL
+EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL_OVERRIDE", "").strip() or _DEFAULT_EMBEDDING
+
+MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost:27017").strip()
+MONGO_DB = os.environ.get("MONGO_DB", "vfloc_py").strip()
+COLLECTION_NAME = os.environ.get("MONGO_COLLECTION", "topk_results").strip()
+
+REPO_CACHE_DIR = Path(os.environ.get("REPO_CACHE_DIR", "./repo_cache")).resolve()
+REPO_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+BM25_TOP_K = int(os.environ.get("BM25_TOP_K", "100"))
+LLM_TOP_K = int(os.environ.get("LLM_TOP_K", "20"))
+LLM_BATCH_SIZE = int(os.environ.get("LLM_BATCH_SIZE", "10"))
+EMBEDDING_BATCH_SIZE = int(os.environ.get("EMBEDDING_BATCH_SIZE", "32"))
