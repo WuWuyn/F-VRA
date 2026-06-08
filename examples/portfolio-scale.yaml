@@ -1,6 +1,0 @@
-# Scale test portfolio — 2 real-world projects:
-#   - bpytop:           5687 LOC, 261 nodes after prune (paper benchmark)
-#   - operation-deploy: ~400 LOC, 151 nodes after prune (aiohttp websocket server)
-projects:
-  - path: C:/Users/nguye/pythonJaRvis.github.io/Jarvis/dataset/macro_benchmark/pj/bpytop
-  - path: C:/Users/nguye/Downloads/operation-deploy
