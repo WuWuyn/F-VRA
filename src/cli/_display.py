@@ -52,31 +52,15 @@ def print_scan_result(result: ScanResult, explain: bool = False) -> None:
     else:
         style, icon = "yellow", "?  UNKNOWN"
 
-    lines = [
-        f"CVE: {result.cve_id}",
-        f"Project: {result.project}",
-    ]
-    if result.vf:
-        lines.append(f"vf: [bold yellow]{result.vf}[/bold yellow]")
-    if result.entry_points:
-        lines.append(f"Affected entries ({len(result.entry_points)}):")
-        for ep in result.entry_points[:5]:
-            lines.append(f"  • {ep}")
-        if len(result.entry_points) > 5:
-            lines.append(f"  ... (+{len(result.entry_points) - 5} more)")
-    lines.append(f"Query time: {result.query_time_ms:.1f} ms")
-    lines.append(f"LLM invoked: {result.llm_invoked}")
+    body = (
+        f"CVE: {result.cve_id}\n"
+        f"Project: {result.project}\n"
+        f"Query time: {result.query_time_ms:.1f} ms\n"
+        f"LLM invoked: {result.llm_invoked}"
+    )
+    console.print(Panel(body, title=icon, border_style=style))
 
-    # For UNKNOWN, surface the reason from call_chain[0] (set by
-    # reachability_query._unknown helper).
-    if result.verdict == Verdict.UNKNOWN and result.call_chain:
-        lines.append("")
-        lines.append(f"[dim]{result.call_chain[0]}[/dim]")
-
-    console.print(Panel("\n".join(lines), title=icon, border_style=style))
-
-    # --explain: show the call chain as a tree (only for AFFECTED).
-    if explain and result.verdict == Verdict.AFFECTED and result.call_chain:
+    if explain and result.call_chain:
         tree = Tree("[bold]Call chain[/bold]")
         node = tree
         for fn in result.call_chain:

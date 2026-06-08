@@ -1,6 +1,0 @@
-# Portfolio that scans all three bundled sample projects in one command.
-# Paths are relative to the repo root; CLI resolves them via Path.cwd().
-projects:
-  - path: sample_projects/affected_yaml
-  - path: sample_projects/safe_yaml
-  - path: sample_projects/affected_requests
