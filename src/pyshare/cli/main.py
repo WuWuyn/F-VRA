@@ -1,6 +1,6 @@
 import typer
 from pyshare.cli.commands import eval as eval_cmd
-from pyshare.cli.commands import index, localize, scan, status
+from pyshare.cli.commands import index, localization_debug, localize, scan, status
 
 app = typer.Typer(
     name="pyshare",
@@ -10,7 +10,8 @@ app = typer.Typer(
 )
 
 app.add_typer(index.app,    name="index")
-app.add_typer(localize.app, name="localize")
+app.command(name="localize")(localize.localize)
+app.add_typer(localization_debug.app, name="localization")
 app.add_typer(scan.app,     name="scan")
 app.add_typer(status.app,   name="status")
 app.add_typer(eval_cmd.app, name="eval")

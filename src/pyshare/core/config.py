@@ -23,32 +23,27 @@ class Settings(BaseSettings):
     llm_top_k: int = 20
     llm_batch_size: int = 10
     embedding_batch_size: int = 16
-
-    llm_provider: str = "openai"
-    openai_api_key: str = ""
-    openai_model: str = "gpt-4o-mini"
+    github_token: str = ""
+    nvd_api_key: str = ""
     openrouter_api_key: str = ""
-    openrouter_model: str = "openai/gpt-oss-120b:free"
-    openrouter_embedding_model: str = "nvidia/llama-nemotron-embed-vl-1b-v2:free"
+    openrouter_model: str = "openai/gpt-4o-mini"
+    openrouter_embedding_model: str = "qwen/qwen3-embedding-0.6b"
+    openrouter_http_referer: str = ""
+    openrouter_app_title: str = "PyShare"
 
     @property
     def llm_api_key(self) -> str:
-        return self.openrouter_api_key if self.llm_provider == "openrouter" else self.openai_api_key
+        return self.openrouter_api_key
 
     @property
-    def llm_base_url(self) -> str | None:
-        return "https://openrouter.ai/api/v1" if self.llm_provider == "openrouter" else None
+    def llm_base_url(self) -> str:
+        return "https://openrouter.ai/api/v1"
 
     @property
     def llm_model(self) -> str:
         override = os.getenv("LLM_MODEL_OVERRIDE")
         if override:
             return override
-        return self.openrouter_model if self.llm_provider == "openrouter" else self.openai_model
-
-    @property
-    def embedding_model(self) -> str:
-        return os.getenv("EMBEDDING_MODEL_OVERRIDE") or self.openrouter_embedding_model
-
+        return self.openrouter_model
 
 settings = Settings()
