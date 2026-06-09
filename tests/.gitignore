@@ -1,6 +1,0 @@
-.env
-__pycache__/
-*.pyc
-config.py
-hf_cache/
-maven_repos/

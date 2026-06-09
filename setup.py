@@ -1,6 +1,5 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
-    package_dir={"pyshare": "src"},
-    packages=["pyshare"] + ["pyshare." + pkg for pkg in find_packages("src")],
+    package_dir={"": "src"},
 )
