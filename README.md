@@ -1,202 +1,60 @@
 # PyShare
 
-> **Status: In Development**
+PyShare is a Python vulnerability reachability analysis product focused on
+mapping CVEs to vulnerable Python functions and checking whether application
+usage can reach them.
 
-An end-to-end Vulnerability Reachability Analysis (VRA) framework for the Python/PyPI ecosystem. PyShare determines whether a known CVE in a third-party library actually reaches your application code — eliminating the false positives produced by metadata-only SCA tools.
+This repository intentionally does not implement a baseline SCA scanner. The
+production focus is:
 
-```
-CVE-2024-35195 affects requests==2.31.0
+1. CVE-to-vulnerable-function localization for Python repositories.
+2. Vulnerable-function knowledge base.
+3. Package analysis: public APIs, call graph, and S_i / S_o summaries.
+4. Project analysis: entry points, imports, usage index, and context.
+5. Reachability verdicts and evidence-rich reports.
 
-  pip-audit:  ⚠ VULNERABLE  (version match only)
-  PyShare:    ✓ NOT AFFECTED (fetch_data() never calls Session.request)
-```
+## Source Layout
 
----
-
-## How it works
-
-PyShare separates expensive analysis from fast queries into two modes:
-
-**Offline** — run once per library version, results reused forever:
-```
-PyPI source → [callgraph_builder] Call Graph → [pcsg_indexer] PCSG Index (Si / So)
-                                                         stored at ~/.pyshare/index/
-```
-
-**Online** — fast query when a new CVE is disclosed:
-```
-CVE-ID → [cve_localization] locate vf → [project_scanner] scan → [reachability_query] verdict
-                                                                          ↑
-                                                               reuses Si from index
-```
-
-### Storage layers
-
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| Library KG | Neo4j | Raw call graph, path explanation |
-| Project KG | Neo4j | Incremental project graph per commit |
-| PCSG Index | CSR `.npz` | Precomputed Si/So, O(1) lookup |
-
----
-
-## Installation
-
-Requirements: Python 3.11+, Neo4j 5.x *(optional, needed for `--explain`)*
-
-```bash
-git clone https://github.com/DHATeam/pyshare
-cd pyshare
-pip install -e ".[dev]"
-cp .env.example .env   # set ANTHROPIC_API_KEY, NEO4J_URI
+```text
+src/pyshare/
+├── cli/                 # Typer command layer and terminal output
+├── core/                # Shared models, config, and errors
+├── kb/                  # CVE-to-vulnerable-function repository contracts
+├── localization/        # Python VFloc implementation: AST parse + BM25 + optional LLM
+├── package_analysis/    # Library call graph and S_i / S_o summary building
+├── project_analysis/    # Project entry points, usage index, and project graph
+├── reachability/        # Reachability query engine and service boundary
+├── reporting/           # Report rendering models and formats
+├── storage/             # Cache and persistence helpers
+└── integrations/        # External system adapters
 ```
 
----
+Legacy Java/replication packages and the Snyk reference CLI tree were removed
+from the production workspace. The Python VFloc implementation formerly under
+`tests/vfloc-py` has been migrated into `src/pyshare/localization`.
 
-## Quick start
+## CLI
 
-**Step 1 — Index a library (offline, once per version)**
 ```bash
 pyshare index requests==2.31.0
+pyshare localize CVE-2023-32681
+pyshare scan --project ./myapp --cve CVE-2023-32681
+pyshare eval --benchmark benchmarks/
+pyshare status
 ```
 
-**Step 2 — Localize a CVE (once per CVE)**
-```bash
-pyshare localize CVE-2024-35195
-```
+`localize` currently needs repository/CVE context when called through the Python
+service API. The CLI command is kept stable while the KB workflow is wired in.
 
-**Step 3 — Scan your project**
-```bash
-pyshare scan --cve CVE-2024-35195 --project ./myapp
-```
-
-Sample output:
-```
-╔══════════════════════════════╗
-║  ⚠  AFFECTED                 ║
-╚══════════════════════════════╝
-
-Entry point : myapp/api/client.py::fetch_data
-Hit set     : Session.request  ← vf reachable
-Query time  : 0.34s  (index lookup, no LLM invoked)
-```
-
----
-
-## CLI reference
-
-```
-pyshare index    <pkg==version>  [--force] [--no-llm] [--neo4j]
-pyshare localize <CVE-ID>        [--top-k N] [--no-cache]
-pyshare scan     --cve <ID>      [--project PATH] [--portfolio FILE]
-                                 [--explain] [--format table|json|sarif]
-                                 [--output FILE] [--fail-on-affected]
-pyshare status   [pkg==version]
-pyshare eval     [--benchmark DIR] [--baseline sca|pycg|jarvis|all]
-                 [--output DIR] [--format csv|latex]
-```
-
----
-
-## Running tests
-
-Install dev dependencies first (included in `pip install -e ".[dev]"`).
+## Development
 
 ```bash
-# Run all tests
+pip install -e ".[dev]"
 pytest
-
-# Verbose output with short tracebacks
-pytest -v
-
-# Unit tests only
-pytest tests/unit/
-
-# End-to-end CLI tests only
-pytest tests/e2e/
-
-# Single test file
-pytest tests/unit/test_models.py
-
-# Single test class or function
-pytest tests/e2e/test_cli.py::TestCLIHelp
-pytest tests/e2e/test_cli.py::TestCLIHelp::test_root_help
-
-# Stop on first failure
-pytest -x
-
-# Show stdout/stderr during tests
-pytest -s
-
-# Run with coverage report
-pytest --cov=src/pyshare --cov-report=term-missing
-
-# Generate HTML coverage report
-pytest --cov=src/pyshare --cov-report=html
-# then open: htmlcov/index.html
-
-# Run in CI mode (fail-fast, no colour)
-pytest --tb=short --no-header -q
 ```
 
----
+For source-tree smoke checks without installing:
 
-## Project structure
-
+```bash
+PYTHONPATH=src python -c "import pyshare; from pyshare.cli.main import app"
 ```
-pyshare/              ← repo root (src/ is mapped as the pyshare package)
-├── src/              ← package root (installed as pyshare.*)
-│   ├── cli/          # Typer commands (presentation layer only)
-│   │   ├── main.py   # Root app, registers all sub-apps
-│   │   ├── index.py
-│   │   ├── localize.py
-│   │   ├── scan.py
-│   │   ├── status.py
-│   │   ├── eval.py
-│   │   └── _display.py       # Rich output helpers
-│   │
-│   ├── core/                 # Shared models & config
-│   │   ├── models.py         # CVERecord, FunctionNode, ScanResult
-│   │   ├── config.py         # Settings via pydantic-settings
-│   │   └── exceptions.py
-│   │
-│   ├── pipeline/             # Business logic (no CLI imports)
-│   │   ├── cve_localization/   # CVE → vulnerable function
-│   │   ├── callgraph_builder/  # Build library call graph GL
-│   │   ├── pcsg_indexer/       # Transitive closure → Si / So index
-│   │   ├── project_scanner/    # Scan project: UI(P,L) + GP
-│   │   └── reachability_query/ # Reachability query engine
-│   │
-│   ├── graph/                # Neo4j layer
-│   │   ├── library_graph.py
-│   │   ├── project_graph.py  # Incremental updates per git commit
-│   │   └── path_explainer.py # --explain call chains
-│   │
-│   ├── storage/              # File persistence (.npz, JSON cache)
-│   ├── llm/                  # LLM client, prompt templates, cache
-│   ├── benchmark/            # PyBM-Python dataset
-│   └── evaluation/           # Metrics, baselines, reporter
-│
-├── tests/
-│   ├── unit/                 # Fast, no I/O
-│   │   ├── test_models.py
-│   │   └── test_config.py
-│   └── e2e/                  # CLI integration tests (CliRunner)
-│       └── test_cli.py
-│
-├── pyproject.toml
-├── .env.example
-└── README.md
-```
-
-**Key rule:** `pipeline/` never imports from `cli/`. Business logic takes plain Python objects and returns plain Python objects — testable without any CLI machinery.
-
----
-
-## Output formats
-
-| Format | Flag | Use case |
-|--------|------|----------|
-| Table | *(default)* | Terminal, human-readable |
-| JSON | `--format json` | Scripting, CI pipelines |
-| SARIF | `--format sarif` | GitHub Code Scanning, GitLab SAST |

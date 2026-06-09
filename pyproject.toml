@@ -11,6 +11,12 @@ dependencies = [
     "rich>=13",
     "pydantic>=2",
     "pydantic-settings>=2",
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "openai>=1.40",
+    "requests>=2.31",
+    "tenacity>=8.2",
+    "tqdm>=4.66",
 ]
 
 [project.optional-dependencies]
@@ -22,8 +28,8 @@ dev = [
 [project.scripts]
 pyshare = "pyshare.cli.main:app"
 
-# Package discovery is handled in setup.py
-# (pyproject.toml + setuptools cannot express package_dir remapping dynamically)
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
