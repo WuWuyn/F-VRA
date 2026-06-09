@@ -12,11 +12,15 @@ def get_client() -> OpenAI:
     global _client
     if _client is None:
         if not settings.llm_api_key:
-            raise RuntimeError(
-                f"API key for provider '{settings.llm_provider}' is not set. "
-                "Set OPENAI_API_KEY or OPENROUTER_API_KEY in .env."
-            )
-        _client = OpenAI(api_key=settings.llm_api_key, base_url=settings.llm_base_url)
+            raise RuntimeError("OPENROUTER_API_KEY is not set")
+        default_headers = {"X-OpenRouter-Title": settings.openrouter_app_title}
+        if settings.openrouter_http_referer:
+            default_headers["HTTP-Referer"] = settings.openrouter_http_referer
+        _client = OpenAI(
+            api_key=settings.llm_api_key,
+            base_url=settings.llm_base_url,
+            default_headers=default_headers,
+        )
     return _client
 
 
@@ -32,7 +36,7 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0.
 
 def describe() -> str:
     return (
-        f"provider={settings.llm_provider} "
+        "provider=openrouter "
         f"model={settings.llm_model} "
         f"base_url={settings.llm_base_url}"
     )
