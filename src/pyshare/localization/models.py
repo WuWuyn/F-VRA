@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Any, Literal
+from typing import Any, Callable, Literal
 
 LocalizationMode = Literal["PATCH_PRESENT", "PATCH_ABSENT"]
 MetadataSource = Literal["OSV", "NVD", "GitHub", "manual", "unknown"]
@@ -10,7 +10,7 @@ MetadataSource = Literal["OSV", "NVD", "GitHub", "manual", "unknown"]
 
 @dataclass
 class LocalizationRequest:
-    repository_path: Path
+    repository_path: Path | None = None
     cve_id: str | None = None
     cve_description: str | None = None
     cwe_id: str | None = None
@@ -18,7 +18,14 @@ class LocalizationRequest:
     auto_resolve_patch: bool = False
     top_k: int = 20
     use_llm: bool = False
+    use_rerank: bool | None = None
+    rerank_model: str | None = None
     use_embeddings: bool = True
+    progress_callback: Callable[[str], None] | None = field(
+        default=None,
+        repr=False,
+        compare=False,
+    )
 
 
 @dataclass

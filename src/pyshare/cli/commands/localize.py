@@ -13,7 +13,12 @@ from pyshare.localization.service import localize_vulnerable_functions, write_re
 
 def localize(
     cve_id: Optional[str] = typer.Argument(None, help="CVE ID, e.g. CVE-2024-35195"),
-    repository: Path = typer.Option(..., "--repository", "-r", help="Local Python repository"),
+    repository: Optional[Path] = typer.Option(
+        None,
+        "--repository",
+        "-r",
+        help="Local Python repository; auto-cloned from CVE metadata when omitted or missing",
+    ),
     description: Optional[str] = typer.Option(None, "--description", help="CVE description"),
     cwe_id: Optional[str] = typer.Option(None, "--cwe", help="CWE ID, e.g. CWE-918"),
     patch: Optional[Path] = typer.Option(None, "--patch", help="Local unified diff/patch"),
@@ -31,10 +36,23 @@ def localize(
     use_llm: bool = typer.Option(
         False,
         "--use-llm",
-        help="Rerank shortlist with the OpenRouter chat API",
+        help="Legacy: rerank shortlist with the OpenRouter chat API",
+    ),
+    use_rerank: Optional[bool] = typer.Option(
+        None,
+        "--use-rerank/--no-rerank",
+        help="Use OpenRouter rerank API; defaults to enabled when OPENROUTER_RERANK_MODEL is set",
+    ),
+    rerank_model: Optional[str] = typer.Option(
+        None,
+        "--rerank-model",
+        help="OpenRouter rerank model override",
     ),
     output: Optional[Path] = typer.Option(None, "--output", "-o", help="Write JSON report"),
 ) -> None:
+    def progress(message: str) -> None:
+        console.print(f"[cyan]{message}[/cyan]")
+
     report = localize_vulnerable_functions(
         LocalizationRequest(
             cve_id=cve_id,
@@ -45,7 +63,10 @@ def localize(
             auto_resolve_patch=auto_resolve_patch,
             top_k=top_k,
             use_llm=use_llm,
+            use_rerank=use_rerank,
+            rerank_model=rerank_model,
             use_embeddings=use_embeddings,
+            progress_callback=progress,
         )
     )
     if output:

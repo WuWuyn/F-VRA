@@ -12,22 +12,25 @@ Python functions.
 5. `candidates.py` combines BM25 and OpenRouter embeddings with Reciprocal Rank
    Fusion.
 6. `ranking.py` combines retrieval relevance, patch evidence, and optional
-   OpenRouter LLM reranking.
+   OpenRouter reranking.
 7. `service.py` returns the final JSON-compatible report.
 
 ## Configuration
 
 ```env
 OPENROUTER_API_KEY=
-OPENROUTER_EMBEDDING_MODEL=qwen/qwen3-embedding-0.6b
-OPENROUTER_MODEL=openai/gpt-4o-mini
+OPENROUTER_MODEL=openai/gpt-oss-120b:free
+OPENROUTER_EMBEDDING_MODEL=nvidia/llama-nemotron-embed-vl-1b-v2:free
+OPENROUTER_RERANK_MODEL=nvidia/llama-nemotron-rerank-vl-1b-v2:free
 GITHUB_TOKEN=
 NVD_API_KEY=
 ```
 
-`OPENROUTER_API_KEY` enables semantic retrieval and `--use-llm`. Without it,
-candidate retrieval falls back to BM25 and reports that fallback in
-`metadata.retrieval`.
+`OPENROUTER_API_KEY` enables semantic retrieval, OpenRouter reranking, and
+legacy `--use-llm` chat reranking. Without it, candidate retrieval falls back to
+BM25 and reports that fallback in `metadata.retrieval`. If
+`OPENROUTER_RERANK_MODEL` is set, localization uses OpenRouter's rerank API by
+default; pass `--no-rerank` to disable it for a run.
 
 ## Run The Full Pipeline
 
@@ -35,11 +38,14 @@ Patch-present mode:
 
 ```powershell
 pyshare localize CVE-2023-32681 `
-  --repository .\requests `
   --auto-resolve-patch `
   --top-k 20 `
   --output .\report.json
 ```
+
+If `--repository` is omitted or the path does not exist, PyShare tries to infer
+a GitHub repository from OSV/NVD references and clones it into
+`repo_cache_dir` automatically.
 
 Manual patch:
 
@@ -55,12 +61,13 @@ Patch-absent mode:
 
 ```powershell
 pyshare localize CVE-2023-32681 `
-  --repository .\requests `
   --top-k 20
 ```
 
-Add `--use-llm` to rerank the shortlist through the OpenRouter chat API. Use
-`--no-embeddings` to test lexical retrieval in isolation.
+Set `OPENROUTER_RERANK_MODEL` or pass `--rerank-model` to rerank the shortlist
+through the OpenRouter rerank API. Use `--no-rerank` to disable reranking, and
+`--no-embeddings` to test lexical retrieval in isolation. `--use-llm` remains
+available for legacy chat-model reranking.
 
 ## Test Each Stage
 

@@ -38,11 +38,18 @@ Run CVE-to-VF localization:
 
 ```powershell
 pyshare localize CVE-2023-32681 `
-  --repository .\requests `
   --auto-resolve-patch `
   --top-k 20 `
   --output .\report.json
 ```
+
+When `--repository` is omitted or points to a path that does not exist, PyShare
+tries to infer a GitHub repository from CVE metadata and clones it into the
+repository cache automatically.
+
+Set `OPENROUTER_RERANK_MODEL` to use a rerank model that is separate from
+`OPENROUTER_MODEL`, for example
+`nvidia/llama-nemotron-rerank-vl-1b-v2:free`.
 
 See the [documentation index](docs/index.md) or the
 [localization guide](docs/localization.md)
