@@ -5,8 +5,10 @@ import time
 from typing import Protocol
 
 import requests
+from tqdm import tqdm
 
 from pyshare.core.config import settings
+from pyshare.localization.llm_client import openrouter_headers
 from pyshare.localization.models import FunctionInfo
 
 
@@ -25,13 +27,7 @@ class OpenRouterEmbeddingBackend:
             )
 
     def embed(self, texts: list[str]) -> list[list[float]]:
-        headers = {
-            "Authorization": f"Bearer {settings.openrouter_api_key}",
-            "Content-Type": "application/json",
-            "X-OpenRouter-Title": settings.openrouter_app_title,
-        }
-        if settings.openrouter_http_referer:
-            headers["HTTP-Referer"] = settings.openrouter_http_referer
+        headers = openrouter_headers()
 
         response = None
         for attempt in range(3):
@@ -105,7 +101,8 @@ def embedding_scores(
     active_backend = backend or OpenRouterEmbeddingBackend()
     texts = [description, *(function_embedding_text(function) for function in functions)]
     vectors: list[list[float]] = []
-    for start in range(0, len(texts), settings.embedding_batch_size):
+    batches = range(0, len(texts), settings.embedding_batch_size)
+    for start in tqdm(batches, desc="Embedding batches"):
         vectors.extend(active_backend.embed(texts[start : start + settings.embedding_batch_size]))
 
     query_vector = vectors[0]

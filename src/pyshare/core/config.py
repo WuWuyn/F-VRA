@@ -28,8 +28,9 @@ class Settings(BaseSettings):
     openrouter_api_key: str = ""
     openrouter_model: str = "openai/gpt-4o-mini"
     openrouter_embedding_model: str = "qwen/qwen3-embedding-0.6b"
+    openrouter_rerank_model: str = ""
     openrouter_http_referer: str = ""
-    openrouter_app_title: str = "PyShare"
+    openrouter_app_title: str = ""
 
     @property
     def llm_api_key(self) -> str:

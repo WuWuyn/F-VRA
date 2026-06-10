@@ -12,6 +12,7 @@ from pyshare.localization.metadata import ResolvedMetadata, download_patch, reso
 from pyshare.localization.models import LocalizationReport, LocalizationRequest
 from pyshare.localization.patch import load_patch, parse_patch_text
 from pyshare.localization.ranking import rank_candidates
+from pyshare.localization.repo_resolver import clone_or_update, github_repo_urls_from_references
 from pyshare.localization.tracker import track_patch_candidates
 
 
@@ -37,14 +38,38 @@ def _resolve_request_metadata(request: LocalizationRequest) -> ResolvedMetadata:
 
 
 def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationReport:
-    repository = request.repository_path.resolve()
-    if not repository.is_dir():
-        raise NotADirectoryError(f"Repository path is not a directory: {repository}")
+    def progress(message: str) -> None:
+        if request.progress_callback:
+            request.progress_callback(message)
+
     if request.top_k < 1:
         raise ValueError("top_k must be at least 1")
 
+    progress("Resolving CVE metadata")
     metadata = _resolve_request_metadata(request)
+    repository = request.repository_path.resolve() if request.repository_path else None
+    repository_source = "local"
+    if repository is None or not repository.is_dir():
+        repo_urls = github_repo_urls_from_references(
+            [*metadata.patch_urls, *metadata.references]
+        )
+        if not repo_urls:
+            missing = (
+                str(repository)
+                if repository is not None
+                else "no --repository was provided"
+            )
+            raise NotADirectoryError(
+                f"Repository path is not a directory: {missing}. "
+                "Could not infer a GitHub repository from CVE metadata; provide "
+                "--repository with a local checkout or a resolvable GitHub-based CVE."
+            )
+        progress(f"Cloning repository {repo_urls[0]}")
+        repository = clone_or_update(repo_urls[0]).resolve()
+        repository_source = repo_urls[0]
+
     description = expand_description(metadata.description, metadata.cwe_id)
+    progress(f"Parsing Python functions under {repository}")
     functions = parse_repository(repository)
     if not functions:
         raise ValueError(f"No Python functions found under {repository}")
@@ -52,9 +77,11 @@ def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationR
     patch_analysis = None
     patch_source = None
     if request.patch_path:
+        progress(f"Loading local patch {request.patch_path}")
         patch_analysis, patch_source = load_patch(request.patch_path)
     elif request.auto_resolve_patch:
         if metadata.source == "manual" and request.cve_id:
+            progress("Resolving patch metadata")
             metadata = resolve_metadata(request.cve_id)
             if request.cve_description:
                 metadata.description = request.cve_description
@@ -62,6 +89,7 @@ def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationR
                 metadata.cwe_id = request.cwe_id
             description = expand_description(metadata.description, metadata.cwe_id)
         for url in metadata.patch_urls:
+            progress(f"Downloading patch candidate {url}")
             downloaded = download_patch(url)
             if downloaded:
                 patch_text, patch_source = downloaded
@@ -70,7 +98,9 @@ def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationR
 
     if patch_analysis is not None and patch_analysis.files:
         mode = "PATCH_PRESENT"
+        progress("Tracking patch-related functions")
         tracker_evidence = track_patch_candidates(functions, patch_analysis)
+        progress("Selecting candidates with patch evidence and retrieval")
         selection = select_patch_present(
             description,
             functions,
@@ -79,12 +109,22 @@ def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationR
         )
     else:
         mode = "PATCH_ABSENT"
+        progress("Selecting candidates with lexical and semantic retrieval")
         selection = select_patch_absent(
             description,
             functions,
             use_embeddings=request.use_embeddings,
         )
 
+    rerank_model = request.rerank_model or settings.openrouter_rerank_model
+    use_rerank = request.use_rerank if request.use_rerank is not None else bool(rerank_model)
+    rerank_metadata: dict[str, str | bool | None] = {}
+    if use_rerank and rerank_model:
+        progress(f"Reranking candidates with {rerank_model}")
+    elif request.use_llm:
+        progress(f"Reranking candidates with chat model {settings.llm_model}")
+    else:
+        progress("Ranking candidates")
     candidates = rank_candidates(
         description,
         selection.candidates,
@@ -92,6 +132,9 @@ def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationR
         selection.evidence,
         top_k=request.top_k,
         use_llm=request.use_llm,
+        use_rerank=use_rerank,
+        rerank_model=rerank_model,
+        rerank_metadata=rerank_metadata,
     )
     return LocalizationReport(
         cve_id=request.cve_id or metadata.cve_id,
@@ -105,8 +148,12 @@ def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationR
         metadata={
             "functions_scanned": len(functions),
             "candidate_pool_size": len(selection.candidates),
+            "repository_source": repository_source,
             "references": metadata.references,
-            "llm_used": bool(request.use_llm and settings.llm_api_key and candidates),
+            "rerank_used": bool(rerank_metadata.get("used")),
+            "rerank_status": rerank_metadata.get("status", "disabled"),
+            "rerank_source": rerank_metadata.get("source"),
+            "rerank_model": rerank_metadata.get("model"),
             "retrieval": {
                 "strategy": (
                     "hybrid_bm25_embeddings"

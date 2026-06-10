@@ -9,6 +9,7 @@ from pyshare.localization.function_parser import parse_repo
 from pyshare.localization.function_parser import parse_repository
 from pyshare.localization.metadata import ResolvedMetadata, download_patch
 from pyshare.localization.models import LocalizationRequest
+from pyshare.localization.repo_resolver import github_repo_url_from_reference
 from pyshare.localization.service import localize, localize_vulnerable_functions
 
 runner = CliRunner()
@@ -202,6 +203,99 @@ def test_auto_resolve_falls_back_to_patch_absent(monkeypatch):
 
     assert report.mode == "PATCH_ABSENT"
     assert report.metadata_source == "OSV"
+
+
+def test_auto_clone_inferred_github_repository_when_repository_missing(monkeypatch):
+    cloned = {}
+
+    monkeypatch.setattr(
+        "pyshare.localization.service.resolve_metadata",
+        lambda cve_id: ResolvedMetadata(
+            cve_id=cve_id,
+            description="unsafe HTTP request handling",
+            references=["https://github.com/example/sample_app/commit/abc123"],
+            patch_urls=[],
+            source="OSV",
+        ),
+    )
+
+    def fake_clone(repo_url):
+        cloned["repo_url"] = repo_url
+        return Path("tests/fixtures/sample_app")
+
+    monkeypatch.setattr("pyshare.localization.service.clone_or_update", fake_clone)
+
+    report = localize_vulnerable_functions(
+        LocalizationRequest(
+            cve_id="CVE-X",
+            repository_path=Path("tests/fixtures/not_cloned_yet"),
+            top_k=2,
+            use_embeddings=False,
+        )
+    )
+
+    assert cloned["repo_url"] == "https://github.com/example/sample_app.git"
+    assert report.mode == "PATCH_ABSENT"
+    assert report.metadata["repository_source"] == "https://github.com/example/sample_app.git"
+    assert report.repository_path.endswith("tests\\fixtures\\sample_app") or report.repository_path.endswith(
+        "tests/fixtures/sample_app"
+    )
+
+
+def test_openrouter_rerank_model_is_separate_from_chat_model(monkeypatch):
+    captured = {}
+
+    class Response:
+        status_code = 200
+        text = ""
+
+        @staticmethod
+        def json():
+            return {
+                "results": [
+                    {"index": 0, "relevance_score": 0.91},
+                    {"index": 1, "relevance_score": 0.25},
+                ]
+            }
+
+    monkeypatch.setattr("pyshare.localization.llm_client.settings.openrouter_api_key", "test-key")
+    monkeypatch.setattr("pyshare.localization.ranking.settings.openrouter_api_key", "test-key")
+    monkeypatch.setattr(
+        "pyshare.localization.ranking.settings.openrouter_rerank_model",
+        "nvidia/llama-nemotron-rerank-vl-1b-v2:free",
+    )
+
+    def fake_post(url, **kwargs):
+        captured["url"] = url
+        captured.update(kwargs)
+        return Response()
+
+    monkeypatch.setattr("pyshare.localization.llm_client.requests.post", fake_post)
+
+    report = localize_vulnerable_functions(
+        LocalizationRequest(
+            cve_id="CVE-X",
+            cve_description="request fetch url using requests get",
+            repository_path=Path("tests/fixtures/sample_app"),
+            top_k=2,
+            use_embeddings=False,
+        )
+    )
+
+    assert captured["url"] == "https://openrouter.ai/api/v1/rerank"
+    assert captured["json"]["model"] == "nvidia/llama-nemotron-rerank-vl-1b-v2:free"
+    assert captured["json"]["query"].startswith("request fetch url")
+    assert captured["json"]["top_n"] == len(captured["json"]["documents"])
+    assert report.metadata["rerank_used"] is True
+    assert report.metadata["rerank_source"] == "openrouter_rerank"
+    assert "llm_used" not in report.metadata
+
+
+def test_github_repo_url_from_reference_normalizes_commit_url():
+    assert (
+        github_repo_url_from_reference("https://github.com/psf/requests/commit/abc123")
+        == "https://github.com/psf/requests.git"
+    )
 
 
 def test_download_patch_uses_github_patch_endpoint(monkeypatch):
