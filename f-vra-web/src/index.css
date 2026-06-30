@@ -1,0 +1,38 @@
+:root {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #27384a;
+  background: #f4f7fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --display: 'Segoe UI', Arial, sans-serif;
+  --mono: 'Cascadia Code', Consolas, monospace;
+  --navy-950: #021637;
+  --navy-900: #032049;
+  --navy-800: #0d284d;
+  --blue-700: #365b7d;
+  --blue-600: #547494;
+  --blue-500: #63819d;
+  --blue-100: #e8eff5;
+  --blue-50: #f3f7fa;
+  --border: #dce4eb;
+  --surface: #ffffff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--blue-600);
+  outline-offset: 2px;
+}

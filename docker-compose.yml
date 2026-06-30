@@ -1,0 +1,73 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: f-vra-postgres
+    environment:
+      POSTGRES_USER: fvra
+      POSTGRES_PASSWORD: fvra
+      POSTGRES_DB: fvra
+    ports:
+      - "5432:5432"
+    volumes:
+      - fvra-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fvra -d fvra"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  api:
+    build:
+      context: ./feagle
+    container_name: f-vra-api
+    environment:
+      DATABASE_URL: postgresql+psycopg://fvra:fvra@postgres:5432/fvra
+      F_VRA_ARTIFACT_ROOT: /var/lib/f-vra/artifacts
+      F_VRA_CHECKOUT_ROOT: /var/lib/f-vra/checkouts
+      F_VRA_PYPI_CACHE_ROOT: /var/lib/f-vra/pypi
+      F_VRA_LLM_ENABLED: "false"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    volumes:
+      - fvra-artifacts:/var/lib/f-vra/artifacts
+      - fvra-checkouts:/var/lib/f-vra/checkouts
+      - fvra-pypi:/var/lib/f-vra/pypi
+
+  worker:
+    build:
+      context: ./feagle
+    container_name: f-vra-worker
+    command: python -m pyshare_api.worker
+    environment:
+      DATABASE_URL: postgresql+psycopg://fvra:fvra@postgres:5432/fvra
+      F_VRA_ARTIFACT_ROOT: /var/lib/f-vra/artifacts
+      F_VRA_CHECKOUT_ROOT: /var/lib/f-vra/checkouts
+      F_VRA_PYPI_CACHE_ROOT: /var/lib/f-vra/pypi
+      F_VRA_LLM_ENABLED: "false"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      api:
+        condition: service_started
+    volumes:
+      - fvra-artifacts:/var/lib/f-vra/artifacts
+      - fvra-checkouts:/var/lib/f-vra/checkouts
+      - fvra-pypi:/var/lib/f-vra/pypi
+
+  web:
+    build:
+      context: ./f-vra-web
+    container_name: f-vra-web
+    depends_on:
+      - api
+    ports:
+      - "8081:80"
+
+volumes:
+  fvra-postgres:
+  fvra-artifacts:
+  fvra-checkouts:
+  fvra-pypi:

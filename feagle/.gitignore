@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+sdist/
+.eggs/
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+
+# Pytest & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# PyShare runtime data
+.pyshare/
+*.npz
+
+# Local experimental projects and generated call graph reports
+benchmarks/local-project/*
+!benchmarks/local-project/
+!benchmarks/local-project/README.md
+!benchmarks/local-project/.gitkeep
+benchmarks/local-project/*-callgraph-*.json
+
+# Local benchmark material
+benchmarks/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
