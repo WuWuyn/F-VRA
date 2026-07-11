@@ -12,6 +12,7 @@ checks whether application usage can reach them.
 | [Project analysis](project-analysis.md) | Discover entry points, build the reachable project graph, and produce the Usage Index |
 | [Reachability](reachability.md) | Compose project usage and package summaries into vulnerability paths |
 | [Knowledge base](knowledge-base.md) | Define vulnerable-function records and persistence contracts |
+| [Dataset card](dataset-card.md) | Dataset layout, annotations, artifacts, and the mock transitive VF case |
 
 ## Development
 
@@ -20,5 +21,6 @@ pip install -e ".[dev]"
 pytest
 ```
 
-Benchmark data conventions remain documented next to the data in
-[`benchmarks/README.md`](../benchmarks/README.md).
+Dataset conventions are documented in
+[`data/README.md`](../data/README.md), [`artifacts/README.md`](../artifacts/README.md),
+and the [dataset card](dataset-card.md).

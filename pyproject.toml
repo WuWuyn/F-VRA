@@ -17,6 +17,7 @@ dependencies = [
     "requests>=2.31",
     "tenacity>=8.2",
     "tqdm>=4.66",
+    "packaging>=24",
 ]
 
 [project.optional-dependencies]
@@ -34,6 +35,7 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-v --tb=short"
+pythonpath = ["src"]
 
 [tool.coverage.run]
 source = ["src"]

@@ -116,8 +116,8 @@ def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationR
             use_embeddings=request.use_embeddings,
         )
 
-    rerank_model = request.rerank_model or settings.openrouter_rerank_model
-    use_rerank = request.use_rerank if request.use_rerank is not None else bool(rerank_model)
+    rerank_model = request.rerank_model or settings.llm_model
+    use_rerank = request.use_rerank if request.use_rerank is not None else False
     rerank_metadata: dict[str, str | bool | None] = {}
     if use_rerank and rerank_model:
         progress(f"Reranking candidates with {rerank_model}")

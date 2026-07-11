@@ -31,22 +31,22 @@ def localize(
     use_embeddings: bool = typer.Option(
         True,
         "--embeddings/--no-embeddings",
-        help="Use OpenRouter embeddings during candidate retrieval",
+        help="Use configured provider embeddings during candidate retrieval",
     ),
     use_llm: bool = typer.Option(
         False,
         "--use-llm",
-        help="Legacy: rerank shortlist with the OpenRouter chat API",
+        help="Legacy: rerank shortlist with the configured chat API",
     ),
     use_rerank: Optional[bool] = typer.Option(
         None,
         "--use-rerank/--no-rerank",
-        help="Use OpenRouter rerank API; defaults to enabled when OPENROUTER_RERANK_MODEL is set",
+        help="Use the configured chat API to rerank candidates",
     ),
     rerank_model: Optional[str] = typer.Option(
         None,
         "--rerank-model",
-        help="OpenRouter rerank model override",
+        help="Rerank model override",
     ),
     output: Optional[Path] = typer.Option(None, "--output", "-o", help="Write JSON report"),
 ) -> None:

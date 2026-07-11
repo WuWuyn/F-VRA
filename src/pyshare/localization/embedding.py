@@ -8,7 +8,7 @@ import requests
 from tqdm import tqdm
 
 from pyshare.core.config import settings
-from pyshare.localization.llm_client import openrouter_headers
+from pyshare.localization.llm_client import provider_headers
 from pyshare.localization.models import FunctionInfo
 
 
@@ -18,55 +18,54 @@ class EmbeddingBackend(Protocol):
     def embed(self, texts: list[str]) -> list[list[float]]: ...
 
 
-class OpenRouterEmbeddingBackend:
+class OpenAICompatibleEmbeddingBackend:
     def __init__(self, model_name: str | None = None) -> None:
-        self.model_name = model_name or settings.openrouter_embedding_model
-        if not settings.openrouter_api_key:
+        self.model_name = model_name or settings.embedding_model
+        self.api_key = settings.embedding_api_key
+        self.base_url = settings.embedding_base_url.rstrip("/")
+        if not self.api_key:
             raise RuntimeError(
-                "OPENROUTER_API_KEY is not set; semantic retrieval is unavailable"
+                "LOCAL_LLM_API_KEY or LOCAL_EMBEDDING_API_KEY is not set; "
+                "semantic retrieval is unavailable"
             )
 
     def embed(self, texts: list[str]) -> list[list[float]]:
-        headers = openrouter_headers()
-
         response = None
         for attempt in range(3):
             try:
                 response = requests.post(
-                    "https://openrouter.ai/api/v1/embeddings",
-                    headers=headers,
+                    f"{self.base_url}/embeddings",
+                    headers=provider_headers(self.api_key),
                     json={
                         "model": self.model_name,
                         "input": texts,
                         "encoding_format": "float",
-                        "provider": {"allow_fallbacks": True},
                     },
                     timeout=90,
                 )
             except requests.RequestException as exc:
                 if attempt == 2:
-                    raise RuntimeError(f"OpenRouter embeddings request failed: {exc}") from exc
+                    raise RuntimeError(f"Embedding request failed: {exc}") from exc
                 time.sleep(2**attempt)
                 continue
             if response.status_code == 200:
                 break
             if response.status_code not in {429, 529} or attempt == 2:
                 raise RuntimeError(
-                    f"OpenRouter embeddings returned HTTP {response.status_code}: "
+                    f"Embeddings returned HTTP {response.status_code}: "
                     f"{response.text[:300]}"
                 )
             time.sleep(2**attempt)
 
         if response is None:
-            raise RuntimeError("OpenRouter embeddings request did not produce a response")
+            raise RuntimeError("Embedding request did not produce a response")
         payload = response.json()
         data = sorted(payload.get("data", []), key=lambda item: item.get("index", 0))
         if len(data) != len(texts):
             raise RuntimeError(
-                f"OpenRouter embeddings returned {len(data)} vectors for {len(texts)} inputs"
+                f"Embeddings returned {len(data)} vectors for {len(texts)} inputs"
             )
         return [item["embedding"] for item in data]
-
 
 def function_embedding_text(function: FunctionInfo, max_chars: int = 4000) -> str:
     structural = " ".join(
@@ -98,7 +97,7 @@ def embedding_scores(
     if not functions:
         return {}, "not_run"
 
-    active_backend = backend or OpenRouterEmbeddingBackend()
+    active_backend = backend or OpenAICompatibleEmbeddingBackend()
     texts = [description, *(function_embedding_text(function) for function in functions)]
     vectors: list[list[float]] = []
     batches = range(0, len(texts), settings.embedding_batch_size)

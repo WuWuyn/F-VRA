@@ -5,32 +5,34 @@ Python functions.
 
 ## Pipeline
 
-1. `metadata.py` fetches CVE metadata from OSV or NVD.
-2. `patch.py` downloads and parses unified diffs.
+1. `sources.py` fetches CVE metadata from OSV or NVD.
+2. `sources.py` downloads and parses unified diffs.
 3. `function_parser.py` extracts Python functions, methods, calls, and names.
 4. `tracker.py` expands patch hits through calls and changed configuration.
-5. `candidates.py` combines BM25 and OpenRouter embeddings with Reciprocal Rank
-   Fusion.
+5. `candidates.py` combines BM25 and provider embeddings with Reciprocal Rank Fusion.
 6. `ranking.py` combines retrieval relevance, patch evidence, and optional
-   OpenRouter reranking.
+   LLM pairwise ranking.
 7. `service.py` returns the final JSON-compatible report.
 
 ## Configuration
 
 ```env
-OPENROUTER_API_KEY=
-OPENROUTER_MODEL=openai/gpt-oss-120b:free
-OPENROUTER_EMBEDDING_MODEL=nvidia/llama-nemotron-embed-vl-1b-v2:free
-OPENROUTER_RERANK_MODEL=nvidia/llama-nemotron-rerank-vl-1b-v2:free
+LOCAL_LLM_API_KEY=
+LOCAL_LLM_BASE_URL=https://quatmo-api.iahn.hanoi.vn/v1
+LOCAL_LLM_MODEL=qwen3-coder
+LOCAL_EMBEDDING_API_KEY=
+LOCAL_EMBEDDING_BASE_URL=https://quatmo-api.iahn.hanoi.vn/v1
+LOCAL_EMBEDDING_MODEL=qwen3-embedding
 GITHUB_TOKEN=
 NVD_API_KEY=
 ```
 
-`OPENROUTER_API_KEY` enables semantic retrieval, OpenRouter reranking, and
-legacy `--use-llm` chat reranking. Without it, candidate retrieval falls back to
-BM25 and reports that fallback in `metadata.retrieval`. If
-`OPENROUTER_RERANK_MODEL` is set, localization uses OpenRouter's rerank API by
-default; pass `--no-rerank` to disable it for a run.
+`LOCAL_LLM_API_KEY` enables LLM-based description enrichment and pairwise
+ranking. `LOCAL_EMBEDDING_API_KEY` is optional: when it is empty, embeddings use
+`LOCAL_LLM_API_KEY`. `LOCAL_EMBEDDING_BASE_URL` should point to the same
+OpenAI-compatible `/v1` endpoint when the provider serves embeddings there.
+Without embedding configuration, candidate retrieval falls back to BM25 and
+reports that fallback in `metadata.retrieval`.
 
 ## Run The Full Pipeline
 
@@ -64,10 +66,8 @@ pyshare localize CVE-2023-32681 `
   --top-k 20
 ```
 
-Set `OPENROUTER_RERANK_MODEL` or pass `--rerank-model` to rerank the shortlist
-through the OpenRouter rerank API. Use `--no-rerank` to disable reranking, and
-`--no-embeddings` to test lexical retrieval in isolation. `--use-llm` remains
-available for legacy chat-model reranking.
+Pass `--pairwise` to use the configured local LLM for pairwise ranking, and
+`--no-embeddings` to test lexical retrieval in isolation.
 
 ## Test Each Stage
 
@@ -150,5 +150,6 @@ print(report.to_dict()["candidates"])
 pytest tests/unit/test_localization.py
 ```
 
-Network calls are mocked in unit tests. Manual metadata and patch commands are
-the end-to-end checks for OSV, NVD, GitHub, and OpenRouter connectivity.
+Network calls are mocked in unit tests. Manual metadata, patch, embedding, and
+localization commands are the end-to-end checks for OSV, NVD, GitHub, and the
+configured local LLM provider.

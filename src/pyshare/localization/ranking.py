@@ -28,28 +28,6 @@ def _rerank_document(function: FunctionInfo, max_chars: int = 5000) -> str:
     return text if len(text) <= max_chars else text[:max_chars] + "\n# ... truncated"
 
 
-def _openrouter_rerank_scores(
-    description: str,
-    candidates: list[FunctionInfo],
-    *,
-    model: str,
-) -> dict[str, float]:
-    from pyshare.localization.llm_client import rerank
-
-    documents = [_rerank_document(function) for function in candidates]
-    ranked = rerank(
-        query=description,
-        documents=documents,
-        model=model,
-        top_n=len(documents),
-    )
-    by_index = {index: score for index, score in ranked}
-    return {
-        function.identity: max(0.0, min(1.0, by_index.get(index, 0.0)))
-        for index, function in enumerate(candidates)
-    }
-
-
 def _chat_llm_scores(description: str, candidates: list[FunctionInfo]) -> dict[str, float]:
     from pyshare.localization.llm_rerank import rerank_with_llm
 
@@ -87,26 +65,15 @@ def rank_candidates(
     reranked: dict[str, float] = {}
     rerank_status = "disabled"
     rerank_source = None
-    active_rerank_model = rerank_model or settings.openrouter_rerank_model
+    active_rerank_model = rerank_model or settings.llm_model
     rerank_candidates = candidates[: min(30, len(candidates))]
-    if use_rerank and active_rerank_model and settings.llm_api_key and rerank_candidates:
-        try:
-            reranked = _openrouter_rerank_scores(
-                description,
-                rerank_candidates,
-                model=active_rerank_model,
-            )
-            rerank_status = "used"
-            rerank_source = "openrouter_rerank"
-        except RuntimeError as exc:
-            rerank_status = f"fallback: {exc}"
-    elif use_llm and settings.llm_api_key and rerank_candidates:
+    if (use_rerank or use_llm) and settings.llm_api_key and rerank_candidates:
         reranked = _chat_llm_scores(description, rerank_candidates)
         rerank_status = "used"
-        rerank_source = "openrouter_chat"
+        rerank_source = "local_chat"
         active_rerank_model = settings.llm_model
-    elif use_rerank and active_rerank_model and not settings.llm_api_key:
-        rerank_status = "disabled: OPENROUTER_API_KEY is not set"
+    elif (use_rerank or use_llm) and not settings.llm_api_key:
+        rerank_status = "disabled: LOCAL_LLM_API_KEY is not set"
 
     if rerank_metadata is not None:
         rerank_metadata.update(

@@ -18,6 +18,7 @@ MANIFEST
 venv/
 env/
 ENV/
+.tools/
 
 # Environment variables
 .env
@@ -28,6 +29,7 @@ ENV/
 .coverage.*
 htmlcov/
 coverage.xml
+.tmp/
 
 # Editors
 .vscode/
@@ -44,6 +46,36 @@ desktop.ini
 # PyShare runtime data
 .pyshare/
 *.npz
+data/raw/projects/*/
+!data/raw/projects/mock_transitive_project/
+!data/raw/projects/mock_transitive_project/**
+
+# Artifact caches
+artifacts/query_cache/**
+!artifacts/query_cache/
+!artifacts/query_cache/.gitkeep
+artifacts/witnesses/**
+!artifacts/witnesses/
+!artifacts/witnesses/.gitkeep
+
+# Experiment outputs
+results/logs/**
+!results/logs/
+!results/logs/.gitkeep
+results/metrics/*.json
+results/metrics/*.csv
+results/tables/*.csv
+!results/tables/project_cve_overview.csv
+!results/tables/project_cve_details.csv
+!results/tables/project_cve_source_findings.csv
+results/figures/*.png
+results/figures/*.svg
+
+# Scanner scratch/cache output
+data/_scans/_tmp/
+data/_scans/snyk/uvcache/
+data/_scans/snyk/*.partial*
+data/_scans/snyk/*.previous*
 
 # Jupyter
 .ipynb_checkpoints/

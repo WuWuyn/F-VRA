@@ -25,26 +25,40 @@ class Settings(BaseSettings):
     embedding_batch_size: int = 16
     github_token: str = ""
     nvd_api_key: str = ""
-    openrouter_api_key: str = ""
-    openrouter_model: str = "openai/gpt-4o-mini"
-    openrouter_embedding_model: str = "qwen/qwen3-embedding-0.6b"
-    openrouter_rerank_model: str = ""
-    openrouter_http_referer: str = ""
-    openrouter_app_title: str = ""
-
+    local_llm_api_key: str = ""
+    local_llm_base_url: str = "https://quatmo-api.iahn.hanoi.vn/v1"
+    local_llm_model: str = "qwen3-coder"
+    local_embedding_api_key: str = ""
+    local_embedding_base_url: str = "https://quatmo-api.iahn.hanoi.vn/v1"
+    local_embedding_model: str = "qwen3-embedding"
     @property
     def llm_api_key(self) -> str:
-        return self.openrouter_api_key
+        return self.local_llm_api_key
 
     @property
     def llm_base_url(self) -> str:
-        return "https://openrouter.ai/api/v1"
+        return self.local_llm_base_url
 
     @property
     def llm_model(self) -> str:
         override = os.getenv("LLM_MODEL_OVERRIDE")
         if override:
             return override
-        return self.openrouter_model
+        return self.local_llm_model
+
+    @property
+    def embedding_api_key(self) -> str:
+        return self.local_embedding_api_key or self.local_llm_api_key
+
+    @property
+    def embedding_base_url(self) -> str:
+        return self.local_embedding_base_url
+
+    @property
+    def embedding_model(self) -> str:
+        override = os.getenv("EMBEDDING_MODEL_OVERRIDE")
+        if override:
+            return override
+        return self.local_embedding_model
 
 settings = Settings()

@@ -4,7 +4,7 @@ from typer.testing import CliRunner
 
 from pyshare.cli.main import app
 from pyshare.localization.candidates import select_patch_absent
-from pyshare.localization.embedding import OpenRouterEmbeddingBackend
+from pyshare.localization.embedding import OpenAICompatibleEmbeddingBackend
 from pyshare.localization.function_parser import parse_repo
 from pyshare.localization.function_parser import parse_repository
 from pyshare.localization.metadata import ResolvedMetadata, download_patch
@@ -93,7 +93,7 @@ def test_embedding_failure_falls_back_to_bm25(monkeypatch):
     assert selection.embedding_status == "fallback: model unavailable"
 
 
-def test_openrouter_embedding_backend_batches_and_orders_vectors(monkeypatch):
+def test_local_embedding_backend_batches_and_orders_vectors(monkeypatch):
     captured = {}
 
     class Response:
@@ -110,8 +110,12 @@ def test_openrouter_embedding_backend_batches_and_orders_vectors(monkeypatch):
             }
 
     monkeypatch.setattr(
-        "pyshare.localization.embedding.settings.openrouter_api_key",
+        "pyshare.localization.embedding.settings.local_embedding_api_key",
         "test-key",
+    )
+    monkeypatch.setattr(
+        "pyshare.localization.embedding.settings.local_embedding_base_url",
+        "https://quatmo-api.iahn.hanoi.vn/v1",
     )
 
     def fake_post(url, **kwargs):
@@ -121,14 +125,14 @@ def test_openrouter_embedding_backend_batches_and_orders_vectors(monkeypatch):
 
     monkeypatch.setattr("pyshare.localization.embedding.requests.post", fake_post)
 
-    backend = OpenRouterEmbeddingBackend("qwen/qwen3-embedding-0.6b")
+    backend = OpenAICompatibleEmbeddingBackend("qwen3-embedding")
     vectors = backend.embed(["query", "function"])
 
     assert vectors == [[1.0, 0.0], [0.0, 1.0]]
-    assert captured["url"] == "https://openrouter.ai/api/v1/embeddings"
+    assert captured["url"] == "https://quatmo-api.iahn.hanoi.vn/v1/embeddings"
     assert captured["headers"]["Authorization"] == "Bearer test-key"
     assert captured["json"]["input"] == ["query", "function"]
-    assert captured["json"]["model"] == "qwen/qwen3-embedding-0.6b"
+    assert captured["json"]["model"] == "qwen3-embedding"
 
 
 def test_patch_absent_report_has_product_schema():
@@ -242,35 +246,19 @@ def test_auto_clone_inferred_github_repository_when_repository_missing(monkeypat
     )
 
 
-def test_openrouter_rerank_model_is_separate_from_chat_model(monkeypatch):
+def test_local_chat_rerank_uses_configured_provider(monkeypatch):
     captured = {}
 
-    class Response:
-        status_code = 200
-        text = ""
+    monkeypatch.setattr("pyshare.localization.ranking.settings.local_llm_api_key", "test-key")
+    monkeypatch.setattr("pyshare.localization.ranking.settings.local_llm_model", "qwen3-coder")
 
-        @staticmethod
-        def json():
-            return {
-                "results": [
-                    {"index": 0, "relevance_score": 0.91},
-                    {"index": 1, "relevance_score": 0.25},
-                ]
-            }
+    def fake_chat(messages, model=None, temperature=0.0):
+        captured["messages"] = messages
+        captured["model"] = model
+        captured["temperature"] = temperature
+        return "0, 9\n1, 2\n"
 
-    monkeypatch.setattr("pyshare.localization.llm_client.settings.openrouter_api_key", "test-key")
-    monkeypatch.setattr("pyshare.localization.ranking.settings.openrouter_api_key", "test-key")
-    monkeypatch.setattr(
-        "pyshare.localization.ranking.settings.openrouter_rerank_model",
-        "nvidia/llama-nemotron-rerank-vl-1b-v2:free",
-    )
-
-    def fake_post(url, **kwargs):
-        captured["url"] = url
-        captured.update(kwargs)
-        return Response()
-
-    monkeypatch.setattr("pyshare.localization.llm_client.requests.post", fake_post)
+    monkeypatch.setattr("pyshare.localization.llm_rerank.chat", fake_chat)
 
     report = localize_vulnerable_functions(
         LocalizationRequest(
@@ -279,15 +267,14 @@ def test_openrouter_rerank_model_is_separate_from_chat_model(monkeypatch):
             repository_path=Path("tests/fixtures/sample_app"),
             top_k=2,
             use_embeddings=False,
+            use_rerank=True,
         )
     )
 
-    assert captured["url"] == "https://openrouter.ai/api/v1/rerank"
-    assert captured["json"]["model"] == "nvidia/llama-nemotron-rerank-vl-1b-v2:free"
-    assert captured["json"]["query"].startswith("request fetch url")
-    assert captured["json"]["top_n"] == len(captured["json"]["documents"])
+    assert captured["messages"][0]["role"] == "system"
+    assert captured["model"] is None
     assert report.metadata["rerank_used"] is True
-    assert report.metadata["rerank_source"] == "openrouter_rerank"
+    assert report.metadata["rerank_source"] == "local_chat"
     assert "llm_used" not in report.metadata
 
 
