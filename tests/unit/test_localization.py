@@ -3,13 +3,13 @@ from pathlib import Path
 from typer.testing import CliRunner
 
 from pyshare.cli.main import app
-from pyshare.localization.candidates import select_patch_absent
-from pyshare.localization.embedding import OpenAICompatibleEmbeddingBackend
-from pyshare.localization.function_parser import parse_repo
-from pyshare.localization.function_parser import parse_repository
-from pyshare.localization.metadata import ResolvedMetadata, download_patch
+from pyshare.localization.retrieval.candidates import select_patch_absent
+from pyshare.localization.retrieval.embedding import OpenAICompatibleEmbeddingBackend
+from pyshare.localization.code.function_parser import parse_repo
+from pyshare.localization.code.function_parser import parse_repository
+from pyshare.localization.sources.metadata import ResolvedMetadata, download_patch
 from pyshare.localization.models import LocalizationRequest
-from pyshare.localization.repo_resolver import github_repo_url_from_reference
+from pyshare.localization.sources.repositories import github_repo_url_from_reference
 from pyshare.localization.service import localize, localize_vulnerable_functions
 
 runner = CliRunner()
@@ -41,11 +41,11 @@ def test_hybrid_retrieval_uses_embedding_signal(monkeypatch):
     fetch_id = next(item.identity for item in functions if item.qualname == "Client.fetch")
 
     monkeypatch.setattr(
-        "pyshare.localization.candidates.lexical_scores",
+        "pyshare.localization.retrieval.candidates.lexical_scores",
         lambda description, items: {item.identity: 0.0 for item in items},
     )
     monkeypatch.setattr(
-        "pyshare.localization.candidates.embedding_scores",
+        "pyshare.localization.retrieval.candidates.embedding_scores",
         lambda description, items: (
             {
                 item.identity: 0.95 if item.identity == fetch_id else 0.05
@@ -78,7 +78,7 @@ def test_embedding_failure_falls_back_to_bm25(monkeypatch):
         raise RuntimeError("model unavailable")
 
     monkeypatch.setattr(
-        "pyshare.localization.candidates.embedding_scores",
+        "pyshare.localization.retrieval.candidates.embedding_scores",
         fail_embedding,
     )
 
@@ -110,11 +110,11 @@ def test_local_embedding_backend_batches_and_orders_vectors(monkeypatch):
             }
 
     monkeypatch.setattr(
-        "pyshare.localization.embedding.settings.local_embedding_api_key",
+        "pyshare.localization.retrieval.embedding.settings.local_embedding_api_key",
         "test-key",
     )
     monkeypatch.setattr(
-        "pyshare.localization.embedding.settings.local_embedding_base_url",
+        "pyshare.localization.retrieval.embedding.settings.local_embedding_base_url",
         "https://quatmo-api.iahn.hanoi.vn/v1",
     )
 
@@ -123,9 +123,14 @@ def test_local_embedding_backend_batches_and_orders_vectors(monkeypatch):
         captured.update(kwargs)
         return Response()
 
-    monkeypatch.setattr("pyshare.localization.embedding.requests.post", fake_post)
+    monkeypatch.setattr("pyshare.localization.retrieval.embedding.requests.post", fake_post)
 
-    backend = OpenAICompatibleEmbeddingBackend("qwen3-embedding")
+    backend = OpenAICompatibleEmbeddingBackend(
+        model_name="qwen3-embedding",
+        api_key="test-key",
+        base_url="https://quatmo-api.iahn.hanoi.vn/v1",
+        provider_name="local",
+    )
     vectors = backend.embed(["query", "function"])
 
     assert vectors == [[1.0, 0.0], [0.0, 1.0]]
@@ -223,8 +228,9 @@ def test_auto_clone_inferred_github_repository_when_repository_missing(monkeypat
         ),
     )
 
-    def fake_clone(repo_url):
+    def fake_clone(repo_url, commit=None):
         cloned["repo_url"] = repo_url
+        cloned["commit"] = commit
         return Path("tests/fixtures/sample_app")
 
     monkeypatch.setattr("pyshare.localization.service.clone_or_update", fake_clone)
@@ -246,19 +252,19 @@ def test_auto_clone_inferred_github_repository_when_repository_missing(monkeypat
     )
 
 
-def test_local_chat_rerank_uses_configured_provider(monkeypatch):
+def test_pairwise_ranking_uses_configured_provider(monkeypatch):
     captured = {}
 
-    monkeypatch.setattr("pyshare.localization.ranking.settings.local_llm_api_key", "test-key")
-    monkeypatch.setattr("pyshare.localization.ranking.settings.local_llm_model", "qwen3-coder")
+    monkeypatch.setattr("pyshare.localization.ranking.methods.pairwise.settings.local_llm_api_key", "test-key")
+    monkeypatch.setattr("pyshare.localization.ranking.methods.pairwise.settings.local_llm_model", "qwen3-coder")
 
     def fake_chat(messages, model=None, temperature=0.0):
         captured["messages"] = messages
         captured["model"] = model
         captured["temperature"] = temperature
-        return "0, 9\n1, 2\n"
+        return "A"
 
-    monkeypatch.setattr("pyshare.localization.llm_rerank.chat", fake_chat)
+    monkeypatch.setattr("pyshare.localization.providers.llm_client.chat", fake_chat)
 
     report = localize_vulnerable_functions(
         LocalizationRequest(
@@ -267,14 +273,16 @@ def test_local_chat_rerank_uses_configured_provider(monkeypatch):
             repository_path=Path("tests/fixtures/sample_app"),
             top_k=2,
             use_embeddings=False,
-            use_rerank=True,
+            pairwise=True,
+            swiss_rounds=1,
+            finalists=2,
         )
     )
 
     assert captured["messages"][0]["role"] == "system"
-    assert captured["model"] is None
-    assert report.metadata["rerank_used"] is True
-    assert report.metadata["rerank_source"] == "local_chat"
+    assert captured["model"] == "qwen3-coder"
+    assert report.metadata["pairwise_ranking"]["used"] is True
+    assert report.metadata["pairwise_ranking"]["source"] == "pairwise_ranking"
     assert "llm_used" not in report.metadata
 
 
@@ -296,7 +304,7 @@ def test_download_patch_uses_github_patch_endpoint(monkeypatch):
         requested_urls.append(url)
         return Response()
 
-    monkeypatch.setattr("pyshare.localization.metadata.requests.get", fake_get)
+    monkeypatch.setattr("pyshare.localization.sources.metadata.requests.get", fake_get)
 
     downloaded = download_patch("https://github.com/example/project/commit/abc123")
 

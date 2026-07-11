@@ -1,6 +1,6 @@
 import typer
 from pyshare.cli.output.display import console, print_index_result, make_progress
-from pyshare.package_analysis.service import index_package
+from pyshare.analysis.package.service import index_package
 
 app = typer.Typer(help="[Offline] Build PCSG index for a PyPI library.")
 

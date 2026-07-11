@@ -13,7 +13,7 @@ It parses source with `ast` and does not import or execute the target package.
 High-level source indexing:
 
 ```python
-from pyshare.package_analysis import index_source
+from pyshare.analysis.package import index_source
 
 result = index_source(
     "./requests",
@@ -28,8 +28,8 @@ print(result.api_count)
 Inspect the graph and summaries:
 
 ```python
-from pyshare.package_analysis.callgraph import LibraryAnalyzer
-from pyshare.package_analysis.summary import build_library_summary
+from pyshare.analysis.package.callgraph import LibraryAnalyzer
+from pyshare.analysis.package.summary import build_library_summary
 
 analyzer = LibraryAnalyzer()
 graph = analyzer.build_library_graph("./requests")

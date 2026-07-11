@@ -57,6 +57,9 @@ artifacts/query_cache/**
 artifacts/witnesses/**
 !artifacts/witnesses/
 !artifacts/witnesses/.gitkeep
+artifacts/pipeline_runs/**
+!artifacts/pipeline_runs/
+!artifacts/pipeline_runs/.gitkeep
 
 # Experiment outputs
 results/logs/**

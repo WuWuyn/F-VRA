@@ -123,12 +123,21 @@ pyshare/
 
 ```text
 src/pyshare/
+|-- analysis/
+|   |-- callgraph/
+|   |-- dependencies/
+|   |-- package/
+|   `-- project/
 |-- cli/
 |-- core/
-|-- kb/
+|   `-- kb/
+|-- cve_vf/
 |-- localization/
-|-- package_analysis/
-|-- project_analysis/
+|   |-- code/
+|   |-- providers/
+|   |-- ranking/
+|   |-- retrieval/
+|   `-- sources/
 |-- reachability/
 |-- reporting/
 |-- storage/
@@ -136,22 +145,10 @@ src/pyshare/
 `-- evaluation/
 ```
 
-This migration also carries the existing engine code as package-level modules
-under `src/`:
-
-```text
-src/
-|-- pyshare_core/
-|-- pyshare_analysis/
-|-- pyshare_reachability/
-|-- pyshare_localization/
-|-- pyshare_cve_vf/
-`-- pyshare_storage/
-```
-
-These modules are the incremental bridge from the old application-shaped repo to
-this research-tool layout. API services, workers, web UI, Docker application
-shells, and server database adapters are intentionally left out.
+`pyshare` is the single import root. Analysis, localization, reachability,
+storage, and CVE/VF helpers live under that package instead of separate
+top-level namespaces. API services, workers, web UI, Docker application shells,
+and server database adapters are intentionally left out.
 
 For source-tree smoke checks without installation:
 
@@ -225,5 +222,5 @@ Legacy metadata and scanner tooling from
 - `tools/`: original SCA runner scripts and helper Dockerfile.
 - `data/raw/sca/legacy_inventory/`: imported raw SCA outputs, checkpoints, and summaries.
 - `data/raw/metadata/cloned-projects-metadata.json`: imported project inventory.
-- `src/pyshare_cve_vf/legacy/`: old advisory/annotation import helpers that still
+- `src/pyshare/cve_vf/legacy/`: old advisory/annotation import helpers that still
   depend on the former server database package.

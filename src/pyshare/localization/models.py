@@ -21,6 +21,15 @@ class LocalizationRequest:
     use_rerank: bool | None = None
     rerank_model: str | None = None
     use_embeddings: bool = True
+    candidate_pool_size: int = 100
+    tracker_max_depth: int = 2
+    cve_repeat: int = 5
+    swiss_rounds: int = 8
+    finalists: int = 20
+    pairwise: bool = False
+    pairwise_model: str | None = None
+    extract_entities: bool = False
+    entity_model: str | None = None
     progress_callback: Callable[[str], None] | None = field(
         default=None,
         repr=False,
@@ -39,6 +48,9 @@ class FunctionInfo:
     docstring: str = ""
     calls: set[str] = field(default_factory=set)
     referenced_names: set[str] = field(default_factory=set)
+    assigned_names: set[str] = field(default_factory=set)
+    parameter_names: set[str] = field(default_factory=set)
+    local_types: dict[str, str] = field(default_factory=dict)
     decorators: list[str] = field(default_factory=list)
     is_async: bool = False
 

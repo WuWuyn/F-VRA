@@ -2,18 +2,25 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-
-from pyshare.core.config import settings
 from pyshare.core.models import LocalizeResult
-from pyshare.localization.candidates import select_patch_absent, select_patch_present
-from pyshare.localization.expansion import expand_description
-from pyshare.localization.function_parser import parse_repository
-from pyshare.localization.metadata import ResolvedMetadata, download_patch, resolve_metadata
+from pyshare.localization.retrieval.candidates import select_patch_absent, select_patch_present
+from pyshare.localization.retrieval.expansion import expand_description
+from pyshare.localization.code.function_parser import parse_repository
+from pyshare.localization.sources import (
+    ResolvedMetadata,
+    clone_or_update,
+    download_patch,
+    github_commit_from_references,
+    github_repo_urls_from_references,
+    load_patch,
+    parse_patch_text,
+    resolve_metadata,
+)
 from pyshare.localization.models import LocalizationReport, LocalizationRequest
-from pyshare.localization.patch import load_patch, parse_patch_text
-from pyshare.localization.ranking import rank_candidates
-from pyshare.localization.repo_resolver import clone_or_update, github_repo_urls_from_references
-from pyshare.localization.tracker import track_patch_candidates
+from pyshare.localization.ranking.methods.description import enrich_description_with_llm_entities
+from pyshare.localization.ranking.methods.pairwise import PairwiseRankingConfig, pairwise_rank_scores
+from pyshare.localization.ranking.ranking import rank_candidates
+from pyshare.localization.code.tracker import track_patch_candidates
 
 
 def _resolve_request_metadata(request: LocalizationRequest) -> ResolvedMetadata:
@@ -44,15 +51,21 @@ def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationR
 
     if request.top_k < 1:
         raise ValueError("top_k must be at least 1")
+    if request.candidate_pool_size < request.top_k:
+        raise ValueError("candidate_pool_size must be at least top_k")
+    if request.tracker_max_depth < 0:
+        raise ValueError("tracker_max_depth must be non-negative")
+    if request.cve_repeat < 1:
+        raise ValueError("cve_repeat must be at least 1")
 
     progress("Resolving CVE metadata")
     metadata = _resolve_request_metadata(request)
     repository = request.repository_path.resolve() if request.repository_path else None
     repository_source = "local"
+    repository_commit = None
     if repository is None or not repository.is_dir():
-        repo_urls = github_repo_urls_from_references(
-            [*metadata.patch_urls, *metadata.references]
-        )
+        references = [*metadata.patch_urls, *metadata.references]
+        repo_urls = github_repo_urls_from_references(references)
         if not repo_urls:
             missing = (
                 str(repository)
@@ -61,14 +74,43 @@ def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationR
             )
             raise NotADirectoryError(
                 f"Repository path is not a directory: {missing}. "
-                "Could not infer a GitHub repository from CVE metadata; provide "
-                "--repository with a local checkout or a resolvable GitHub-based CVE."
+                "Could not infer a GitHub repository from CVE metadata; use a "
+                "resolvable GitHub-based CVE or call the Python API with "
+                "repository_path for a local checkout."
             )
-        progress(f"Cloning repository {repo_urls[0]}")
-        repository = clone_or_update(repo_urls[0]).resolve()
+        repository_commit = github_commit_from_references(references)
+        progress(
+            f"Cloning repository {repo_urls[0]}"
+            + (f" at {repository_commit}" if repository_commit else "")
+        )
+        repository = clone_or_update(repo_urls[0], commit=repository_commit).resolve()
         repository_source = repo_urls[0]
 
-    description = expand_description(metadata.description, metadata.cwe_id)
+    description = expand_description(
+        metadata.description,
+        metadata.cwe_id,
+        original_repeat=request.cve_repeat,
+    )
+    description_enrichment = {
+        "enabled": request.extract_entities,
+        "status": "disabled",
+        "model": request.entity_model,
+        "entities": {},
+    }
+    if request.extract_entities:
+        progress("Extracting CVE search entities with LLM")
+        enriched = enrich_description_with_llm_entities(
+            description,
+            model=request.entity_model,
+        )
+        description = enriched.text
+        description_enrichment.update(
+            {
+                "status": enriched.status,
+                "model": enriched.model,
+                "entities": enriched.entities,
+            }
+        )
     progress(f"Parsing Python functions under {repository}")
     functions = parse_repository(repository)
     if not functions:
@@ -87,7 +129,11 @@ def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationR
                 metadata.description = request.cve_description
             if request.cwe_id:
                 metadata.cwe_id = request.cwe_id
-            description = expand_description(metadata.description, metadata.cwe_id)
+            description = expand_description(
+                metadata.description,
+                metadata.cwe_id,
+                original_repeat=request.cve_repeat,
+            )
         for url in metadata.patch_urls:
             progress(f"Downloading patch candidate {url}")
             downloaded = download_patch(url)
@@ -99,12 +145,18 @@ def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationR
     if patch_analysis is not None and patch_analysis.files:
         mode = "PATCH_PRESENT"
         progress("Tracking patch-related functions")
-        tracker_evidence = track_patch_candidates(functions, patch_analysis)
+        tracker_evidence = track_patch_candidates(
+            functions,
+            patch_analysis,
+            max_depth=request.tracker_max_depth,
+            repository_root=repository,
+        )
         progress("Selecting candidates with patch evidence and retrieval")
         selection = select_patch_present(
             description,
             functions,
             tracker_evidence,
+            pool_size=request.candidate_pool_size,
             use_embeddings=request.use_embeddings,
         )
     else:
@@ -113,27 +165,38 @@ def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationR
         selection = select_patch_absent(
             description,
             functions,
+            pool_size=request.candidate_pool_size,
             use_embeddings=request.use_embeddings,
         )
 
-    rerank_model = request.rerank_model or settings.llm_model
-    use_rerank = request.use_rerank if request.use_rerank is not None else False
     rerank_metadata: dict[str, str | bool | None] = {}
-    if use_rerank and rerank_model:
-        progress(f"Reranking candidates with {rerank_model}")
-    elif request.use_llm:
-        progress(f"Reranking candidates with chat model {settings.llm_model}")
-    else:
-        progress("Ranking candidates")
+    pairwise_metadata: dict[str, str | bool | int | None] = {
+        "enabled": True,
+    }
+    progress("Ranking candidates with Swiss/exhaustive pairwise ranking")
+    pairwise_scores, pairwise_details = pairwise_rank_scores(
+        description,
+        selection.candidates,
+        selection.relevance_scores,
+        selection.evidence,
+        config=PairwiseRankingConfig(
+            swiss_rounds=request.swiss_rounds,
+            finalists=max(request.top_k, request.finalists),
+            use_pairwise=request.pairwise,
+            model=request.pairwise_model,
+        ),
+    )
+    pairwise_metadata.update(pairwise_details)
     candidates = rank_candidates(
         description,
         selection.candidates,
         selection.relevance_scores,
         selection.evidence,
         top_k=request.top_k,
-        use_llm=request.use_llm,
-        use_rerank=use_rerank,
-        rerank_model=rerank_model,
+        use_llm=False,
+        use_rerank=False,
+        rerank_model=None,
+        pairwise_scores=pairwise_scores,
         rerank_metadata=rerank_metadata,
     )
     return LocalizationReport(
@@ -149,11 +212,25 @@ def localize_vulnerable_functions(request: LocalizationRequest) -> LocalizationR
             "functions_scanned": len(functions),
             "candidate_pool_size": len(selection.candidates),
             "repository_source": repository_source,
+            "repository_commit": repository_commit,
             "references": metadata.references,
             "rerank_used": bool(rerank_metadata.get("used")),
             "rerank_status": rerank_metadata.get("status", "disabled"),
             "rerank_source": rerank_metadata.get("source"),
             "rerank_model": rerank_metadata.get("model"),
+            "localization_method": "configurable_hybrid_pairwise",
+            "candidate_pool_size": request.candidate_pool_size,
+            "tracker_max_depth": request.tracker_max_depth,
+            "cve_repeat": request.cve_repeat,
+            "method_config": {
+                "description_strategy": "cve_cwe_repeat",
+                "ranking_strategy": "swiss_exhaustive_pairwise",
+                "use_embeddings": request.use_embeddings,
+                "pairwise": request.pairwise,
+                "extract_entities": request.extract_entities,
+            },
+            "description_enrichment": description_enrichment,
+            "pairwise_ranking": pairwise_metadata,
             "retrieval": {
                 "strategy": (
                     "hybrid_bm25_embeddings"
@@ -183,7 +260,7 @@ def localize(
     repo_path: str | Path | None = None,
     top_k: int = 20,
 ) -> LocalizeResult:
-    """Backward-compatible compact result used by older callers."""
+    """Compact localization result for simple Python callers."""
     if repo_path is None:
         return LocalizeResult(cve_id=cve_id, package="", mode="needs_context")
     report = localize_vulnerable_functions(

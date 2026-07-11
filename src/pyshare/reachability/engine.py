@@ -30,8 +30,8 @@ Design notes that the four critical requirements pin down:
    qualification differences between how a symbol is *referenced* and how it is
    *keyed*.
 
-All vulnerability tests in the hot path are strict ``set`` operations
-(``in`` / ``&``), i.e. O(1) per element.
+Exact vulnerability tests use set membership. Qualification mismatches fall
+back to a component-aligned suffix scan.
 """
 from collections import deque
 from typing import Deque, Dict, List, Optional, Set, Tuple
@@ -43,9 +43,8 @@ from pyshare.core.models import (
     ReachabilityPath,
 )
 
-# A BFS work item: the dotted symbol we are currently exploring, and the full
-# ordered chain of hops that led us there (its first element is the project API).
-_QueueItem = Tuple[str, List[str]]
+# A BFS work item: current target, path so far, and summaries traversed so far.
+_QueueItem = Tuple[str, List[str], List[str]]
 
 
 class ReachabilityQueryEngine:
@@ -67,6 +66,10 @@ class ReachabilityQueryEngine:
     vulnerabilities:
         Qualified names of known-vulnerable functions / sinks. Membership and
         intersection against this set is what flags a path as dangerous.
+    max_depth:
+        Maximum number of cross-package hops in a transitive path.
+    max_paths:
+        Maximum number of distinct witness paths returned.
     """
 
     def __init__(
@@ -74,10 +77,19 @@ class ReachabilityQueryEngine:
         ui: List[ExternalNode],
         summaries: Dict[str, LibrarySummary],
         vulnerabilities: Set[str],
+        *,
+        max_depth: int = 25,
+        max_paths: int = 100,
     ) -> None:
+        if max_depth < 1:
+            raise ValueError("max_depth must be at least 1")
+        if max_paths < 1:
+            raise ValueError("max_paths must be at least 1")
         self.ui = ui
         self.summaries = summaries
         self.vulnerabilities = vulnerabilities
+        self.max_depth = max_depth
+        self.max_paths = max_paths
 
     # ------------------------------------------------------------------ #
     # Public API
@@ -91,20 +103,23 @@ class ReachabilityQueryEngine:
         iff at least one such path exists.
         """
         paths: List[ReachabilityPath] = []
-        visited: Set[str] = set()
+        path_keys: Set[Tuple[str, ...]] = set()
+        unresolved: Set[str] = set()
+        unresolved_frontier: Set[str] = set()
         queue: Deque[_QueueItem] = deque()
 
         # Seed the frontier with the project's own external calls. Each UI node
         # is a *project API* — the head of any chain it begins.
+        seeded: Set[str] = set()
         for ui_node in self.ui:
             start = ui_node.identity_string
-            if start in visited:
+            if not start or start in seeded:
                 continue
-            visited.add(start)
-            queue.append((start, [start]))
+            seeded.add(start)
+            queue.append((start, [start], []))
 
-        while queue:
-            current_target, current_path = queue.popleft()
+        while queue and len(paths) < self.max_paths:
+            current_target, current_path, used_summaries = queue.popleft()
 
             # ---- Step 1: Direct vulnerability check (the blind-spot guard). --
             # The hop may itself be a sink with no LibrarySummary (stdlib, C
@@ -112,7 +127,12 @@ class ReachabilityQueryEngine:
             # never lost. Suffix matching tolerates qualification differences.
             direct_vuln = self._match_vulnerability(current_target)
             if direct_vuln is not None:
-                paths.append(self._make_path(current_path, direct_vuln))
+                bridged_path, bridged_summaries = self._alias_bridge_path(
+                    current_target,
+                    current_path,
+                    used_summaries,
+                )
+                self._append_path(paths, path_keys, bridged_path, direct_vuln, bridged_summaries)
                 # The target is terminal-as-a-sink; nothing further to expand
                 # for *this* node along the vulnerability dimension.
                 continue
@@ -121,37 +141,75 @@ class ReachabilityQueryEngine:
             root = self._root_module(current_target)
             summary = self.summaries.get(root)
             if summary is None:
+                unresolved.add(current_target)
+                if used_summaries:
+                    unresolved_frontier.add(current_target)
                 # No summary for this library — cannot expand further. (Any
                 # vulnerability it directly *is* was already caught in Step 1.)
                 continue
 
             # ---- Step 3: Resolve the API key. -------------------------------
-            api_key = self._resolve_api_key(current_target, summary)
-            if api_key is None:
+            api_keys = self._resolve_api_keys(current_target, summary)
+            if not api_keys:
+                unresolved.add(current_target)
+                if used_summaries:
+                    unresolved_frontier.add(current_target)
                 continue
+            next_used_summaries = self._append_summary_root(used_summaries, root)
 
-            inner_reach: Set[str] = summary.inner_summary.get(api_key, set())
-            outer_reach: Set[str] = summary.outer_summary.get(api_key, set())
+            for api_key in api_keys:
+                inner_reach: Set[str] = summary.inner_summary.get(api_key, set())
+                outer_reach: Set[str] = summary.outer_summary.get(api_key, set())
 
-            # ---- Step 4: Summary intersections (strict O(1) set ops). -------
-            # A vulnerability may be reached intra-library (S_i) or across a TPL
-            # boundary (S_o). Intersect against both; every hit is a witness.
-            for vuln in (inner_reach & self.vulnerabilities):
-                paths.append(self._make_path(current_path, vuln))
-            for vuln in (outer_reach & self.vulnerabilities):
-                paths.append(self._make_path(current_path, vuln))
+                for target in sorted(inner_reach):
+                    vuln = self._match_vulnerability(target)
+                    if vuln is not None:
+                        composed = self._extend_with_summary_path(
+                            current_path,
+                            summary,
+                            api_key,
+                            target,
+                            inner=True,
+                        )
+                        self._append_path(paths, path_keys, composed, vuln, next_used_summaries)
+                        if len(paths) >= self.max_paths:
+                            break
+                if len(paths) >= self.max_paths:
+                    break
 
-            # ---- Step 5: Enqueue next hops. ---------------------------------
-            # Only *external* targets (S_o) cross into other libraries and thus
-            # continue the supply chain. Skip ones already flagged as vulns
-            # (recorded above) and ones already visited.
-            for next_hop in (outer_reach - self.vulnerabilities):
-                if next_hop in visited:
-                    continue
-                visited.add(next_hop)
-                queue.append((next_hop, current_path + [next_hop]))
+                # S_o targets are the transitive package-boundary frontier. Cycle
+                # prevention is path-local so converging callers retain witnesses.
+                for next_hop in sorted(outer_reach):
+                    composed = self._extend_with_summary_path(
+                        current_path,
+                        summary,
+                        api_key,
+                        next_hop,
+                        inner=False,
+                    )
+                    vuln = self._match_vulnerability(next_hop)
+                    if vuln is not None:
+                        self._append_path(paths, path_keys, composed, vuln, next_used_summaries)
+                        if len(paths) >= self.max_paths:
+                            break
+                        continue
+                    if len(current_path) >= self.max_depth:
+                        unresolved.add(next_hop)
+                        unresolved_frontier.add(next_hop)
+                        continue
+                    if next_hop in current_path:
+                        continue
+                    queue.append((next_hop, composed, next_used_summaries))
+                if len(paths) >= self.max_paths:
+                    break
 
-        return QueryReport(is_vulnerable=bool(paths), paths=paths)
+        return QueryReport(
+            is_vulnerable=bool(paths),
+            paths=paths,
+            unresolved_targets=sorted(unresolved),
+            unresolved_frontier=sorted(unresolved_frontier),
+            used_summaries=sorted({root for path in paths for root in path.used_summaries}),
+        )
 
     # ------------------------------------------------------------------ #
     # Internal helpers
@@ -206,35 +264,120 @@ class ReachabilityQueryEngine:
         return best
 
     def _resolve_api_key(self, target: str, summary: LibrarySummary) -> Optional[str]:
-        """
-        Longest-suffix match of ``target`` against the summary's API keys.
+        keys = self._resolve_api_keys(target, summary)
+        return keys[0] if keys else None
 
-        The same logical symbol may be *referenced* and *keyed* with different
-        leading qualification (how it was imported vs. how the indexer recorded
-        it). We pick the key sharing the longest dotted suffix with ``target``,
-        considering keys from both S_i and S_o. Returns ``None`` when nothing
-        overlaps.
-        """
-        exact = (target in summary.inner_summary) or (target in summary.outer_summary)
-        if exact:
-            return target
+    def _resolve_api_keys(self, target: str, summary: LibrarySummary) -> List[str]:
+        keys = set(summary.inner_summary) | set(summary.outer_summary)
+        scored: dict[str, tuple[int, int]] = {}
 
-        best: Optional[str] = None
-        best_score = 0
-        # Union of both summaries' keys — an API may have only inner, only
-        # outer, or both reach-sets recorded.
-        for key in (summary.inner_summary.keys() | summary.outer_summary.keys()):
+        def add(candidate: str, rank: int, score: int = 0) -> None:
+            if candidate not in keys:
+                return
+            current = scored.get(candidate)
+            value = (rank, score)
+            if current is None or value > current:
+                scored[candidate] = value
+
+        add(target, 100, len(target.split(".")))
+        canonical = summary.api_aliases.get(target)
+        if canonical:
+            add(canonical, 95, len(canonical.split(".")))
+
+        parts = [part for part in target.split(".") if part]
+        alias_probes = [target, *(".".join(parts[index:]) for index in range(1, len(parts)))]
+        confidence_rank = {"high": 90, "medium": 75, "low": 60}
+        for probe in alias_probes:
+            for item in summary.alias_table.get(probe, []):
+                canonical = str(item.get("canonical") or "")
+                confidence = str(item.get("confidence") or "low")
+                add(canonical, confidence_rank.get(confidence, 60), len(canonical.split(".")))
+
+        for key in keys:
             if not (target == key
                     or target.endswith("." + key)
                     or key.endswith("." + target)):
                 continue
-            score = self._suffix_overlap(target, key)
-            if score > best_score:
-                best, best_score = key, score
-        return best
+            add(key, 70, self._suffix_overlap(target, key))
+
+        if not scored and parts:
+            tail = parts[-1]
+            for key in keys:
+                if key.rsplit(".", 1)[-1] == tail:
+                    add(key, 40, 1)
+
+        return [
+            key
+            for key, _score in sorted(
+                scored.items(),
+                key=lambda item: (item[1][0], item[1][1], item[0]),
+                reverse=True,
+            )
+        ]
+
+    def _alias_bridge_path(
+        self,
+        target: str,
+        current_path: List[str],
+        used_summaries: List[str],
+    ) -> Tuple[List[str], List[str]]:
+        root = self._root_module(target)
+        summary = self.summaries.get(root)
+        if summary is None:
+            return current_path, used_summaries
+        api_key = self._resolve_api_key(target, summary)
+        if api_key is None:
+            return current_path, used_summaries
+        canonical = summary.api_aliases.get(api_key) or summary.api_aliases.get(target)
+        if not canonical or canonical == target or canonical in current_path:
+            return current_path, used_summaries
+        bridged = self._extend_with_summary_path(
+            current_path,
+            summary,
+            api_key,
+            canonical,
+            inner=True,
+        )
+        return bridged, self._append_summary_root(used_summaries, root)
 
     @staticmethod
-    def _make_path(current_path: List[str], vuln: str) -> ReachabilityPath:
+    def _merge_paths(prefix: List[str], suffix: List[str]) -> List[str]:
+        if not suffix:
+            return list(prefix)
+        merged = list(prefix)
+        for node in suffix:
+            if merged and merged[-1] == node:
+                continue
+            if node in merged:
+                continue
+            merged.append(node)
+        return merged
+
+    def _extend_with_summary_path(
+        self,
+        current_path: List[str],
+        summary: LibrarySummary,
+        api_key: str,
+        target: str,
+        *,
+        inner: bool,
+    ) -> List[str]:
+        paths = summary.inner_paths if inner else summary.outer_paths
+        summary_path = paths.get(api_key, {}).get(target)
+        if summary_path:
+            return self._merge_paths(current_path, summary_path)
+        if target in current_path:
+            return list(current_path)
+        return [*current_path, target]
+
+    @staticmethod
+    def _append_summary_root(used_summaries: List[str], root: str) -> List[str]:
+        if root in used_summaries:
+            return list(used_summaries)
+        return [*used_summaries, root]
+
+    @staticmethod
+    def _make_path(current_path: List[str], vuln: str, used_summaries: List[str]) -> ReachabilityPath:
         """
         Build a :class:`ReachabilityPath` from the BFS chain and matched sink.
 
@@ -243,10 +386,35 @@ class ReachabilityQueryEngine:
         tail, so we avoid duplicating it.
         """
         chain = list(current_path)
-        if not chain or chain[-1] != vuln:
+        if chain and chain[-1] != vuln:
+            tail = chain[-1]
+            if vuln.endswith("." + tail):
+                chain[-1] = vuln
+            elif tail.endswith("." + vuln):
+                pass
+            elif vuln not in chain:
+                chain.append(vuln)
+        elif not chain:
             chain.append(vuln)
         return ReachabilityPath(
             project_api=chain[0],
             tpl_chain=chain,
             vulnerable_target=vuln,
+            used_summaries=list(used_summaries),
         )
+
+    def _append_path(
+        self,
+        paths: List[ReachabilityPath],
+        path_keys: Set[Tuple[str, ...]],
+        current_path: List[str],
+        vuln: str,
+        used_summaries: List[str],
+    ) -> None:
+        path = self._make_path(current_path, vuln, used_summaries)
+        key = tuple(path.tpl_chain)
+        if key in path_keys or len(paths) >= self.max_paths:
+            return
+        path_keys.add(key)
+        paths.append(path)
+

@@ -7,9 +7,9 @@ from typing import Any, Optional
 import typer
 
 from pyshare.cli.output.display import console
-from pyshare.localization.candidates import select_patch_absent
-from pyshare.localization.function_parser import parse_repository
-from pyshare.localization.metadata import (
+from pyshare.localization.retrieval.candidates import select_patch_absent
+from pyshare.localization.code.function_parser import parse_repository
+from pyshare.localization.sources.metadata import (
     ResolvedMetadata,
     download_patch,
     resolve_metadata,
@@ -17,9 +17,9 @@ from pyshare.localization.metadata import (
     resolve_osv,
 )
 from pyshare.localization.models import LocalizationRequest
-from pyshare.localization.patch import PatchAnalysis, load_patch, parse_patch_text
+from pyshare.localization.sources.patch import PatchAnalysis, load_patch, parse_patch_text
 from pyshare.localization.service import localize_vulnerable_functions
-from pyshare.localization.tracker import track_patch_candidates
+from pyshare.localization.code.tracker import track_patch_candidates
 
 app = typer.Typer(help="Inspect each CVE-to-VF pipeline stage", no_args_is_help=True)
 

@@ -1,7 +1,7 @@
-from pyshare.package_analysis.callgraph import LibraryAnalyzer
-from pyshare.package_analysis.summary import build_library_summary
-from pyshare.project_analysis.entrypoints import scan_project
-from pyshare.project_analysis.project_graph import build_project_graph
+from pyshare.analysis.package.callgraph import LibraryAnalyzer
+from pyshare.analysis.package.summary import build_library_summary
+from pyshare.analysis.project.entrypoints import scan_project
+from pyshare.analysis.project.project_graph import build_project_graph
 
 
 def test_package_analysis_builds_callgraph_and_summary():

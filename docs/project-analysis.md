@@ -20,7 +20,7 @@ The analyzer uses static `ast` parsing and never executes project code.
 Discover entry points:
 
 ```python
-from pyshare.project_analysis import scan_project
+from pyshare.analysis.project import scan_project
 
 entrypoints = scan_project("./myapp")
 for entrypoint in entrypoints:
@@ -30,7 +30,7 @@ for entrypoint in entrypoints:
 Build the reachable project graph and Usage Index:
 
 ```python
-from pyshare.project_analysis import build_project_graph
+from pyshare.analysis.project import build_project_graph
 
 graph, usage_index = build_project_graph("./myapp")
 

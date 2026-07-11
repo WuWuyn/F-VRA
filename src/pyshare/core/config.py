@@ -18,6 +18,8 @@ class Settings(BaseSettings):
     index_dir:     Path = Path.home() / ".pyshare" / "index"
     cve_cache_dir: Path = Path.home() / ".pyshare" / "cve"
     repo_cache_dir: Path = Path.home() / ".pyshare" / "repos"
+    client_cache_dir: Path = Path.home() / ".pyshare" / "client"
+    server_store_dir: Path = Path.home() / ".pyshare" / "server"
 
     bm25_top_k: int = 100
     llm_top_k: int = 20
@@ -26,11 +28,17 @@ class Settings(BaseSettings):
     github_token: str = ""
     nvd_api_key: str = ""
     local_llm_api_key: str = ""
-    local_llm_base_url: str = "https://quatmo-api.iahn.hanoi.vn/v1"
-    local_llm_model: str = "qwen3-coder"
+    local_llm_base_url: str = ""
+    local_llm_model: str = ""
+    llm_provider: str = "auto"
+    llm_fallback_provider: str = ""
     local_embedding_api_key: str = ""
-    local_embedding_base_url: str = "https://quatmo-api.iahn.hanoi.vn/v1"
-    local_embedding_model: str = "qwen3-embedding"
+    local_embedding_base_url: str = ""
+    local_embedding_model: str = ""
+    callgraph_llm_model: str = ""
+    callgraph_llm_threshold: float = 0.75
+    callgraph_llm_limit: int = 0
+
     @property
     def llm_api_key(self) -> str:
         return self.local_llm_api_key
@@ -52,13 +60,24 @@ class Settings(BaseSettings):
 
     @property
     def embedding_base_url(self) -> str:
-        return self.local_embedding_base_url
+        if self.embedding_api_key and self.local_embedding_base_url:
+            return self.local_embedding_base_url
+        return ""
 
     @property
     def embedding_model(self) -> str:
         override = os.getenv("EMBEDDING_MODEL_OVERRIDE")
         if override:
             return override
-        return self.local_embedding_model
+        if (self.local_embedding_api_key or self.local_llm_api_key) and self.local_embedding_model:
+            return self.local_embedding_model
+        return ""
+
+    @property
+    def callgraph_model(self) -> str:
+        override = os.getenv("CALLGRAPH_LLM_MODEL_OVERRIDE")
+        if override:
+            return override
+        return self.callgraph_llm_model or self.llm_model
 
 settings = Settings()

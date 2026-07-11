@@ -17,14 +17,14 @@ SRC_ROOT = REPO_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
-from pyshare_analysis.callgraph.jarvis_backend import (  # noqa: E402
+from pyshare.analysis.callgraph.jarvis_backend import (  # noqa: E402
     JarvisOptions,
     build_jarvis_project_graph,
 )
-from pyshare_analysis.dependencies.resolver import resolve_dependency_graph  # noqa: E402
-from pyshare_core.models import ExternalNode, LibrarySummary  # noqa: E402
-from pyshare_reachability.engine import ReachabilityQueryEngine  # noqa: E402
-from pyshare_reachability.service import (  # noqa: E402
+from pyshare.analysis.dependencies.resolver import resolve_dependency_graph  # noqa: E402
+from pyshare.core.models import ExternalNode, LibrarySummary  # noqa: E402
+from pyshare.reachability.engine import ReachabilityQueryEngine  # noqa: E402
+from pyshare.reachability.service import (  # noqa: E402
     _graph_artifact,
     _with_project_callers,
     decide_reachability_verdict,
@@ -197,7 +197,7 @@ def _proxy_targets_from_usage(
 
 
 def _build_summary_for_root(root: str) -> tuple[LibrarySummary | None, dict[str, Any]]:
-    from pyshare_reachability.service import _build_package_summary
+    from pyshare.reachability.service import _build_package_summary
 
     started = time.perf_counter()
     try:

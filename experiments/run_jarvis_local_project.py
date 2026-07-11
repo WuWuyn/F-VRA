@@ -13,7 +13,7 @@ SRC_ROOT = REPO_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
-from pyshare_analysis.callgraph.jarvis_backend import (  # noqa: E402
+from pyshare.analysis.callgraph.jarvis_backend import (  # noqa: E402
     JarvisOptions,
     build_jarvis_project_graph,
 )

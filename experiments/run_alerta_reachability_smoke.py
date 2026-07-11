@@ -15,14 +15,14 @@ SRC_ROOT = REPO_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
-from pyshare_analysis.callgraph.jarvis_backend import (  # noqa: E402
+from pyshare.analysis.callgraph.jarvis_backend import (  # noqa: E402
     JarvisOptions,
     build_jarvis_project_graph,
 )
-from pyshare_analysis.dependencies.resolver import resolve_dependency_graph  # noqa: E402
-from pyshare_core.models import LibrarySummary  # noqa: E402
-from pyshare_reachability.engine import ReachabilityQueryEngine  # noqa: E402
-from pyshare_reachability.service import _graph_artifact, _with_project_callers  # noqa: E402
+from pyshare.analysis.dependencies.resolver import resolve_dependency_graph  # noqa: E402
+from pyshare.core.models import LibrarySummary  # noqa: E402
+from pyshare.reachability.engine import ReachabilityQueryEngine  # noqa: E402
+from pyshare.reachability.service import _graph_artifact, _with_project_callers  # noqa: E402
 
 
 def _resolve(path_value: str | Path) -> Path:
