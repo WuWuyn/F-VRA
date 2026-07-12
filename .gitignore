@@ -60,6 +60,10 @@ artifacts/witnesses/**
 artifacts/pipeline_runs/**
 !artifacts/pipeline_runs/
 !artifacts/pipeline_runs/.gitkeep
+artifacts/patch_diffs/**
+!artifacts/patch_diffs/
+!artifacts/patch_diffs/.gitkeep
+docs/output_file/**
 
 # Experiment outputs
 results/logs/**
@@ -71,6 +75,7 @@ results/tables/*.csv
 !results/tables/project_cve_overview.csv
 !results/tables/project_cve_details.csv
 !results/tables/project_cve_source_findings.csv
+!results/tables/cve_vf_annotation_coverage.csv
 results/figures/*.png
 results/figures/*.svg
 

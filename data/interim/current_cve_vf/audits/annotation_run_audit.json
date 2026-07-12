@@ -1,0 +1,14 @@
+{
+  "annotated_count": 148,
+  "bucket_file": "data/interim/annotations/current_cve_vf/judged_vf_queue.jsonl",
+  "candidate_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\interim\\current_cve_vf\\current_candidate_functions.jsonl",
+  "dry_run": false,
+  "error_count": 0,
+  "model": "anthropic/claude-sonnet-5",
+  "no_diff_count": 0,
+  "no_source_count": 83,
+  "out_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\interim\\annotations\\vf_annotations.jsonl",
+  "requested_group_count": 278,
+  "resume": true,
+  "skipped_count": 130
+}

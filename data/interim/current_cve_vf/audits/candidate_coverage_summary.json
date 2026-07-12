@@ -1,0 +1,19 @@
+{
+  "available_by_evidence_level": {
+    "advisory_explicit": 1,
+    "patch_verified": 228,
+    "weak_or_uncertain": 120
+  },
+  "candidate_record_count": 349,
+  "missing_by_evidence_level": {
+    "advisory_explicit": 32,
+    "weak_or_uncertain": 163
+  },
+  "missing_candidate_count": 195,
+  "scope_row_count": 544,
+  "source_counts": {
+    "diff_hunk_fallback": 125,
+    "phase7e_candidate_functions_v2": 224
+  },
+  "tool_version": "current_cve_scope_v1"
+}

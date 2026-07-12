@@ -1,0 +1,379 @@
+[
+  {
+    "candidates": [
+      {
+        "candidate_available": false,
+        "evidence_level": "weak_or_uncertain",
+        "group_id": "CVE-2023-6237::cryptography",
+        "package": "cryptography",
+        "package_normalized": "cryptography",
+        "package_selection_score": 13601,
+        "valid_alert_row_count": 1,
+        "valid_project_count": 1
+      },
+      {
+        "candidate_available": false,
+        "evidence_level": "weak_or_uncertain",
+        "group_id": "CVE-2023-6237::pyopenssl",
+        "package": "pyopenssl",
+        "package_normalized": "pyopenssl",
+        "package_selection_score": 13601,
+        "valid_alert_row_count": 1,
+        "valid_project_count": 1
+      }
+    ],
+    "cve_id": "CVE-2023-6237",
+    "selected_group_id": "CVE-2023-6237::cryptography",
+    "selected_package": "cryptography",
+    "selected_package_normalized": "cryptography",
+    "selected_package_reason": "selected cryptography by strongest evidence policy: evidence=weak_or_uncertain, score=13601, candidate not yet available"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_available": true,
+        "evidence_level": "patch_verified",
+        "group_id": "CVE-2024-12911::llama-index",
+        "package": "llama-index",
+        "package_normalized": "llama-index",
+        "package_selection_score": 58603,
+        "valid_alert_row_count": 3,
+        "valid_project_count": 1
+      },
+      {
+        "candidate_available": false,
+        "evidence_level": "weak_or_uncertain",
+        "group_id": "CVE-2024-12911::llama-index-core",
+        "package": "llama-index-core",
+        "package_normalized": "llama-index-core",
+        "package_selection_score": 13601,
+        "valid_alert_row_count": 1,
+        "valid_project_count": 1
+      }
+    ],
+    "cve_id": "CVE-2024-12911",
+    "selected_group_id": "CVE-2024-12911::llama-index",
+    "selected_package": "llama-index",
+    "selected_package_normalized": "llama-index",
+    "selected_package_reason": "selected llama-index by strongest evidence policy: evidence=patch_verified, score=58603, candidate available"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_available": false,
+        "evidence_level": "weak_or_uncertain",
+        "group_id": "CVE-2024-2511::cryptography",
+        "package": "cryptography",
+        "package_normalized": "cryptography",
+        "package_selection_score": 13702,
+        "valid_alert_row_count": 2,
+        "valid_project_count": 2
+      },
+      {
+        "candidate_available": false,
+        "evidence_level": "weak_or_uncertain",
+        "group_id": "CVE-2024-2511::pyopenssl",
+        "package": "pyopenssl",
+        "package_normalized": "pyopenssl",
+        "package_selection_score": 13601,
+        "valid_alert_row_count": 1,
+        "valid_project_count": 1
+      }
+    ],
+    "cve_id": "CVE-2024-2511",
+    "selected_group_id": "CVE-2024-2511::cryptography",
+    "selected_package": "cryptography",
+    "selected_package_normalized": "cryptography",
+    "selected_package_reason": "selected cryptography by strongest evidence policy: evidence=weak_or_uncertain, score=13702, candidate not yet available"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_available": true,
+        "evidence_level": "patch_verified",
+        "group_id": "CVE-2024-8309::langchain-community",
+        "package": "langchain-community",
+        "package_normalized": "langchain-community",
+        "package_selection_score": 58603,
+        "valid_alert_row_count": 3,
+        "valid_project_count": 1
+      },
+      {
+        "candidate_available": true,
+        "evidence_level": "patch_verified",
+        "group_id": "CVE-2024-8309::langchain",
+        "package": "langchain",
+        "package_normalized": "langchain",
+        "package_selection_score": 58601,
+        "valid_alert_row_count": 1,
+        "valid_project_count": 1
+      }
+    ],
+    "cve_id": "CVE-2024-8309",
+    "selected_group_id": "CVE-2024-8309::langchain-community",
+    "selected_package": "langchain-community",
+    "selected_package_normalized": "langchain-community",
+    "selected_package_reason": "selected langchain-community by strongest evidence policy: evidence=patch_verified, score=58603, candidate available"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_available": true,
+        "evidence_level": "patch_verified",
+        "group_id": "CVE-2025-1793::llama-index",
+        "package": "llama-index",
+        "package_normalized": "llama-index",
+        "package_selection_score": 58603,
+        "valid_alert_row_count": 3,
+        "valid_project_count": 1
+      },
+      {
+        "candidate_available": false,
+        "evidence_level": "weak_or_uncertain",
+        "group_id": "CVE-2025-1793::llama-index-core",
+        "package": "llama-index-core",
+        "package_normalized": "llama-index-core",
+        "package_selection_score": 13601,
+        "valid_alert_row_count": 1,
+        "valid_project_count": 1
+      }
+    ],
+    "cve_id": "CVE-2025-1793",
+    "selected_group_id": "CVE-2025-1793::llama-index",
+    "selected_package": "llama-index",
+    "selected_package_normalized": "llama-index",
+    "selected_package_reason": "selected llama-index by strongest evidence policy: evidence=patch_verified, score=58603, candidate available"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_available": true,
+        "evidence_level": "patch_verified",
+        "group_id": "CVE-2025-3108::llama-index-core",
+        "package": "llama-index-core",
+        "package_normalized": "llama-index-core",
+        "package_selection_score": 58601,
+        "valid_alert_row_count": 1,
+        "valid_project_count": 1
+      },
+      {
+        "candidate_available": false,
+        "evidence_level": "weak_or_uncertain",
+        "group_id": "CVE-2025-3108::llama-index",
+        "package": "llama-index",
+        "package_normalized": "llama-index",
+        "package_selection_score": 13601,
+        "valid_alert_row_count": 1,
+        "valid_project_count": 1
+      }
+    ],
+    "cve_id": "CVE-2025-3108",
+    "selected_group_id": "CVE-2025-3108::llama-index-core",
+    "selected_package": "llama-index-core",
+    "selected_package_normalized": "llama-index-core",
+    "selected_package_reason": "selected llama-index-core by strongest evidence policy: evidence=patch_verified, score=58601, candidate available"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_available": true,
+        "evidence_level": "patch_verified",
+        "group_id": "CVE-2025-5472::llama-index-core",
+        "package": "llama-index-core",
+        "package_normalized": "llama-index-core",
+        "package_selection_score": 58604,
+        "valid_alert_row_count": 4,
+        "valid_project_count": 1
+      },
+      {
+        "candidate_available": false,
+        "evidence_level": "weak_or_uncertain",
+        "group_id": "CVE-2025-5472::llama-index",
+        "package": "llama-index",
+        "package_normalized": "llama-index",
+        "package_selection_score": 13601,
+        "valid_alert_row_count": 1,
+        "valid_project_count": 1
+      }
+    ],
+    "cve_id": "CVE-2025-5472",
+    "selected_group_id": "CVE-2025-5472::llama-index-core",
+    "selected_package": "llama-index-core",
+    "selected_package_normalized": "llama-index-core",
+    "selected_package_reason": "selected llama-index-core by strongest evidence policy: evidence=patch_verified, score=58604, candidate available"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_available": true,
+        "evidence_level": "patch_verified",
+        "group_id": "CVE-2025-6209::llama-index",
+        "package": "llama-index",
+        "package_normalized": "llama-index",
+        "package_selection_score": 58601,
+        "valid_alert_row_count": 1,
+        "valid_project_count": 1
+      },
+      {
+        "candidate_available": true,
+        "evidence_level": "patch_verified",
+        "group_id": "CVE-2025-6209::llama-index-core",
+        "package": "llama-index-core",
+        "package_normalized": "llama-index-core",
+        "package_selection_score": 58601,
+        "valid_alert_row_count": 1,
+        "valid_project_count": 1
+      }
+    ],
+    "cve_id": "CVE-2025-6209",
+    "selected_group_id": "CVE-2025-6209::llama-index",
+    "selected_package": "llama-index",
+    "selected_package_normalized": "llama-index",
+    "selected_package_reason": "selected llama-index by strongest evidence policy: evidence=patch_verified, score=58601, candidate available"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_available": true,
+        "evidence_level": "patch_verified",
+        "group_id": "CVE-2025-66416::mcp",
+        "package": "mcp",
+        "package_normalized": "mcp",
+        "package_selection_score": 58708,
+        "valid_alert_row_count": 8,
+        "valid_project_count": 2
+      },
+      {
+        "candidate_available": false,
+        "evidence_level": "weak_or_uncertain",
+        "group_id": "CVE-2025-66416::fastmcp",
+        "package": "fastmcp",
+        "package_normalized": "fastmcp",
+        "package_selection_score": 13602,
+        "valid_alert_row_count": 2,
+        "valid_project_count": 1
+      }
+    ],
+    "cve_id": "CVE-2025-66416",
+    "selected_group_id": "CVE-2025-66416::mcp",
+    "selected_package": "mcp",
+    "selected_package_normalized": "mcp",
+    "selected_package_reason": "selected mcp by strongest evidence policy: evidence=patch_verified, score=58708, candidate available"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_available": false,
+        "evidence_level": "advisory_explicit",
+        "group_id": "CVE-2025-7707::llama-index",
+        "package": "llama-index",
+        "package_normalized": "llama-index",
+        "package_selection_score": 33604,
+        "valid_alert_row_count": 4,
+        "valid_project_count": 1
+      },
+      {
+        "candidate_available": false,
+        "evidence_level": "weak_or_uncertain",
+        "group_id": "CVE-2025-7707::llama-index-core",
+        "package": "llama-index-core",
+        "package_normalized": "llama-index-core",
+        "package_selection_score": 13601,
+        "valid_alert_row_count": 1,
+        "valid_project_count": 1
+      }
+    ],
+    "cve_id": "CVE-2025-7707",
+    "selected_group_id": "CVE-2025-7707::llama-index",
+    "selected_package": "llama-index",
+    "selected_package_normalized": "llama-index",
+    "selected_package_reason": "selected llama-index by strongest evidence policy: evidence=advisory_explicit, score=33604, candidate not yet available"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_available": true,
+        "evidence_level": "patch_verified",
+        "group_id": "CVE-2026-26013::langchain-core",
+        "package": "langchain-core",
+        "package_normalized": "langchain-core",
+        "package_selection_score": 58704,
+        "valid_alert_row_count": 4,
+        "valid_project_count": 2
+      },
+      {
+        "candidate_available": false,
+        "evidence_level": "weak_or_uncertain",
+        "group_id": "CVE-2026-26013::langchain-openai",
+        "package": "langchain-openai",
+        "package_normalized": "langchain-openai",
+        "package_selection_score": 13601,
+        "valid_alert_row_count": 1,
+        "valid_project_count": 1
+      }
+    ],
+    "cve_id": "CVE-2026-26013",
+    "selected_group_id": "CVE-2026-26013::langchain-core",
+    "selected_package": "langchain-core",
+    "selected_package_normalized": "langchain-core",
+    "selected_package_reason": "selected langchain-core by strongest evidence policy: evidence=patch_verified, score=58704, candidate available"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_available": true,
+        "evidence_level": "patch_verified",
+        "group_id": "CVE-2026-45134::langsmith",
+        "package": "langsmith",
+        "package_normalized": "langsmith",
+        "package_selection_score": 58706,
+        "valid_alert_row_count": 6,
+        "valid_project_count": 2
+      },
+      {
+        "candidate_available": true,
+        "evidence_level": "patch_verified",
+        "group_id": "CVE-2026-45134::langchain",
+        "package": "langchain",
+        "package_normalized": "langchain",
+        "package_selection_score": 58705,
+        "valid_alert_row_count": 5,
+        "valid_project_count": 2
+      }
+    ],
+    "cve_id": "CVE-2026-45134",
+    "selected_group_id": "CVE-2026-45134::langsmith",
+    "selected_package": "langsmith",
+    "selected_package_normalized": "langsmith",
+    "selected_package_reason": "selected langsmith by strongest evidence policy: evidence=patch_verified, score=58706, candidate available"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_available": false,
+        "evidence_level": "weak_or_uncertain",
+        "group_id": "CVE-2026-55443::langchain",
+        "package": "langchain",
+        "package_normalized": "langchain",
+        "package_selection_score": 13808,
+        "valid_alert_row_count": 8,
+        "valid_project_count": 3
+      },
+      {
+        "candidate_available": false,
+        "evidence_level": "weak_or_uncertain",
+        "group_id": "CVE-2026-55443::langchain-anthropic",
+        "package": "langchain-anthropic",
+        "package_normalized": "langchain-anthropic",
+        "package_selection_score": 13603,
+        "valid_alert_row_count": 3,
+        "valid_project_count": 1
+      }
+    ],
+    "cve_id": "CVE-2026-55443",
+    "selected_group_id": "CVE-2026-55443::langchain",
+    "selected_package": "langchain",
+    "selected_package_normalized": "langchain",
+    "selected_package_reason": "selected langchain by strongest evidence policy: evidence=weak_or_uncertain, score=13808, candidate not yet available"
+  }
+]

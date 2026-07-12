@@ -1,0 +1,35 @@
+{
+  "annotation_file": "data\\interim\\annotations\\vf_annotations.jsonl",
+  "confidence_counts": {
+    "high": 134,
+    "low": 48,
+    "medium": 7
+  },
+  "duplicate_group_ids": [],
+  "error_count": 0,
+  "evidence_level_counts": {
+    "advisory_explicit": 1,
+    "patch_verified": 133,
+    "weak_or_uncertain": 55
+  },
+  "expected_tier1_count": 189,
+  "extra_output_count": 0,
+  "mapping_type_counts": {
+    "ambiguous": 62,
+    "multi_function_behavior": 16,
+    "multiple_independent_vfs": 12,
+    "single_vf": 99
+  },
+  "missing_from_output_count": 0,
+  "missing_required_count": 0,
+  "passes": true,
+  "row_count": 189,
+  "target_label_counts": {
+    "discard": 182,
+    "review": 1,
+    "root_cause_vf": 158,
+    "vulnerable_usage_site": 10
+  },
+  "tier1_bucket_file": "data\\interim\\annotations\\current_cve_vf\\annotation_buckets\\tier1_ready.jsonl",
+  "vf_not_in_candidates_count": 63
+}

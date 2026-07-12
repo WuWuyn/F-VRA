@@ -1,0 +1,26 @@
+{
+  "judged_evidence_counts": {
+    "advisory_explicit": 99,
+    "ambiguous": 11,
+    "patch_verified": 285,
+    "poc_verified": 1,
+    "unknown": 55,
+    "weak_or_uncertain": 93
+  },
+  "judgement_count": 544,
+  "passes_no_duplicate_group_id": true,
+  "queue_confidence_counts": {
+    "high": 263,
+    "medium": 15
+  },
+  "queue_count": 278,
+  "queue_evidence_counts": {
+    "advisory_explicit": 12,
+    "patch_verified": 266
+  },
+  "reject_reasons": {
+    "judge_rejected": 159,
+    "low_confidence": 1,
+    "no_candidate_functions": 106
+  }
+}
