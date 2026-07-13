@@ -1,0 +1,183 @@
+{
+  "nodes": 23,
+  "edges": 22,
+  "internal_edges": 10,
+  "external_edges": 12,
+  "usage_index_count": 6,
+  "entry_points": [
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\fastapi_skeleton\\api\\routes\\heartbeat.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\fastapi_skeleton\\api\\routes\\prediction.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\conftest.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\test_api\\test_api_auth.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\test_api\\test_heartbeat.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\test_api\\test_prediction.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\test_service\\test_models.py"
+  ],
+  "metadata": {
+    "jarvis_external_usage_augmented_count": 8,
+    "jarvis_external_usage_augmented_edges": [
+      {
+        "caller": "fastapi_skeleton.main.get_app",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\fastapi_skeleton\\main.py",
+        "line_number": 9,
+        "call_expr": "FastAPI(title=APP_NAME, version=APP_VERSION, debug=IS_DEBUG)"
+      },
+      {
+        "caller": "tests.conftest.test_client",
+        "callee": "starlette.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\conftest.py",
+        "line_number": 16,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "fastapi_skeleton.services.models.HousePriceModel._load_local_model",
+        "callee": "joblib.load",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\fastapi_skeleton\\services\\models.py",
+        "line_number": 18,
+        "call_expr": "joblib.load(self.path)"
+      },
+      {
+        "caller": "fastapi_skeleton.services.models.HousePriceModel._pre_process",
+        "callee": "numpy.asarray",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\fastapi_skeleton\\services\\models.py",
+        "line_number": 22,
+        "call_expr": "np.asarray(payload_to_list(payload))"
+      },
+      {
+        "caller": "fastapi_skeleton.services.models.HousePriceModel._pre_process",
+        "callee": "loguru.logger.debug",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\fastapi_skeleton\\services\\models.py",
+        "line_number": 21,
+        "call_expr": "logger.debug('Pre-processing payload.')"
+      },
+      {
+        "caller": "fastapi_skeleton.services.models.HousePriceModel._post_process",
+        "callee": "loguru.logger.debug",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\fastapi_skeleton\\services\\models.py",
+        "line_number": 26,
+        "call_expr": "logger.debug('Post-processing prediction.')"
+      },
+      {
+        "caller": "fastapi_skeleton.services.models.HousePriceModel._predict",
+        "callee": "loguru.logger.debug",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\fastapi_skeleton\\services\\models.py",
+        "line_number": 33,
+        "call_expr": "logger.debug('Predicting.')"
+      },
+      {
+        "caller": "fastapi_skeleton.services.models.HousePriceModel.predict",
+        "callee": "loguru.logger.info",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\fastapi_skeleton\\services\\models.py",
+        "line_number": 40,
+        "call_expr": "logger.info(prediction)"
+      }
+    ],
+    "jarvis_usage_index_before_filter": [
+      "<builtin>.int",
+      "<builtin>.isinstance",
+      "<builtin>.str",
+      "fastapi.FastAPI",
+      "joblib.load",
+      "loguru.logger.debug",
+      "loguru.logger.info",
+      "numpy.asarray",
+      "starlette.testclient.TestClient"
+    ],
+    "jarvis_usage_index_after_filter": [
+      "fastapi.FastAPI",
+      "joblib.load",
+      "loguru.logger.debug",
+      "loguru.logger.info",
+      "numpy.asarray",
+      "starlette.testclient.TestClient"
+    ],
+    "jarvis_usage_augmentation_warnings": [],
+    "analysis_mode": "jarvis",
+    "project_mode": "jarvis_EA_entrypoints",
+    "entry_points": [
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\fastapi_skeleton\\api\\routes\\heartbeat.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\fastapi_skeleton\\api\\routes\\prediction.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\conftest.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\test_api\\test_api_auth.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\test_api\\test_heartbeat.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\test_api\\test_prediction.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\test_service\\test_models.py"
+    ],
+    "jarvis_mode": "EA",
+    "jarvis_scope": "entrypoints",
+    "jarvis_scope_meta": {
+      "scope": "entrypoints",
+      "entrypoint_count": 10,
+      "entrypoint_names": [
+        "fastapi_skeleton.api.routes.heartbeat.get_hearbeat",
+        "fastapi_skeleton.api.routes.prediction.post_predict",
+        "tests.conftest.test_client",
+        "tests.test_api.test_api_auth.test_auth_using_prediction_api_no_apikey_header",
+        "tests.test_api.test_api_auth.test_auth_using_prediction_api_wrong_apikey_header",
+        "tests.test_api.test_heartbeat.test_default_route",
+        "tests.test_api.test_heartbeat.test_heartbeat",
+        "tests.test_api.test_prediction.test_prediction",
+        "tests.test_api.test_prediction.test_prediction_nopayload",
+        "tests.test_service.test_models.test_prediction"
+      ],
+      "entrypoint_files": [
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\fastapi_skeleton\\api\\routes\\heartbeat.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\fastapi_skeleton\\api\\routes\\prediction.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\conftest.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\test_api\\test_api_auth.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\test_api\\test_heartbeat.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\test_api\\test_prediction.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton\\tests\\test_service\\test_models.py"
+      ],
+      "fallback": false
+    },
+    "jarvis": {
+      "runner": "docker",
+      "mode": "EA",
+      "precision": true,
+      "jarvis_root": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.tools\\pythonJaRvis\\Jarvis",
+      "timeout_s": 300,
+      "module_count": 7,
+      "pip_install": "",
+      "stdout": "/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/fastapi_skeleton/api/routes/heartbeat.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/fastapi_skeleton/models/heartbeat.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/fastapi_skeleton/api/routes/prediction.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/fastapi_skeleton/core/security.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/fastapi_skeleton/core/config.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/fastapi_skeleton/core/messages.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/fastapi_skeleton/models/payload.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/fastapi_skeleton/models/prediction.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/fastapi_skeleton/services/models.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/tests/conftest.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/fastapi_skeleton/main.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/fastapi_skeleton/api/routes/router.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/fastapi_skeleton/core/event_handlers.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/tests/test_api/test_api_auth.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/tests/test_api/test_heartbeat.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/tests/test_api/test_prediction.py\n/workspace/data/raw/projects/eightBEC__fastapi-ml-skeleton/tests/test_service/test_models.py\n",
+      "stderr": ""
+    },
+    "function_type_graphs": {},
+    "unresolved_calls": [],
+    "candidate_edges": [],
+    "reanalyzed_contexts": []
+  },
+  "usage_index": [
+    {
+      "identity": "fastapi.FastAPI",
+      "target_module": "fastapi",
+      "target_name": "FastAPI"
+    },
+    {
+      "identity": "joblib.load",
+      "target_module": "joblib",
+      "target_name": "load"
+    },
+    {
+      "identity": "loguru.logger.debug",
+      "target_module": "loguru.logger",
+      "target_name": "debug"
+    },
+    {
+      "identity": "loguru.logger.info",
+      "target_module": "loguru.logger",
+      "target_name": "info"
+    },
+    {
+      "identity": "numpy.asarray",
+      "target_module": "numpy",
+      "target_name": "asarray"
+    },
+    {
+      "identity": "starlette.testclient.TestClient",
+      "target_module": "starlette.testclient",
+      "target_name": "TestClient"
+    }
+  ]
+}

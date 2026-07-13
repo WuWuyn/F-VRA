@@ -1,0 +1,51 @@
+{
+  "project": {
+    "id": "spiral-project__ihatemoney",
+    "name": "spiral-project__ihatemoney",
+    "repo_full_name": "spiral-project/ihatemoney",
+    "repo_url": "https://github.com/spiral-project/ihatemoney.git",
+    "commit": "3ee8e078f472fb2a1e48c406f840c1f919224ce1",
+    "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\spiral-project__ihatemoney",
+    "enabled": true,
+    "environment_status": "resolved_from_lockfile_or_manifest",
+    "version_source": "lockfile_or_manifest",
+    "manifest_files": [
+      "uv.lock",
+      "pyproject.toml"
+    ],
+    "resolved_package_count": 101
+  },
+  "status": "success",
+  "runner": "docker",
+  "jarvis_attempts": [
+    {
+      "runner": "docker",
+      "status": "success",
+      "elapsed_s": 8.994
+    }
+  ],
+  "dependency_graph": {
+    "status": "success",
+    "dependency_count": 101,
+    "elapsed_s": 0.458
+  },
+  "artifacts": {
+    "project_graph": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\spiral-project__ihatemoney\\project_graph_jarvis.json",
+    "usage_index": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\spiral-project__ihatemoney\\usage_index.json",
+    "package_summary_status": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\spiral-project__ihatemoney\\package_summary_status.json",
+    "reachability": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\spiral-project__ihatemoney\\reachability_report.json"
+  },
+  "counts": {
+    "project_nodes": 321,
+    "project_edges": 636,
+    "usage_index": 60,
+    "records": 16,
+    "query_targets": 22,
+    "package_summary_status": {
+      "built": 14,
+      "missing_source": 46
+    },
+    "loaded_summaries": 14
+  },
+  "elapsed_s": 34.996
+}

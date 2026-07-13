@@ -1,0 +1,961 @@
+{
+  "nodes": 380,
+  "edges": 666,
+  "internal_edges": 412,
+  "external_edges": 254,
+  "usage_index_count": 24,
+  "entry_points": [
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\api\\test_core.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ftp.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ftps.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_smb.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_smtp.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_socket.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ssh.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ssl.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_user_added_http_headers.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\test_die.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\test_exclude_ports.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\test_graph.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\test_ip.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\utils\\test_common.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_db.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_models.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_mysql.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_postgresql.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_sqlite.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\lib\\payloads\\test_passwords.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\lib\\payloads\\test_wordlists.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\test_yaml_schema_and_regex.py"
+  ],
+  "metadata": {
+    "jarvis_external_usage_augmented_count": 60,
+    "jarvis_external_usage_augmented_edges": [
+      {
+        "caller": "tests.test_yaml_schema_and_regex.load_yaml",
+        "callee": "yaml.safe_load",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\test_yaml_schema_and_regex.py",
+        "line_number": 24,
+        "call_expr": "yaml.safe_load(f)"
+      },
+      {
+        "caller": "tests.test_yaml_schema_and_regex.test_yaml_schema_and_regex_valid",
+        "callee": "pytest.skip",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\test_yaml_schema_and_regex.py",
+        "line_number": 283,
+        "call_expr": "pytest.skip(f'{yaml_file}: no supported payload libraries found (expected http, socket, or brute protocols)')"
+      },
+      {
+        "caller": "tests.database.test_db.TestDatabase.test_apsw_busy_error",
+        "callee": "apsw.BusyError",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_db.py",
+        "line_number": 411,
+        "call_expr": "apsw.BusyError('database is locked')"
+      },
+      {
+        "caller": "tests.database.test_db.TestDatabase.test_sqlite_operational_error",
+        "callee": "apsw.BusyError",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_db.py",
+        "line_number": 437,
+        "call_expr": "apsw.BusyError('other error')"
+      },
+      {
+        "caller": "tests.database.test_db.TestDatabase.test_temp_log_busy_error",
+        "callee": "apsw.BusyError",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_db.py",
+        "line_number": 561,
+        "call_expr": "apsw.BusyError('database is locked')"
+      },
+      {
+        "caller": "tests.database.test_db.TestDatabase.test_temp_log_operational_error",
+        "callee": "apsw.BusyError",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_db.py",
+        "line_number": 578,
+        "call_expr": "apsw.BusyError('some other error')"
+      },
+      {
+        "caller": "tests.database.test_mysql.test_mysql_create_database_exception",
+        "callee": "sqlalchemy.exc.SQLAlchemyError",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_mysql.py",
+        "line_number": 71,
+        "call_expr": "SQLAlchemyError('Connection error')"
+      },
+      {
+        "caller": "tests.core.lib.test_ftp.TestFtpLibrary.test_connect_failure_propagates",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ftp.py",
+        "line_number": 89,
+        "call_expr": "pytest.raises(type(exc))"
+      },
+      {
+        "caller": "tests.core.lib.test_ftp.TestFtpLibrary.test_login_ftp_error_propagates",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ftp.py",
+        "line_number": 106,
+        "call_expr": "pytest.raises(type(exc))"
+      },
+      {
+        "caller": "tests.core.utils.test_common.test_fuzzer_repeater_perform_disallowed_interceptor_raises",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\utils\\test_common.py",
+        "line_number": 281,
+        "call_expr": "pytest.raises(ValueError, match='os.system')"
+      },
+      {
+        "caller": "tests.core.utils.test_common.test_fuzzer_repeater_perform_unknown_interceptor_alongside_allowed_raises",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\utils\\test_common.py",
+        "line_number": 289,
+        "call_expr": "pytest.raises(ValueError, match='__import__')"
+      },
+      {
+        "caller": "nettacker.api.core.get_file",
+        "callee": "flask.abort",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\core.py",
+        "line_number": 127,
+        "call_expr": "abort(404)"
+      },
+      {
+        "caller": "nettacker.api.core.api_key_is_valid",
+        "callee": "flask.abort",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\core.py",
+        "line_number": 143,
+        "call_expr": "abort(401, _('API_invalid'))"
+      },
+      {
+        "caller": "nettacker.api.engine.get_statics",
+        "callee": "flask.Response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 188,
+        "call_expr": "Response(get_file(os.path.join(Config.path.web_static_dir, path)), mimetype=static_types.get(os.path.splitext(path)[1], 'text/html'))"
+      },
+      {
+        "caller": "nettacker.api.engine.index",
+        "callee": "flask.render_template",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 202,
+        "call_expr": "render_template('index.html', selected_modules=scan_methods(), profile=profiles(), languages=languages_to_country(), graphs=graphs(), filename=Config.settings.report_path_filename)"
+      },
+      {
+        "caller": "nettacker.api.engine.sanitize_report_path_filename",
+        "callee": "werkzeug.utils.secure_filename",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 222,
+        "call_expr": "secure_filename(os.path.basename(report_path_filename))"
+      },
+      {
+        "caller": "nettacker.api.engine.new_scan",
+        "callee": "flask.jsonify",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 271,
+        "call_expr": "jsonify(vars(nettacker_app.arguments))"
+      },
+      {
+        "caller": "nettacker.api.engine.compare_scans",
+        "callee": "flask.jsonify",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 308,
+        "call_expr": "jsonify(structure(status='error', msg='Invalid file path'))"
+      },
+      {
+        "caller": "nettacker.api.engine.session_check",
+        "callee": "flask.jsonify",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 320,
+        "call_expr": "jsonify(structure(status='ok', msg=_('browser_session_valid')))"
+      },
+      {
+        "caller": "nettacker.api.engine.session_set",
+        "callee": "flask.make_response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 333,
+        "call_expr": "make_response(jsonify(structure(status='ok', msg=_('browser_session_valid'))))"
+      },
+      {
+        "caller": "nettacker.api.engine.session_set",
+        "callee": "flask.jsonify",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 333,
+        "call_expr": "jsonify(structure(status='ok', msg=_('browser_session_valid')))"
+      },
+      {
+        "caller": "nettacker.api.engine.session_kill",
+        "callee": "flask.make_response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 353,
+        "call_expr": "make_response(jsonify(structure(status='ok', msg=_('browser_session_killed'))))"
+      },
+      {
+        "caller": "nettacker.api.engine.session_kill",
+        "callee": "flask.jsonify",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 353,
+        "call_expr": "jsonify(structure(status='ok', msg=_('browser_session_killed')))"
+      },
+      {
+        "caller": "nettacker.api.engine.get_results",
+        "callee": "flask.jsonify",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 370,
+        "call_expr": "jsonify(select_reports(int(page)))"
+      },
+      {
+        "caller": "nettacker.api.engine.get_result_content",
+        "callee": "flask.Response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 391,
+        "call_expr": "Response(file_content, mimetype=mime_types().get(os.path.splitext(filename)[1], 'text/plain'), headers={'Content-Disposition': 'attachment;filename=' + filename.split('/')[-1]})"
+      },
+      {
+        "caller": "nettacker.api.engine.get_result_content",
+        "callee": "flask.jsonify",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 389,
+        "call_expr": "jsonify(structure(status='error', msg='database error!'))"
+      },
+      {
+        "caller": "nettacker.api.engine.get_results_json",
+        "callee": "flask.Response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 414,
+        "call_expr": "Response(json_object, mimetype='application/json', headers={'Content-Disposition': 'attachment;filename=' + filename})"
+      },
+      {
+        "caller": "nettacker.api.engine.get_results_json",
+        "callee": "flask.jsonify",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 410,
+        "call_expr": "jsonify(structure(status='error', msg=_('invalid_scan_id')))"
+      },
+      {
+        "caller": "nettacker.api.engine.get_results_csv",
+        "callee": "flask.Response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 445,
+        "call_expr": "Response(reader, mimetype='text/csv', headers={'Content-Disposition': 'attachment;filename=' + filename})"
+      },
+      {
+        "caller": "nettacker.api.engine.get_results_csv",
+        "callee": "flask.jsonify",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 433,
+        "call_expr": "jsonify(structure(status='error', msg=_('invalid_scan_id')))"
+      },
+      {
+        "caller": "nettacker.api.engine.get_last_host_logs",
+        "callee": "flask.jsonify",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 464,
+        "call_expr": "jsonify(last_host_logs(int(page)))"
+      },
+      {
+        "caller": "nettacker.api.engine.get_logs_html",
+        "callee": "flask.make_response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 477,
+        "call_expr": "make_response(logs_to_report_html(target))"
+      },
+      {
+        "caller": "nettacker.api.engine.get_logs",
+        "callee": "flask.Response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 497,
+        "call_expr": "Response(json_object, mimetype='application/json', headers={'Content-Disposition': 'attachment;filename=' + filename + '.json'})"
+      },
+      {
+        "caller": "nettacker.api.engine.get_logs_csv",
+        "callee": "flask.Response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 528,
+        "call_expr": "Response(reader, mimetype='text/csv', headers={'Content-Disposition': f'attachment;filename={filename}.csv'})"
+      },
+      {
+        "caller": "nettacker.api.engine.go_for_search_logs",
+        "callee": "flask.jsonify",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "line_number": 554,
+        "call_expr": "jsonify(search_logs(page, query))"
+      },
+      {
+        "caller": "nettacker.core.arg_parser.ArgParser.load_modules",
+        "callee": "yaml.safe_load",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\arg_parser.py",
+        "line_number": 89,
+        "call_expr": "yaml.safe_load(TemplateLoader(module).open().split('payload:')[0])"
+      },
+      {
+        "caller": "nettacker.core.graph.build_text_table",
+        "callee": "texttable.Texttable",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\graph.py",
+        "line_number": 85,
+        "call_expr": "texttable.Texttable()"
+      },
+      {
+        "caller": "nettacker.core.graph.create_compare_text_table",
+        "callee": "texttable.Texttable",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\graph.py",
+        "line_number": 111,
+        "call_expr": "texttable.Texttable()"
+      },
+      {
+        "caller": "nettacker.core.ip.generate_ip_range",
+        "callee": "netaddr.iprange_to_cidrs",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\ip.py",
+        "line_number": 22,
+        "call_expr": "netaddr.iprange_to_cidrs(*ip_range.rsplit('-'))"
+      },
+      {
+        "caller": "nettacker.core.ip.generate_ip_range",
+        "callee": "netaddr.IPNetwork",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\ip.py",
+        "line_number": 18,
+        "call_expr": "netaddr.IPNetwork(ip_range)"
+      },
+      {
+        "caller": "nettacker.core.ip.get_ip_range",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\ip.py",
+        "line_number": 42,
+        "call_expr": "requests.get(f'https://rest.db.ripe.net/search.json?query-string={ip}&flags=no-filtering')"
+      },
+      {
+        "caller": "nettacker.core.ip.is_single_ipv4",
+        "callee": "netaddr.valid_ipv4",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\ip.py",
+        "line_number": 61,
+        "call_expr": "netaddr.valid_ipv4(str(ip))"
+      },
+      {
+        "caller": "nettacker.core.ip.is_ipv4_range",
+        "callee": "netaddr.IPNetwork",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\ip.py",
+        "line_number": 70,
+        "call_expr": "netaddr.IPNetwork(ip_range)"
+      },
+      {
+        "caller": "nettacker.core.ip.is_ipv4_cidr",
+        "callee": "netaddr.iprange_to_cidrs",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\ip.py",
+        "line_number": 82,
+        "call_expr": "netaddr.iprange_to_cidrs(*ip_range.split('-'))"
+      },
+      {
+        "caller": "nettacker.core.ip.is_single_ipv6",
+        "callee": "netaddr.valid_ipv6",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\ip.py",
+        "line_number": 98,
+        "call_expr": "netaddr.valid_ipv6(ip)"
+      },
+      {
+        "caller": "nettacker.core.ip.is_ipv6_range",
+        "callee": "netaddr.iprange_to_cidrs",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\ip.py",
+        "line_number": 107,
+        "call_expr": "netaddr.iprange_to_cidrs(*ip_range.split('-'))"
+      },
+      {
+        "caller": "nettacker.core.ip.is_ipv6_cidr",
+        "callee": "netaddr.IPNetwork",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\ip.py",
+        "line_number": 119,
+        "call_expr": "netaddr.IPNetwork(ip_range)"
+      },
+      {
+        "caller": "nettacker.core.template.TemplateLoader.load",
+        "callee": "yaml.safe_load",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\template.py",
+        "line_number": 42,
+        "call_expr": "yaml.safe_load(self.format())"
+      },
+      {
+        "caller": "nettacker.database.db.create_connection",
+        "callee": "sqlalchemy.orm.sessionmaker",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\database\\db.py",
+        "line_number": 84,
+        "call_expr": "sessionmaker(bind=db_engine)"
+      },
+      {
+        "caller": "nettacker.database.db.create_connection",
+        "callee": "sqlalchemy.create_engine",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\database\\db.py",
+        "line_number": 77,
+        "call_expr": "create_engine(db_inputs(Config.db.engine), connect_args=connection_args, pool_size=50, pool_pre_ping=True)"
+      },
+      {
+        "caller": "nettacker.database.mysql.mysql_create_database",
+        "callee": "sqlalchemy.text",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\database\\mysql.py",
+        "line_number": 23,
+        "call_expr": "text('CREATE DATABASE {0} '.format(Config.db.name))"
+      },
+      {
+        "caller": "nettacker.database.mysql.mysql_create_database",
+        "callee": "sqlalchemy.create_engine",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\database\\mysql.py",
+        "line_number": 12,
+        "call_expr": "create_engine('mysql+pymysql://{username}:{password}@{host}:{port}'.format(**Config.db.as_dict()))"
+      },
+      {
+        "caller": "nettacker.database.mysql.mysql_create_tables",
+        "callee": "sqlalchemy.create_engine",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\database\\mysql.py",
+        "line_number": 39,
+        "call_expr": "create_engine('mysql+pymysql://{username}:{password}@{host}:{port}/{name}'.format(**Config.db.as_dict()))"
+      },
+      {
+        "caller": "nettacker.database.postgresql.postgres_create_database",
+        "callee": "sqlalchemy.create_engine",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\database\\postgresql.py",
+        "line_number": 31,
+        "call_expr": "create_engine('postgresql+psycopg2://{username}:{password}@{host}:{port}/{name}'.format(**Config.db.as_dict()))"
+      },
+      {
+        "caller": "nettacker.database.postgresql.postgres_create_database",
+        "callee": "sqlalchemy.text",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\database\\postgresql.py",
+        "line_number": 29,
+        "call_expr": "text(f'CREATE DATABASE {Config.db.name}')"
+      },
+      {
+        "caller": "nettacker.database.sqlite.sqlite_create_tables",
+        "callee": "sqlalchemy.create_engine",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\database\\sqlite.py",
+        "line_number": 13,
+        "call_expr": "create_engine('sqlite:///{name}'.format(**Config.db.as_dict()), connect_args={'check_same_thread': False})"
+      },
+      {
+        "caller": "nettacker.core.lib.smb.create_connection",
+        "callee": "impacket.smbconnection.SMBConnection",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\lib\\smb.py",
+        "line_number": 7,
+        "call_expr": "SMBConnection(host, remoteHost=host, sess_port=port)"
+      },
+      {
+        "caller": "nettacker.core.lib.ssh.SshLibrary.brute_force",
+        "callee": "paramiko.auth_strategy.NoneAuth",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\lib\\ssh.py",
+        "line_number": 28,
+        "call_expr": "NoneAuth(username=username)"
+      },
+      {
+        "caller": "nettacker.core.lib.ssh.SshLibrary.brute_force",
+        "callee": "paramiko.auth_strategy.Password",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\lib\\ssh.py",
+        "line_number": 26,
+        "call_expr": "Password(username=username, password_getter=lambda: password)"
+      },
+      {
+        "caller": "nettacker.core.lib.ssh.SshLibrary.brute_force",
+        "callee": "paramiko.AutoAddPolicy",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\core\\lib\\ssh.py",
+        "line_number": 21,
+        "call_expr": "AutoAddPolicy()"
+      }
+    ],
+    "jarvis_usage_index_before_filter": [
+      "<builtin>.Exception",
+      "<builtin>.ImportError",
+      "<builtin>.SystemError",
+      "<builtin>.ValueError",
+      "<builtin>.bool",
+      "<builtin>.dict",
+      "<builtin>.enumerate",
+      "<builtin>.getattr",
+      "<builtin>.int",
+      "<builtin>.isinstance",
+      "<builtin>.issubclass",
+      "<builtin>.len",
+      "<builtin>.list",
+      "<builtin>.max",
+      "<builtin>.min",
+      "<builtin>.open",
+      "<builtin>.print",
+      "<builtin>.range",
+      "<builtin>.repr",
+      "<builtin>.set",
+      "<builtin>.sorted",
+      "<builtin>.str",
+      "<builtin>.super",
+      "<builtin>.tuple",
+      "<builtin>.type",
+      "<builtin>.vars",
+      "<map>.copy",
+      "<map>.get",
+      "<map>.items",
+      "<map>.keys",
+      "<map>.pop",
+      "<map>.update",
+      "<str>.replace",
+      "<str>.rsplit",
+      "<str>.split",
+      "<str>.startswith",
+      "append",
+      "apsw.BusyError",
+      "extend",
+      "flask.Response",
+      "flask.abort",
+      "flask.jsonify",
+      "flask.make_response",
+      "flask.render_template",
+      "impacket.smbconnection.SMBConnection",
+      "netaddr.IPNetwork",
+      "netaddr.iprange_to_cidrs",
+      "netaddr.valid_ipv4",
+      "netaddr.valid_ipv6",
+      "paramiko.AutoAddPolicy",
+      "paramiko.auth_strategy.NoneAuth",
+      "paramiko.auth_strategy.Password",
+      "pytest.raises",
+      "pytest.skip",
+      "requests.get",
+      "sqlalchemy.create_engine",
+      "sqlalchemy.exc.SQLAlchemyError",
+      "sqlalchemy.orm.sessionmaker",
+      "sqlalchemy.text",
+      "texttable.Texttable",
+      "werkzeug.utils.secure_filename",
+      "yaml.safe_load"
+    ],
+    "jarvis_usage_index_after_filter": [
+      "apsw.BusyError",
+      "flask.Response",
+      "flask.abort",
+      "flask.jsonify",
+      "flask.make_response",
+      "flask.render_template",
+      "impacket.smbconnection.SMBConnection",
+      "netaddr.IPNetwork",
+      "netaddr.iprange_to_cidrs",
+      "netaddr.valid_ipv4",
+      "netaddr.valid_ipv6",
+      "paramiko.AutoAddPolicy",
+      "paramiko.auth_strategy.NoneAuth",
+      "paramiko.auth_strategy.Password",
+      "pytest.raises",
+      "pytest.skip",
+      "requests.get",
+      "sqlalchemy.create_engine",
+      "sqlalchemy.exc.SQLAlchemyError",
+      "sqlalchemy.orm.sessionmaker",
+      "sqlalchemy.text",
+      "texttable.Texttable",
+      "werkzeug.utils.secure_filename",
+      "yaml.safe_load"
+    ],
+    "jarvis_usage_augmentation_warnings": [],
+    "analysis_mode": "jarvis",
+    "project_mode": "jarvis_EA_entrypoints",
+    "entry_points": [
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\api\\test_core.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ftp.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ftps.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_smb.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_smtp.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_socket.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ssh.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ssl.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_user_added_http_headers.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\test_die.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\test_exclude_ports.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\test_graph.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\test_ip.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\utils\\test_common.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_db.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_models.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_mysql.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_postgresql.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_sqlite.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\lib\\payloads\\test_passwords.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\lib\\payloads\\test_wordlists.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\test_yaml_schema_and_regex.py"
+    ],
+    "jarvis_mode": "EA",
+    "jarvis_scope": "entrypoints",
+    "jarvis_scope_meta": {
+      "scope": "entrypoints",
+      "entrypoint_count": 215,
+      "entrypoint_names": [
+        "nettacker.api.engine.compare_scans",
+        "nettacker.api.engine.get_last_host_logs",
+        "nettacker.api.engine.get_logs",
+        "nettacker.api.engine.get_logs_csv",
+        "nettacker.api.engine.get_logs_html",
+        "nettacker.api.engine.get_result_content",
+        "nettacker.api.engine.get_results",
+        "nettacker.api.engine.get_results_csv",
+        "nettacker.api.engine.get_results_json",
+        "nettacker.api.engine.get_statics",
+        "nettacker.api.engine.go_for_search_logs",
+        "nettacker.api.engine.index",
+        "nettacker.api.engine.new_scan",
+        "nettacker.api.engine.session_check",
+        "nettacker.api.engine.session_kill",
+        "nettacker.api.engine.session_set",
+        "tests.api.test_core.test_api_key_invalid",
+        "tests.api.test_core.test_api_key_is_valid",
+        "tests.api.test_core.test_get_file_ioerror",
+        "tests.api.test_core.test_get_file_outside_web_static_dir",
+        "tests.api.test_core.test_get_file_valid",
+        "tests.api.test_core.test_get_file_valueerror",
+        "tests.api.test_core.test_get_value",
+        "tests.api.test_core.test_graphs",
+        "tests.api.test_core.test_graphs_empty",
+        "tests.api.test_core.test_languages_to_country",
+        "tests.api.test_core.test_mime_types",
+        "tests.api.test_core.test_profiles",
+        "tests.api.test_core.test_scan_methods",
+        "tests.core.lib.test_ftp.TestFtpEngine.test_engine_has_correct_library",
+        "tests.core.lib.test_ftp.TestFtpEngine.test_engine_instantiates",
+        "tests.core.lib.test_ftp.TestFtpLibrary.test_connect_failure_propagates",
+        "tests.core.lib.test_ftp.TestFtpLibrary.test_login_ftp_error_propagates",
+        "tests.core.lib.test_ftp.TestFtpLibrary.test_successful_login_calls_close",
+        "tests.core.lib.test_ftp.TestFtpLibrary.test_successful_login_calls_connect",
+        "tests.core.lib.test_ftp.TestFtpLibrary.test_successful_login_calls_login",
+        "tests.core.lib.test_ftp.TestFtpLibrary.test_successful_login_returns_dict",
+        "tests.core.lib.test_ftp.TestFtpLibrary.test_timeout_passed_to_ftp_constructor",
+        "tests.core.lib.test_ftps.TestFtpsEngine.test_engine_has_correct_library",
+        "tests.core.lib.test_ftps.TestFtpsEngine.test_engine_subclasses_ftp_engine",
+        "tests.core.lib.test_ftps.TestFtpsLibrary.test_brute_force_uses_ftp_tls_client",
+        "tests.core.lib.test_ftps.TestFtpsLibrary.test_client_is_ftp_tls",
+        "tests.core.lib.test_ftps.TestFtpsLibrary.test_library_subclasses_ftp_library",
+        "tests.core.lib.test_smb.TestSmbMethod.test_brute_force_password",
+        "tests.core.lib.test_smtp.TestSmtpMethod.test_brute_force_password",
+        "tests.core.lib.test_socket.TestSocketMethod.test_create_tcp_socket",
+        "tests.core.lib.test_socket.TestSocketMethod.test_response_conditions_matched_socket_icmp",
+        "tests.core.lib.test_socket.TestSocketMethod.test_response_conditions_matched_tcp_connect_only",
+        "tests.core.lib.test_socket.TestSocketMethod.test_response_conditions_matched_tcp_connect_send_and_receive",
+        "tests.core.lib.test_socket.TestSocketMethod.test_response_conditions_matched_with_none_response",
+        "tests.core.lib.test_ssh.TestSshMethod.test_brute_force_no_password",
+        "tests.core.lib.test_ssh.TestSshMethod.test_brute_force_password",
+        "tests.core.lib.test_ssl.TestSslMethod.test_create_tcp_socket",
+        "tests.core.lib.test_ssl.TestSslMethod.test_is_weak_cipher_suite_ssl_error",
+        "tests.core.lib.test_ssl.TestSslMethod.test_is_weak_cipher_suite_success",
+        "tests.core.lib.test_ssl.TestSslMethod.test_is_weak_hash_algo",
+        "tests.core.lib.test_ssl.TestSslMethod.test_is_weak_ssl_version_exceptions",
+        "tests.core.lib.test_ssl.TestSslMethod.test_is_weak_ssl_version_secure",
+        "tests.core.lib.test_ssl.TestSslMethod.test_is_weak_ssl_version_weak",
+        "tests.core.lib.test_ssl.TestSslMethod.test_response_conditions_matched_deactivated_cert",
+        "tests.core.lib.test_ssl.TestSslMethod.test_response_conditions_matched_expired_cert",
+        "tests.core.lib.test_ssl.TestSslMethod.test_response_conditions_matched_none_response",
+        "tests.core.lib.test_ssl.TestSslMethod.test_response_conditions_matched_ssl_off",
+        "tests.core.lib.test_ssl.TestSslMethod.test_response_conditions_matched_weak_version",
+        "tests.core.lib.test_ssl.TestSslMethod.test_ssl_certificate_scan_no_ssl",
+        "tests.core.lib.test_ssl.TestSslMethod.test_ssl_certificate_scan_self_signed",
+        "tests.core.lib.test_ssl.TestSslMethod.test_ssl_certificate_scan_valid_cert",
+        "tests.core.lib.test_ssl.TestSslMethod.test_ssl_version_and_cipher_scan_no_ssl",
+        "tests.core.lib.test_ssl.TestSslMethod.test_ssl_version_and_cipher_scan_secure",
+        "tests.core.lib.test_ssl.TestSslMethod.test_ssl_version_and_cipher_scan_weak",
+        "tests.core.lib.test_user_added_http_headers.test_httpengine_run_happy_path_merges_headers_and_random_ua",
+        "tests.core.lib.test_user_added_http_headers.test_httpengine_run_with_dependent_on_temp_event",
+        "tests.core.lib.test_user_added_http_headers.test_httpengine_run_with_iterative_response_match",
+        "tests.core.lib.test_user_added_http_headers.test_perform_request_action_happy_path",
+        "tests.core.lib.test_user_added_http_headers.test_response_conditions_headers_case_insensitive",
+        "tests.core.lib.test_user_added_http_headers.test_response_conditions_matched_status_code_match",
+        "tests.core.lib.test_user_added_http_headers.test_response_conditions_or_typical_response_match",
+        "tests.core.lib.test_user_added_http_headers.test_response_conditions_or_typical_response_no_match",
+        "tests.core.lib.test_user_added_http_headers.test_response_conditions_responsetime",
+        "tests.core.lib.test_user_added_http_headers.test_send_request_uses_session_and_method",
+        "tests.core.test_die.test_die_failure",
+        "tests.core.test_die.test_die_success",
+        "tests.core.test_exclude_ports.test_generate_loops_with_excluded_ports_and_ports_in_content",
+        "tests.core.test_exclude_ports.test_generate_loops_with_excluded_ports_no_ports_in_content",
+        "tests.core.test_exclude_ports.test_init_and_service_discovery_signature",
+        "tests.core.test_exclude_ports.test_load_appends_port_to_existing_protocol",
+        "tests.core.test_exclude_ports.test_load_with_service_discovery",
+        "tests.core.test_exclude_ports.test_sort_loops",
+        "tests.core.test_exclude_ports.test_sort_loops_behavior",
+        "tests.core.test_exclude_ports.test_start_library_not_supported",
+        "tests.core.test_exclude_ports.test_start_unsupported_library",
+        "tests.core.test_graph.test_build_compare_report_module_not_found",
+        "tests.core.test_graph.test_build_compare_report_success",
+        "tests.core.test_graph.test_build_graph_module_not_found",
+        "tests.core.test_graph.test_build_graph_success",
+        "tests.core.test_graph.test_build_text_table",
+        "tests.core.test_graph.test_create_compare_text_table",
+        "tests.core.test_graph.test_create_report_html",
+        "tests.core.test_graph.test_create_report_with_graph_name",
+        "tests.core.test_graph.test_csv_report",
+        "tests.core.test_graph.test_dict_options",
+        "tests.core.test_graph.test_html_json_csv_text",
+        "tests.core.test_graph.test_json_report",
+        "tests.core.test_graph.test_no_comparison_logs",
+        "tests.core.test_graph.test_no_current_logs",
+        "tests.core.test_graph.test_no_events",
+        "tests.core.test_graph.test_permission_error",
+        "tests.core.test_graph.test_text_report",
+        "tests.core.test_ip.test_generate_ip_range",
+        "tests.core.test_ip.test_get_ip_range",
+        "tests.core.test_ip.test_is_ipv4_cidr",
+        "tests.core.test_ip.test_is_ipv4_range",
+        "tests.core.test_ip.test_is_ipv6_cidr",
+        "tests.core.test_ip.test_is_ipv6_range",
+        "tests.core.test_ip.test_is_single_ipv4",
+        "tests.core.test_ip.test_is_single_ipv6",
+        "tests.core.utils.test_common.test_allowed_interceptors_registry_is_restricted",
+        "tests.core.utils.test_common.test_apply_data_functions_invokes_allowed_function",
+        "tests.core.utils.test_common.test_apply_data_functions_skips_unknown_function_name",
+        "tests.core.utils.test_common.test_apply_data_functions_skips_unknown_item",
+        "tests.core.utils.test_common.test_arrays_to_matrix",
+        "tests.core.utils.test_common.test_fuzzer_repeater_perform_allowed_interceptor_runs",
+        "tests.core.utils.test_common.test_fuzzer_repeater_perform_disallowed_interceptor_raises",
+        "tests.core.utils.test_common.test_fuzzer_repeater_perform_no_interceptors",
+        "tests.core.utils.test_common.test_fuzzer_repeater_perform_unknown_interceptor_alongside_allowed_raises",
+        "tests.core.utils.test_common.test_generate_new_sub_steps_substitutes_values_without_exec",
+        "tests.core.utils.test_common.test_generate_target_groups_empty_list",
+        "tests.core.utils.test_common.test_generate_target_groups_set_hardware_equal_to_targets_total",
+        "tests.core.utils.test_common.test_generate_target_groups_set_hardware_greater_than_targets_total",
+        "tests.core.utils.test_common.test_generate_target_groups_set_hardware_less_than_targets_total",
+        "tests.core.utils.test_common.test_merge_logs_to_list_deduplicates",
+        "tests.core.utils.test_common.test_merge_logs_to_list_nested",
+        "tests.core.utils.test_common.test_merge_logs_to_list_no_log_key",
+        "tests.core.utils.test_common.test_merge_logs_to_list_no_shared_state_between_calls",
+        "tests.core.utils.test_common.test_merge_logs_to_list_simple",
+        "tests.core.utils.test_common.test_select_maximum_cpu_core",
+        "tests.core.utils.test_common.test_set_nested_value_ignores_empty_segments",
+        "tests.core.utils.test_common.test_set_nested_value_nested_path",
+        "tests.core.utils.test_common.test_set_nested_value_single_key",
+        "tests.core.utils.test_common.test_sort_dictionary",
+        "tests.core.utils.test_common.test_wait_for_threads_to_finish_all_dead",
+        "tests.core.utils.test_common.test_wait_for_threads_to_finish_empties_list",
+        "tests.core.utils.test_common.test_wait_for_threads_to_finish_removes_all_dead_threads",
+        "tests.core.utils.test_common.test_wait_for_threads_to_finish_with_maximum",
+        "tests.database.test_db.TestDatabase.test_apsw_busy_error",
+        "tests.database.test_db.TestDatabase.test_create_connection_mysql",
+        "tests.database.test_db.TestDatabase.test_create_connection_sqlite",
+        "tests.database.test_db.TestDatabase.test_db_inputs_mysql",
+        "tests.database.test_db.TestDatabase.test_db_inputs_postgres",
+        "tests.database.test_db.TestDatabase.test_find_events_sqlalchemy",
+        "tests.database.test_db.TestDatabase.test_find_events_sqlite",
+        "tests.database.test_db.TestDatabase.test_find_events_sqlite_exception",
+        "tests.database.test_db.TestDatabase.test_find_temp_events_sqlite",
+        "tests.database.test_db.TestDatabase.test_get_logs_by_scan_id_sqlite",
+        "tests.database.test_db.TestDatabase.test_get_options_by_scan_id_sqlite",
+        "tests.database.test_db.TestDatabase.test_get_scan_result_sqlalchemy",
+        "tests.database.test_db.TestDatabase.test_get_scan_result_sqlite",
+        "tests.database.test_db.TestDatabase.test_last_host_logs_sqlite",
+        "tests.database.test_db.TestDatabase.test_log_not_dict",
+        "tests.database.test_db.TestDatabase.test_logs_to_report_html_sqlalchemy",
+        "tests.database.test_db.TestDatabase.test_logs_to_report_html_sqlite",
+        "tests.database.test_db.TestDatabase.test_logs_to_report_json_sqlite",
+        "tests.database.test_db.TestDatabase.test_remove_old_logs_sqlalchemy",
+        "tests.database.test_db.TestDatabase.test_remove_old_logs_sqlite",
+        "tests.database.test_db.TestDatabase.test_search_logs_no_results",
+        "tests.database.test_db.TestDatabase.test_search_logs_sqlite",
+        "tests.database.test_db.TestDatabase.test_select_reports_sqlalchemy",
+        "tests.database.test_db.TestDatabase.test_select_reports_sqlalchemy_exception",
+        "tests.database.test_db.TestDatabase.test_select_reports_sqlite",
+        "tests.database.test_db.TestDatabase.test_select_reports_sqlite_exception",
+        "tests.database.test_db.TestDatabase.test_send_submit_query_sqlalchemy_failure",
+        "tests.database.test_db.TestDatabase.test_send_submit_query_sqlalchemy_success",
+        "tests.database.test_db.TestDatabase.test_send_submit_query_sqlite_failure",
+        "tests.database.test_db.TestDatabase.test_send_submit_query_sqlite_retry_then_success",
+        "tests.database.test_db.TestDatabase.test_send_submit_query_sqlite_success",
+        "tests.database.test_db.TestDatabase.test_sqlalchemy_no_result",
+        "tests.database.test_db.TestDatabase.test_sqlalchemy_path",
+        "tests.database.test_db.TestDatabase.test_sqlalchemy_path_exception",
+        "tests.database.test_db.TestDatabase.test_sqlalchemy_path_no_results",
+        "tests.database.test_db.TestDatabase.test_sqlalchemy_path_success",
+        "tests.database.test_db.TestDatabase.test_sqlalchemy_submit_fail",
+        "tests.database.test_db.TestDatabase.test_sqlalchemy_successful_lookup",
+        "tests.database.test_db.TestDatabase.test_sqlite_exception_and_retry",
+        "tests.database.test_db.TestDatabase.test_sqlite_generic_exception",
+        "tests.database.test_db.TestDatabase.test_sqlite_happy_path",
+        "tests.database.test_db.TestDatabase.test_sqlite_no_result",
+        "tests.database.test_db.TestDatabase.test_sqlite_operational_error",
+        "tests.database.test_db.TestDatabase.test_sqlite_outer_exception",
+        "tests.database.test_db.TestDatabase.test_sqlite_path_exception",
+        "tests.database.test_db.TestDatabase.test_sqlite_successful_lookup",
+        "tests.database.test_db.TestDatabase.test_submit_logs_to_db_sqlite_success",
+        "tests.database.test_db.TestDatabase.test_submit_report_to_db_sqlalchemy",
+        "tests.database.test_db.TestDatabase.test_submit_report_to_db_sqlite",
+        "tests.database.test_db.TestDatabase.test_submit_temp_logs_to_db_sqlite",
+        "tests.database.test_db.TestDatabase.test_submit_temp_logs_to_db_sqlite_success",
+        "tests.database.test_db.TestDatabase.test_temp_log_busy_error",
+        "tests.database.test_db.TestDatabase.test_temp_log_generic_exception",
+        "tests.database.test_db.TestDatabase.test_temp_log_not_dict",
+        "tests.database.test_db.TestDatabase.test_temp_log_operational_error",
+        "tests.database.test_db.TestDatabase.test_temp_log_sqlalchemy_path",
+        "tests.database.test_models.test_hosts_log_model",
+        "tests.database.test_models.test_report_model",
+        "tests.database.test_models.test_temp_events_model",
+        "tests.database.test_mysql.test_mysql_create_database_already_exists",
+        "tests.database.test_mysql.test_mysql_create_database_exception",
+        "tests.database.test_mysql.test_mysql_create_database_success",
+        "tests.database.test_mysql.test_mysql_create_tables",
+        "tests.database.test_postgresql.test_postgres_create_database_create_fail",
+        "tests.database.test_postgresql.test_postgres_create_database_if_not_exists",
+        "tests.database.test_postgresql.test_postgres_create_database_success",
+        "tests.database.test_sqlite.test_sqlite_create_tables",
+        "tests.database.test_sqlite.test_sqlite_create_tables_integration",
+        "tests.lib.payloads.test_passwords.test_top_1000_common_passwords",
+        "tests.lib.payloads.test_wordlists.test_wordlist",
+        "tests.test_yaml_schema_and_regex.test_yaml_schema_and_regex_valid"
+      ],
+      "entrypoint_files": [
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\nettacker\\api\\engine.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\api\\test_core.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ftp.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ftps.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_smb.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_smtp.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_socket.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ssh.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_ssl.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\lib\\test_user_added_http_headers.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\test_die.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\test_exclude_ports.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\test_graph.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\test_ip.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\core\\utils\\test_common.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_db.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_models.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_mysql.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_postgresql.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\database\\test_sqlite.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\lib\\payloads\\test_passwords.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\lib\\payloads\\test_wordlists.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\owasp__nettacker\\tests\\test_yaml_schema_and_regex.py"
+      ],
+      "fallback": false
+    },
+    "jarvis": {
+      "runner": "docker",
+      "mode": "EA",
+      "precision": true,
+      "jarvis_root": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.tools\\pythonJaRvis\\Jarvis",
+      "timeout_s": 300,
+      "module_count": 23,
+      "pip_install": "",
+      "stdout": "ttacker/nettacker/api/engine.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/logger.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/utils/time.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/api/core.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/config.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/version.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/utils/common.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/app.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/arg_parser.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/__init__.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/die.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/ip.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/messages.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/template.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/graph.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/database/db.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/api/helpers.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/database/models.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/module.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/socks_proxy.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/database/mysql.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/database/postgresql.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/database/sqlite.py\n/workspace/data/raw/projects/owasp__nettacker/tests/api/test_core.py\n/workspace/data/raw/projects/owasp__nettacker/tests/core/lib/test_ftp.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/lib/ftp.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/lib/base.py\n/workspace/data/raw/projects/owasp__nettacker/tests/core/lib/test_ftps.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/lib/ftps.py\n/workspace/data/raw/projects/owasp__nettacker/tests/core/lib/test_smb.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/lib/smb.py\n/workspace/data/raw/projects/owasp__nettacker/tests/common.py\n/workspace/data/raw/projects/owasp__nettacker/tests/core/lib/test_smtp.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/lib/smtp.py\n/workspace/data/raw/projects/owasp__nettacker/tests/core/lib/test_socket.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/lib/socket.py\n/workspace/data/raw/projects/owasp__nettacker/tests/core/lib/test_ssh.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/lib/ssh.py\n/workspace/data/raw/projects/owasp__nettacker/tests/core/lib/test_ssl.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/core/lib/ssl.py\n/workspace/data/raw/projects/owasp__nettacker/tests/core/lib/test_user_added_http_headers.py\n/workspace/data/raw/projects/owasp__nettacker/tests/core/test_die.py\n/workspace/data/raw/projects/owasp__nettacker/tests/core/test_exclude_ports.py\n/workspace/data/raw/projects/owasp__nettacker/tests/core/test_graph.py\n/workspace/data/raw/projects/owasp__nettacker/tests/core/test_ip.py\n/workspace/data/raw/projects/owasp__nettacker/tests/core/utils/test_common.py\n/workspace/data/raw/projects/owasp__nettacker/tests/database/test_db.py\n/workspace/data/raw/projects/owasp__nettacker/tests/database/test_models.py\n/workspace/data/raw/projects/owasp__nettacker/tests/database/test_mysql.py\n/workspace/data/raw/projects/owasp__nettacker/tests/database/test_postgresql.py\n/workspace/data/raw/projects/owasp__nettacker/tests/database/test_sqlite.py\n/workspace/data/raw/projects/owasp__nettacker/tests/lib/payloads/test_passwords.py\n/workspace/data/raw/projects/owasp__nettacker/tests/lib/payloads/test_wordlists.py\n/workspace/data/raw/projects/owasp__nettacker/tests/test_yaml_schema_and_regex.py\n/workspace/data/raw/projects/owasp__nettacker/nettacker/lib/html_log/log_data.py\n",
+      "stderr": ""
+    },
+    "function_type_graphs": {},
+    "unresolved_calls": [],
+    "candidate_edges": [],
+    "reanalyzed_contexts": []
+  },
+  "usage_index": [
+    {
+      "identity": "apsw.BusyError",
+      "target_module": "apsw",
+      "target_name": "BusyError"
+    },
+    {
+      "identity": "flask.Response",
+      "target_module": "flask",
+      "target_name": "Response"
+    },
+    {
+      "identity": "flask.abort",
+      "target_module": "flask",
+      "target_name": "abort"
+    },
+    {
+      "identity": "flask.jsonify",
+      "target_module": "flask",
+      "target_name": "jsonify"
+    },
+    {
+      "identity": "flask.make_response",
+      "target_module": "flask",
+      "target_name": "make_response"
+    },
+    {
+      "identity": "flask.render_template",
+      "target_module": "flask",
+      "target_name": "render_template"
+    },
+    {
+      "identity": "impacket.smbconnection.SMBConnection",
+      "target_module": "impacket.smbconnection",
+      "target_name": "SMBConnection"
+    },
+    {
+      "identity": "netaddr.IPNetwork",
+      "target_module": "netaddr",
+      "target_name": "IPNetwork"
+    },
+    {
+      "identity": "netaddr.iprange_to_cidrs",
+      "target_module": "netaddr",
+      "target_name": "iprange_to_cidrs"
+    },
+    {
+      "identity": "netaddr.valid_ipv4",
+      "target_module": "netaddr",
+      "target_name": "valid_ipv4"
+    },
+    {
+      "identity": "netaddr.valid_ipv6",
+      "target_module": "netaddr",
+      "target_name": "valid_ipv6"
+    },
+    {
+      "identity": "paramiko.AutoAddPolicy",
+      "target_module": "paramiko",
+      "target_name": "AutoAddPolicy"
+    },
+    {
+      "identity": "paramiko.auth_strategy.NoneAuth",
+      "target_module": "paramiko.auth_strategy",
+      "target_name": "NoneAuth"
+    },
+    {
+      "identity": "paramiko.auth_strategy.Password",
+      "target_module": "paramiko.auth_strategy",
+      "target_name": "Password"
+    },
+    {
+      "identity": "pytest.raises",
+      "target_module": "pytest",
+      "target_name": "raises"
+    },
+    {
+      "identity": "pytest.skip",
+      "target_module": "pytest",
+      "target_name": "skip"
+    },
+    {
+      "identity": "requests.get",
+      "target_module": "requests",
+      "target_name": "get"
+    },
+    {
+      "identity": "sqlalchemy.create_engine",
+      "target_module": "sqlalchemy",
+      "target_name": "create_engine"
+    },
+    {
+      "identity": "sqlalchemy.exc.SQLAlchemyError",
+      "target_module": "sqlalchemy.exc",
+      "target_name": "SQLAlchemyError"
+    },
+    {
+      "identity": "sqlalchemy.orm.sessionmaker",
+      "target_module": "sqlalchemy.orm",
+      "target_name": "sessionmaker"
+    },
+    {
+      "identity": "sqlalchemy.text",
+      "target_module": "sqlalchemy",
+      "target_name": "text"
+    },
+    {
+      "identity": "texttable.Texttable",
+      "target_module": "texttable",
+      "target_name": "Texttable"
+    },
+    {
+      "identity": "werkzeug.utils.secure_filename",
+      "target_module": "werkzeug.utils",
+      "target_name": "secure_filename"
+    },
+    {
+      "identity": "yaml.safe_load",
+      "target_module": "yaml",
+      "target_name": "safe_load"
+    }
+  ]
+}

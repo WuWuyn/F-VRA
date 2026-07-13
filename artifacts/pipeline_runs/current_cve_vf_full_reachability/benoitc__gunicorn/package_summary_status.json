@@ -1,0 +1,427 @@
+[
+  {
+    "root": "_pytest",
+    "status": "built",
+    "cache_key": "pytest==9.1.1",
+    "package": {
+      "name": "pytest",
+      "version": "9.1.1",
+      "normalized_name": "pytest",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_pytest",
+    "summary_counts": {
+      "inner_keys": 2010,
+      "outer_keys": 2010,
+      "outer_targets": 16746
+    },
+    "elapsed_s": 9.341,
+    "depth": 0
+  },
+  {
+    "root": "blacksheep",
+    "status": "missing_source",
+    "elapsed_s": 0.1,
+    "depth": 0
+  },
+  {
+    "root": "fastapi",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "gevent",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 0
+  },
+  {
+    "root": "h2",
+    "status": "missing_source",
+    "elapsed_s": 0.098,
+    "depth": 0
+  },
+  {
+    "root": "httpx",
+    "status": "built_cached",
+    "cache_key": "httpx==0.28.1",
+    "package": {
+      "name": "httpx",
+      "version": "0.28.1",
+      "normalized_name": "httpx",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\httpx",
+    "summary_counts": {
+      "inner_keys": 529,
+      "outer_keys": 529,
+      "outer_targets": 9679
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "litestar",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 0
+  },
+  {
+    "root": "mkdocs_gen_files",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 0
+  },
+  {
+    "root": "numpy",
+    "status": "built",
+    "cache_key": "numpy==2.5.1",
+    "package": {
+      "name": "numpy",
+      "version": "2.5.1",
+      "normalized_name": "numpy",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\numpy",
+    "summary_counts": {
+      "inner_keys": 3251,
+      "outer_keys": 3251,
+      "outer_targets": 17873
+    },
+    "elapsed_s": 19.727,
+    "depth": 0
+  },
+  {
+    "root": "pytest",
+    "status": "built_cached",
+    "cache_key": "pytest==9.1.1",
+    "package": {
+      "name": "pytest",
+      "version": "9.1.1",
+      "normalized_name": "pytest",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_pytest",
+    "summary_counts": {
+      "inner_keys": 2010,
+      "outer_keys": 2010,
+      "outer_targets": 16746
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "quart",
+    "status": "missing_source",
+    "elapsed_s": 0.101,
+    "depth": 0
+  },
+  {
+    "root": "requests",
+    "status": "built",
+    "cache_key": "requests==2.32.5",
+    "package": {
+      "name": "requests",
+      "version": "2.32.5",
+      "normalized_name": "requests",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\requests",
+    "summary_counts": {
+      "inner_keys": 278,
+      "outer_keys": 278,
+      "outer_targets": 4271
+    },
+    "elapsed_s": 0.863,
+    "depth": 0
+  },
+  {
+    "root": "t",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 0
+  },
+  {
+    "root": "tornado",
+    "status": "missing_source",
+    "elapsed_s": 0.098,
+    "depth": 0
+  },
+  {
+    "root": "treq",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 0
+  },
+  {
+    "root": "treq_asgi",
+    "status": "missing_source",
+    "elapsed_s": 0.095,
+    "depth": 0
+  },
+  {
+    "root": "uvloop",
+    "status": "missing_source",
+    "elapsed_s": 0.101,
+    "depth": 0
+  },
+  {
+    "root": "CollectError",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  },
+  {
+    "root": "DocTestParser",
+    "status": "missing_source",
+    "elapsed_s": 0.093,
+    "depth": 1
+  },
+  {
+    "root": "EINVAL",
+    "status": "missing_source",
+    "elapsed_s": 0.097,
+    "depth": 1
+  },
+  {
+    "root": "ENOENT",
+    "status": "missing_source",
+    "elapsed_s": 0.097,
+    "depth": 1
+  },
+  {
+    "root": "Exception",
+    "status": "missing_source",
+    "elapsed_s": 0.1,
+    "depth": 1
+  },
+  {
+    "root": "Failed",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  },
+  {
+    "root": "ImportMismatchError",
+    "status": "missing_source",
+    "elapsed_s": 0.096,
+    "depth": 1
+  },
+  {
+    "root": "Interrupted",
+    "status": "missing_source",
+    "elapsed_s": 0.097,
+    "depth": 1
+  },
+  {
+    "root": "InvocationParams",
+    "status": "missing_source",
+    "elapsed_s": 0.1,
+    "depth": 1
+  },
+  {
+    "root": "Path",
+    "status": "missing_source",
+    "elapsed_s": 0.098,
+    "depth": 1
+  },
+  {
+    "root": "__call__",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  },
+  {
+    "root": "__class__",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  },
+  {
+    "root": "__enter__",
+    "status": "missing_source",
+    "elapsed_s": 0.098,
+    "depth": 1
+  },
+  {
+    "root": "__exit__",
+    "status": "missing_source",
+    "elapsed_s": 0.094,
+    "depth": 1
+  },
+  {
+    "root": "__getitem__",
+    "status": "missing_source",
+    "elapsed_s": 0.096,
+    "depth": 1
+  },
+  {
+    "root": "__init__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__new__",
+    "status": "missing_source",
+    "elapsed_s": 0.098,
+    "depth": 1
+  },
+  {
+    "root": "__preserve",
+    "status": "missing_source",
+    "elapsed_s": 0.1,
+    "depth": 1
+  },
+  {
+    "root": "__setattr__",
+    "status": "missing_source",
+    "elapsed_s": 0.098,
+    "depth": 1
+  },
+  {
+    "root": "_add_verbosity_ini",
+    "status": "missing_source",
+    "elapsed_s": 0.1,
+    "depth": 1
+  },
+  {
+    "root": "_assertion_pass",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  },
+  {
+    "root": "_create",
+    "status": "missing_source",
+    "elapsed_s": 0.098,
+    "depth": 1
+  },
+  {
+    "root": "_ensuredirs",
+    "status": "missing_source",
+    "elapsed_s": 0.101,
+    "depth": 1
+  },
+  {
+    "root": "_explicit_tearDown",
+    "status": "missing_source",
+    "elapsed_s": 0.125,
+    "depth": 1
+  },
+  {
+    "root": "_find_spec",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  },
+  {
+    "root": "_for_parametrize",
+    "status": "missing_source",
+    "elapsed_s": 0.096,
+    "depth": 1
+  },
+  {
+    "root": "_format_action_invocation",
+    "status": "missing_source",
+    "elapsed_s": 0.1,
+    "depth": 1
+  },
+  {
+    "root": "_get_directory",
+    "status": "missing_source",
+    "elapsed_s": 0.101,
+    "depth": 1
+  },
+  {
+    "root": "_getaction",
+    "status": "missing_source",
+    "elapsed_s": 0.098,
+    "depth": 1
+  },
+  {
+    "root": "_getreprcrash",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  },
+  {
+    "root": "_initrequest",
+    "status": "missing_source",
+    "elapsed_s": 0.096,
+    "depth": 1
+  },
+  {
+    "root": "_new",
+    "status": "missing_source",
+    "elapsed_s": 0.096,
+    "depth": 1
+  },
+  {
+    "root": "_parse_exc",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  },
+  {
+    "root": "_parse_parametrize_args",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  },
+  {
+    "root": "_processopt",
+    "status": "missing_source",
+    "elapsed_s": 0.095,
+    "depth": 1
+  },
+  {
+    "root": "_reprcompare",
+    "status": "missing_source",
+    "elapsed_s": 0.103,
+    "depth": 1
+  },
+  {
+    "root": "_start",
+    "status": "missing_source",
+    "elapsed_s": 0.096,
+    "depth": 1
+  },
+  {
+    "root": "_trace",
+    "status": "missing_source",
+    "elapsed_s": 0.095,
+    "depth": 1
+  },
+  {
+    "root": "_undo_wrapping",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  },
+  {
+    "root": "absolute",
+    "status": "missing_source",
+    "elapsed_s": 0.102,
+    "depth": 1
+  },
+  {
+    "root": "add",
+    "status": "missing_source",
+    "elapsed_s": 0.096,
+    "depth": 1
+  },
+  {
+    "root": "addFilter",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  },
+  {
+    "root": "addHandler",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  }
+]

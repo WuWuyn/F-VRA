@@ -1,0 +1,372 @@
+{
+  "nodes": 123,
+  "edges": 233,
+  "internal_edges": 203,
+  "external_edges": 30,
+  "usage_index_count": 9,
+  "entry_points": [
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\auth\\views.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\main\\views.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\tests\\test_api.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\tests\\test_basics.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\tests\\test_client.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\todolist.py"
+  ],
+  "metadata": {
+    "jarvis_external_usage_augmented_count": 20,
+    "jarvis_external_usage_augmented_edges": [
+      {
+        "caller": "todolist.test",
+        "callee": "pytest.main",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\todolist.py",
+        "line_number": 19,
+        "call_expr": "pytest.main(['-v'])"
+      },
+      {
+        "caller": "app.models.User.verify_password",
+        "callee": "werkzeug.security.check_password_hash",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\models.py",
+        "line_number": 128,
+        "call_expr": "check_password_hash(self.password_hash, password)"
+      },
+      {
+        "caller": "app.auth.views._get_safe_redirect_target",
+        "callee": "flask.url_for",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\auth\\views.py",
+        "line_number": 25,
+        "call_expr": "url_for('main.index')"
+      },
+      {
+        "caller": "app.auth.views._get_safe_redirect_target",
+        "callee": "flask.request.args.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\auth\\views.py",
+        "line_number": 14,
+        "call_expr": "request.args.get('next')"
+      },
+      {
+        "caller": "app.auth.views.login",
+        "callee": "flask.render_template",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\auth\\views.py",
+        "line_number": 47,
+        "call_expr": "render_template('login.html', form=form)"
+      },
+      {
+        "caller": "app.auth.views.login",
+        "callee": "flask.redirect",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\auth\\views.py",
+        "line_number": 46,
+        "call_expr": "redirect(_get_safe_redirect_target())"
+      },
+      {
+        "caller": "app.auth.views.login",
+        "callee": "flask_login.login_user",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\auth\\views.py",
+        "line_number": 45,
+        "call_expr": "login_user(user_by_name.seen())"
+      },
+      {
+        "caller": "app.auth.views.login",
+        "callee": "sqlalchemy.select",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\auth\\views.py",
+        "line_number": 39,
+        "call_expr": "select(User)"
+      },
+      {
+        "caller": "app.auth.views.register",
+        "callee": "flask.render_template",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\auth\\views.py",
+        "line_number": 66,
+        "call_expr": "render_template('register.html', form=form)"
+      },
+      {
+        "caller": "app.auth.views.register",
+        "callee": "flask.redirect",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\auth\\views.py",
+        "line_number": 65,
+        "call_expr": "redirect(url_for('auth.login'))"
+      },
+      {
+        "caller": "app.auth.views.register",
+        "callee": "flask.url_for",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\auth\\views.py",
+        "line_number": 65,
+        "call_expr": "url_for('auth.login')"
+      },
+      {
+        "caller": "app.main.views.todolist",
+        "callee": "flask.render_template",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\main\\views.py",
+        "line_number": 41,
+        "call_expr": "render_template('todolist.html', todolist=todolist, form=form)"
+      },
+      {
+        "caller": "app.main.views.todolist",
+        "callee": "flask.redirect",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\main\\views.py",
+        "line_number": 40,
+        "call_expr": "redirect(url_for('main.todolist', id=id))"
+      },
+      {
+        "caller": "app.main.views.todolist",
+        "callee": "flask.url_for",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\main\\views.py",
+        "line_number": 40,
+        "call_expr": "url_for('main.todolist', id=id)"
+      },
+      {
+        "caller": "app.main.views.new_todolist",
+        "callee": "flask.redirect",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\main\\views.py",
+        "line_number": 54,
+        "call_expr": "redirect(url_for('main.index'))"
+      },
+      {
+        "caller": "app.main.views.new_todolist",
+        "callee": "flask.url_for",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\main\\views.py",
+        "line_number": 54,
+        "call_expr": "url_for('main.index')"
+      },
+      {
+        "caller": "app.main.views.new_todolist",
+        "callee": "flask.request.form.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\main\\views.py",
+        "line_number": 46,
+        "call_expr": "request.form.get('todo')"
+      },
+      {
+        "caller": "app.main.views.add_todolist",
+        "callee": "flask.redirect",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\main\\views.py",
+        "line_number": 63,
+        "call_expr": "redirect(url_for('main.index'))"
+      },
+      {
+        "caller": "app.main.views.add_todolist",
+        "callee": "flask.url_for",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\main\\views.py",
+        "line_number": 63,
+        "call_expr": "url_for('main.index')"
+      },
+      {
+        "caller": "app.main.views.add_todolist",
+        "callee": "flask.request.form.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\main\\views.py",
+        "line_number": 59,
+        "call_expr": "request.form.get('title')"
+      }
+    ],
+    "jarvis_usage_index_before_filter": [
+      "<builtin>.SystemExit",
+      "<builtin>.dict",
+      "<builtin>.len",
+      "<builtin>.super",
+      "flask.redirect",
+      "flask.render_template",
+      "flask.request.args.get",
+      "flask.request.form.get",
+      "flask.url_for",
+      "flask_login.login_user",
+      "pytest.main",
+      "sqlalchemy.select",
+      "werkzeug.security.check_password_hash"
+    ],
+    "jarvis_usage_index_after_filter": [
+      "flask.redirect",
+      "flask.render_template",
+      "flask.request.args.get",
+      "flask.request.form.get",
+      "flask.url_for",
+      "flask_login.login_user",
+      "pytest.main",
+      "sqlalchemy.select",
+      "werkzeug.security.check_password_hash"
+    ],
+    "jarvis_usage_augmentation_warnings": [],
+    "analysis_mode": "jarvis",
+    "project_mode": "jarvis_EA_entrypoints",
+    "entry_points": [
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\auth\\views.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\main\\views.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\tests\\test_api.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\tests\\test_basics.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\tests\\test_client.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\todolist.py"
+    ],
+    "jarvis_mode": "EA",
+    "jarvis_scope": "entrypoints",
+    "jarvis_scope_meta": {
+      "scope": "entrypoints",
+      "entrypoint_count": 96,
+      "entrypoint_names": [
+        "app.auth.views.login",
+        "app.auth.views.logout",
+        "app.auth.views.register",
+        "app.main.views.add_todolist",
+        "app.main.views.index",
+        "app.main.views.new_todolist",
+        "app.main.views.todolist",
+        "app.main.views.todolist_overview",
+        "tests.test_api.test_add_todolist",
+        "tests.test_api.test_add_todolist_todo",
+        "tests.test_api.test_add_todolist_todo_when_todolist_does_not_exist",
+        "tests.test_api.test_add_todolist_todo_without_todo_data",
+        "tests.test_api.test_add_todolist_with_too_long_title",
+        "tests.test_api.test_add_todolist_without_title",
+        "tests.test_api.test_add_user",
+        "tests.test_api.test_add_user_only_using_the_username",
+        "tests.test_api.test_add_user_only_using_the_username_and_email",
+        "tests.test_api.test_add_user_only_using_the_username_and_password",
+        "tests.test_api.test_add_user_todolist",
+        "tests.test_api.test_add_user_todolist_todo",
+        "tests.test_api.test_add_user_todolist_todo_rejects_other_users_todolist",
+        "tests.test_api.test_add_user_todolist_todo_when_todolist_does_not_exist",
+        "tests.test_api.test_add_user_todolist_todo_without_todo_data",
+        "tests.test_api.test_add_user_todolist_when_user_does_not_exist",
+        "tests.test_api.test_add_user_with_duplicate_email_returns_400",
+        "tests.test_api.test_add_user_with_duplicate_username_returns_400",
+        "tests.test_api.test_add_user_with_extra_fields",
+        "tests.test_api.test_add_user_with_invalid_email",
+        "tests.test_api.test_add_user_with_invalid_username",
+        "tests.test_api.test_add_user_with_to_long_username",
+        "tests.test_api.test_add_user_with_too_long_email",
+        "tests.test_api.test_add_user_withoout_email",
+        "tests.test_api.test_add_user_without_password",
+        "tests.test_api.test_add_user_without_username",
+        "tests.test_api.test_change_todolist_title",
+        "tests.test_api.test_change_todolist_title_empty_title",
+        "tests.test_api.test_change_todolist_title_too_long_title",
+        "tests.test_api.test_change_todolist_title_without_title",
+        "tests.test_api.test_delete_todo",
+        "tests.test_api.test_delete_todolist",
+        "tests.test_api.test_delete_user",
+        "tests.test_api.test_get_different_user_todolist_todos",
+        "tests.test_api.test_get_todolist_todos",
+        "tests.test_api.test_get_todolist_todos_when_todolist_does_not_exist",
+        "tests.test_api.test_get_todolist_todos_when_todolist_has_no_todos",
+        "tests.test_api.test_get_todolists",
+        "tests.test_api.test_get_todolists_when_no_todolists_exist",
+        "tests.test_api.test_get_user",
+        "tests.test_api.test_get_user_todolist",
+        "tests.test_api.test_get_user_todolist_todos",
+        "tests.test_api.test_get_user_todolist_todos_when_todolist_does_not_exist",
+        "tests.test_api.test_get_user_todolist_todos_when_todolist_has_no_todos",
+        "tests.test_api.test_get_user_todolist_todos_when_user_does_not_exist",
+        "tests.test_api.test_get_user_todolist_when_todolist_does_not_exist",
+        "tests.test_api.test_get_user_todolist_when_user_does_not_exist",
+        "tests.test_api.test_get_user_todolists",
+        "tests.test_api.test_get_user_todolists_when_user_does_not_exist",
+        "tests.test_api.test_get_user_todolists_when_user_has_no_todolists",
+        "tests.test_api.test_get_user_when_user_does_not_exist",
+        "tests.test_api.test_get_users",
+        "tests.test_api.test_get_users_when_no_users_exist",
+        "tests.test_api.test_main_route",
+        "tests.test_api.test_not_found",
+        "tests.test_api.test_update_todo_status_to_finished",
+        "tests.test_api.test_update_todo_status_to_open",
+        "tests.test_basics.test_adding_new_todo_with_user",
+        "tests.test_basics.test_adding_new_todo_without_user",
+        "tests.test_basics.test_adding_new_todolist_with_user",
+        "tests.test_basics.test_adding_new_todolist_without_user",
+        "tests.test_basics.test_adding_new_user",
+        "tests.test_basics.test_adding_todo_to_todolist",
+        "tests.test_basics.test_adding_two_todolists_with_the_same_title",
+        "tests.test_basics.test_adding_two_todos_with_the_same_description",
+        "tests.test_basics.test_app_exists",
+        "tests.test_basics.test_app_is_testing",
+        "tests.test_basics.test_closing_todo",
+        "tests.test_basics.test_counting_todos_of_todolist",
+        "tests.test_basics.test_delete_todo",
+        "tests.test_basics.test_delete_todolist",
+        "tests.test_basics.test_delete_user",
+        "tests.test_basics.test_no_password_getter",
+        "tests.test_basics.test_password_salts_are_random",
+        "tests.test_basics.test_password_setter",
+        "tests.test_basics.test_password_verification",
+        "tests.test_basics.test_reopen_closed_todo",
+        "tests.test_client.test_empty_todo_stays_on_todolist_view",
+        "tests.test_client.test_home_page",
+        "tests.test_client.test_last_seen_update_after_login",
+        "tests.test_client.test_login_page",
+        "tests.test_client.test_login_redirects_to_internal_next_target",
+        "tests.test_client.test_login_rejects_external_next_target",
+        "tests.test_client.test_overview_page",
+        "tests.test_client.test_register_and_login_and_logout",
+        "tests.test_client.test_register_page",
+        "todolist.fill_db",
+        "todolist.test"
+      ],
+      "entrypoint_files": [
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\auth\\views.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\app\\main\\views.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\tests\\test_api.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\tests\\test_basics.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\tests\\test_client.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\todolist.py"
+      ],
+      "fallback": false
+    },
+    "jarvis": {
+      "runner": "docker",
+      "mode": "EA",
+      "precision": true,
+      "jarvis_root": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.tools\\pythonJaRvis\\Jarvis",
+      "timeout_s": 300,
+      "module_count": 6,
+      "pip_install": "",
+      "stdout": "/workspace/data/raw/projects/rtzll__flask-todolist/app/auth/views.py\n/workspace/data/raw/projects/rtzll__flask-todolist/app/__init__.py\n/workspace/data/raw/projects/rtzll__flask-todolist/config.py\n/workspace/data/raw/projects/rtzll__flask-todolist/app/auth/__init__.py\n/workspace/data/raw/projects/rtzll__flask-todolist/app/auth/forms.py\n/workspace/data/raw/projects/rtzll__flask-todolist/app/models.py\n/workspace/data/raw/projects/rtzll__flask-todolist/app/main/views.py\n/workspace/data/raw/projects/rtzll__flask-todolist/app/main/__init__.py\n/workspace/data/raw/projects/rtzll__flask-todolist/app/main/forms.py\n/workspace/data/raw/projects/rtzll__flask-todolist/tests/test_api.py\n/workspace/data/raw/projects/rtzll__flask-todolist/tests/test_basics.py\n/workspace/data/raw/projects/rtzll__flask-todolist/tests/test_client.py\n/workspace/data/raw/projects/rtzll__flask-todolist/todolist.py\n/workspace/data/raw/projects/rtzll__flask-todolist/app/api/__init__.py\n/workspace/data/raw/projects/rtzll__flask-todolist/app/api/errors.py\n/workspace/data/raw/projects/rtzll__flask-todolist/app/api/views.py\n/workspace/data/raw/projects/rtzll__flask-todolist/app/utils/__init__.py\n/workspace/data/raw/projects/rtzll__flask-todolist/app/utils/errors.py\n/workspace/data/raw/projects/rtzll__flask-todolist/app/utils/filters.py\n",
+      "stderr": ""
+    },
+    "function_type_graphs": {},
+    "unresolved_calls": [],
+    "candidate_edges": [],
+    "reanalyzed_contexts": []
+  },
+  "usage_index": [
+    {
+      "identity": "flask.redirect",
+      "target_module": "flask",
+      "target_name": "redirect"
+    },
+    {
+      "identity": "flask.render_template",
+      "target_module": "flask",
+      "target_name": "render_template"
+    },
+    {
+      "identity": "flask.request.args.get",
+      "target_module": "flask.request.args",
+      "target_name": "get"
+    },
+    {
+      "identity": "flask.request.form.get",
+      "target_module": "flask.request.form",
+      "target_name": "get"
+    },
+    {
+      "identity": "flask.url_for",
+      "target_module": "flask",
+      "target_name": "url_for"
+    },
+    {
+      "identity": "flask_login.login_user",
+      "target_module": "flask_login",
+      "target_name": "login_user"
+    },
+    {
+      "identity": "pytest.main",
+      "target_module": "pytest",
+      "target_name": "main"
+    },
+    {
+      "identity": "sqlalchemy.select",
+      "target_module": "sqlalchemy",
+      "target_name": "select"
+    },
+    {
+      "identity": "werkzeug.security.check_password_hash",
+      "target_module": "werkzeug.security",
+      "target_name": "check_password_hash"
+    }
+  ]
+}

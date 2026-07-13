@@ -1,0 +1,427 @@
+[
+  {
+    "root": "_pytest",
+    "status": "built_cached",
+    "cache_key": "pytest==9.1.1",
+    "package": {
+      "name": "pytest",
+      "version": "9.1.1",
+      "normalized_name": "pytest",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_pytest",
+    "summary_counts": {
+      "inner_keys": 2010,
+      "outer_keys": 2010,
+      "outer_targets": 16746
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "aiohttp",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "allauth",
+    "status": "missing_source",
+    "elapsed_s": 0.11,
+    "depth": 0
+  },
+  {
+    "root": "api",
+    "status": "missing_source",
+    "elapsed_s": 0.106,
+    "depth": 0
+  },
+  {
+    "root": "django",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "dotenv",
+    "status": "built_cached",
+    "cache_key": "python-dotenv==1.2.2",
+    "package": {
+      "name": "python-dotenv",
+      "version": "1.2.2",
+      "normalized_name": "python-dotenv",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\dotenv",
+    "summary_counts": {
+      "inner_keys": 82,
+      "outer_keys": 82,
+      "outer_targets": 698
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "gunicorn",
+    "status": "missing_source",
+    "elapsed_s": 0.105,
+    "depth": 0
+  },
+  {
+    "root": "redis",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "requests",
+    "status": "built_cached",
+    "cache_key": "requests==2.32.5",
+    "package": {
+      "name": "requests",
+      "version": "2.32.5",
+      "normalized_name": "requests",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\requests",
+    "summary_counts": {
+      "inner_keys": 278,
+      "outer_keys": 278,
+      "outer_targets": 4271
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "setuptools",
+    "status": "built_cached",
+    "cache_key": "setuptools==80.10.2",
+    "package": {
+      "name": "setuptools",
+      "version": "80.10.2",
+      "normalized_name": "setuptools",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack",
+    "summary_counts": {
+      "inner_keys": 21,
+      "outer_keys": 21,
+      "outer_targets": 36
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "sqlparse",
+    "status": "missing_source",
+    "elapsed_s": 0.103,
+    "depth": 0
+  },
+  {
+    "root": "urllib3",
+    "status": "built_cached",
+    "cache_key": "urllib3==2.7.0",
+    "package": {
+      "name": "urllib3",
+      "version": "2.7.0",
+      "normalized_name": "urllib3",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\urllib3",
+    "summary_counts": {
+      "inner_keys": 548,
+      "outer_keys": 548,
+      "outer_targets": 3021
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "CollectError",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "DocTestParser",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "EINVAL",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "ENOENT",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "Exception",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "Failed",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "ImportMismatchError",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "Interrupted",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "InvocationParams",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "Path",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__call__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__class__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__enter__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__exit__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__getitem__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__init__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__new__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__preserve",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__setattr__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_add_verbosity_ini",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_assertion_pass",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_create",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_ensuredirs",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_explicit_tearDown",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_find_spec",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_for_parametrize",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_format_action_invocation",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_get_directory",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_getaction",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_getreprcrash",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_initrequest",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_new",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_parse_exc",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_parse_parametrize_args",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_processopt",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_reprcompare",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_start",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_trace",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_undo_wrapping",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "absolute",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "add",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "addFilter",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "addHandler",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "add_argument",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "add_argument_group",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "add_hookcall_monitoring",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "add_hookspecs",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "append",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  }
+]

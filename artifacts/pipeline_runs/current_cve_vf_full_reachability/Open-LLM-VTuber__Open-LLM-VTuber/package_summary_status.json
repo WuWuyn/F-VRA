@@ -1,0 +1,482 @@
+[
+  {
+    "root": "TTS",
+    "status": "missing_source",
+    "elapsed_s": 0.096,
+    "depth": 0
+  },
+  {
+    "root": "aiohttp",
+    "status": "missing_source",
+    "elapsed_s": 0.093,
+    "depth": 0
+  },
+  {
+    "root": "anthropic",
+    "status": "missing_source",
+    "elapsed_s": 0.103,
+    "depth": 0
+  },
+  {
+    "root": "azure",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 0
+  },
+  {
+    "root": "bark",
+    "status": "missing_source",
+    "elapsed_s": 0.095,
+    "depth": 0
+  },
+  {
+    "root": "chardet",
+    "status": "missing_source",
+    "elapsed_s": 0.097,
+    "depth": 0
+  },
+  {
+    "root": "dotenv",
+    "status": "built",
+    "cache_key": "python-dotenv==1.2.2",
+    "package": {
+      "name": "python-dotenv",
+      "version": "1.2.2",
+      "normalized_name": "python-dotenv",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\dotenv",
+    "summary_counts": {
+      "inner_keys": 82,
+      "outer_keys": 82,
+      "outer_targets": 698
+    },
+    "elapsed_s": 0.206,
+    "depth": 0
+  },
+  {
+    "root": "edge_tts",
+    "status": "missing_source",
+    "elapsed_s": 0.095,
+    "depth": 0
+  },
+  {
+    "root": "elevenlabs",
+    "status": "missing_source",
+    "elapsed_s": 0.092,
+    "depth": 0
+  },
+  {
+    "root": "fastapi",
+    "status": "missing_source",
+    "elapsed_s": 0.095,
+    "depth": 0
+  },
+  {
+    "root": "faster_whisper",
+    "status": "missing_source",
+    "elapsed_s": 0.094,
+    "depth": 0
+  },
+  {
+    "root": "fish_audio_sdk",
+    "status": "missing_source",
+    "elapsed_s": 0.138,
+    "depth": 0
+  },
+  {
+    "root": "funasr",
+    "status": "missing_source",
+    "elapsed_s": 0.103,
+    "depth": 0
+  },
+  {
+    "root": "google",
+    "status": "missing_source",
+    "elapsed_s": 0.098,
+    "depth": 0
+  },
+  {
+    "root": "gradio_client",
+    "status": "missing_source",
+    "elapsed_s": 0.098,
+    "depth": 0
+  },
+  {
+    "root": "groq",
+    "status": "missing_source",
+    "elapsed_s": 0.095,
+    "depth": 0
+  },
+  {
+    "root": "httpx",
+    "status": "built",
+    "cache_key": "httpx==0.28.1",
+    "package": {
+      "name": "httpx",
+      "version": "0.28.1",
+      "normalized_name": "httpx",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\httpx",
+    "summary_counts": {
+      "inner_keys": 529,
+      "outer_keys": 529,
+      "outer_targets": 9679
+    },
+    "elapsed_s": 1.737,
+    "depth": 0
+  },
+  {
+    "root": "jinja2",
+    "status": "built",
+    "cache_key": "jinja2==3.1.6",
+    "package": {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "normalized_name": "jinja2",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\jinja2",
+    "summary_counts": {
+      "inner_keys": 771,
+      "outer_keys": 771,
+      "outer_targets": 4389
+    },
+    "elapsed_s": 6.125,
+    "depth": 0
+  },
+  {
+    "root": "jwt",
+    "status": "built",
+    "cache_key": "pyjwt==2.12.1",
+    "package": {
+      "name": "PyJWT",
+      "version": "2.12.1",
+      "normalized_name": "pyjwt",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\jwt",
+    "summary_counts": {
+      "inner_keys": 119,
+      "outer_keys": 119,
+      "outer_targets": 319
+    },
+    "elapsed_s": 0.421,
+    "depth": 0
+  },
+  {
+    "root": "langdetect",
+    "status": "missing_source",
+    "elapsed_s": 0.095,
+    "depth": 0
+  },
+  {
+    "root": "letta_client",
+    "status": "missing_source",
+    "elapsed_s": 0.104,
+    "depth": 0
+  },
+  {
+    "root": "llama_cpp",
+    "status": "missing_source",
+    "elapsed_s": 0.097,
+    "depth": 0
+  },
+  {
+    "root": "loguru",
+    "status": "missing_source",
+    "elapsed_s": 0.101,
+    "depth": 0
+  },
+  {
+    "root": "mcp",
+    "status": "missing_source",
+    "elapsed_s": 0.101,
+    "depth": 0
+  },
+  {
+    "root": "melo",
+    "status": "missing_source",
+    "elapsed_s": 0.106,
+    "depth": 0
+  },
+  {
+    "root": "nltk",
+    "status": "missing_source",
+    "elapsed_s": 0.096,
+    "depth": 0
+  },
+  {
+    "root": "numpy",
+    "status": "failed_timeout",
+    "error": "package summary timed out after 45s",
+    "elapsed_s": 45.037,
+    "depth": 0
+  },
+  {
+    "root": "onnxruntime",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 0
+  },
+  {
+    "root": "openai",
+    "status": "failed_timeout",
+    "error": "package summary timed out after 45s",
+    "elapsed_s": 45.025,
+    "depth": 0
+  },
+  {
+    "root": "packaging",
+    "status": "built",
+    "cache_key": "packaging==26.2",
+    "package": {
+      "name": "packaging",
+      "version": "26.2",
+      "normalized_name": "packaging",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\packaging",
+    "summary_counts": {
+      "inner_keys": 407,
+      "outer_keys": 407,
+      "outer_targets": 1496
+    },
+    "elapsed_s": 1.465,
+    "depth": 0
+  },
+  {
+    "root": "pydub",
+    "status": "missing_source",
+    "elapsed_s": 0.094,
+    "depth": 0
+  },
+  {
+    "root": "pysbd",
+    "status": "missing_source",
+    "elapsed_s": 0.094,
+    "depth": 0
+  },
+  {
+    "root": "python_multipart",
+    "status": "missing_source",
+    "elapsed_s": 0.097,
+    "depth": 0
+  },
+  {
+    "root": "pyttsx3",
+    "status": "missing_source",
+    "elapsed_s": 0.094,
+    "depth": 0
+  },
+  {
+    "root": "pywhispercpp",
+    "status": "missing_source",
+    "elapsed_s": 0.093,
+    "depth": 0
+  },
+  {
+    "root": "requests",
+    "status": "built",
+    "cache_key": "requests==2.32.5",
+    "package": {
+      "name": "requests",
+      "version": "2.32.5",
+      "normalized_name": "requests",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\requests",
+    "summary_counts": {
+      "inner_keys": 278,
+      "outer_keys": 278,
+      "outer_targets": 4271
+    },
+    "elapsed_s": 0.884,
+    "depth": 0
+  },
+  {
+    "root": "ruamel",
+    "status": "missing_source",
+    "elapsed_s": 0.095,
+    "depth": 0
+  },
+  {
+    "root": "scipy",
+    "status": "failed_timeout",
+    "error": "package summary timed out after 45s",
+    "elapsed_s": 45.028,
+    "depth": 0
+  },
+  {
+    "root": "sherpa_onnx",
+    "status": "missing_source",
+    "elapsed_s": 0.098,
+    "depth": 0
+  },
+  {
+    "root": "silero_vad",
+    "status": "missing_source",
+    "elapsed_s": 0.097,
+    "depth": 0
+  },
+  {
+    "root": "soundfile",
+    "status": "missing_source",
+    "elapsed_s": 0.095,
+    "depth": 0
+  },
+  {
+    "root": "starlette",
+    "status": "missing_source",
+    "elapsed_s": 0.116,
+    "depth": 0
+  },
+  {
+    "root": "tomli",
+    "status": "built",
+    "cache_key": "tomli==2.4.1",
+    "package": {
+      "name": "tomli",
+      "version": "2.4.1",
+      "normalized_name": "tomli",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\tomli",
+    "summary_counts": {
+      "inner_keys": 49,
+      "outer_keys": 49,
+      "outer_targets": 326
+    },
+    "elapsed_s": 0.214,
+    "depth": 0
+  },
+  {
+    "root": "torch",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 0
+  },
+  {
+    "root": "uvicorn",
+    "status": "missing_source",
+    "elapsed_s": 0.104,
+    "depth": 0
+  },
+  {
+    "root": "websockets",
+    "status": "missing_source",
+    "elapsed_s": 0.103,
+    "depth": 0
+  },
+  {
+    "root": "whisper",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 0
+  },
+  {
+    "root": "yaml",
+    "status": "built",
+    "cache_key": "pyyaml==6.0.3",
+    "package": {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "normalized_name": "pyyaml",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_yaml",
+    "summary_counts": {
+      "inner_keys": 1,
+      "outer_keys": 1,
+      "outer_targets": 1
+    },
+    "elapsed_s": 0.086,
+    "depth": 0
+  },
+  {
+    "root": "IPython",
+    "status": "missing_source",
+    "elapsed_s": 0.1,
+    "depth": 1
+  },
+  {
+    "root": "append",
+    "status": "missing_source",
+    "elapsed_s": 0.1,
+    "depth": 1
+  },
+  {
+    "root": "casefold",
+    "status": "missing_source",
+    "elapsed_s": 0.101,
+    "depth": 1
+  },
+  {
+    "root": "click",
+    "status": "built",
+    "cache_key": "click==8.4.2",
+    "package": {
+      "name": "click",
+      "version": "8.4.2",
+      "normalized_name": "click",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\click",
+    "summary_counts": {
+      "inner_keys": 601,
+      "outer_keys": 601,
+      "outer_targets": 2745
+    },
+    "elapsed_s": 1.83,
+    "depth": 1
+  },
+  {
+    "root": "close",
+    "status": "missing_source",
+    "elapsed_s": 0.101,
+    "depth": 1
+  },
+  {
+    "root": "collections",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  },
+  {
+    "root": "communicate",
+    "status": "missing_source",
+    "elapsed_s": 0.14,
+    "depth": 1
+  },
+  {
+    "root": "debug",
+    "status": "missing_source",
+    "elapsed_s": 0.097,
+    "depth": 1
+  },
+  {
+    "root": "end",
+    "status": "missing_source",
+    "elapsed_s": 0.097,
+    "depth": 1
+  },
+  {
+    "root": "endswith",
+    "status": "missing_source",
+    "elapsed_s": 0.095,
+    "depth": 1
+  },
+  {
+    "root": "finditer",
+    "status": "missing_source",
+    "elapsed_s": 0.097,
+    "depth": 1
+  },
+  {
+    "root": "format",
+    "status": "missing_source",
+    "elapsed_s": 0.102,
+    "depth": 1
+  }
+]

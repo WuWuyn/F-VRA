@@ -1,0 +1,440 @@
+[
+  {
+    "root": "flask",
+    "status": "built_cached",
+    "cache_key": "flask==3.1.3",
+    "package": {
+      "name": "Flask",
+      "version": "3.1.3",
+      "normalized_name": "flask",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\flask",
+    "summary_counts": {
+      "inner_keys": 391,
+      "outer_keys": 391,
+      "outer_targets": 1245
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "flask_login",
+    "status": "missing_source",
+    "elapsed_s": 0.106,
+    "depth": 0
+  },
+  {
+    "root": "mako",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "pytest",
+    "status": "built_cached",
+    "cache_key": "pytest==9.1.1",
+    "package": {
+      "name": "pytest",
+      "version": "9.1.1",
+      "normalized_name": "pytest",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_pytest",
+    "summary_counts": {
+      "inner_keys": 2010,
+      "outer_keys": 2010,
+      "outer_targets": 16746
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "sqlalchemy",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "werkzeug",
+    "status": "built",
+    "cache_key": "werkzeug==3.1.7",
+    "package": {
+      "name": "Werkzeug",
+      "version": "3.1.7",
+      "normalized_name": "werkzeug",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\werkzeug",
+    "summary_counts": {
+      "inner_keys": 1096,
+      "outer_keys": 1096,
+      "outer_targets": 7843
+    },
+    "elapsed_s": 16.142,
+    "depth": 0
+  },
+  {
+    "root": "AppGroup",
+    "status": "missing_source",
+    "elapsed_s": 0.11,
+    "depth": 1
+  },
+  {
+    "root": "Formatter",
+    "status": "missing_source",
+    "elapsed_s": 0.105,
+    "depth": 1
+  },
+  {
+    "root": "StreamHandler",
+    "status": "missing_source",
+    "elapsed_s": 0.101,
+    "depth": 1
+  },
+  {
+    "root": "TypeVar",
+    "status": "missing_source",
+    "elapsed_s": 0.106,
+    "depth": 1
+  },
+  {
+    "root": "__class__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__html__",
+    "status": "missing_source",
+    "elapsed_s": 0.109,
+    "depth": 1
+  },
+  {
+    "root": "__init__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__init_subclass__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_add_cookies_to_wsgi",
+    "status": "missing_source",
+    "elapsed_s": 0.107,
+    "depth": 1
+  },
+  {
+    "root": "_get_current_object",
+    "status": "missing_source",
+    "elapsed_s": 0.102,
+    "depth": 1
+  },
+  {
+    "root": "_update_cookies_from_response",
+    "status": "missing_source",
+    "elapsed_s": 0.102,
+    "depth": 1
+  },
+  {
+    "root": "aborter",
+    "status": "missing_source",
+    "elapsed_s": 0.106,
+    "depth": 1
+  },
+  {
+    "root": "aborter_class",
+    "status": "missing_source",
+    "elapsed_s": 0.105,
+    "depth": 1
+  },
+  {
+    "root": "add",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "addHandler",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "add_command",
+    "status": "missing_source",
+    "elapsed_s": 0.107,
+    "depth": 1
+  },
+  {
+    "root": "allowed_methods",
+    "status": "missing_source",
+    "elapsed_s": 0.103,
+    "depth": 1
+  },
+  {
+    "root": "app_ctx_globals_class",
+    "status": "missing_source",
+    "elapsed_s": 0.11,
+    "depth": 1
+  },
+  {
+    "root": "append",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "asgiref",
+    "status": "missing_source",
+    "elapsed_s": 0.104,
+    "depth": 1
+  },
+  {
+    "root": "ast",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "base64",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "bind",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "bind_to_environ",
+    "status": "missing_source",
+    "elapsed_s": 0.107,
+    "depth": 1
+  },
+  {
+    "root": "blinker",
+    "status": "built",
+    "cache_key": "blinker==1.9.0",
+    "package": {
+      "name": "blinker",
+      "version": "1.9.0",
+      "normalized_name": "blinker",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\blinker",
+    "summary_counts": {
+      "inner_keys": 34,
+      "outer_keys": 34,
+      "outer_targets": 76
+    },
+    "elapsed_s": 0.09,
+    "depth": 1
+  },
+  {
+    "root": "build",
+    "status": "missing_source",
+    "elapsed_s": 0.105,
+    "depth": 1
+  },
+  {
+    "root": "cast",
+    "status": "missing_source",
+    "elapsed_s": 0.107,
+    "depth": 1
+  },
+  {
+    "root": "clear",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "click",
+    "status": "built_cached",
+    "cache_key": "click==8.4.2",
+    "package": {
+      "name": "click",
+      "version": "8.4.2",
+      "normalized_name": "click",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\click",
+    "summary_counts": {
+      "inner_keys": 601,
+      "outer_keys": 601,
+      "outer_targets": 2745
+    },
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "close",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "code",
+    "status": "missing_source",
+    "elapsed_s": 0.11,
+    "depth": 1
+  },
+  {
+    "root": "collections",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "config_class",
+    "status": "missing_source",
+    "elapsed_s": 0.108,
+    "depth": 1
+  },
+  {
+    "root": "contextlib",
+    "status": "missing_source",
+    "elapsed_s": 0.106,
+    "depth": 1
+  },
+  {
+    "root": "contextvars",
+    "status": "missing_source",
+    "elapsed_s": 0.109,
+    "depth": 1
+  },
+  {
+    "root": "copy",
+    "status": "missing_source",
+    "elapsed_s": 0.108,
+    "depth": 1
+  },
+  {
+    "root": "create_app",
+    "status": "missing_source",
+    "elapsed_s": 0.103,
+    "depth": 1
+  },
+  {
+    "root": "dataclasses",
+    "status": "missing_source",
+    "elapsed_s": 0.102,
+    "depth": 1
+  },
+  {
+    "root": "datetime",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "decode",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "delete_cookie",
+    "status": "missing_source",
+    "elapsed_s": 0.101,
+    "depth": 1
+  },
+  {
+    "root": "dotenv",
+    "status": "built_cached",
+    "cache_key": "python-dotenv==1.2.2",
+    "package": {
+      "name": "python-dotenv",
+      "version": "1.2.2",
+      "normalized_name": "python-dotenv",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\dotenv",
+    "summary_counts": {
+      "inner_keys": 82,
+      "outer_keys": 82,
+      "outer_targets": 698
+    },
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "dumps",
+    "status": "missing_source",
+    "elapsed_s": 0.109,
+    "depth": 1
+  },
+  {
+    "root": "endswith",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "ensure_object",
+    "status": "missing_source",
+    "elapsed_s": 0.105,
+    "depth": 1
+  },
+  {
+    "root": "ensure_sync",
+    "status": "missing_source",
+    "elapsed_s": 0.103,
+    "depth": 1
+  },
+  {
+    "root": "error",
+    "status": "missing_source",
+    "elapsed_s": 0.104,
+    "depth": 1
+  },
+  {
+    "root": "exception",
+    "status": "missing_source",
+    "elapsed_s": 0.105,
+    "depth": 1
+  },
+  {
+    "root": "exit",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "extend",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "force_type",
+    "status": "missing_source",
+    "elapsed_s": 0.105,
+    "depth": 1
+  },
+  {
+    "root": "format",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "format_message",
+    "status": "missing_source",
+    "elapsed_s": 0.109,
+    "depth": 1
+  },
+  {
+    "root": "from_environ",
+    "status": "missing_source",
+    "elapsed_s": 0.102,
+    "depth": 1
+  }
+]

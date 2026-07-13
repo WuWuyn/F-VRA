@@ -1,0 +1,51 @@
+{
+  "project": {
+    "id": "ATH-MaaS__Pixelle-MCP",
+    "name": "ATH-MaaS__Pixelle-MCP",
+    "repo_full_name": "ATH-MaaS/Pixelle-MCP",
+    "repo_url": "https://github.com/ATH-MaaS/Pixelle-MCP.git",
+    "commit": "b30e749655a91c5d8896f029ba83572aebf2d9a5",
+    "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ATH-MaaS__Pixelle-MCP",
+    "enabled": true,
+    "environment_status": "resolved_from_lockfile_or_manifest",
+    "version_source": "lockfile_or_manifest",
+    "manifest_files": [
+      "uv.lock",
+      "pyproject.toml"
+    ],
+    "resolved_package_count": 181
+  },
+  "status": "success",
+  "runner": "docker",
+  "jarvis_attempts": [
+    {
+      "runner": "docker",
+      "status": "success",
+      "elapsed_s": 9.879
+    }
+  ],
+  "dependency_graph": {
+    "status": "success",
+    "dependency_count": 181,
+    "elapsed_s": 1.186
+  },
+  "artifacts": {
+    "project_graph": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\ATH-MaaS__Pixelle-MCP\\project_graph_jarvis.json",
+    "usage_index": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\ATH-MaaS__Pixelle-MCP\\usage_index.json",
+    "package_summary_status": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\ATH-MaaS__Pixelle-MCP\\package_summary_status.json",
+    "reachability": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\ATH-MaaS__Pixelle-MCP\\reachability_report.json"
+  },
+  "counts": {
+    "project_nodes": 138,
+    "project_edges": 283,
+    "usage_index": 26,
+    "records": 67,
+    "query_targets": 106,
+    "package_summary_status": {
+      "built": 9,
+      "missing_source": 51
+    },
+    "loaded_summaries": 9
+  },
+  "elapsed_s": 58.765
+}

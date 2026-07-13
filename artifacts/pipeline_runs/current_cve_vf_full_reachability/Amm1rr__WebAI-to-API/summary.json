@@ -1,0 +1,52 @@
+{
+  "project": {
+    "id": "Amm1rr__WebAI-to-API",
+    "name": "Amm1rr__WebAI-to-API",
+    "repo_full_name": "Amm1rr/WebAI-to-API",
+    "repo_url": "https://github.com/Amm1rr/WebAI-to-API.git",
+    "commit": "f81aa1248e0d78e53f7171c9bdb416952d71d4b6",
+    "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\Amm1rr__WebAI-to-API",
+    "enabled": true,
+    "environment_status": "resolved_from_lockfile_or_manifest",
+    "version_source": "lockfile_or_manifest",
+    "manifest_files": [
+      "poetry.lock",
+      "requirements.txt",
+      "pyproject.toml"
+    ],
+    "resolved_package_count": 60
+  },
+  "status": "success",
+  "runner": "docker",
+  "jarvis_attempts": [
+    {
+      "runner": "docker",
+      "status": "success",
+      "elapsed_s": 19.357
+    }
+  ],
+  "dependency_graph": {
+    "status": "success",
+    "dependency_count": 60,
+    "elapsed_s": 0.417
+  },
+  "artifacts": {
+    "project_graph": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\Amm1rr__WebAI-to-API\\project_graph_jarvis.json",
+    "usage_index": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\Amm1rr__WebAI-to-API\\usage_index.json",
+    "package_summary_status": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\Amm1rr__WebAI-to-API\\package_summary_status.json",
+    "reachability": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\Amm1rr__WebAI-to-API\\reachability_report.json"
+  },
+  "counts": {
+    "project_nodes": 446,
+    "project_edges": 934,
+    "usage_index": 56,
+    "records": 30,
+    "query_targets": 47,
+    "package_summary_status": {
+      "built": 4,
+      "missing_source": 56
+    },
+    "loaded_summaries": 4
+  },
+  "elapsed_s": 38.473
+}

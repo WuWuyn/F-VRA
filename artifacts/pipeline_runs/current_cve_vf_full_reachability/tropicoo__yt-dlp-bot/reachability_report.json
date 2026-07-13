@@ -1,0 +1,3443 @@
+{
+  "project": {
+    "id": "tropicoo__yt-dlp-bot",
+    "name": "tropicoo__yt-dlp-bot",
+    "repo_full_name": "tropicoo/yt-dlp-bot",
+    "repo_url": "https://github.com/tropicoo/yt-dlp-bot.git",
+    "commit": "ded26973a35b4acd7f1842e0b93c5e9a0057bf22",
+    "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\tropicoo__yt-dlp-bot",
+    "enabled": true,
+    "environment_status": "resolved_from_lockfile_or_manifest",
+    "version_source": "lockfile_or_manifest",
+    "manifest_files": [
+      "uv.lock",
+      "pyproject.toml"
+    ],
+    "resolved_package_count": 75
+  },
+  "target_source": "vf_annotations",
+  "records": [
+    {
+      "group_id": "CVE-2024-38519::yt-dlp",
+      "cve_id": "CVE-2024-38519",
+      "package": "yt-dlp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multiple_independent_vfs",
+      "confidence": "high",
+      "target_vfs": [
+        "yt_dlp.utils._utils.prepend_extension",
+        "yt_dlp.utils._utils.replace_extension"
+      ],
+      "scan_alert_count": 1,
+      "scanner_count": 1,
+      "scanners": [
+        "snyk"
+      ],
+      "resolved_versions": [
+        "2025.6.25.235247.dev0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "yt_dlp.utils._utils.prepend_extension",
+        "yt_dlp.utils._utils.replace_extension"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.211
+    },
+    {
+      "group_id": "CVE-2025-53643::aiohttp",
+      "cve_id": "CVE-2025-53643",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.http_parser.HttpPayloadParser.feed_data"
+      ],
+      "scan_alert_count": 10,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.http_parser.HttpPayloadParser.feed_data"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.118
+    },
+    {
+      "group_id": "CVE-2025-54072::yt-dlp",
+      "cve_id": "CVE-2025-54072",
+      "package": "yt-dlp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "yt_dlp.postprocessor.exec.parse_cmd"
+      ],
+      "scan_alert_count": 1,
+      "scanner_count": 1,
+      "scanners": [
+        "snyk"
+      ],
+      "resolved_versions": [
+        "2025.6.25.235247.dev0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "yt_dlp.postprocessor.exec.parse_cmd"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.108
+    },
+    {
+      "group_id": "CVE-2025-54121::starlette",
+      "cve_id": "CVE-2025-54121",
+      "package": "starlette",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "starlette.datastructures.UploadFile._in_memory",
+        "starlette.datastructures.UploadFile.write"
+      ],
+      "scan_alert_count": 17,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "0.35.1",
+        "0.38.6",
+        "0.46.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "starlette.datastructures.UploadFile._in_memory",
+        "starlette.datastructures.UploadFile.write"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.126
+    },
+    {
+      "group_id": "CVE-2025-62727::starlette",
+      "cve_id": "CVE-2025-62727",
+      "package": "starlette",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "starlette.responses.FileResponse._parse_range_header"
+      ],
+      "scan_alert_count": 11,
+      "scanner_count": 4,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "0.35.1",
+        "0.38.6",
+        "0.46.2",
+        "0.47.3"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "starlette.responses.FileResponse._parse_range_header"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.107
+    },
+    {
+      "group_id": "CVE-2025-67720::pyrofork",
+      "cve_id": "CVE-2025-67720",
+      "package": "pyrofork",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "pyrogram.methods.messages.download_media.DownloadMedia.download_media"
+      ],
+      "scan_alert_count": 3,
+      "scanner_count": 3,
+      "scanners": [
+        "pip-audit",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "2.3.67"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "pyrogram.methods.messages.download_media.DownloadMedia.download_media"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.111
+    },
+    {
+      "group_id": "CVE-2025-69223::aiohttp",
+      "cve_id": "CVE-2025-69223",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.compression_utils.ZLibDecompressor.decompress_sync",
+        "aiohttp.compression_utils.ZLibDecompressor.decompress"
+      ],
+      "scan_alert_count": 31,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.compression_utils.ZLibDecompressor.decompress",
+        "aiohttp.compression_utils.ZLibDecompressor.decompress_sync"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.126
+    },
+    {
+      "group_id": "CVE-2025-69224::aiohttp",
+      "cve_id": "CVE-2025-69224",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multiple_independent_vfs",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.http_parser._is_supported_upgrade",
+        "aiohttp.http_parser.HttpParser.parse_headers",
+        "aiohttp.http_parser.HttpRequestParser._is_chunked_te"
+      ],
+      "scan_alert_count": 25,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.http_parser.HttpParser.parse_headers",
+        "aiohttp.http_parser.HttpRequestParser._is_chunked_te",
+        "aiohttp.http_parser._is_supported_upgrade"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.18
+    },
+    {
+      "group_id": "CVE-2025-69225::aiohttp",
+      "cve_id": "CVE-2025-69225",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.web_request.BaseRequest.http_range"
+      ],
+      "scan_alert_count": 25,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.web_request.BaseRequest.http_range"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.137
+    },
+    {
+      "group_id": "CVE-2025-69226::aiohttp",
+      "cve_id": "CVE-2025-69226",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.web_urldispatcher.StaticResource.resolve",
+        "aiohttp.web_urldispatcher.StaticResource._handle"
+      ],
+      "scan_alert_count": 25,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.web_urldispatcher.StaticResource._handle",
+        "aiohttp.web_urldispatcher.StaticResource.resolve"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.152
+    },
+    {
+      "group_id": "CVE-2025-69227::aiohttp",
+      "cve_id": "CVE-2025-69227",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.multipart.BodyPartReader.read_chunk",
+        "aiohttp.multipart.BodyPartReader._read_chunk_from_stream",
+        "aiohttp.web_request.BaseRequest.post"
+      ],
+      "scan_alert_count": 25,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.multipart.BodyPartReader._read_chunk_from_stream",
+        "aiohttp.multipart.BodyPartReader.read_chunk",
+        "aiohttp.web_request.BaseRequest.post"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.18
+    },
+    {
+      "group_id": "CVE-2025-69228::aiohttp",
+      "cve_id": "CVE-2025-69228",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.web_request.BaseRequest.post"
+      ],
+      "scan_alert_count": 25,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.web_request.BaseRequest.post"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.132
+    },
+    {
+      "group_id": "CVE-2025-69229::aiohttp",
+      "cve_id": "CVE-2025-69229",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.streams.StreamReader.__init__",
+        "aiohttp.streams.StreamReader.end_http_chunk_receiving",
+        "aiohttp.streams.StreamReader._read_nowait_chunk"
+      ],
+      "scan_alert_count": 25,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.streams.StreamReader.__init__",
+        "aiohttp.streams.StreamReader._read_nowait_chunk",
+        "aiohttp.streams.StreamReader.end_http_chunk_receiving"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.181
+    },
+    {
+      "group_id": "CVE-2025-69230::aiohttp",
+      "cve_id": "CVE-2025-69230",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp._cookie_helpers.parse_cookie_header"
+      ],
+      "scan_alert_count": 25,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp._cookie_helpers.parse_cookie_header"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.122
+    },
+    {
+      "group_id": "CVE-2026-22815::aiohttp",
+      "cve_id": "CVE-2026-22815",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multiple_independent_vfs",
+      "confidence": "medium",
+      "target_vfs": [
+        "aiohttp.http_parser.HeadersParser.parse_headers",
+        "aiohttp.http_parser.HttpParser.__init__"
+      ],
+      "scan_alert_count": 35,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.http_parser.HeadersParser.parse_headers",
+        "aiohttp.http_parser.HttpParser.__init__"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.149
+    },
+    {
+      "group_id": "CVE-2026-24486::python-multipart",
+      "cve_id": "CVE-2026-24486",
+      "package": "python-multipart",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "python_multipart.multipart.File.__init__"
+      ],
+      "scan_alert_count": 25,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "0.0.12",
+        "0.0.20",
+        "0.0.21"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "python_multipart.multipart.File.__init__"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.119
+    },
+    {
+      "group_id": "CVE-2026-26331::yt-dlp",
+      "cve_id": "CVE-2026-26331",
+      "package": "yt-dlp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "yt_dlp.extractor.common.InfoExtractor._get_netrc_login_info",
+        "yt_dlp.extractor.getcourseru.GetCourseRuIE._real_extract",
+        "yt_dlp.extractor.pornhub.PornHubBaseIE._login",
+        "yt_dlp.extractor.teachable.TeachableIE._real_extract"
+      ],
+      "scan_alert_count": 2,
+      "scanner_count": 2,
+      "scanners": [
+        "pip-audit",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "2025.6.25.235247.dev0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "yt_dlp.extractor.common.InfoExtractor._get_netrc_login_info",
+        "yt_dlp.extractor.getcourseru.GetCourseRuIE._real_extract",
+        "yt_dlp.extractor.pornhub.PornHubBaseIE._login",
+        "yt_dlp.extractor.teachable.TeachableIE._real_extract"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.205
+    },
+    {
+      "group_id": "CVE-2026-28684::python-dotenv",
+      "cve_id": "CVE-2026-28684",
+      "package": "python-dotenv",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "src.dotenv.main.rewrite",
+        "src.dotenv.main.set_key",
+        "src.dotenv.main.unset_key"
+      ],
+      "scan_alert_count": 42,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "0.18.0",
+        "1.0.0",
+        "1.0.1",
+        "1.1.1",
+        "1.2.1"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "src.dotenv.main.rewrite",
+        "src.dotenv.main.set_key",
+        "src.dotenv.main.unset_key"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.147
+    },
+    {
+      "group_id": "CVE-2026-34513::aiohttp",
+      "cve_id": "CVE-2026-34513",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.connector._DNSCacheTable.__init__",
+        "aiohttp.connector._DNSCacheTable.add"
+      ],
+      "scan_alert_count": 35,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.connector._DNSCacheTable.__init__",
+        "aiohttp.connector._DNSCacheTable.add"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.142
+    },
+    {
+      "group_id": "CVE-2026-34514::aiohttp",
+      "cve_id": "CVE-2026-34514",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.formdata.FormData.add_field"
+      ],
+      "scan_alert_count": 35,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.formdata.FormData.add_field"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.12
+    },
+    {
+      "group_id": "CVE-2026-34515::aiohttp",
+      "cve_id": "CVE-2026-34515",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.web_urldispatcher.StaticResource._handle"
+      ],
+      "scan_alert_count": 35,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.web_urldispatcher.StaticResource._handle"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.105
+    },
+    {
+      "group_id": "CVE-2026-34516::aiohttp",
+      "cve_id": "CVE-2026-34516",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.multipart.MultipartReader.__init__",
+        "aiohttp.multipart.MultipartReader._read_headers",
+        "aiohttp.streams.StreamReader.readuntil"
+      ],
+      "scan_alert_count": 35,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.multipart.MultipartReader.__init__",
+        "aiohttp.multipart.MultipartReader._read_headers",
+        "aiohttp.streams.StreamReader.readuntil"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.137
+    },
+    {
+      "group_id": "CVE-2026-34517::aiohttp",
+      "cve_id": "CVE-2026-34517",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.web_request.BaseRequest.post"
+      ],
+      "scan_alert_count": 35,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.web_request.BaseRequest.post"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.105
+    },
+    {
+      "group_id": "CVE-2026-34518::aiohttp",
+      "cve_id": "CVE-2026-34518",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.client.ClientSession._request"
+      ],
+      "scan_alert_count": 35,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.client.ClientSession._request"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.106
+    },
+    {
+      "group_id": "CVE-2026-34519::aiohttp",
+      "cve_id": "CVE-2026-34519",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multiple_independent_vfs",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.http_writer._py_serialize_headers",
+        "aiohttp.web_response.StreamResponse._set_status"
+      ],
+      "scan_alert_count": 35,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.http_writer._py_serialize_headers",
+        "aiohttp.web_response.StreamResponse._set_status"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.135
+    },
+    {
+      "group_id": "CVE-2026-34525::aiohttp",
+      "cve_id": "CVE-2026-34525",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.http_parser.HeadersParser.parse_headers",
+        "aiohttp.http_parser.HttpParser.parse_headers"
+      ],
+      "scan_alert_count": 35,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.http_parser.HeadersParser.parse_headers",
+        "aiohttp.http_parser.HttpParser.parse_headers"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.125
+    },
+    {
+      "group_id": "CVE-2026-34993::aiohttp",
+      "cve_id": "CVE-2026-34993",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.cookiejar.CookieJar.save",
+        "aiohttp.cookiejar.CookieJar.load"
+      ],
+      "scan_alert_count": 47,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.13.5",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.cookiejar.CookieJar.load",
+        "aiohttp.cookiejar.CookieJar.save"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.122
+    },
+    {
+      "group_id": "CVE-2026-40192::pillow",
+      "cve_id": "CVE-2026-40192",
+      "package": "pillow",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "src.PIL.FitsImagePlugin.decode"
+      ],
+      "scan_alert_count": 24,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "10.4.0",
+        "11.2.1",
+        "11.3.0",
+        "12.0.0",
+        "12.1.0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "src.PIL.FitsImagePlugin.decode"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.106
+    },
+    {
+      "group_id": "CVE-2026-41205::mako",
+      "cve_id": "CVE-2026-41205",
+      "package": "mako",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "mako.template.Template.__init__"
+      ],
+      "scan_alert_count": 18,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "1.3.0",
+        "1.3.10",
+        "1.3.5"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "mako.template.Template.__init__"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.101
+    },
+    {
+      "group_id": "CVE-2026-42310::pillow",
+      "cve_id": "CVE-2026-42310",
+      "package": "pillow",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "src.PIL.PdfParser.read_prev_trailer"
+      ],
+      "scan_alert_count": 24,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "10.4.0",
+        "11.2.1",
+        "11.3.0",
+        "12.0.0",
+        "12.1.0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "src.PIL.PdfParser.read_prev_trailer"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.104
+    },
+    {
+      "group_id": "CVE-2026-42311::pillow",
+      "cve_id": "CVE-2026-42311",
+      "package": "pillow",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "src.PIL.ImageFile.setimage"
+      ],
+      "scan_alert_count": 24,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "10.4.0",
+        "11.2.1",
+        "11.3.0",
+        "12.0.0",
+        "12.1.0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "src.PIL.ImageFile.setimage"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.103
+    },
+    {
+      "group_id": "CVE-2026-44307::mako",
+      "cve_id": "CVE-2026-44307",
+      "package": "mako",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "mako.lookup.TemplateLookup.get_template",
+        "mako.template.Template.__init__"
+      ],
+      "scan_alert_count": 19,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "1.3.0",
+        "1.3.10",
+        "1.3.11",
+        "1.3.5"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "mako.lookup.TemplateLookup.get_template",
+        "mako.template.Template.__init__"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.119
+    },
+    {
+      "group_id": "CVE-2026-47265::aiohttp",
+      "cve_id": "CVE-2026-47265",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.client.ClientSession._request"
+      ],
+      "scan_alert_count": 47,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.13.5",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.client.ClientSession._request"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.102
+    },
+    {
+      "group_id": "CVE-2026-48710::starlette",
+      "cve_id": "CVE-2026-48710",
+      "package": "starlette",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "starlette.datastructures.URL.__init__"
+      ],
+      "scan_alert_count": 61,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "0.35.1",
+        "0.38.6",
+        "0.46.2",
+        "0.47.3",
+        "0.49.3",
+        "0.50.0",
+        "0.52.1",
+        "1.0.0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "starlette.datastructures.URL.__init__"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.102
+    },
+    {
+      "group_id": "CVE-2026-48818::starlette",
+      "cve_id": "CVE-2026-48818",
+      "package": "starlette",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "medium",
+      "target_vfs": [
+        "starlette.staticfiles.get_response"
+      ],
+      "scan_alert_count": 47,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "0.35.1",
+        "0.38.6",
+        "0.46.2",
+        "0.47.3",
+        "0.49.3",
+        "0.50.0",
+        "0.52.1",
+        "1.0.0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "starlette.staticfiles.get_response"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.099
+    },
+    {
+      "group_id": "CVE-2026-50023::yt-dlp",
+      "cve_id": "CVE-2026-50023",
+      "package": "yt-dlp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "yt_dlp.YoutubeDL._write_link_file",
+        "yt_dlp.utils._utils.sanitize_extension"
+      ],
+      "scan_alert_count": 2,
+      "scanner_count": 2,
+      "scanners": [
+        "pip-audit",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "2025.6.25.235247.dev0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "yt_dlp.YoutubeDL._write_link_file",
+        "yt_dlp.utils._utils.sanitize_extension"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.123
+    },
+    {
+      "group_id": "CVE-2026-50269::aiohttp",
+      "cve_id": "CVE-2026-50269",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.payload.headers"
+      ],
+      "scan_alert_count": 47,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.13.5",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.payload.headers"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.102
+    },
+    {
+      "group_id": "CVE-2026-50574::yt-dlp",
+      "cve_id": "CVE-2026-50574",
+      "package": "yt-dlp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "yt_dlp.downloader.external._make_cmd"
+      ],
+      "scan_alert_count": 2,
+      "scanner_count": 2,
+      "scanners": [
+        "pip-audit",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "2025.6.25.235247.dev0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "yt_dlp.downloader.external._make_cmd"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.102
+    },
+    {
+      "group_id": "CVE-2026-54059::pillow",
+      "cve_id": "CVE-2026-54059",
+      "package": "pillow",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multiple_independent_vfs",
+      "confidence": "high",
+      "target_vfs": [
+        "src.PIL.BdfFontFile.bdf_char",
+        "src.PIL.FontFile.compile",
+        "src.PIL.PcfFontFile.append"
+      ],
+      "scan_alert_count": 10,
+      "scanner_count": 1,
+      "scanners": [
+        "snyk"
+      ],
+      "resolved_versions": [
+        "10.4.0",
+        "11.2.1",
+        "11.3.0",
+        "12.0.0",
+        "12.1.0",
+        "12.2.0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "src.PIL.BdfFontFile.bdf_char",
+        "src.PIL.FontFile.compile",
+        "src.PIL.PcfFontFile.append"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.141
+    },
+    {
+      "group_id": "CVE-2026-54060::pillow",
+      "cve_id": "CVE-2026-54060",
+      "package": "pillow",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multiple_independent_vfs",
+      "confidence": "high",
+      "target_vfs": [
+        "src.PIL.BdfFontFile.bdf_char",
+        "src.PIL.FontFile.compile",
+        "src.PIL.PcfFontFile.append"
+      ],
+      "scan_alert_count": 10,
+      "scanner_count": 1,
+      "scanners": [
+        "snyk"
+      ],
+      "resolved_versions": [
+        "10.4.0",
+        "11.2.1",
+        "11.3.0",
+        "12.0.0",
+        "12.1.0",
+        "12.2.0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "src.PIL.BdfFontFile.bdf_char",
+        "src.PIL.FontFile.compile",
+        "src.PIL.PcfFontFile.append"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.143
+    },
+    {
+      "group_id": "CVE-2026-54273::aiohttp",
+      "cve_id": "CVE-2026-54273",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.base_protocol.resume_reading",
+        "aiohttp.http_parser.__init__",
+        "aiohttp.http_parser.feed_data",
+        "aiohttp.http_parser.get_content_length",
+        "aiohttp.web_protocol.__init__"
+      ],
+      "scan_alert_count": 47,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.13.5",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.base_protocol.resume_reading",
+        "aiohttp.http_parser.__init__",
+        "aiohttp.http_parser.feed_data",
+        "aiohttp.http_parser.get_content_length",
+        "aiohttp.web_protocol.__init__"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.173
+    },
+    {
+      "group_id": "CVE-2026-54274::aiohttp",
+      "cve_id": "CVE-2026-54274",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp._websocket.reader_py._handle_frame",
+        "aiohttp._websocket.reader_py._feed_data"
+      ],
+      "scan_alert_count": 47,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.13.5",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp._websocket.reader_py._feed_data",
+        "aiohttp._websocket.reader_py._handle_frame"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.122
+    },
+    {
+      "group_id": "CVE-2026-54276::aiohttp",
+      "cve_id": "CVE-2026-54276",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.client_middleware_digest_auth.__call__"
+      ],
+      "scan_alert_count": 47,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.13.5",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.client_middleware_digest_auth.__call__"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.103
+    },
+    {
+      "group_id": "CVE-2026-54278::aiohttp",
+      "cve_id": "CVE-2026-54278",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.streams._read_nowait"
+      ],
+      "scan_alert_count": 47,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.13.5",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.streams._read_nowait"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.1
+    },
+    {
+      "group_id": "CVE-2026-54279::aiohttp",
+      "cve_id": "CVE-2026-54279",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multi_function_behavior",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.cookiejar.save",
+        "aiohttp.cookiejar._load_json_data"
+      ],
+      "scan_alert_count": 47,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.13.5",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.cookiejar._load_json_data",
+        "aiohttp.cookiejar.save"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.121
+    },
+    {
+      "group_id": "CVE-2026-54280::aiohttp",
+      "cve_id": "CVE-2026-54280",
+      "package": "aiohttp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "aiohttp.web_response.write_eof"
+      ],
+      "scan_alert_count": 47,
+      "scanner_count": 5,
+      "scanners": [
+        "osv-scanner",
+        "pip-audit",
+        "pip-audit-fallback",
+        "semgrep-supply-chain",
+        "snyk"
+      ],
+      "resolved_versions": [
+        "3.12.13",
+        "3.12.15",
+        "3.13.2",
+        "3.13.3",
+        "3.13.5",
+        "3.8.4",
+        "3.9.2"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "aiohttp.web_response.write_eof"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.202
+    },
+    {
+      "group_id": "CVE-2026-55379::pillow",
+      "cve_id": "CVE-2026-55379",
+      "package": "pillow",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multiple_independent_vfs",
+      "confidence": "high",
+      "target_vfs": [
+        "src.PIL.BdfFontFile.bdf_char",
+        "src.PIL.FontFile.compile",
+        "src.PIL.PcfFontFile.append"
+      ],
+      "scan_alert_count": 10,
+      "scanner_count": 1,
+      "scanners": [
+        "snyk"
+      ],
+      "resolved_versions": [
+        "10.4.0",
+        "11.2.1",
+        "11.3.0",
+        "12.0.0",
+        "12.1.0",
+        "12.2.0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "src.PIL.BdfFontFile.bdf_char",
+        "src.PIL.FontFile.compile",
+        "src.PIL.PcfFontFile.append"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.142
+    },
+    {
+      "group_id": "CVE-2026-55380::pillow",
+      "cve_id": "CVE-2026-55380",
+      "package": "pillow",
+      "evidence_level": "patch_verified",
+      "mapping_type": "single_vf",
+      "confidence": "high",
+      "target_vfs": [
+        "src.PIL.GdImageFile._open"
+      ],
+      "scan_alert_count": 10,
+      "scanner_count": 1,
+      "scanners": [
+        "snyk"
+      ],
+      "resolved_versions": [
+        "10.4.0",
+        "11.2.1",
+        "11.3.0",
+        "12.0.0",
+        "12.1.0",
+        "12.2.0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "src.PIL.GdImageFile._open"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.105
+    },
+    {
+      "group_id": "CVE-2026-55404::yt-dlp",
+      "cve_id": "CVE-2026-55404",
+      "package": "yt-dlp",
+      "evidence_level": "patch_verified",
+      "mapping_type": "multiple_independent_vfs",
+      "confidence": "high",
+      "target_vfs": [
+        "yt_dlp.YoutubeDL._write_link_file",
+        "yt_dlp.utils._utils.iri_to_uri"
+      ],
+      "scan_alert_count": 1,
+      "scanner_count": 1,
+      "scanners": [
+        "snyk"
+      ],
+      "resolved_versions": [
+        "2025.6.25.235247.dev0"
+      ],
+      "project": "tropicoo__yt-dlp-bot",
+      "target_source": "vf_annotations",
+      "query_targets": [
+        "yt_dlp.YoutubeDL._write_link_file",
+        "yt_dlp.utils._utils.iri_to_uri"
+      ],
+      "verdict": "not_reachable",
+      "hit_set": [],
+      "path_count": 0,
+      "paths": [],
+      "path_lengths": [],
+      "used_summaries": [],
+      "loaded_summaries": [
+        "click",
+        "dotenv"
+      ],
+      "unresolved_targets": [
+        "api.apps.video.v1.tasks.services.task.TaskService",
+        "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+        "api.common.exceptions.TaskNotFoundHTTPError",
+        "bot.bot.launcher.BotLauncher",
+        "bot.core.log.setup_logging",
+        "fastapi.HTTPException",
+        "worker.core.launcher.WorkerLauncher",
+        "worker.core.log.setup_logging"
+      ],
+      "unresolved_frontier": [],
+      "uncertainty": {
+        "unresolved_target_related": [],
+        "unresolved_unrelated": [
+          "api.apps.video.v1.tasks.services.task.TaskService",
+          "api.apps.video.v1.tasks.services.task.TaskService.create_task_non_db",
+          "api.common.exceptions.TaskNotFoundHTTPError",
+          "bot.bot.launcher.BotLauncher",
+          "bot.core.log.setup_logging",
+          "fastapi.HTTPException",
+          "worker.core.launcher.WorkerLauncher",
+          "worker.core.log.setup_logging"
+        ],
+        "summary_warning_roots": [],
+        "graph_warning_related": []
+      },
+      "query_time_ms": 0.119
+    }
+  ],
+  "counts": {
+    "records": 49,
+    "query_targets": 72,
+    "verdict_counts": {
+      "not_reachable": 49
+    },
+    "paths": 0
+  }
+}

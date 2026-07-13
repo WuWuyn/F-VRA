@@ -1,0 +1,3027 @@
+{
+  "nodes": 956,
+  "edges": 1977,
+  "internal_edges": 1170,
+  "external_edges": 807,
+  "usage_index_count": 68,
+  "entry_points": [
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\__main__.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\performance_analyser.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\test_user_asset_path.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_additional.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_modes.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_runtime.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_timing.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_timing_override.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\scripts\\keyrest.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\scripts\\keyrest_auto.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\scripts\\oneshot.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets_cached_urls.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_cache.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_get_gif_frames.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_now_playing.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_sendspin_servers.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_apis.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_assets.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_audio_device_persistence.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_events.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gap_devices.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_integration.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_image_cache.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_image_security.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_instance_id.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_mpris.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_musicbrainz.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_normalise.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_sendspin.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_service.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_smtc.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes_action_field.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes_api_action_field.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes_api_integration.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes_id.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_sendspin_always_on_runtime.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_sendspin_stream_flac_lifecycle.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_startup_playlist.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_thumbnail_cache.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_virtual_device_deletion.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_virtual_presets.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_websocket_clients.py"
+  ],
+  "metadata": {
+    "jarvis_external_usage_augmented_count": 224,
+    "jarvis_external_usage_augmented_edges": [
+      {
+        "caller": "performance_analyser.load_and_prepare_data",
+        "callee": "pandas.to_numeric",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\performance_analyser.py",
+        "line_number": 40,
+        "call_expr": "pd.to_numeric(df['percent_faster'].str.strip('%'))"
+      },
+      {
+        "caller": "performance_analyser.load_and_prepare_data",
+        "callee": "pandas.to_datetime",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\performance_analyser.py",
+        "line_number": 22,
+        "call_expr": "pd.to_datetime(df['timestamp'])"
+      },
+      {
+        "caller": "performance_analyser.load_and_prepare_data",
+        "callee": "pandas.read_csv",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\performance_analyser.py",
+        "line_number": 12,
+        "call_expr": "pd.read_csv('performance_analysis.csv')"
+      },
+      {
+        "caller": "test_user_asset_path.create_test_gif",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\test_user_asset_path.py",
+        "line_number": 13,
+        "call_expr": "Image.new('RGB', (10, 10), color='red')"
+      },
+      {
+        "caller": "ledfx.assets.validate_asset_content",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\assets.py",
+        "line_number": 217,
+        "call_expr": "Image.open(io.BytesIO(data))"
+      },
+      {
+        "caller": "ledfx.config.load_config",
+        "callee": "packaging.version.parse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\config.py",
+        "line_number": 466,
+        "call_expr": "parse_version(CONFIGURATION_VERSION)"
+      },
+      {
+        "caller": "ledfx.config.migrate_config",
+        "callee": "packaging.version.parse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\config.py",
+        "line_number": 854,
+        "call_expr": "parse_version('2.3.6')"
+      },
+      {
+        "caller": "ledfx.core.LedFxCore.__init__",
+        "callee": "winloop.new_event_loop",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\core.py",
+        "line_number": 129,
+        "call_expr": "winloop.new_event_loop()"
+      },
+      {
+        "caller": "ledfx.core.LedFxCore.__init__",
+        "callee": "uvloop.new_event_loop",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\core.py",
+        "line_number": 123,
+        "call_expr": "uvloop.new_event_loop()"
+      },
+      {
+        "caller": "ledfx.core.LedFxCore._start_audio_device_monitor",
+        "callee": "audio_hotplug.create_monitor",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\core.py",
+        "line_number": 215,
+        "call_expr": "create_monitor(loop=self.loop, debounce_ms=200)"
+      },
+      {
+        "caller": "ledfx.core.LedFxCore.setup_icon_menu",
+        "callee": "pystray.Menu",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\core.py",
+        "line_number": 325,
+        "call_expr": "pystray.Menu(pystray.MenuItem(f'LedFx - {PROJECT_VERSION}', None, enabled=False), pystray.Menu.SEPARATOR, pystray.MenuItem('Open', self.open_ui, default=True), pystray.MenuItem('Check for Update', self.check_and_notify_updates), pystray.MenuItem('Quit Ledfx', self.stop))"
+      },
+      {
+        "caller": "ledfx.core.LedFxCore.setup_icon_menu",
+        "callee": "pystray.MenuItem",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\core.py",
+        "line_number": 334,
+        "call_expr": "pystray.MenuItem('Quit Ledfx', self.stop)"
+      },
+      {
+        "caller": "ledfx.http_manager.HttpServer.__init__",
+        "callee": "aiohttp.web.Application",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\http_manager.py",
+        "line_number": 24,
+        "call_expr": "web.Application(client_max_size=5 * 1024 * 1024)"
+      },
+      {
+        "caller": "ledfx.http_manager.HttpServer.start",
+        "callee": "aiohttp.web.AppRunner",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\http_manager.py",
+        "line_number": 102,
+        "call_expr": "web.AppRunner(self.app)"
+      },
+      {
+        "caller": "ledfx.http_manager.HttpServer.start_tcpsite",
+        "callee": "aiohttp.web.TCPSite",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\http_manager.py",
+        "line_number": 118,
+        "call_expr": "web.TCPSite(self.runner, self.host, port, ssl_context=ssl_context)"
+      },
+      {
+        "caller": "ledfx.scenes.Scenes.__init__",
+        "callee": "voluptuous.Schema",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\scenes.py",
+        "line_number": 31,
+        "call_expr": "vol.Schema({vol.Required('name', description='Name of the scene'): str, vol.Optional('scene_image', description='Image or icon to display', default='Wallpaper'): str, vol.Optional('scene_tags', description='Tags for filtering'): str, vol.Optional('scene_puturl', description='On Scene Activate, URL to PUT too'): str, vol.Optional('scene_payload', description='On Scene Activate, send this payload to scene_puturl'): str, vol.Optional('scene_midiactivate', description='On MIDI key/note, Activate a scene'): str, vol.Required('virtuals', description='The effects of these virtuals will be saved'): virtuals_validator})"
+      },
+      {
+        "caller": "ledfx.scenes.Scenes.__init__",
+        "callee": "voluptuous.Required",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\scenes.py",
+        "line_number": 55,
+        "call_expr": "vol.Required('virtuals', description='The effects of these virtuals will be saved')"
+      },
+      {
+        "caller": "ledfx.scenes.Scenes.__init__",
+        "callee": "voluptuous.Optional",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\scenes.py",
+        "line_number": 51,
+        "call_expr": "vol.Optional('scene_midiactivate', description='On MIDI key/note, Activate a scene')"
+      },
+      {
+        "caller": "ledfx.sentry_config.setup_sentry",
+        "callee": "sentry_sdk.init",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\sentry_config.py",
+        "line_number": 59,
+        "call_expr": "sentry_sdk.init(sentry_dsn, traces_sample_rate=sample_rate, integrations=[AioHttpIntegration()], release=release)"
+      },
+      {
+        "caller": "ledfx.sentry_config.setup_sentry",
+        "callee": "sentry_sdk.integrations.aiohttp.AioHttpIntegration",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\sentry_config.py",
+        "line_number": 62,
+        "call_expr": "AioHttpIntegration()"
+      },
+      {
+        "caller": "ledfx.utils.read_ledfx_dotenv",
+        "callee": "dotenv.load_dotenv",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utils.py",
+        "line_number": 704,
+        "call_expr": "load_dotenv(dotenv_path=path_to_load)"
+      },
+      {
+        "caller": "ledfx.utils._validate_and_open_image",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utils.py",
+        "line_number": 1620,
+        "call_expr": "Image.open(resolved_path)"
+      },
+      {
+        "caller": "ledfx.utils.open_gif",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utils.py",
+        "line_number": 1780,
+        "call_expr": "Image.open(io.BytesIO(data))"
+      },
+      {
+        "caller": "ledfx.utils.open_image",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utils.py",
+        "line_number": 1994,
+        "call_expr": "Image.open(io.BytesIO(data))"
+      },
+      {
+        "caller": "ledfx.utils.UpdateChecker.get_release_information",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utils.py",
+        "line_number": 2403,
+        "call_expr": "requests.get(UpdateChecker._update_url, timeout=0.5)"
+      },
+      {
+        "caller": "ledfx.utils.get_sorted_physical_ips",
+        "callee": "psutil.net_if_addrs",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utils.py",
+        "line_number": 2669,
+        "call_expr": "psutil.net_if_addrs()"
+      },
+      {
+        "caller": "ledfx.utils.get_sorted_physical_ips",
+        "callee": "psutil.net_io_counters",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utils.py",
+        "line_number": 2667,
+        "call_expr": "psutil.net_io_counters(pernic=True)"
+      },
+      {
+        "caller": "ledfx.utils.get_sorted_physical_ips",
+        "callee": "psutil.net_if_stats",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utils.py",
+        "line_number": 2666,
+        "call_expr": "psutil.net_if_stats()"
+      },
+      {
+        "caller": "ledfx.__main__.main",
+        "callee": "pystray.Icon",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\__main__.py",
+        "line_number": 294,
+        "call_expr": "pystray.Icon('LedFx', icon=Image.open(icon_location), title='LedFx')"
+      },
+      {
+        "caller": "ledfx.__main__.main",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\__main__.py",
+        "line_number": 295,
+        "call_expr": "Image.open(icon_location)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIList.test_list_assets",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 70,
+        "call_expr": "requests.get(ASSETS_API_URL, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIUpload.test_download_builtin_asset",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 220,
+        "call_expr": "requests.post(ASSETS_DOWNLOAD_API_URL, json={'path': builtin_path}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIUpload.test_download_builtin_asset",
+        "callee": "pytest.skip",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 214,
+        "call_expr": "pytest.skip('No built-in assets available for testing')"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIUpload.test_download_builtin_asset",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 207,
+        "call_expr": "requests.get(f'http://127.0.0.1:{BASE_PORT}/api/assets_fixed', timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIUpload.test_download_get_builtin_asset",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 298,
+        "call_expr": "requests.get(ASSETS_DOWNLOAD_API_URL, params={'path': builtin_path}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIUpload.test_download_get_builtin_asset",
+        "callee": "pytest.skip",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 292,
+        "call_expr": "pytest.skip('No built-in assets available for testing')"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIIntegration.test_full_lifecycle",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 504,
+        "call_expr": "requests.get(ASSETS_API_URL, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIIntegration.test_full_lifecycle",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 496,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': asset_path}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIIntegration.test_full_lifecycle",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 486,
+        "call_expr": "requests.post(ASSETS_DOWNLOAD_API_URL, json={'path': asset_path}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_default_size",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 545,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'test_thumbnail.png'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_default_size",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 539,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_default_size",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 529,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': 'test_thumbnail.png'}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_custom_size",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 578,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'test_thumbnail_custom.png'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_custom_size",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 574,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_custom_size",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 564,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': 'test_thumbnail_custom.png', 'size': 64}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_dimension_max",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 802,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'test_dimension_max.png'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_dimension_max",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 797,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_dimension_max",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 783,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': 'test_dimension_max.png', 'size': 200, 'dimension': 'max'}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_animated_gif_default",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 881,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'test_animated.gif'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_animated_gif_default",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 872,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_animated_gif_default",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 862,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': 'test_animated.gif', 'size': 64}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_animated_gif_explicit_true",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 918,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'test_animated2.gif'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_animated_gif_explicit_true",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 912,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_animated_gif_explicit_true",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 902,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': 'test_animated2.gif', 'size': 64, 'animated': True}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_animated_gif_static",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 958,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'test_animated_static.gif'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_animated_gif_static",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 951,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_animated_gif_static",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 937,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': 'test_animated_static.gif', 'size': 64, 'animated': False}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_builtin_animated",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1031,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_builtin_animated",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1021,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': 'builtin://skull.gif', 'size': 64, 'animated': True}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_builtin_static",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1052,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_builtin_static",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1038,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': 'builtin://skull.gif', 'size': 64, 'animated': False}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_auto_invalidation_on_upload",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1110,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'test_auto_invalidate.png'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_auto_invalidation_on_upload",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1105,
+        "call_expr": "Image.open(io.BytesIO(resp2.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_auto_invalidation_on_upload",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1093,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': 'test_auto_invalidate.png', 'size': 64}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_auto_invalidation_on_upload",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1081,
+        "call_expr": "Image.new('RGB', (100, 100), color='blue')"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_force_refresh",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1180,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'test_force_refresh.png'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_force_refresh",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1170,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': 'test_force_refresh.png', 'size': 64}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_force_refresh",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1165,
+        "call_expr": "Image.open(io.BytesIO(resp3.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_force_refresh",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1119,
+        "call_expr": "Image.new('RGB', (100, 100), color='red')"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIAnimationMetadata.test_list_assets_includes_animation_metadata",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1242,
+        "call_expr": "requests.get(ASSETS_API_URL, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIAnimationMetadata.test_static_image_metadata",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1286,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'test_static_meta.png'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIAnimationMetadata.test_static_image_metadata",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1273,
+        "call_expr": "requests.get(ASSETS_API_URL, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsAPIAnimationMetadata.test_static_image_metadata",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1269,
+        "call_expr": "requests.post(ASSETS_API_URL, files=files, data=data, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsFixedAPI.test_assets_fixed_endpoint_exists",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1296,
+        "call_expr": "requests.get(f'http://127.0.0.1:{BASE_PORT}/api/assets_fixed', timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsFixedAPI.test_assets_fixed_metadata_structure",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1306,
+        "call_expr": "requests.get(f'http://127.0.0.1:{BASE_PORT}/api/assets_fixed', timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_builtin_asset",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1383,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_builtin_asset",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1370,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': asset_path, 'size': 64}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_builtin_asset",
+        "callee": "pytest.skip",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1363,
+        "call_expr": "pytest.skip('No built-in assets available for testing')"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_builtin_asset",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1356,
+        "call_expr": "requests.get(f'http://127.0.0.1:{BASE_PORT}/api/assets_fixed', timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_user_vs_builtin_separation",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1434,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': builtin_asset_name}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_user_vs_builtin_separation",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1425,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': f'builtin://{builtin_asset_name}', 'size': 64}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_user_vs_builtin_separation",
+        "callee": "pytest.skip",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1397,
+        "call_expr": "pytest.skip('No built-in assets available for testing')"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_user_vs_builtin_separation",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1391,
+        "call_expr": "requests.get(f'http://127.0.0.1:{BASE_PORT}/api/assets_fixed', timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_builtin_nested_path",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1457,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': nested_path, 'size': 64}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_builtin_nested_path",
+        "callee": "pytest.skip",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1453,
+        "call_expr": "pytest.skip('No nested built-in assets available for testing')"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_builtin_nested_path",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1441,
+        "call_expr": "requests.get(f'http://127.0.0.1:{BASE_PORT}/api/assets_fixed', timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_default_size",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1515,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'test_thumb_get_default.png'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_default_size",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1510,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_default_size",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1501,
+        "call_expr": "requests.get(ASSETS_THUMBNAIL_API_URL, params={'path': 'test_thumb_get_default.png'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_default_size",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1497,
+        "call_expr": "requests.post(ASSETS_API_URL, files=files, data=data, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_custom_size",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1549,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'test_thumb_get_custom.png'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_custom_size",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1545,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_custom_size",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1536,
+        "call_expr": "requests.get(ASSETS_THUMBNAIL_API_URL, params={'path': 'test_thumb_get_custom.png', 'size': '64'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_custom_size",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1532,
+        "call_expr": "requests.post(ASSETS_API_URL, files=files, data=data, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_animated_true",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1663,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'test_thumb_get_animated.gif'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_animated_true",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1658,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_animated_true",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1646,
+        "call_expr": "requests.get(ASSETS_THUMBNAIL_API_URL, params={'path': 'test_thumb_get_animated.gif', 'animated': 'true'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_animated_true",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1642,
+        "call_expr": "requests.post(ASSETS_API_URL, files=files, data=data, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_animated_false",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1701,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'test_thumb_get_static.gif'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_animated_false",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1696,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_animated_false",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1684,
+        "call_expr": "requests.get(ASSETS_THUMBNAIL_API_URL, params={'path': 'test_thumb_get_static.gif', 'animated': 'false'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_animated_false",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1680,
+        "call_expr": "requests.post(ASSETS_API_URL, files=files, data=data, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_builtin_asset",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1730,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_builtin_asset",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1721,
+        "call_expr": "requests.get(ASSETS_THUMBNAIL_API_URL, params={'path': builtin_path, 'size': '64'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_builtin_asset",
+        "callee": "pytest.skip",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "line_number": 1717,
+        "call_expr": "pytest.skip('No built-in assets available for testing')"
+      },
+      {
+        "caller": "tests.test_api_assets_cached_urls.TestAssetsDownloadCachedURL.test_download_uncached_url_returns_error",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets_cached_urls.py",
+        "line_number": 90,
+        "call_expr": "requests.post(ASSETS_DOWNLOAD_API_URL, json={'path': test_url}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets_cached_urls.TestAssetsDownloadCachedURL.test_download_uncached_url_returns_error",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets_cached_urls.py",
+        "line_number": 75,
+        "call_expr": "requests.get(ASSETS_DOWNLOAD_API_URL, params={'path': test_url}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets_cached_urls.TestAssetsThumbnailCachedURL.test_thumbnail_uncached_url_returns_error",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets_cached_urls.py",
+        "line_number": 123,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': test_url, 'size': 64}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_assets_cached_urls.TestURLDownloadWithExternalURL.test_download_url_successfully",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets_cached_urls.py",
+        "line_number": 200,
+        "call_expr": "requests.get(CACHE_API_URL, timeout=10)"
+      },
+      {
+        "caller": "tests.test_api_assets_cached_urls.TestURLDownloadWithExternalURL.test_download_url_successfully",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets_cached_urls.py",
+        "line_number": 195,
+        "call_expr": "Image.open(io.BytesIO(resp.content))"
+      },
+      {
+        "caller": "tests.test_api_assets_cached_urls.TestURLDownloadWithExternalURL.test_thumbnail_url_cached_separately",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets_cached_urls.py",
+        "line_number": 287,
+        "call_expr": "requests.get(CACHE_API_URL, timeout=10)"
+      },
+      {
+        "caller": "tests.test_api_assets_cached_urls.TestURLDownloadWithExternalURL.test_thumbnail_url_cached_separately",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets_cached_urls.py",
+        "line_number": 278,
+        "call_expr": "requests.post(ASSETS_THUMBNAIL_API_URL, json={'path': test_url, 'size': 50, 'dimension': 'max'}, headers={'Content-Type': 'application/json'}, timeout=60)"
+      },
+      {
+        "caller": "tests.test_api_assets_cached_urls.TestURLDownloadWithExternalURL.test_url_ssrf_protection",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets_cached_urls.py",
+        "line_number": 312,
+        "call_expr": "requests.get(ASSETS_DOWNLOAD_API_URL, params={'path': url}, timeout=10)"
+      },
+      {
+        "caller": "tests.test_api_cache.TestCacheRefreshAPI.test_refresh_single_entry",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_cache.py",
+        "line_number": 74,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'refresh_test.png'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_cache.TestCacheRefreshAPI.test_refresh_single_entry",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_cache.py",
+        "line_number": 61,
+        "call_expr": "requests.post(CACHE_REFRESH_API_URL, json={'url': 'asset://refresh_test.png', 'all_variants': False}, headers={'Content-Type': 'application/json'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_cache.TestCacheStatsAPI.test_get_stats_includes_image_metadata",
+        "callee": "requests.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_cache.py",
+        "line_number": 450,
+        "call_expr": "requests.delete(ASSETS_API_URL, params={'path': 'metadata_test.png'}, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_cache.TestCacheStatsAPI.test_get_stats_includes_image_metadata",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_cache.py",
+        "line_number": 421,
+        "call_expr": "requests.get(CACHE_API_URL, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_cache.TestCacheStatsAPI.test_get_stats_includes_image_metadata",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_cache.py",
+        "line_number": 415,
+        "call_expr": "requests.post(ASSETS_API_URL, files=files, data=data, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_user_asset_plain_filename",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_get_gif_frames.py",
+        "line_number": 70,
+        "call_expr": "requests.post(GIF_FRAMES_API_URL, json=payload, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_builtin_asset",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_get_gif_frames.py",
+        "line_number": 106,
+        "call_expr": "requests.post(GIF_FRAMES_API_URL, json=payload, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_single_frame_image",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_get_gif_frames.py",
+        "line_number": 198,
+        "call_expr": "requests.post(GIF_FRAMES_API_URL, json=payload, timeout=5)"
+      },
+      {
+        "caller": "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_single_frame_image",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_get_gif_frames.py",
+        "line_number": 180,
+        "call_expr": "Image.new('RGB', (50, 50), color='yellow')"
+      },
+      {
+        "caller": "tests.test_api_now_playing._make_test_png",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_now_playing.py",
+        "line_number": 16,
+        "call_expr": "Image.new('RGB', (4, 4), color=(255, 0, 0))"
+      },
+      {
+        "caller": "tests.test_assets.TestSaveAsset.test_save_overwrite_allowed",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_assets.py",
+        "line_number": 479,
+        "call_expr": "Image.new('RGB', (200, 200), color='blue')"
+      },
+      {
+        "caller": "tests.test_assets.TestSaveAsset.test_save_oversized_file_rejected",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_assets.py",
+        "line_number": 531,
+        "call_expr": "Image.new('RGB', (2000, 2000), color='red')"
+      },
+      {
+        "caller": "tests.test_assets.TestGetAssetOrBuiltinPath.test_builtin_asset_with_prefix",
+        "callee": "pytest.skip",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_assets.py",
+        "line_number": 1003,
+        "call_expr": "pytest.skip('No built-in assets available for testing')"
+      },
+      {
+        "caller": "tests.test_assets.TestGetAssetOrBuiltinPath.test_builtin_nested_path",
+        "callee": "pytest.skip",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_assets.py",
+        "line_number": 1081,
+        "call_expr": "pytest.skip('No nested built-in assets available for testing')"
+      },
+      {
+        "caller": "tests.test_gradient_extraction.TestExtractDominantColors.test_extract_from_solid_color",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+        "line_number": 21,
+        "call_expr": "Image.new('RGB', (100, 100), color=(255, 0, 0))"
+      },
+      {
+        "caller": "tests.test_gradient_extraction.TestExtractDominantColors.test_extract_from_two_colors",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+        "line_number": 32,
+        "call_expr": "Image.new('RGB', (100, 100))"
+      },
+      {
+        "caller": "tests.test_gradient_extraction.TestExtractDominantColors.test_extract_returns_sorted_by_frequency",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+        "line_number": 52,
+        "call_expr": "Image.new('RGB', (100, 100), color=(128, 128, 128))"
+      },
+      {
+        "caller": "tests.test_gradient_extraction.TestExtractDominantColors.test_extract_handles_rgba",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+        "line_number": 61,
+        "call_expr": "Image.new('RGBA', (100, 100), color=(255, 0, 0, 128))"
+      },
+      {
+        "caller": "tests.test_gradient_extraction.TestExtractGradientMetadata.test_extracts_all_variants",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+        "line_number": 274,
+        "call_expr": "Image.new('RGB', (100, 100), color=(255, 0, 0))"
+      },
+      {
+        "caller": "tests.test_gradient_extraction.TestExtractGradientMetadata.test_led_safe_variant_structure",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+        "line_number": 284,
+        "call_expr": "Image.new('RGB', (100, 100), color=(255, 0, 0))"
+      },
+      {
+        "caller": "tests.test_gradient_extraction.TestExtractGradientMetadata.test_metadata_fields",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+        "line_number": 295,
+        "call_expr": "Image.new('RGB', (100, 100), color=(128, 128, 128))"
+      },
+      {
+        "caller": "tests.test_gradient_extraction.TestExtractGradientMetadata.test_detects_background_in_metadata",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+        "line_number": 312,
+        "call_expr": "Image.new('RGB', (100, 100))"
+      },
+      {
+        "caller": "tests.test_gradient_extraction.TestExtractGradientMetadata.test_no_background_pattern",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+        "line_number": 331,
+        "call_expr": "Image.new('RGB', (90, 90))"
+      },
+      {
+        "caller": "tests.test_gradient_extraction.TestExtractGradientMetadata.test_handles_exceptions_gracefully",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+        "line_number": 363,
+        "call_expr": "Image.new('RGB', (1, 1), color=(0, 0, 0))"
+      },
+      {
+        "caller": "tests.test_gradient_extraction.TestExtractGradientMetadata.test_gradient_deterministic",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+        "line_number": 372,
+        "call_expr": "Image.new('RGB', (100, 100), color=(255, 128, 0))"
+      },
+      {
+        "caller": "tests.test_gradient_integration.TestImageCacheGradientIntegration.test_cache_includes_all_gradient_variants",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_integration.py",
+        "line_number": 101,
+        "call_expr": "Image.new('RGB', (100, 100))"
+      },
+      {
+        "caller": "tests.test_gradient_integration.TestAssetGradientIntegration.test_list_assets_includes_gradients",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_integration.py",
+        "line_number": 193,
+        "call_expr": "Image.new('RGB', (100, 100), color=(0, 128, 255))"
+      },
+      {
+        "caller": "tests.test_gradient_integration.TestAssetGradientIntegration.test_list_assets_handles_gradient_extraction_failure",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_integration.py",
+        "line_number": 230,
+        "call_expr": "Image.new('RGB', (2, 2), color=(255, 255, 255))"
+      },
+      {
+        "caller": "tests.test_gradient_integration.TestAssetGradientIntegration.test_asset_gradients_detect_background",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_integration.py",
+        "line_number": 252,
+        "call_expr": "Image.new('RGB', (100, 100))"
+      },
+      {
+        "caller": "tests.test_gradient_integration.TestAssetGradientIntegration.test_multiple_assets_all_have_gradients",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_integration.py",
+        "line_number": 292,
+        "call_expr": "Image.new('RGB', (50, 50), color=color)"
+      },
+      {
+        "caller": "tests.test_image_cache.TestCacheImageMetadata.test_animated_gif_metadata",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_image_cache.py",
+        "line_number": 537,
+        "call_expr": "Image.new('RGB', (50, 50), color=color)"
+      },
+      {
+        "caller": "tests.test_image_security.TestIntegrationOpenImage.test_valid_local_png",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_image_security.py",
+        "line_number": 30,
+        "call_expr": "Image.new('RGB', (100, 100), color='green')"
+      },
+      {
+        "caller": "tests.test_image_security.TestIntegrationOpenImage.test_valid_remote_image",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_image_security.py",
+        "line_number": 69,
+        "call_expr": "Image.new('RGB', (10, 10), color='red')"
+      },
+      {
+        "caller": "tests.test_image_security.TestIntegrationOpenImage.test_extensionless_remote_url_success",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_image_security.py",
+        "line_number": 113,
+        "call_expr": "Image.new('RGB', (10, 10), color='blue')"
+      },
+      {
+        "caller": "tests.test_image_security.TestIntegrationOpenGif.test_valid_local_gif",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_image_security.py",
+        "line_number": 150,
+        "call_expr": "Image.new('RGB', (50, 50), color='blue')"
+      },
+      {
+        "caller": "tests.test_image_security.TestIntegrationOpenGif.test_single_frame_image_gets_n_frames",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_image_security.py",
+        "line_number": 164,
+        "call_expr": "Image.new('RGB', (50, 50), color='yellow')"
+      },
+      {
+        "caller": "tests.test_image_security.TestIntegrationOpenGif.test_extensionless_remote_gif_url_success",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_image_security.py",
+        "line_number": 184,
+        "call_expr": "Image.new('RGB', (10, 10), color='green')"
+      },
+      {
+        "caller": "tests.test_instance_id.TestSendspinClientId._run_connect_and_capture",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_instance_id.py",
+        "line_number": 110,
+        "call_expr": "pytest.raises(Exception, match='stop')"
+      },
+      {
+        "caller": "tests.test_now_playing_sendspin.TestSendspinProviderMetadata.test_same_artwork_url_not_re_sent",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_sendspin.py",
+        "line_number": 269,
+        "call_expr": "Image.new('RGB', (4, 4), color='red')"
+      },
+      {
+        "caller": "tests.test_now_playing_service._make_test_png",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_service.py",
+        "line_number": 43,
+        "call_expr": "Image.new('RGB', (width, height), color=(255, 0, 0))"
+      },
+      {
+        "caller": "tests.test_now_playing_service._make_test_jpeg",
+        "callee": "PIL.Image.new",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_service.py",
+        "line_number": 51,
+        "call_expr": "Image.new('RGB', (width, height), color=(0, 255, 0))"
+      },
+      {
+        "caller": "tests.test_now_playing_service._make_mock_schema",
+        "callee": "voluptuous.Schema",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_service.py",
+        "line_number": 616,
+        "call_expr": "vol.Schema(schema_dict)"
+      },
+      {
+        "caller": "tests.test_now_playing_service._make_mock_schema",
+        "callee": "voluptuous.Optional",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_service.py",
+        "line_number": 615,
+        "call_expr": "vol.Optional(k, default='')"
+      },
+      {
+        "caller": "tests.test_sendspin_stream_flac_lifecycle.TestStreamClearFinishesDecoder.test_buffers_cleared_on_stream_clear",
+        "callee": "numpy.zeros",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_sendspin_stream_flac_lifecycle.py",
+        "line_number": 93,
+        "call_expr": "np.zeros(10)"
+      },
+      {
+        "caller": "tests.test_sendspin_stream_flac_lifecycle.TestStreamClearFinishesDecoder.test_buffers_cleared_on_stream_clear",
+        "callee": "numpy.ones",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_sendspin_stream_flac_lifecycle.py",
+        "line_number": 90,
+        "call_expr": "np.ones(100, dtype=np.float32)"
+      },
+      {
+        "caller": "tests.test_sendspin_stream_flac_lifecycle.TestPcmPathNoDecoderCleanup.test_stream_clear_pcm_only",
+        "callee": "numpy.zeros",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_sendspin_stream_flac_lifecycle.py",
+        "line_number": 138,
+        "call_expr": "np.zeros(10)"
+      },
+      {
+        "caller": "tests.test_sendspin_stream_flac_lifecycle.TestPcmPathNoDecoderCleanup.test_stream_clear_pcm_only",
+        "callee": "numpy.ones",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_sendspin_stream_flac_lifecycle.py",
+        "line_number": 136,
+        "call_expr": "np.ones(50, dtype=np.float32)"
+      },
+      {
+        "caller": "tests.test_sendspin_stream_flac_lifecycle.TestPcmPathNoDecoderCleanup.test_stream_start_pcm_only",
+        "callee": "numpy.ones",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_sendspin_stream_flac_lifecycle.py",
+        "line_number": 151,
+        "call_expr": "np.ones(25, dtype=np.float32)"
+      },
+      {
+        "caller": "tests.test_virtual_device_deletion.TestEmptySegmentDefensiveBehavior.test_set_effect_raises_value_error_for_no_segments",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_virtual_device_deletion.py",
+        "line_number": 573,
+        "call_expr": "pytest.raises(ValueError, match='Cannot activate')"
+      },
+      {
+        "caller": "tests.test_virtual_device_deletion.TestEmptySegmentDefensiveBehavior.test_activate_raises_runtime_error_for_no_segments",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_virtual_device_deletion.py",
+        "line_number": 585,
+        "call_expr": "pytest.raises(RuntimeError, match='Cannot activate')"
+      },
+      {
+        "caller": "tests.playlist.test_playlists.test_validation_rejects_short_duration",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists.py",
+        "line_number": 65,
+        "call_expr": "pytest.raises(Exception)"
+      },
+      {
+        "caller": "tests.scripts.keyrest_auto.on_space_press",
+        "callee": "requests.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\scripts\\keyrest_auto.py",
+        "line_number": 20,
+        "call_expr": "requests.post(f'http://127.0.0.1:8888/api/virtuals/{v}/effects', json=payload)"
+      },
+      {
+        "caller": "tests.scripts.keyrest_auto.on_space_release",
+        "callee": "requests.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\scripts\\keyrest_auto.py",
+        "line_number": 31,
+        "call_expr": "requests.get(f'http://127.0.0.1:8888/api/virtuals/{v}/fallback')"
+      },
+      {
+        "caller": "tests.test_utilities.test_utils.HTTPSession.send_test_api_request",
+        "callee": "pytest.fail",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_utilities\\test_utils.py",
+        "line_number": 126,
+        "call_expr": "pytest.fail(f'An error occurred while sending the API request: {str(e)}')"
+      },
+      {
+        "caller": "ledfx.api.RestEndpoint.json_decode_error",
+        "callee": "aiohttp.web.json_response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\api\\__init__.py",
+        "line_number": 104,
+        "call_expr": "web.json_response(data=response, status=400)"
+      },
+      {
+        "caller": "ledfx.api.RestEndpoint.internal_error",
+        "callee": "aiohttp.web.json_response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\api\\__init__.py",
+        "line_number": 124,
+        "call_expr": "web.json_response(data=response, status=500)"
+      },
+      {
+        "caller": "ledfx.api.RestEndpoint.invalid_request",
+        "callee": "aiohttp.web.json_response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\api\\__init__.py",
+        "line_number": 151,
+        "call_expr": "web.json_response(data=response, status=resp_code)"
+      },
+      {
+        "caller": "ledfx.api.RestEndpoint.request_success",
+        "callee": "aiohttp.web.json_response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\api\\__init__.py",
+        "line_number": 182,
+        "call_expr": "web.json_response(data=response, status=resp_code)"
+      },
+      {
+        "caller": "ledfx.api.RestEndpoint.bare_request_success",
+        "callee": "aiohttp.web.json_response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\api\\__init__.py",
+        "line_number": 199,
+        "call_expr": "web.json_response(data=payload, status=200)"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioInputSource.default_device_index",
+        "callee": "sounddevice.query_devices",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 330,
+        "call_expr": "sd.query_devices()"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioInputSource.query_hostapis",
+        "callee": "sounddevice.query_hostapis",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 388,
+        "call_expr": "sd.query_hostapis()"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioInputSource.query_devices",
+        "callee": "sounddevice.query_devices",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 399,
+        "call_expr": "sd.query_devices()"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioInputSource._activate_inner",
+        "callee": "numpy.linspace",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 784,
+        "call_expr": "np.linspace(0, MIC_RATE, freq_domain_length)"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioInputSource._activate_inner",
+        "callee": "aubio.cvec",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 782,
+        "call_expr": "aubio.cvec(self._config['fft_size'])"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioInputSource._activate_inner",
+        "callee": "aubio.pvoc",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 778,
+        "call_expr": "aubio.pvoc(self._config['fft_size'], MIC_RATE // self._config['sample_rate'])"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioInputSource._activate_inner",
+        "callee": "numpy.zeros",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 772,
+        "call_expr": "np.zeros(MIC_RATE // self._config['sample_rate'], dtype=np.float32)"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioInputSource._activate_inner",
+        "callee": "aubio.digital_filter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 749,
+        "call_expr": "aubio.digital_filter(3)"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioInputSource._activate_inner.open_audio_stream",
+        "callee": "samplerate.Resampler",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 880,
+        "call_expr": "samplerate.Resampler('sinc_fastest', channels=1)"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioInputSource._activate_inner.try_open_device",
+        "callee": "sounddevice._initialize",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 902,
+        "call_expr": "sd._initialize()"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioInputSource._activate_inner.try_open_device",
+        "callee": "sounddevice._terminate",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 901,
+        "call_expr": "sd._terminate()"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioAnalysisSource.initialise_analysis",
+        "callee": "numpy.zeros",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 1306,
+        "call_expr": "np.zeros(len(self.freq_max_mels))"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioAnalysisSource.initialise_analysis",
+        "callee": "aubio.pitch",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 1292,
+        "call_expr": "aubio.pitch(self._config['pitch_method'], *fft_params)"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioAnalysisSource.initialise_analysis",
+        "callee": "aubio.onset",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 1291,
+        "call_expr": "aubio.onset(self._config['onset_method'], *fft_params)"
+      },
+      {
+        "caller": "ledfx.effects.audio.AudioAnalysisSource.initialise_analysis",
+        "callee": "aubio.tempo",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\audio.py",
+        "line_number": 1290,
+        "call_expr": "aubio.tempo(self._config['tempo_method'], *fft_params)"
+      },
+      {
+        "caller": "ledfx.effects.mel.hertz_to_mel",
+        "callee": "numpy.log",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\mel.py",
+        "line_number": 52,
+        "call_expr": "np.log(9)"
+      },
+      {
+        "caller": "ledfx.effects.mel.melfrequencies_mel_filterbank",
+        "callee": "numpy.arange",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\mel.py",
+        "line_number": 109,
+        "call_expr": "np.arange(0, num_bands + 2)"
+      },
+      {
+        "caller": "ledfx.effects.mel.compute_melmat",
+        "callee": "numpy.zeros",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\mel.py",
+        "line_number": 171,
+        "call_expr": "np.zeros((num_mel_bands, num_fft_bands))"
+      },
+      {
+        "caller": "ledfx.effects.mel.compute_melmat",
+        "callee": "numpy.linspace",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\mel.py",
+        "line_number": 168,
+        "call_expr": "np.linspace(0.0, sample_rate / 2.0, num_fft_bands)"
+      },
+      {
+        "caller": "ledfx.effects.mel.compute_melmat_from_range",
+        "callee": "numpy.mean",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\mel.py",
+        "line_number": 215,
+        "call_expr": "np.mean([lower_edges_hz, upper_edges_hz], axis=0)"
+      },
+      {
+        "caller": "ledfx.effects.mel.compute_melmat_from_range",
+        "callee": "numpy.linspace",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\mel.py",
+        "line_number": 212,
+        "call_expr": "np.linspace(0.0, sample_rate / 2.0, num_fft_bands)"
+      },
+      {
+        "caller": "ledfx.effects.mel.compute_melmat_from_range",
+        "callee": "numpy.zeros",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\mel.py",
+        "line_number": 209,
+        "call_expr": "np.zeros((len(lower_edges_hz), num_fft_bands))"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbank.__init__",
+        "callee": "numpy.max",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 352,
+        "call_expr": "np.max(coeffs, axis=-1)"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbank.__init__",
+        "callee": "aubio.filterbank",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 335,
+        "call_expr": "aubio.filterbank(self._config['samples'], FFT_SIZE)"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbank.__init__",
+        "callee": "numpy.zeros",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 318,
+        "call_expr": "np.zeros(len(ranges))"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbank.__init__",
+        "callee": "numpy.array",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 277,
+        "call_expr": "np.array([matt_to_hertz(matt) for matt in melbank_matt])"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbank.__init__",
+        "callee": "numpy.linspace",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 272,
+        "call_expr": "np.linspace(hertz_to_matt(self._config['min_frequency']), hertz_to_matt(self._config['max_frequency']), self._config['samples'] + 2)"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbank.__init__",
+        "callee": "aubio.meltohz",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 212,
+        "call_expr": "aubio.meltohz(mel)"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbank.__init__",
+        "callee": "aubio.hztomel",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 208,
+        "call_expr": "aubio.hztomel(self._config['max_frequency'])"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbank.__init__",
+        "callee": "numpy.hstack",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 169,
+        "call_expr": "np.hstack((linearSpacedFreqs, logSpacedFreqs))"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbank.__init__",
+        "callee": "numpy.power",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 164,
+        "call_expr": "np.power(logSpacing, np.arange(1, logFilters + 1))"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbank.__init__",
+        "callee": "numpy.arange",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 165,
+        "call_expr": "np.arange(1, logFilters + 1)"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbank.__init__",
+        "callee": "numpy.sinh",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 136,
+        "call_expr": "np.sinh(melbank_bark / 6.0)"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbank.__init__",
+        "callee": "numpy.arcsinh",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 132,
+        "call_expr": "np.arcsinh(self._config['max_frequency'] / 600.0)"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbank.__init__",
+        "callee": "numpy.tan",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 106,
+        "call_expr": "np.tan(0.5 * np.pi * (self._config['peak_isolation'] + 1) / 2)"
+      },
+      {
+        "caller": "ledfx.effects.melbank.Melbanks.update_config",
+        "callee": "numpy.zeros",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\melbank.py",
+        "line_number": 522,
+        "call_expr": "np.zeros(self.mel_len)"
+      },
+      {
+        "caller": "ledfx.effects.DummyEffect.__init__",
+        "callee": "numpy.zeros",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\effects\\__init__.py",
+        "line_number": 28,
+        "call_expr": "np.zeros((pixel_count, 3))"
+      },
+      {
+        "caller": "ledfx.sendspin.stream.SendspinAudioStream.__init__",
+        "callee": "numpy.array",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\sendspin\\stream.py",
+        "line_number": 125,
+        "call_expr": "np.array([], dtype=np.float32)"
+      },
+      {
+        "caller": "ledfx.utilities.gradient_extraction.extract_dominant_colors",
+        "callee": "numpy.zeros_like",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utilities\\gradient_extraction.py",
+        "line_number": 155,
+        "call_expr": "np.zeros_like(counts)"
+      },
+      {
+        "caller": "ledfx.utilities.gradient_extraction.extract_dominant_colors",
+        "callee": "numpy.bincount",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utilities\\gradient_extraction.py",
+        "line_number": 149,
+        "call_expr": "np.bincount(pixel_array.ravel(), minlength=len(palette_colors))"
+      },
+      {
+        "caller": "ledfx.utilities.gradient_extraction.extract_dominant_colors",
+        "callee": "numpy.array",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utilities\\gradient_extraction.py",
+        "line_number": 144,
+        "call_expr": "np.array(quantized, dtype=np.uint8)"
+      },
+      {
+        "caller": "ledfx.utilities.gradient_extraction._build_accent_sample_image",
+        "callee": "PIL.Image.fromarray",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utilities\\gradient_extraction.py",
+        "line_number": 249,
+        "call_expr": "Image.fromarray(sample, mode='RGB')"
+      },
+      {
+        "caller": "ledfx.utilities.gradient_extraction._build_accent_sample_image",
+        "callee": "numpy.where",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utilities\\gradient_extraction.py",
+        "line_number": 231,
+        "call_expr": "np.where(maxc > 1e-06, delt / (maxc + 1e-06), 0.0)"
+      },
+      {
+        "caller": "ledfx.utilities.gradient_extraction._build_accent_sample_image",
+        "callee": "numpy.minimum",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utilities\\gradient_extraction.py",
+        "line_number": 228,
+        "call_expr": "np.minimum(np.minimum(r, g), b)"
+      },
+      {
+        "caller": "ledfx.utilities.gradient_extraction._build_accent_sample_image",
+        "callee": "numpy.maximum",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utilities\\gradient_extraction.py",
+        "line_number": 227,
+        "call_expr": "np.maximum(np.maximum(r, g), b)"
+      },
+      {
+        "caller": "ledfx.utilities.gradient_extraction._build_accent_sample_image",
+        "callee": "numpy.asarray",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utilities\\gradient_extraction.py",
+        "line_number": 219,
+        "call_expr": "np.asarray(pil_image, dtype=np.uint8)"
+      },
+      {
+        "caller": "ledfx.utilities.gradient_extraction.extract_gradient_metadata",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utilities\\gradient_extraction.py",
+        "line_number": 804,
+        "call_expr": "Image.open(image_source)"
+      },
+      {
+        "caller": "ledfx.utilities.image_utils.get_image_metadata",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utilities\\image_utils.py",
+        "line_number": 28,
+        "call_expr": "Image.open(abs_path)"
+      },
+      {
+        "caller": "ledfx.utilities.security_utils.validate_image_mime_type",
+        "callee": "PIL.Image.open",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\utilities\\security_utils.py",
+        "line_number": 401,
+        "call_expr": "Image.open(file_path)"
+      },
+      {
+        "caller": "ledfx.nowplaying.album_art.musicbrainz.MusicBrainzArtProvider._search_recordings",
+        "callee": "aiohttp.ClientTimeout",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\nowplaying\\album_art\\musicbrainz.py",
+        "line_number": 588,
+        "call_expr": "aiohttp.ClientTimeout(total=_SEARCH_TIMEOUT)"
+      },
+      {
+        "caller": "ledfx.nowplaying.album_art.musicbrainz.MusicBrainzArtProvider._search_recordings",
+        "callee": "aiohttp.ClientSession",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\nowplaying\\album_art\\musicbrainz.py",
+        "line_number": 581,
+        "call_expr": "aiohttp.ClientSession()"
+      },
+      {
+        "caller": "ledfx.nowplaying.providers.smtc.SMTCNowPlayingProvider._initialize",
+        "callee": "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionManager.request_async",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\nowplaying\\providers\\smtc.py",
+        "line_number": 84,
+        "call_expr": "MediaManager.request_async()"
+      }
+    ],
+    "jarvis_usage_index_before_filter": [
+      "<builtin>.AssertionError",
+      "<builtin>.Exception",
+      "<builtin>.ImportError",
+      "<builtin>.RuntimeError",
+      "<builtin>.TypeError",
+      "<builtin>.ValueError",
+      "<builtin>.abs",
+      "<builtin>.all",
+      "<builtin>.any",
+      "<builtin>.bool",
+      "<builtin>.classmethod",
+      "<builtin>.dict",
+      "<builtin>.enumerate",
+      "<builtin>.float",
+      "<builtin>.getattr",
+      "<builtin>.hasattr",
+      "<builtin>.id",
+      "<builtin>.int",
+      "<builtin>.isinstance",
+      "<builtin>.iter",
+      "<builtin>.len",
+      "<builtin>.list",
+      "<builtin>.max",
+      "<builtin>.min",
+      "<builtin>.next",
+      "<builtin>.open",
+      "<builtin>.pow",
+      "<builtin>.print",
+      "<builtin>.range",
+      "<builtin>.round",
+      "<builtin>.set",
+      "<builtin>.setattr",
+      "<builtin>.sorted",
+      "<builtin>.str",
+      "<builtin>.sum",
+      "<builtin>.super",
+      "<builtin>.tuple",
+      "<builtin>.type",
+      "<builtin>.zip",
+      "<map>.clear",
+      "<map>.get",
+      "<map>.items",
+      "<map>.values",
+      "<str>.capitalize",
+      "<str>.encode",
+      "<str>.lower",
+      "<str>.replace",
+      "<str>.startswith",
+      "<str>.strip",
+      "<str>.upper",
+      "PIL.Image.fromarray",
+      "PIL.Image.new",
+      "PIL.Image.open",
+      "aiohttp.ClientSession",
+      "aiohttp.ClientTimeout",
+      "aiohttp.web.AppRunner",
+      "aiohttp.web.Application",
+      "aiohttp.web.TCPSite",
+      "aiohttp.web.json_response",
+      "append",
+      "aubio.cvec",
+      "aubio.digital_filter",
+      "aubio.filterbank",
+      "aubio.hztomel",
+      "aubio.meltohz",
+      "aubio.onset",
+      "aubio.pitch",
+      "aubio.pvoc",
+      "aubio.tempo",
+      "audio_hotplug.create_monitor",
+      "dotenv.load_dotenv",
+      "numpy.arange",
+      "numpy.arcsinh",
+      "numpy.array",
+      "numpy.asarray",
+      "numpy.bincount",
+      "numpy.hstack",
+      "numpy.linspace",
+      "numpy.log",
+      "numpy.max",
+      "numpy.maximum",
+      "numpy.mean",
+      "numpy.minimum",
+      "numpy.ones",
+      "numpy.power",
+      "numpy.sinh",
+      "numpy.tan",
+      "numpy.where",
+      "numpy.zeros",
+      "numpy.zeros_like",
+      "packaging.version.parse",
+      "pandas.read_csv",
+      "pandas.to_datetime",
+      "pandas.to_numeric",
+      "psutil.net_if_addrs",
+      "psutil.net_if_stats",
+      "psutil.net_io_counters",
+      "pystray.Icon",
+      "pystray.Menu",
+      "pystray.MenuItem",
+      "pytest.fail",
+      "pytest.raises",
+      "pytest.skip",
+      "requests.delete",
+      "requests.get",
+      "requests.post",
+      "samplerate.Resampler",
+      "sentry_sdk.init",
+      "sentry_sdk.integrations.aiohttp.AioHttpIntegration",
+      "sort",
+      "sounddevice._initialize",
+      "sounddevice._terminate",
+      "sounddevice.query_devices",
+      "sounddevice.query_hostapis",
+      "uvloop.new_event_loop",
+      "voluptuous.Optional",
+      "voluptuous.Required",
+      "voluptuous.Schema",
+      "winloop.new_event_loop",
+      "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionManager.request_async"
+    ],
+    "jarvis_usage_index_after_filter": [
+      "PIL.Image.fromarray",
+      "PIL.Image.new",
+      "PIL.Image.open",
+      "aiohttp.ClientSession",
+      "aiohttp.ClientTimeout",
+      "aiohttp.web.AppRunner",
+      "aiohttp.web.Application",
+      "aiohttp.web.TCPSite",
+      "aiohttp.web.json_response",
+      "aubio.cvec",
+      "aubio.digital_filter",
+      "aubio.filterbank",
+      "aubio.hztomel",
+      "aubio.meltohz",
+      "aubio.onset",
+      "aubio.pitch",
+      "aubio.pvoc",
+      "aubio.tempo",
+      "audio_hotplug.create_monitor",
+      "dotenv.load_dotenv",
+      "numpy.arange",
+      "numpy.arcsinh",
+      "numpy.array",
+      "numpy.asarray",
+      "numpy.bincount",
+      "numpy.hstack",
+      "numpy.linspace",
+      "numpy.log",
+      "numpy.max",
+      "numpy.maximum",
+      "numpy.mean",
+      "numpy.minimum",
+      "numpy.ones",
+      "numpy.power",
+      "numpy.sinh",
+      "numpy.tan",
+      "numpy.where",
+      "numpy.zeros",
+      "numpy.zeros_like",
+      "packaging.version.parse",
+      "pandas.read_csv",
+      "pandas.to_datetime",
+      "pandas.to_numeric",
+      "psutil.net_if_addrs",
+      "psutil.net_if_stats",
+      "psutil.net_io_counters",
+      "pystray.Icon",
+      "pystray.Menu",
+      "pystray.MenuItem",
+      "pytest.fail",
+      "pytest.raises",
+      "pytest.skip",
+      "requests.delete",
+      "requests.get",
+      "requests.post",
+      "samplerate.Resampler",
+      "sentry_sdk.init",
+      "sentry_sdk.integrations.aiohttp.AioHttpIntegration",
+      "sounddevice._initialize",
+      "sounddevice._terminate",
+      "sounddevice.query_devices",
+      "sounddevice.query_hostapis",
+      "uvloop.new_event_loop",
+      "voluptuous.Optional",
+      "voluptuous.Required",
+      "voluptuous.Schema",
+      "winloop.new_event_loop",
+      "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionManager.request_async"
+    ],
+    "jarvis_usage_augmentation_warnings": [],
+    "analysis_mode": "jarvis",
+    "project_mode": "jarvis_EA_entrypoints",
+    "entry_points": [
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\__main__.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\performance_analyser.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\test_user_asset_path.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_additional.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_modes.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_runtime.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_timing.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_timing_override.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\scripts\\keyrest.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\scripts\\keyrest_auto.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\scripts\\oneshot.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets_cached_urls.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_cache.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_get_gif_frames.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_now_playing.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_sendspin_servers.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_apis.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_assets.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_audio_device_persistence.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_events.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gap_devices.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_integration.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_image_cache.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_image_security.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_instance_id.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_mpris.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_musicbrainz.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_normalise.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_sendspin.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_service.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_smtc.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes_action_field.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes_api_action_field.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes_api_integration.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes_id.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_sendspin_always_on_runtime.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_sendspin_stream_flac_lifecycle.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_startup_playlist.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_thumbnail_cache.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_virtual_device_deletion.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_virtual_presets.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_websocket_clients.py"
+    ],
+    "jarvis_mode": "EA",
+    "jarvis_scope": "entrypoints",
+    "jarvis_scope_meta": {
+      "scope": "entrypoints",
+      "entrypoint_count": 742,
+      "entrypoint_names": [
+        "ledfx.__main__.main",
+        "performance_analyser.main",
+        "test_user_asset_path.test_builtin_still_works",
+        "test_user_asset_path.test_nested_user_asset_path",
+        "test_user_asset_path.test_user_asset_path",
+        "tests.playlist.test_playlists.test_create_and_list_playlists",
+        "tests.playlist.test_playlists.test_create_generates_id_when_missing",
+        "tests.playlist.test_playlists.test_delete_stops_active_playlist",
+        "tests.playlist.test_playlists.test_validation_rejects_short_duration",
+        "tests.playlist.test_playlists_additional.test_active_endpoint_returns_null_when_inactive",
+        "tests.playlist.test_playlists_additional.test_delete_emits_stopped_event",
+        "tests.playlist.test_playlists_additional.test_empty_playlist_fails_when_no_scenes",
+        "tests.playlist.test_playlists_additional.test_empty_playlist_get_state_returns_scenes",
+        "tests.playlist.test_playlists_additional.test_empty_playlist_resolves_to_all_scenes",
+        "tests.playlist.test_playlists_additional.test_events_include_timing_fields",
+        "tests.playlist.test_playlists_additional.test_get_playlists_endpoint_returns_empty_when_no_playlists",
+        "tests.playlist.test_playlists_additional.test_jitter_bounds",
+        "tests.playlist.test_playlists_modes.test_configured_mode_is_used_when_no_override",
+        "tests.playlist.test_playlists_modes.test_sequence_start_overrides_prior_shuffle",
+        "tests.playlist.test_playlists_modes.test_shuffle_start_overrides_prior_sequence",
+        "tests.playlist.test_playlists_runtime.test_pause_resume",
+        "tests.playlist.test_playlists_runtime.test_start_and_advance",
+        "tests.playlist.test_playlists_timing.test_get_state_includes_timing_fields",
+        "tests.playlist.test_playlists_timing.test_next_regenerates_shuffle_on_wrap",
+        "tests.playlist.test_playlists_timing.test_pause_sets_remaining_and_resume_uses_it",
+        "tests.playlist.test_playlists_timing.test_shuffle_per_cycle",
+        "tests.playlist.test_playlists_timing.test_shuffle_regenerates_on_natural_cycle_completion",
+        "tests.playlist.test_playlists_timing_override.test_configured_timing_used_when_no_override",
+        "tests.playlist.test_playlists_timing_override.test_runtime_timing_override_applies",
+        "tests.playlist.test_playlists_timing_override.test_runtime_timing_override_preserved_across_pause_resume",
+        "tests.scripts.keyrest.main",
+        "tests.scripts.keyrest_auto.main",
+        "tests.scripts.oneshot.main",
+        "tests.test_api_assets.TestAssetsAPIAnimationMetadata.test_list_assets_includes_animation_metadata",
+        "tests.test_api_assets.TestAssetsAPIAnimationMetadata.test_static_image_metadata",
+        "tests.test_api_assets.TestAssetsAPIDelete.test_delete_existing_asset",
+        "tests.test_api_assets.TestAssetsAPIDelete.test_delete_nonexistent_asset",
+        "tests.test_api_assets.TestAssetsAPIDelete.test_delete_with_json_body",
+        "tests.test_api_assets.TestAssetsAPIIntegration.test_full_lifecycle",
+        "tests.test_api_assets.TestAssetsAPIList.test_list_assets",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_animated_gif_default",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_animated_gif_explicit_true",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_animated_gif_static",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_animated_validation",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_auto_invalidation_on_upload",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_builtin_animated",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_builtin_static",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_custom_size",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_default_size",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_dimension_height",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_dimension_invalid",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_dimension_max",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_dimension_width",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_force_refresh",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_force_refresh_validation",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_jpeg_source",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_missing_path",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_nonexistent_asset",
+        "tests.test_api_assets.TestAssetsAPIThumbnail.test_thumbnail_size_limits",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_download_asset",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_download_builtin_asset",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_download_builtin_nonexistent",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_download_builtin_path_traversal_rejected",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_download_get_absolute_path_rejected",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_download_get_builtin_asset",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_download_get_existing_asset",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_download_get_missing_path_parameter",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_download_get_nonexistent_asset",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_download_get_path_traversal_rejected",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_download_nonexistent_asset",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_download_post_absolute_path_rejected",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_download_post_path_traversal_rejected",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_upload_fake_image",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_upload_invalid_extension",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_upload_path_traversal_rejected",
+        "tests.test_api_assets.TestAssetsAPIUpload.test_upload_valid_png",
+        "tests.test_api_assets.TestAssetsFixedAPI.test_assets_fixed_endpoint_exists",
+        "tests.test_api_assets.TestAssetsFixedAPI.test_assets_fixed_metadata_structure",
+        "tests.test_api_assets.TestAssetsFixedAPI.test_assets_fixed_paths_relative",
+        "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_builtin_asset",
+        "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_builtin_nested_path",
+        "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_builtin_nonexistent",
+        "tests.test_api_assets.TestAssetsThumbnailBuiltinSupport.test_thumbnail_user_vs_builtin_separation",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_all_parameters",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_animated_case_insensitive",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_animated_false",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_animated_true",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_builtin_asset",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_custom_size",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_default_size",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_dimension_height",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_dimension_width",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_force_refresh",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_invalid_dimension",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_invalid_size",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_missing_path",
+        "tests.test_api_assets.TestAssetsThumbnailGET.test_thumbnail_get_nonexistent_asset",
+        "tests.test_api_assets_cached_urls.TestAssetsDownloadCachedURL.test_download_uncached_url_returns_error",
+        "tests.test_api_assets_cached_urls.TestAssetsThumbnailCachedURL.test_thumbnail_uncached_url_returns_error",
+        "tests.test_api_assets_cached_urls.TestCachedURLIntegration.test_non_url_paths_still_work",
+        "tests.test_api_assets_cached_urls.TestURLDownloadWithExternalURL.test_download_url_successfully",
+        "tests.test_api_assets_cached_urls.TestURLDownloadWithExternalURL.test_download_url_uses_cache_on_second_request",
+        "tests.test_api_assets_cached_urls.TestURLDownloadWithExternalURL.test_thumbnail_url_cached_separately",
+        "tests.test_api_assets_cached_urls.TestURLDownloadWithExternalURL.test_thumbnail_url_successfully",
+        "tests.test_api_assets_cached_urls.TestURLDownloadWithExternalURL.test_url_ssrf_protection",
+        "tests.test_api_cache.TestCacheDeleteAPI.test_clear_entire_cache",
+        "tests.test_api_cache.TestCacheDeleteAPI.test_delete_all_variants",
+        "tests.test_api_cache.TestCacheDeleteAPI.test_delete_query_param_boolean_parsing",
+        "tests.test_api_cache.TestCacheDeleteAPI.test_delete_single_entry",
+        "tests.test_api_cache.TestCacheRefreshAPI.test_refresh_all_variants",
+        "tests.test_api_cache.TestCacheRefreshAPI.test_refresh_all_variants_boolean_validation",
+        "tests.test_api_cache.TestCacheRefreshAPI.test_refresh_missing_url",
+        "tests.test_api_cache.TestCacheRefreshAPI.test_refresh_single_entry",
+        "tests.test_api_cache.TestCacheRefreshAPI.test_refresh_uncached_url",
+        "tests.test_api_cache.TestCacheStatsAPI.test_get_stats_excludes_thumbnails",
+        "tests.test_api_cache.TestCacheStatsAPI.test_get_stats_includes_image_metadata",
+        "tests.test_api_cache.TestCacheStatsAPI.test_get_stats_structure",
+        "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_absolute_path_blocked",
+        "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_builtin_asset",
+        "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_builtin_asset_nested",
+        "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_invalid_json",
+        "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_missing_path_url",
+        "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_nonexistent_file",
+        "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_path_traversal_blocked",
+        "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_single_frame_image",
+        "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_user_asset_plain_filename",
+        "tests.test_api_get_gif_frames.TestGetGifFramesAPI.test_user_asset_with_subfolder",
+        "tests.test_api_now_playing.test_get_after_clear",
+        "tests.test_api_now_playing.test_get_empty_state",
+        "tests.test_api_now_playing.test_get_with_artwork_url",
+        "tests.test_api_now_playing.test_get_with_metadata",
+        "tests.test_api_now_playing.test_put_album_art_config",
+        "tests.test_api_now_playing.test_put_gradient_config",
+        "tests.test_api_now_playing.test_put_invalid_json",
+        "tests.test_api_now_playing.test_put_invalid_variant",
+        "tests.test_api_now_playing.test_put_non_dict_body",
+        "tests.test_api_now_playing.test_put_reflects_in_get",
+        "tests.test_api_now_playing.test_put_track_text_config",
+        "tests.test_api_sendspin_servers.TestDeleteSendspinServer.test_delete_not_found",
+        "tests.test_api_sendspin_servers.TestDeleteSendspinServer.test_delete_server",
+        "tests.test_api_sendspin_servers.TestDeleteSendspinServer.test_delete_unavailable",
+        "tests.test_api_sendspin_servers.TestGetSendspinDiscover.test_discover_already_configured",
+        "tests.test_api_sendspin_servers.TestGetSendspinDiscover.test_discover_finds_server",
+        "tests.test_api_sendspin_servers.TestGetSendspinDiscover.test_discover_invalid_timeout",
+        "tests.test_api_sendspin_servers.TestGetSendspinDiscover.test_discover_no_servers",
+        "tests.test_api_sendspin_servers.TestGetSendspinDiscover.test_discover_respects_timeout_param",
+        "tests.test_api_sendspin_servers.TestGetSendspinDiscover.test_discover_timeout_too_large",
+        "tests.test_api_sendspin_servers.TestGetSendspinDiscover.test_discover_unavailable",
+        "tests.test_api_sendspin_servers.TestGetSendspinServers.test_get_empty",
+        "tests.test_api_sendspin_servers.TestGetSendspinServers.test_get_unavailable",
+        "tests.test_api_sendspin_servers.TestGetSendspinServers.test_get_with_servers",
+        "tests.test_api_sendspin_servers.TestPostSendspinServers.test_add_duplicate_server",
+        "tests.test_api_sendspin_servers.TestPostSendspinServers.test_add_server",
+        "tests.test_api_sendspin_servers.TestPostSendspinServers.test_add_server_id_is_slugified",
+        "tests.test_api_sendspin_servers.TestPostSendspinServers.test_add_server_invalid_url_scheme",
+        "tests.test_api_sendspin_servers.TestPostSendspinServers.test_add_server_missing_id",
+        "tests.test_api_sendspin_servers.TestPostSendspinServers.test_add_server_missing_url",
+        "tests.test_api_sendspin_servers.TestPostSendspinServers.test_add_server_with_client_name",
+        "tests.test_api_sendspin_servers.TestPostSendspinServers.test_post_unavailable",
+        "tests.test_api_sendspin_servers.TestPutSendspinServer.test_update_client_name",
+        "tests.test_api_sendspin_servers.TestPutSendspinServer.test_update_invalid_url_scheme",
+        "tests.test_api_sendspin_servers.TestPutSendspinServer.test_update_not_found",
+        "tests.test_api_sendspin_servers.TestPutSendspinServer.test_update_url",
+        "tests.test_apis.test_api",
+        "tests.test_assets.TestAnimationMetadata.test_animated_gif_metadata",
+        "tests.test_assets.TestAnimationMetadata.test_static_gif_metadata",
+        "tests.test_assets.TestAnimationMetadata.test_static_jpeg_metadata",
+        "tests.test_assets.TestAnimationMetadata.test_static_png_metadata",
+        "tests.test_assets.TestAnimationMetadata.test_webp_metadata",
+        "tests.test_assets.TestAssetsDirectory.test_ensure_assets_directory_creates",
+        "tests.test_assets.TestAssetsDirectory.test_ensure_assets_directory_idempotent",
+        "tests.test_assets.TestAssetsDirectory.test_get_assets_directory",
+        "tests.test_assets.TestContentValidation.test_corrupted_image_rejected",
+        "tests.test_assets.TestContentValidation.test_extension_mismatch_rejected",
+        "tests.test_assets.TestContentValidation.test_fake_image_rejected",
+        "tests.test_assets.TestContentValidation.test_valid_gif_content",
+        "tests.test_assets.TestContentValidation.test_valid_jpeg_content",
+        "tests.test_assets.TestContentValidation.test_valid_png_content",
+        "tests.test_assets.TestContentValidation.test_valid_webp_content",
+        "tests.test_assets.TestDeleteAsset.test_delete_cleans_empty_directories",
+        "tests.test_assets.TestDeleteAsset.test_delete_existing_asset",
+        "tests.test_assets.TestDeleteAsset.test_delete_nested_asset",
+        "tests.test_assets.TestDeleteAsset.test_delete_nonexistent_asset",
+        "tests.test_assets.TestDeleteAsset.test_delete_path_traversal_rejected",
+        "tests.test_assets.TestExtensionValidation.test_case_insensitive",
+        "tests.test_assets.TestExtensionValidation.test_invalid_extensions",
+        "tests.test_assets.TestExtensionValidation.test_no_extension",
+        "tests.test_assets.TestExtensionValidation.test_valid_extensions",
+        "tests.test_assets.TestGetAssetOrBuiltinPath.test_builtin_asset_with_prefix",
+        "tests.test_assets.TestGetAssetOrBuiltinPath.test_builtin_nested_path",
+        "tests.test_assets.TestGetAssetOrBuiltinPath.test_builtin_path_traversal_rejected",
+        "tests.test_assets.TestGetAssetOrBuiltinPath.test_empty_path_rejected",
+        "tests.test_assets.TestGetAssetOrBuiltinPath.test_nonexistent_builtin_asset",
+        "tests.test_assets.TestGetAssetOrBuiltinPath.test_nonexistent_user_asset",
+        "tests.test_assets.TestGetAssetOrBuiltinPath.test_user_asset_without_prefix",
+        "tests.test_assets.TestGetAssetPath.test_get_existing_asset",
+        "tests.test_assets.TestGetAssetPath.test_get_nonexistent_asset",
+        "tests.test_assets.TestGetAssetPath.test_get_path_traversal_rejected",
+        "tests.test_assets.TestListAssets.test_list_empty_directory",
+        "tests.test_assets.TestListAssets.test_list_ignores_non_image_files",
+        "tests.test_assets.TestListAssets.test_list_ignores_system_files",
+        "tests.test_assets.TestListAssets.test_list_ignores_temp_files",
+        "tests.test_assets.TestListAssets.test_list_multiple_assets",
+        "tests.test_assets.TestListAssets.test_list_nested_assets",
+        "tests.test_assets.TestListAssets.test_list_nonexistent_directory",
+        "tests.test_assets.TestListAssets.test_list_single_asset",
+        "tests.test_assets.TestListAssets.test_list_sorted_output",
+        "tests.test_assets.TestListAssets.test_list_uses_forward_slashes",
+        "tests.test_assets.TestPathResolution.test_absolute_path_rejected",
+        "tests.test_assets.TestPathResolution.test_create_dirs_option",
+        "tests.test_assets.TestPathResolution.test_empty_path_rejected",
+        "tests.test_assets.TestPathResolution.test_path_normalization",
+        "tests.test_assets.TestPathResolution.test_path_traversal_rejected",
+        "tests.test_assets.TestPathResolution.test_path_traversal_with_valid_prefix_rejected",
+        "tests.test_assets.TestPathResolution.test_url_scheme_rejected",
+        "tests.test_assets.TestPathResolution.test_valid_nested_path",
+        "tests.test_assets.TestPathResolution.test_valid_simple_path",
+        "tests.test_assets.TestPathResolution.test_whitespace_stripped",
+        "tests.test_assets.TestPathResolution.test_windows_absolute_path_rejected",
+        "tests.test_assets.TestSaveAsset.test_atomic_write_uses_temp_file",
+        "tests.test_assets.TestSaveAsset.test_save_creates_parent_directories",
+        "tests.test_assets.TestSaveAsset.test_save_fake_image_rejected",
+        "tests.test_assets.TestSaveAsset.test_save_invalid_extension_rejected",
+        "tests.test_assets.TestSaveAsset.test_save_nested_path",
+        "tests.test_assets.TestSaveAsset.test_save_oversized_file_rejected",
+        "tests.test_assets.TestSaveAsset.test_save_overwrite_allowed",
+        "tests.test_assets.TestSaveAsset.test_save_overwrite_rejected_by_default",
+        "tests.test_assets.TestSaveAsset.test_save_path_traversal_rejected",
+        "tests.test_assets.TestSaveAsset.test_save_valid_png",
+        "tests.test_assets.TestSecurityPatterns.test_double_dot_sequences",
+        "tests.test_assets.TestSecurityPatterns.test_extremely_long_path",
+        "tests.test_assets.TestSecurityPatterns.test_mixed_separators",
+        "tests.test_assets.TestSecurityPatterns.test_null_byte_injection",
+        "tests.test_assets.TestSecurityPatterns.test_unicode_traversal",
+        "tests.test_assets.TestSizeValidation.test_custom_size_limit",
+        "tests.test_assets.TestSizeValidation.test_large_file_rejected",
+        "tests.test_assets.TestSizeValidation.test_size_at_limit",
+        "tests.test_assets.TestSizeValidation.test_size_exceeds_limit",
+        "tests.test_assets.TestSizeValidation.test_size_within_limit",
+        "tests.test_audio_device_persistence.TestAudioDevicesApi.test_api_put_device_change_replaces_stale_name",
+        "tests.test_audio_device_persistence.TestAudioDevicesApi.test_api_put_invalid_index_not_in_devices",
+        "tests.test_audio_device_persistence.TestAudioDevicesApi.test_api_put_persists_name_and_index",
+        "tests.test_audio_device_persistence.TestGetDeviceIndexByName.test_case_sensitive_matching",
+        "tests.test_audio_device_persistence.TestGetDeviceIndexByName.test_empty_string_returns_negative_one",
+        "tests.test_audio_device_persistence.TestGetDeviceIndexByName.test_exact_match_preferred",
+        "tests.test_audio_device_persistence.TestGetDeviceIndexByName.test_no_match_returns_negative_one",
+        "tests.test_audio_device_persistence.TestGetDeviceIndexByName.test_partial_match_avoids_false_positive",
+        "tests.test_audio_device_persistence.TestGetDeviceIndexByName.test_partial_match_stored_name_is_substring",
+        "tests.test_audio_device_persistence.TestHandleDeviceListChangeIntegration.test_hotplug_device_removed_uses_fallback",
+        "tests.test_audio_device_persistence.TestHandleDeviceListChangeIntegration.test_hotplug_no_active_stream_no_crash",
+        "tests.test_audio_device_persistence.TestHandleDeviceListChangeIntegration.test_hotplug_recovery_updates_name",
+        "tests.test_audio_device_persistence.TestLegacyUpgradePath.test_legacy_config_empty_audio_dict",
+        "tests.test_audio_device_persistence.TestLegacyUpgradePath.test_legacy_config_no_name_field",
+        "tests.test_audio_device_persistence.TestLegacyUpgradePath.test_legacy_upgrade_name_not_persisted_for_invalid_device",
+        "tests.test_audio_device_persistence.TestLegacyUpgradePath.test_legacy_upgrade_name_persisted_on_activation",
+        "tests.test_audio_device_persistence.TestLegacyUpgradePath.test_legacy_upgrade_second_startup_uses_name",
+        "tests.test_audio_device_persistence.TestPartialUpdatePreservesDevice.test_delay_only_update_keeps_selected_device",
+        "tests.test_audio_device_persistence.TestRegressionGuards.test_config_roundtrip_preserves_all_fields",
+        "tests.test_audio_device_persistence.TestRegressionGuards.test_device_index_validator_unchanged_behavior",
+        "tests.test_audio_device_persistence.TestRegressionGuards.test_resolve_still_works_without_name",
+        "tests.test_audio_device_persistence.TestRegressionGuards.test_schema_accepts_legacy_config_without_name",
+        "tests.test_audio_device_persistence.TestRegressionGuards.test_schema_allows_extra_keys",
+        "tests.test_audio_device_persistence.TestRegressionGuards.test_sendspin_device_name_persisted",
+        "tests.test_audio_device_persistence.TestRegressionGuards.test_web_audio_device_name_persisted",
+        "tests.test_audio_device_persistence.TestResolveDeviceFromName.test_resolve_empty_name_skips_resolution",
+        "tests.test_audio_device_persistence.TestResolveDeviceFromName.test_resolve_index_valid_but_wrong_device",
+        "tests.test_audio_device_persistence.TestResolveDeviceFromName.test_resolve_name_found_at_different_index",
+        "tests.test_audio_device_persistence.TestResolveDeviceFromName.test_resolve_name_matches_at_saved_index",
+        "tests.test_audio_device_persistence.TestResolveDeviceFromName.test_resolve_name_not_found_device_removed",
+        "tests.test_audio_device_persistence.TestResolveDeviceFromName.test_resolve_no_name_key_skips_resolution",
+        "tests.test_audio_device_persistence.TestResolveDeviceFromName.test_resolve_partial_match_truncated_name",
+        "tests.test_audio_device_persistence.TestResolveDeviceFromName.test_resolve_prefers_exact_over_partial",
+        "tests.test_audio_device_persistence.TestResolveDeviceFromName.test_resolve_saved_index_invalid_name_found",
+        "tests.test_audio_device_persistence.TestResolveDeviceFromName.test_resolve_saved_index_invalid_name_not_found",
+        "tests.test_audio_device_persistence.TestSendspinDeviceListEvent.test_api_get_returns_name",
+        "tests.test_audio_device_persistence.TestSendspinDeviceListEvent.test_load_sendspin_servers_fires_device_list_changed",
+        "tests.test_audio_device_persistence.TestUpdateDeviceConfig.test_update_device_config_clears_name_for_invalid",
+        "tests.test_audio_device_persistence.TestUpdateDeviceConfig.test_update_device_config_no_ledfx_no_crash",
+        "tests.test_audio_device_persistence.TestUpdateDeviceConfig.test_update_device_config_saves_to_disk",
+        "tests.test_audio_device_persistence.TestUpdateDeviceConfig.test_update_device_config_writes_name",
+        "tests.test_events.TestEventListener.test_empty_dict_passed_explicitly",
+        "tests.test_events.TestEventListener.test_explicit_filter_works",
+        "tests.test_events.TestEventListener.test_filter_independence_without_args",
+        "tests.test_events.TestEventsAddListener.test_add_listener_filter_independence",
+        "tests.test_events.TestEventsAddListener.test_add_listener_with_explicit_filter",
+        "tests.test_gap_devices.TestGapDeviceIdentification.test_gap_device_identification",
+        "tests.test_gap_devices.TestGapDeviceIdentification.test_gap_device_with_dummy_type",
+        "tests.test_gap_devices.TestGapDeviceIdentification.test_gap_device_with_wrong_type",
+        "tests.test_gap_devices.TestGapDeviceIdentification.test_non_gap_device_identification",
+        "tests.test_gap_devices.TestGapDeviceIdentification.test_non_gap_device_with_any_type",
+        "tests.test_gap_devices.TestGapDeviceIdentification.test_special_device_types",
+        "tests.test_gap_devices.TestGapDeviceIntegration.test_devices_module_imports",
+        "tests.test_gap_devices.TestGapDeviceIntegration.test_validate_segment_logic",
+        "tests.test_gradient_extraction.TestApplyLedCorrection.test_punchy_mode_boosts_saturation",
+        "tests.test_gradient_extraction.TestApplyLedCorrection.test_punchy_mode_more_vibrant_than_safe",
+        "tests.test_gradient_extraction.TestApplyLedCorrection.test_safe_mode_no_correction",
+        "tests.test_gradient_extraction.TestApplyLedCorrection.test_white_replacement",
+        "tests.test_gradient_extraction.TestBuildGradientStops.test_empty_colors_returns_empty",
+        "tests.test_gradient_extraction.TestBuildGradientStops.test_interleaved_gradient_with_background",
+        "tests.test_gradient_extraction.TestBuildGradientStops.test_normal_gradient_without_background",
+        "tests.test_gradient_extraction.TestBuildGradientStops.test_uses_all_extracted_accents_interleaved",
+        "tests.test_gradient_extraction.TestBuildGradientString.test_builds_valid_ledfx_format",
+        "tests.test_gradient_extraction.TestBuildGradientString.test_handles_empty_stops",
+        "tests.test_gradient_extraction.TestDetectDominantBackground.test_detects_background_over_threshold",
+        "tests.test_gradient_extraction.TestDetectDominantBackground.test_detects_bright_background",
+        "tests.test_gradient_extraction.TestDetectDominantBackground.test_detects_bright_colored_background",
+        "tests.test_gradient_extraction.TestDetectDominantBackground.test_empty_colors_returns_none",
+        "tests.test_gradient_extraction.TestDetectDominantBackground.test_no_background_under_threshold",
+        "tests.test_gradient_extraction.TestExtractDominantColors.test_extract_from_solid_color",
+        "tests.test_gradient_extraction.TestExtractDominantColors.test_extract_from_two_colors",
+        "tests.test_gradient_extraction.TestExtractDominantColors.test_extract_handles_rgba",
+        "tests.test_gradient_extraction.TestExtractDominantColors.test_extract_returns_sorted_by_frequency",
+        "tests.test_gradient_extraction.TestExtractGradientMetadata.test_detects_background_in_metadata",
+        "tests.test_gradient_extraction.TestExtractGradientMetadata.test_extracts_all_variants",
+        "tests.test_gradient_extraction.TestExtractGradientMetadata.test_gradient_deterministic",
+        "tests.test_gradient_extraction.TestExtractGradientMetadata.test_handles_exceptions_gracefully",
+        "tests.test_gradient_extraction.TestExtractGradientMetadata.test_led_safe_variant_structure",
+        "tests.test_gradient_extraction.TestExtractGradientMetadata.test_metadata_fields",
+        "tests.test_gradient_extraction.TestExtractGradientMetadata.test_no_background_pattern",
+        "tests.test_gradient_integration.TestAssetGradientIntegration.test_asset_gradients_detect_background",
+        "tests.test_gradient_integration.TestAssetGradientIntegration.test_list_assets_handles_gradient_extraction_failure",
+        "tests.test_gradient_integration.TestAssetGradientIntegration.test_list_assets_includes_gradients",
+        "tests.test_gradient_integration.TestAssetGradientIntegration.test_multiple_assets_all_have_gradients",
+        "tests.test_gradient_integration.TestImageCacheGradientIntegration.test_cache_includes_all_gradient_variants",
+        "tests.test_gradient_integration.TestImageCacheGradientIntegration.test_cache_put_extracts_gradients",
+        "tests.test_gradient_integration.TestImageCacheGradientIntegration.test_cache_put_handles_gradient_extraction_failure",
+        "tests.test_gradient_integration.TestImageCacheGradientIntegration.test_cache_thumbnails_skip_gradient_extraction",
+        "tests.test_image_cache.TestCacheAccessTracking.test_access_count_increments",
+        "tests.test_image_cache.TestCacheAccessTracking.test_last_accessed_updates",
+        "tests.test_image_cache.TestCacheBasicOperations.test_cache_directory_created",
+        "tests.test_image_cache.TestCacheBasicOperations.test_cache_initialization",
+        "tests.test_image_cache.TestCacheBasicOperations.test_cache_miss",
+        "tests.test_image_cache.TestCacheBasicOperations.test_cache_put_and_get",
+        "tests.test_image_cache.TestCacheBasicOperations.test_metadata_tracking",
+        "tests.test_image_cache.TestCacheDelete.test_clear_entire_cache",
+        "tests.test_image_cache.TestCacheDelete.test_delete_nonexistent_url",
+        "tests.test_image_cache.TestCacheDelete.test_delete_specific_url",
+        "tests.test_image_cache.TestCacheFallbackOnError.test_corrupt_cache_fallback_open_gif",
+        "tests.test_image_cache.TestCacheFallbackOnError.test_corrupt_cache_fallback_open_image",
+        "tests.test_image_cache.TestCacheHeaders.test_get_headers_for_uncached_url",
+        "tests.test_image_cache.TestCacheHeaders.test_store_etag_and_last_modified",
+        "tests.test_image_cache.TestCacheImageMetadata.test_animated_gif_metadata",
+        "tests.test_image_cache.TestCachePersistence.test_metadata_persists",
+        "tests.test_image_cache.TestCacheStatistics.test_get_stats",
+        "tests.test_image_cache.TestCacheStatistics.test_stats_entries_sorted_by_access_count",
+        "tests.test_image_cache.TestContentTypeExtensionMapping.test_extension_from_content_type",
+        "tests.test_image_cache.TestLRUEviction.test_eviction_by_count_limit",
+        "tests.test_image_cache.TestLRUEviction.test_eviction_by_size_limit",
+        "tests.test_image_cache.TestLRUEviction.test_lru_evicts_least_recently_used",
+        "tests.test_image_security.TestExtensionlessRemoteURLs.test_cdn_urls_without_extension_allowed",
+        "tests.test_image_security.TestExtensionlessRemoteURLs.test_http_url_no_extension_allowed",
+        "tests.test_image_security.TestExtensionlessRemoteURLs.test_https_url_no_extension_allowed",
+        "tests.test_image_security.TestExtensionlessRemoteURLs.test_local_file_invalid_extension_rejected",
+        "tests.test_image_security.TestExtensionlessRemoteURLs.test_local_file_no_extension_rejected",
+        "tests.test_image_security.TestExtensionlessRemoteURLs.test_remote_url_no_extension_with_fragment",
+        "tests.test_image_security.TestExtensionlessRemoteURLs.test_remote_url_no_extension_with_query",
+        "tests.test_image_security.TestExtensionlessRemoteURLs.test_remote_url_with_invalid_extension_rejected",
+        "tests.test_image_security.TestExtensionlessRemoteURLs.test_remote_url_with_path_no_extension",
+        "tests.test_image_security.TestExtensionlessRemoteURLs.test_remote_url_with_valid_extension_still_works",
+        "tests.test_image_security.TestIntegrationOpenGif.test_extensionless_remote_gif_url_success",
+        "tests.test_image_security.TestIntegrationOpenGif.test_single_frame_image_gets_n_frames",
+        "tests.test_image_security.TestIntegrationOpenGif.test_valid_local_gif",
+        "tests.test_image_security.TestIntegrationOpenImage.test_extensionless_remote_url_success",
+        "tests.test_image_security.TestIntegrationOpenImage.test_invalid_extension_rejected",
+        "tests.test_image_security.TestIntegrationOpenImage.test_invalid_url_extension_rejected",
+        "tests.test_image_security.TestIntegrationOpenImage.test_nonexistent_file",
+        "tests.test_image_security.TestIntegrationOpenImage.test_valid_local_png",
+        "tests.test_image_security.TestIntegrationOpenImage.test_valid_remote_image",
+        "tests.test_image_security.TestLocalFileSchemeValidation.test_data_uri_rejected_in_open_image",
+        "tests.test_image_security.TestLocalFileSchemeValidation.test_file_scheme_rejected_in_open_gif",
+        "tests.test_image_security.TestLocalFileSchemeValidation.test_file_scheme_rejected_in_open_image",
+        "tests.test_image_security.TestLocalFileSchemeValidation.test_ftp_scheme_rejected_in_open_gif",
+        "tests.test_image_security.TestLocalFileSchemeValidation.test_ftp_scheme_rejected_in_open_image",
+        "tests.test_image_security.TestLocalFileSchemeValidation.test_javascript_scheme_rejected",
+        "tests.test_image_security.TestLocalFileSchemeValidation.test_other_schemes_rejected",
+        "tests.test_image_security.TestPathTraversalNaughtyStrings.test_path_traversal_attempts",
+        "tests.test_image_security.TestPathTraversalNaughtyStrings.test_special_filename_attacks",
+        "tests.test_image_security.TestPathTraversalNaughtyStrings.test_url_injection_attempts",
+        "tests.test_image_security.TestSSRFProtection.test_dns_rebinding_protection",
+        "tests.test_image_security.TestSSRFProtection.test_invalid_protocols_blocked",
+        "tests.test_image_security.TestSSRFProtection.test_ipv6_loopback_blocked",
+        "tests.test_image_security.TestSSRFProtection.test_ipv6_private_blocked",
+        "tests.test_image_security.TestSSRFProtection.test_link_local_blocked",
+        "tests.test_image_security.TestSSRFProtection.test_loopback_ipv4_blocked",
+        "tests.test_image_security.TestSSRFProtection.test_metadata_endpoints_blocked",
+        "tests.test_image_security.TestSSRFProtection.test_open_gif_blocks_ssrf",
+        "tests.test_image_security.TestSSRFProtection.test_open_image_blocks_ssrf",
+        "tests.test_image_security.TestSSRFProtection.test_private_networks_blocked",
+        "tests.test_image_security.TestSSRFProtection.test_valid_public_url_allowed",
+        "tests.test_image_security.TestURLParsing.test_url_with_fragment",
+        "tests.test_image_security.TestURLParsing.test_url_with_invalid_extension_and_query",
+        "tests.test_image_security.TestURLParsing.test_url_with_query_and_fragment",
+        "tests.test_image_security.TestURLParsing.test_url_with_query_string",
+        "tests.test_instance_id.TestBackwardCompatibility.test_old_config_without_instance_id",
+        "tests.test_instance_id.TestEnsureInstanceId.test_generated_ids_are_unique",
+        "tests.test_instance_id.TestEnsureInstanceId.test_generates_uuid_when_empty_string",
+        "tests.test_instance_id.TestEnsureInstanceId.test_generates_uuid_when_missing",
+        "tests.test_instance_id.TestEnsureInstanceId.test_preserves_existing_instance_id",
+        "tests.test_instance_id.TestEnsureInstanceId.test_schema_accepts_instance_id",
+        "tests.test_instance_id.TestEnsureInstanceId.test_schema_defaults_instance_id_to_empty",
+        "tests.test_instance_id.TestSendspinClientId.test_client_id_deterministic",
+        "tests.test_instance_id.TestSendspinClientId.test_client_id_differs_across_instances",
+        "tests.test_instance_id.TestSendspinClientId.test_client_id_uses_short_instance_id",
+        "tests.test_instance_id.TestSendspinClientId.test_stream_constructor_stores_ids",
+        "tests.test_now_playing_mpris.TestMPRISArtworkRouting.test_provider_does_not_set_artwork_directly",
+        "tests.test_now_playing_mpris.TestMPRISLifecycle.test_clear_resets_provider_state",
+        "tests.test_now_playing_mpris.TestMPRISLifecycle.test_start_non_linux_noop",
+        "tests.test_now_playing_mpris.TestMPRISMetadata.test_push_metadata_forwards_track",
+        "tests.test_now_playing_mpris.TestMPRISMetadata.test_push_metadata_stopped_with_no_content_clears",
+        "tests.test_now_playing_mpris.TestMPRISSelection.test_select_best_player_clears_when_none",
+        "tests.test_now_playing_mpris.TestMPRISSelection.test_select_best_player_prefers_playing",
+        "tests.test_now_playing_musicbrainz.test_bad_variant_matching_uses_word_boundaries",
+        "tests.test_now_playing_musicbrainz.test_build_queries_escapes_embedded_quotes",
+        "tests.test_now_playing_musicbrainz.test_release_artist_exact_match_scores_much_higher_than_mismatch",
+        "tests.test_now_playing_musicbrainz.test_release_dedup_keeps_best_scoring_candidate",
+        "tests.test_now_playing_musicbrainz.test_release_score_reason_includes_artist_mismatch_marker",
+        "tests.test_now_playing_musicbrainz.test_release_score_skips_artist_penalties_when_track_artist_empty",
+        "tests.test_now_playing_musicbrainz.test_various_artists_release_gets_strong_penalty",
+        "tests.test_now_playing_normalise.test_official_video_bracket_with_following_text_is_stripped",
+        "tests.test_now_playing_normalise.test_official_video_suffix_with_trailing_text_is_stripped",
+        "tests.test_now_playing_normalise.test_terminal_official_video_suffix_is_stripped",
+        "tests.test_now_playing_sendspin.TestSendspinProviderClear.test_clear_resets_artwork_tracking",
+        "tests.test_now_playing_sendspin.TestSendspinProviderClear.test_clear_resets_state",
+        "tests.test_now_playing_sendspin.TestSendspinProviderMetadata.test_artwork_url_forwarded",
+        "tests.test_now_playing_sendspin.TestSendspinProviderMetadata.test_basic_metadata_forwarded",
+        "tests.test_now_playing_sendspin.TestSendspinProviderMetadata.test_different_artwork_url_sent",
+        "tests.test_now_playing_sendspin.TestSendspinProviderMetadata.test_explicit_none_clears_field",
+        "tests.test_now_playing_sendspin.TestSendspinProviderMetadata.test_incremental_accumulation_across_messages",
+        "tests.test_now_playing_sendspin.TestSendspinProviderMetadata.test_none_metadata_ignored",
+        "tests.test_now_playing_sendspin.TestSendspinProviderMetadata.test_same_artwork_url_not_re_sent",
+        "tests.test_now_playing_sendspin.TestSendspinProviderMetadata.test_undefined_fields_retain_previous_value",
+        "tests.test_now_playing_sendspin.TestSendspinProviderMetadata.test_undefined_fields_start_as_none",
+        "tests.test_now_playing_sendspin.TestSendspinProviderNoLedfx.test_no_now_playing_graceful",
+        "tests.test_now_playing_service.TestAlbumArtAutoApplication.test_called_on_set_artwork_bytes",
+        "tests.test_now_playing_service.TestAlbumArtAutoApplication.test_called_on_set_artwork_url",
+        "tests.test_now_playing_service.TestAlbumArtAutoApplication.test_not_called_when_disabled",
+        "tests.test_now_playing_service.TestAlbumArtAutoApplication.test_not_called_when_virtual_ids_empty",
+        "tests.test_now_playing_service.TestAlbumArtDurationSchema.test_album_art_duration_max_still_enforced",
+        "tests.test_now_playing_service.TestAlbumArtDurationSchema.test_duration_negative_still_invalid_for_track_text",
+        "tests.test_now_playing_service.TestAlbumArtDurationSchema.test_duration_zero_accepted_for_album_art",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_created_effect_type_is_image",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_disabled_returns_zero",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_effect_creation_error_skips_virtual",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_empty_virtual_ids_returns_zero",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_image_source_config_uses_cache_key",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_missing_virtual_skipped",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_multiple_virtuals_updated",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_no_artwork_returns_zero",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_no_cache_key_returns_zero",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_no_effects_attr_returns_zero",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_no_virtuals_attr_returns_zero",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_permanent_mode_no_fallback",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_set_effect_error_skips_virtual",
+        "tests.test_now_playing_service.TestApplyAlbumArtToVirtuals.test_temporary_mode_uses_fallback",
+        "tests.test_now_playing_service.TestApplyGradientToVirtuals.test_applies_gradient_to_single_effect",
+        "tests.test_now_playing_service.TestApplyGradientToVirtuals.test_applies_to_multiple_virtuals",
+        "tests.test_now_playing_service.TestApplyGradientToVirtuals.test_effect_without_gradient_in_schema_gets_colors_only",
+        "tests.test_now_playing_service.TestApplyGradientToVirtuals.test_empty_virtual_ids_means_all",
+        "tests.test_now_playing_service.TestApplyGradientToVirtuals.test_filters_by_virtual_ids",
+        "tests.test_now_playing_service.TestApplyGradientToVirtuals.test_hidden_keys_skipped",
+        "tests.test_now_playing_service.TestApplyGradientToVirtuals.test_no_config_save_when_nothing_updated",
+        "tests.test_now_playing_service.TestApplyGradientToVirtuals.test_no_gradient_returns_zero",
+        "tests.test_now_playing_service.TestApplyGradientToVirtuals.test_no_virtuals_attribute_returns_zero",
+        "tests.test_now_playing_service.TestApplyGradientToVirtuals.test_saves_config_after_updates",
+        "tests.test_now_playing_service.TestApplyGradientToVirtuals.test_skips_dummy_effect",
+        "tests.test_now_playing_service.TestApplyGradientToVirtuals.test_skips_virtual_without_effect",
+        "tests.test_now_playing_service.TestArtworkReference.test_to_dict",
+        "tests.test_now_playing_service.TestGradientApplicationConfig.test_default_gradient_enabled",
+        "tests.test_now_playing_service.TestGradientApplicationConfig.test_default_gradient_virtual_ids_empty",
+        "tests.test_now_playing_service.TestGradientApplicationConfig.test_gradient_virtual_ids_returns_copy",
+        "tests.test_now_playing_service.TestGradientApplicationConfig.test_set_gradient_enabled",
+        "tests.test_now_playing_service.TestGradientApplicationConfig.test_set_gradient_virtual_ids",
+        "tests.test_now_playing_service.TestGradientAutoApplication.test_gradient_applied_on_artwork_bytes",
+        "tests.test_now_playing_service.TestGradientAutoApplication.test_gradient_event_still_fires_when_disabled",
+        "tests.test_now_playing_service.TestGradientAutoApplication.test_gradient_not_applied_when_disabled",
+        "tests.test_now_playing_service.TestNowPlayingConfigSchema.test_all_variants_accepted",
+        "tests.test_now_playing_service.TestNowPlayingConfigSchema.test_default_config_is_valid",
+        "tests.test_now_playing_service.TestNowPlayingConfigSchema.test_duration_out_of_range",
+        "tests.test_now_playing_service.TestNowPlayingConfigSchema.test_enabled_flag_accepted",
+        "tests.test_now_playing_service.TestNowPlayingConfigSchema.test_invalid_enabled_rejected",
+        "tests.test_now_playing_service.TestNowPlayingConfigSchema.test_invalid_variant_rejected",
+        "tests.test_now_playing_service.TestNowPlayingServiceClear.test_clear_active_source_resets_state",
+        "tests.test_now_playing_service.TestNowPlayingServiceClear.test_clear_inactive_source_no_effect",
+        "tests.test_now_playing_service.TestNowPlayingServiceEvents.test_artwork_changed_event_on_bytes",
+        "tests.test_now_playing_service.TestNowPlayingServiceEvents.test_artwork_changed_event_on_url",
+        "tests.test_now_playing_service.TestNowPlayingServiceEvents.test_cleared_event_on_active_source",
+        "tests.test_now_playing_service.TestNowPlayingServiceEvents.test_metadata_changed_event_fired",
+        "tests.test_now_playing_service.TestNowPlayingServiceEvents.test_no_artwork_event_when_unchanged",
+        "tests.test_now_playing_service.TestNowPlayingServiceEvents.test_no_cleared_event_on_inactive_source",
+        "tests.test_now_playing_service.TestNowPlayingServiceEvents.test_no_events_from_inactive_source",
+        "tests.test_now_playing_service.TestNowPlayingServiceEvents.test_no_track_changed_event_on_same_track",
+        "tests.test_now_playing_service.TestNowPlayingServiceEvents.test_track_changed_event_on_different_track",
+        "tests.test_now_playing_service.TestNowPlayingServiceEvents.test_track_changed_event_on_new_track",
+        "tests.test_now_playing_service.TestNowPlayingServiceGetCurrent.test_get_current_returns_live_state",
+        "tests.test_now_playing_service.TestNowPlayingServiceGetCurrent.test_initial_state_is_empty",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetArtworkBytes.test_artwork_bytes_stored",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetArtworkBytes.test_artwork_file_overwritten_on_change",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetArtworkBytes.test_artwork_file_written_to_disk",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetArtworkBytes.test_explicit_hash_used",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetArtworkBytes.test_same_bytes_no_change",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetArtworkUrl.test_artwork_url_stored",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetArtworkUrl.test_different_artwork_url_is_change",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetArtworkUrl.test_download_failure_returns_false",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetArtworkUrl.test_inactive_source_rejected",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetArtworkUrl.test_same_artwork_url_no_change",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetMetadata.test_different_track_returns_change",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetMetadata.test_first_metadata_returns_track_changed",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetMetadata.test_first_metadata_sets_active_source",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetMetadata.test_inactive_source_ignored",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetMetadata.test_metadata_updated_at_is_set",
+        "tests.test_now_playing_service.TestNowPlayingServiceSetMetadata.test_same_metadata_returns_no_change",
+        "tests.test_now_playing_service.TestNowPlayingState.test_default_state",
+        "tests.test_now_playing_service.TestNowPlayingState.test_to_dict_empty",
+        "tests.test_now_playing_service.TestNowPlayingState.test_to_dict_with_data",
+        "tests.test_now_playing_service.TestServiceConfigFromInit.test_default_config_loaded",
+        "tests.test_now_playing_service.TestServiceConfigFromInit.test_persisted_config_loaded",
+        "tests.test_now_playing_service.TestServiceConfigFromInit.test_variant_applied_to_state",
+        "tests.test_now_playing_service.TestTrackMetadata.test_to_dict_roundtrip",
+        "tests.test_now_playing_service.TestTrackMetadata.test_track_identity_tuple",
+        "tests.test_now_playing_service.TestTrackMetadata.test_track_identity_with_none_fields",
+        "tests.test_now_playing_service.TestUpdateConfig.test_config_persisted_to_disk",
+        "tests.test_now_playing_service.TestUpdateConfig.test_full_update",
+        "tests.test_now_playing_service.TestUpdateConfig.test_invalid_config_raises",
+        "tests.test_now_playing_service.TestUpdateConfig.test_partial_update_album_art",
+        "tests.test_now_playing_service.TestUpdateConfig.test_partial_update_gradient",
+        "tests.test_now_playing_service.TestUpdateConfig.test_partial_update_track_text",
+        "tests.test_now_playing_service.TestUpdateConfig.test_update_preserves_unrelated_sections",
+        "tests.test_now_playing_service.TestUpdateConfig.test_variant_change_no_re_resolve_when_unchanged",
+        "tests.test_now_playing_service.TestUpdateConfig.test_variant_change_re_resolves_gradient",
+        "tests.test_now_playing_smtc.TestAttachToSession.test_attach_new_session_subscribes_events",
+        "tests.test_now_playing_smtc.TestAttachToSession.test_attach_replaces_previous_session",
+        "tests.test_now_playing_smtc.TestAttachToSession.test_detach_clears_tokens_and_session",
+        "tests.test_now_playing_smtc.TestAttachToSession.test_none_session_clears_when_had_content",
+        "tests.test_now_playing_smtc.TestAttachToSession.test_none_session_no_clear_when_empty",
+        "tests.test_now_playing_smtc.TestFetchAndPushMetadata.test_basic_metadata_forwarded",
+        "tests.test_now_playing_smtc.TestFetchAndPushMetadata.test_cache_updated_after_fetch",
+        "tests.test_now_playing_smtc.TestFetchAndPushMetadata.test_empty_string_fields_become_none",
+        "tests.test_now_playing_smtc.TestFetchAndPushMetadata.test_no_now_playing_attr_returns_early",
+        "tests.test_now_playing_smtc.TestFetchAndPushMetadata.test_no_session_returns_early",
+        "tests.test_now_playing_smtc.TestFetchAndPushMetadata.test_none_props_triggers_maybe_clear",
+        "tests.test_now_playing_smtc.TestFetchAndPushMetadata.test_props_failure_returns_early",
+        "tests.test_now_playing_smtc.TestSMTCInitialize.test_attaches_to_existing_session",
+        "tests.test_now_playing_smtc.TestSMTCInitialize.test_import_error_silently_returns",
+        "tests.test_now_playing_smtc.TestSMTCInitialize.test_no_active_session_at_startup",
+        "tests.test_now_playing_smtc.TestSMTCInitialize.test_request_async_failure",
+        "tests.test_now_playing_smtc.TestSMTCInitialize.test_subscribes_to_session_changed",
+        "tests.test_now_playing_smtc.TestSMTCProviderLifecycle.test_init_state",
+        "tests.test_now_playing_smtc.TestSMTCProviderLifecycle.test_start_idempotent_while_running",
+        "tests.test_now_playing_smtc.TestSMTCProviderLifecycle.test_start_non_windows_noop",
+        "tests.test_now_playing_smtc.TestSMTCProviderLifecycle.test_start_on_windows_creates_task",
+        "tests.test_now_playing_smtc.TestSMTCProviderLifecycle.test_stop_cancels_init_task",
+        "tests.test_now_playing_smtc.TestSMTCProviderLifecycle.test_stop_clears_state",
+        "tests.test_now_playing_smtc.TestSMTCProviderLifecycle.test_stop_when_never_started",
+        "tests.test_now_playing_smtc.TestStateMethods.test_clear_calls_now_playing_clear",
+        "tests.test_now_playing_smtc.TestStateMethods.test_clear_no_now_playing",
+        "tests.test_now_playing_smtc.TestStateMethods.test_clear_resets_cache",
+        "tests.test_now_playing_smtc.TestStateMethods.test_maybe_clear_fires_when_album_set",
+        "tests.test_now_playing_smtc.TestStateMethods.test_maybe_clear_fires_when_artist_set",
+        "tests.test_now_playing_smtc.TestStateMethods.test_maybe_clear_fires_when_title_set",
+        "tests.test_now_playing_smtc.TestStateMethods.test_maybe_clear_noop_when_no_content",
+        "tests.test_scenes.test_is_active_legacy_empty_object_with_effect",
+        "tests.test_scenes.test_is_active_legacy_empty_object_with_no_effect",
+        "tests.test_scenes.test_is_active_legacy_type_config_matching",
+        "tests.test_scenes.test_is_active_legacy_type_config_not_matching",
+        "tests.test_scenes.test_is_active_with_action_activate_config_mismatch",
+        "tests.test_scenes.test_is_active_with_action_activate_matching",
+        "tests.test_scenes.test_is_active_with_action_activate_preset_matching",
+        "tests.test_scenes.test_is_active_with_action_activate_preset_not_matching",
+        "tests.test_scenes.test_is_active_with_action_activate_type_mismatch",
+        "tests.test_scenes.test_is_active_with_action_forceblack_matching",
+        "tests.test_scenes.test_is_active_with_action_forceblack_wrong_color",
+        "tests.test_scenes.test_is_active_with_action_forceblack_wrong_effect_type",
+        "tests.test_scenes.test_is_active_with_action_ignore",
+        "tests.test_scenes.test_is_active_with_action_stop_matching",
+        "tests.test_scenes.test_is_active_with_action_stop_not_matching",
+        "tests.test_scenes.test_is_active_with_mixed_actions",
+        "tests.test_scenes.test_is_active_with_mixed_actions_one_mismatch",
+        "tests.test_scenes.test_scene_is_active_when_effects_match",
+        "tests.test_scenes.test_scene_is_not_active_on_effect_mismatch",
+        "tests.test_scenes.test_scene_is_not_active_when_virtual_missing",
+        "tests.test_scenes_action_field.test_action_activate_ledfx_presets_priority",
+        "tests.test_scenes_action_field.test_action_activate_missing_config_and_preset",
+        "tests.test_scenes_action_field.test_action_activate_missing_type_field",
+        "tests.test_scenes_action_field.test_action_activate_preset_fallback_to_default",
+        "tests.test_scenes_action_field.test_action_activate_with_explicit_config",
+        "tests.test_scenes_action_field.test_action_activate_with_missing_preset_falls_back_to_reset",
+        "tests.test_scenes_action_field.test_action_activate_with_preset",
+        "tests.test_scenes_action_field.test_action_activate_with_reset_preset",
+        "tests.test_scenes_action_field.test_action_activate_with_user_preset",
+        "tests.test_scenes_action_field.test_action_activate_without_type_or_config_skips",
+        "tests.test_scenes_action_field.test_action_forceblack_sets_black_single_color",
+        "tests.test_scenes_action_field.test_action_ignore_leaves_virtual_unchanged",
+        "tests.test_scenes_action_field.test_action_stop_clears_effect",
+        "tests.test_scenes_action_field.test_legacy_empty_object_behaves_as_ignore",
+        "tests.test_scenes_action_field.test_legacy_type_config_behaves_as_activate",
+        "tests.test_scenes_action_field.test_mixed_actions_in_scene",
+        "tests.test_scenes_action_field.test_multiple_unknown_actions_in_scene",
+        "tests.test_scenes_action_field.test_preset_resolution_from_user_presets",
+        "tests.test_scenes_action_field.test_scene_activation_skips_missing_virtuals",
+        "tests.test_scenes_action_field.test_scene_with_no_virtuals_activates_successfully",
+        "tests.test_scenes_action_field.test_unknown_action_value_is_ignored",
+        "tests.test_scenes_action_field.test_unknown_action_value_treated_as_legacy",
+        "tests.test_scenes_api_action_field.TestSceneEndpointDelete.test_delete_nonexistent_scene",
+        "tests.test_scenes_api_action_field.TestSceneEndpointDelete.test_delete_scene_restful",
+        "tests.test_scenes_api_action_field.TestSceneEndpointGet.test_get_scene_with_preset_detection",
+        "tests.test_scenes_api_action_field.TestScenesEndpointGet.test_get_scenes_includes_active_flag",
+        "tests.test_scenes_api_action_field.TestScenesEndpointGet.test_get_scenes_with_preset_detection",
+        "tests.test_scenes_api_action_field.TestScenesEndpointPost.test_create_scene_legacy_format",
+        "tests.test_scenes_api_action_field.TestScenesEndpointPost.test_create_scene_with_action_fields",
+        "tests.test_scenes_api_action_field.TestScenesEndpointPost.test_create_scene_with_preset",
+        "tests.test_scenes_api_action_field.TestScenesEndpointPost.test_upsert_scene_with_id",
+        "tests.test_scenes_api_action_field.test_scene_action_field_preservation",
+        "tests.test_scenes_api_integration.test_delete_nonexistent_scene_returns_error",
+        "tests.test_scenes_api_integration.test_delete_scene_by_id_restful",
+        "tests.test_scenes_api_integration.test_get_scene_by_id_includes_preset_detection",
+        "tests.test_scenes_api_integration.test_get_scenes_handles_virtuals_without_type_or_config",
+        "tests.test_scenes_api_integration.test_get_scenes_includes_preset_detection",
+        "tests.test_scenes_api_integration.test_post_scene_mixed_legacy_and_new",
+        "tests.test_scenes_api_integration.test_post_scene_preserves_action_fields",
+        "tests.test_scenes_api_integration.test_post_scene_preserves_legacy_format",
+        "tests.test_scenes_api_integration.test_post_scene_warns_preset_without_type",
+        "tests.test_scenes_api_integration.test_post_scene_with_upsert",
+        "tests.test_scenes_id.test_get_scene_handles_empty_virtual_effect",
+        "tests.test_scenes_id.test_get_scene_handles_scene_with_no_virtuals",
+        "tests.test_scenes_id.test_get_scene_returns_active_flag_true_for_active_scene",
+        "tests.test_scenes_id.test_get_scene_returns_error_for_nonexistent_scene",
+        "tests.test_scenes_id.test_get_scene_returns_scene_with_id_and_config",
+        "tests.test_scenes_id.test_get_scene_sanitizes_scene_id",
+        "tests.test_sendspin_always_on_runtime.test_audio_should_keep_active_for_sendspin_name_even_if_index_invalid",
+        "tests.test_sendspin_always_on_runtime.test_config_update_audio_triggers_core_sendspin_reconcile",
+        "tests.test_sendspin_always_on_runtime.test_eager_start_reuses_existing_audio_instance",
+        "tests.test_sendspin_always_on_runtime.test_handle_base_configuration_update_reconciles_when_enabled",
+        "tests.test_sendspin_always_on_runtime.test_reconcile_sendspin_always_on_runtime_deactivates_when_disabled",
+        "tests.test_sendspin_always_on_runtime.test_sendspin_always_on_default_true",
+        "tests.test_sendspin_stream_flac_lifecycle.TestCloseFinishesDecoder.test_flac_decoder_finished_on_close",
+        "tests.test_sendspin_stream_flac_lifecycle.TestFinishFlacDecoderHelper.test_exception_in_finish_is_swallowed",
+        "tests.test_sendspin_stream_flac_lifecycle.TestFinishFlacDecoderHelper.test_finishes_and_nulls_decoder",
+        "tests.test_sendspin_stream_flac_lifecycle.TestFinishFlacDecoderHelper.test_noop_when_no_decoder",
+        "tests.test_sendspin_stream_flac_lifecycle.TestPcmPathNoDecoderCleanup.test_stream_clear_pcm_only",
+        "tests.test_sendspin_stream_flac_lifecycle.TestPcmPathNoDecoderCleanup.test_stream_start_pcm_only",
+        "tests.test_sendspin_stream_flac_lifecycle.TestStreamClearFinishesDecoder.test_buffers_cleared_on_stream_clear",
+        "tests.test_sendspin_stream_flac_lifecycle.TestStreamClearFinishesDecoder.test_flac_decoder_finished_on_stream_clear",
+        "tests.test_sendspin_stream_flac_lifecycle.TestStreamStartFinishesDecoder.test_flac_decoder_finished_on_stream_start",
+        "tests.test_startup_playlist.TestStartupPlaylistActivation.test_creates_playlist_manager_if_missing",
+        "tests.test_startup_playlist.TestStartupPlaylistActivation.test_startup_playlist_skipped_when_empty",
+        "tests.test_startup_playlist.TestStartupPlaylistActivation.test_startup_playlist_starts_when_configured",
+        "tests.test_startup_playlist.TestStartupPlaylistActivation.test_startup_playlist_warns_when_not_found",
+        "tests.test_startup_playlist.TestStartupPlaylistConfig.test_accepts_string_value",
+        "tests.test_startup_playlist.TestStartupPlaylistConfig.test_default_value_is_empty_string",
+        "tests.test_startup_playlist.TestStartupPlaylistConfig.test_present_in_api_permitted_keys",
+        "tests.test_startup_playlist.TestStartupPlaylistConfig.test_present_in_no_restart_keys",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_cache_key_different_params",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_cache_key_with_params",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_delete_all_for_url",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_delete_all_for_url_with_different_urls",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_delete_specific_variant",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_get_cache_headers_with_params",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_get_stats_excludes_thumbnails",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_get_with_different_params_misses",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_lru_eviction_with_params",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_metadata_stores_params",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_multiple_thumbnail_variants",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_path_traversal_protection",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_put_and_get_with_params",
+        "tests.test_thumbnail_cache.TestThumbnailCaching.test_special_filename_handling",
+        "tests.test_virtual_device_deletion.TestAutoGeneratedVirtualDeletion.test_auto_generated_virtual_destroyed",
+        "tests.test_virtual_device_deletion.TestAutoGeneratedVirtualDeletion.test_partial_segment_removal_keeps_virtual",
+        "tests.test_virtual_device_deletion.TestCachedPropertyInvalidation.test_cached_devices_invalidated_after_segment_removal",
+        "tests.test_virtual_device_deletion.TestDeviceDeletionDestroysUserVirtual.test_config_integrity_after_device_removal",
+        "tests.test_virtual_device_deletion.TestDeviceDeletionDestroysUserVirtual.test_user_virtual_destroyed_after_device_removal",
+        "tests.test_virtual_device_deletion.TestEmptySegmentDefensiveBehavior.test_activate_raises_runtime_error_for_no_segments",
+        "tests.test_virtual_device_deletion.TestEmptySegmentDefensiveBehavior.test_create_from_config_catches_value_error",
+        "tests.test_virtual_device_deletion.TestEmptySegmentDefensiveBehavior.test_set_effect_raises_value_error_for_no_segments",
+        "tests.test_virtual_device_deletion.TestLogging.test_startup_logs_warning_for_poisoned_virtual",
+        "tests.test_virtual_device_deletion.TestMixedValidInvalidStartup.test_bad_virtual_does_not_prevent_good_virtual_restore",
+        "tests.test_virtual_device_deletion.TestSceneCleanupOnVirtualRemoval.test_multiple_scenes_cleaned",
+        "tests.test_virtual_device_deletion.TestSceneCleanupOnVirtualRemoval.test_scene_references_removed_with_virtual",
+        "tests.test_virtual_device_deletion.TestStartupRestoreWithPoisonedConfig.test_no_segments_key_with_effect_does_not_crash",
+        "tests.test_virtual_device_deletion.TestStartupRestoreWithPoisonedConfig.test_zero_segments_virtual_with_effect_does_not_crash",
+        "tests.test_virtual_presets.test_add_active_flags_advanced_ignored_but_other_mismatch",
+        "tests.test_virtual_presets.test_add_active_flags_advanced_only_in_active",
+        "tests.test_virtual_presets.test_add_active_flags_advanced_only_in_preset",
+        "tests.test_virtual_presets.test_add_active_flags_case_sensitivity",
+        "tests.test_virtual_presets.test_add_active_flags_empty_presets",
+        "tests.test_virtual_presets.test_add_active_flags_exact_match_required",
+        "tests.test_virtual_presets.test_add_active_flags_handles_empty_configs",
+        "tests.test_virtual_presets.test_add_active_flags_ignores_advanced_key",
+        "tests.test_virtual_presets.test_add_active_flags_ignores_both_advanced_and_diag",
+        "tests.test_virtual_presets.test_add_active_flags_ignores_diag_key",
+        "tests.test_virtual_presets.test_add_active_flags_matching_preset",
+        "tests.test_virtual_presets.test_add_active_flags_no_matching_preset",
+        "tests.test_virtual_presets.test_add_active_flags_preserves_all_preset_data",
+        "tests.test_virtual_presets.test_add_active_flags_value_type_sensitivity",
+        "tests.test_websocket_clients.TestConcurrency.test_concurrent_metadata_updates",
+        "tests.test_websocket_clients.TestConcurrency.test_concurrent_name_checks",
+        "tests.test_websocket_clients.TestConstants.test_broadcast_types",
+        "tests.test_websocket_clients.TestConstants.test_max_payload_size",
+        "tests.test_websocket_clients.TestConstants.test_target_modes",
+        "tests.test_websocket_clients.TestConstants.test_valid_client_types",
+        "tests.test_websocket_clients.TestPhase1Infrastructure.test_get_all_clients_metadata",
+        "tests.test_websocket_clients.TestPhase1Infrastructure.test_instance_attributes",
+        "tests.test_websocket_clients.TestPhase1Infrastructure.test_metadata_storage_initialization",
+        "tests.test_websocket_clients.TestPhase1Infrastructure.test_name_exists_empty",
+        "tests.test_websocket_clients.TestPhase1Infrastructure.test_name_exists_exclude_self",
+        "tests.test_websocket_clients.TestPhase1Infrastructure.test_name_exists_found",
+        "tests.test_websocket_clients.TestPhase1Infrastructure.test_update_metadata",
+        "tests.test_websocket_clients.TestPhase2ClientMetadata.test_set_client_info_basic",
+        "tests.test_websocket_clients.TestPhase2ClientMetadata.test_set_client_info_default_name",
+        "tests.test_websocket_clients.TestPhase2ClientMetadata.test_set_client_info_invalid_type",
+        "tests.test_websocket_clients.TestPhase2ClientMetadata.test_set_client_info_multiple_conflicts",
+        "tests.test_websocket_clients.TestPhase2ClientMetadata.test_set_client_info_name_conflict",
+        "tests.test_websocket_clients.TestPhase2ClientMetadata.test_update_client_info_invalid_type",
+        "tests.test_websocket_clients.TestPhase2ClientMetadata.test_update_client_info_name_and_type",
+        "tests.test_websocket_clients.TestPhase2ClientMetadata.test_update_client_info_name_conflict",
+        "tests.test_websocket_clients.TestPhase2ClientMetadata.test_update_client_info_name_only",
+        "tests.test_websocket_clients.TestPhase2ClientMetadata.test_update_client_info_no_updates",
+        "tests.test_websocket_clients.TestPhase2ClientMetadata.test_update_client_info_type_update",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_broadcast_handler_invalid_schema",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_broadcast_handler_no_sender_id_field",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_broadcast_handler_no_targets_matched",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_broadcast_handler_payload_too_large",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_broadcast_handler_success",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_invalid_mode",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_all",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_all_sender_only",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_names",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_names_lenient",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_names_missing_list",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_names_sender_excluded",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_names_sender_included",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_type",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_type_includes_sender",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_type_missing_value",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_uuids",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_uuids_missing_list",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_uuids_sender_excluded",
+        "tests.test_websocket_clients.TestPhase3Broadcasting.test_filter_targets_mode_uuids_sender_included",
+        "tests.test_websocket_clients.TestSchemaValidation.test_broadcast_schema_invalid_broadcast_type",
+        "tests.test_websocket_clients.TestSchemaValidation.test_broadcast_schema_invalid_target_mode",
+        "tests.test_websocket_clients.TestSchemaValidation.test_broadcast_schema_missing_required",
+        "tests.test_websocket_clients.TestSchemaValidation.test_broadcast_schema_prevents_extra_fields",
+        "tests.test_websocket_clients.TestSchemaValidation.test_broadcast_schema_valid"
+      ],
+      "entrypoint_files": [
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\ledfx\\__main__.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\performance_analyser.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\test_user_asset_path.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_additional.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_modes.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_runtime.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_timing.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\playlist\\test_playlists_timing_override.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\scripts\\keyrest.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\scripts\\keyrest_auto.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\scripts\\oneshot.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_assets_cached_urls.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_cache.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_get_gif_frames.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_now_playing.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_api_sendspin_servers.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_apis.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_assets.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_audio_device_persistence.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_events.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gap_devices.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_extraction.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_gradient_integration.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_image_cache.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_image_security.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_instance_id.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_mpris.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_musicbrainz.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_normalise.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_sendspin.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_service.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_now_playing_smtc.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes_action_field.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes_api_action_field.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes_api_integration.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_scenes_id.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_sendspin_always_on_runtime.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_sendspin_stream_flac_lifecycle.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_startup_playlist.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_thumbnail_cache.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_virtual_device_deletion.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_virtual_presets.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\ledfx__ledfx\\tests\\test_websocket_clients.py"
+      ],
+      "fallback": false
+    },
+    "jarvis": {
+      "runner": "docker",
+      "mode": "EA",
+      "precision": true,
+      "jarvis_root": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.tools\\pythonJaRvis\\Jarvis",
+      "timeout_s": 300,
+      "module_count": 46,
+      "pip_install": "",
+      "stdout": "x/tests/test_api_assets_cached_urls.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_api_cache.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_api_get_gif_frames.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_api_now_playing.py\n/workspace/data/raw/projects/ledfx__ledfx/ledfx/api/now_playing.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_api_sendspin_servers.py\n/workspace/data/raw/projects/ledfx__ledfx/ledfx/api/sendspin_discover.py\n/workspace/data/raw/projects/ledfx__ledfx/ledfx/api/sendspin_server.py\n/workspace/data/raw/projects/ledfx__ledfx/ledfx/api/sendspin_servers.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_apis.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/conftest.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_definitions/all_effects.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_utilities/test_utils.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_definitions/audio_configs.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_definitions/coexistance.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_definitions/devices.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_definitions/effects.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_definitions/lifx.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_definitions/log.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_definitions/preset_delete.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_definitions/proof_of_life.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_definitions/virtual_config.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_definitions/virtual_fallback.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_assets.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_audio_device_persistence.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_events.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_gap_devices.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_gradient_extraction.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_gradient_integration.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_image_cache.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_image_security.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_instance_id.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_now_playing_mpris.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_now_playing_musicbrainz.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_now_playing_normalise.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_now_playing_sendspin.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_now_playing_service.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_now_playing_smtc.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_scenes.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_scenes_action_field.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_scenes_api_action_field.py\n/workspace/data/raw/projects/ledfx__ledfx/ledfx/api/scenes.py\n/workspace/data/raw/projects/ledfx__ledfx/ledfx/api/scenes_id.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_scenes_api_integration.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_scenes_id.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_sendspin_always_on_runtime.py\n/workspace/data/raw/projects/ledfx__ledfx/ledfx/api/config.py\n/workspace/data/raw/projects/ledfx__ledfx/ledfx/api/utils.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_sendspin_stream_flac_lifecycle.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_startup_playlist.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_thumbnail_cache.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_virtual_device_deletion.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_virtual_presets.py\n/workspace/data/raw/projects/ledfx__ledfx/ledfx/api/virtual_presets.py\n/workspace/data/raw/projects/ledfx__ledfx/tests/test_websocket_clients.py\n",
+      "stderr": ""
+    },
+    "function_type_graphs": {},
+    "unresolved_calls": [],
+    "candidate_edges": [],
+    "reanalyzed_contexts": []
+  },
+  "usage_index": [
+    {
+      "identity": "PIL.Image.fromarray",
+      "target_module": "PIL.Image",
+      "target_name": "fromarray"
+    },
+    {
+      "identity": "PIL.Image.new",
+      "target_module": "PIL.Image",
+      "target_name": "new"
+    },
+    {
+      "identity": "PIL.Image.open",
+      "target_module": "PIL.Image",
+      "target_name": "open"
+    },
+    {
+      "identity": "aiohttp.ClientSession",
+      "target_module": "aiohttp",
+      "target_name": "ClientSession"
+    },
+    {
+      "identity": "aiohttp.ClientTimeout",
+      "target_module": "aiohttp",
+      "target_name": "ClientTimeout"
+    },
+    {
+      "identity": "aiohttp.web.AppRunner",
+      "target_module": "aiohttp.web",
+      "target_name": "AppRunner"
+    },
+    {
+      "identity": "aiohttp.web.Application",
+      "target_module": "aiohttp.web",
+      "target_name": "Application"
+    },
+    {
+      "identity": "aiohttp.web.TCPSite",
+      "target_module": "aiohttp.web",
+      "target_name": "TCPSite"
+    },
+    {
+      "identity": "aiohttp.web.json_response",
+      "target_module": "aiohttp.web",
+      "target_name": "json_response"
+    },
+    {
+      "identity": "aubio.cvec",
+      "target_module": "aubio",
+      "target_name": "cvec"
+    },
+    {
+      "identity": "aubio.digital_filter",
+      "target_module": "aubio",
+      "target_name": "digital_filter"
+    },
+    {
+      "identity": "aubio.filterbank",
+      "target_module": "aubio",
+      "target_name": "filterbank"
+    },
+    {
+      "identity": "aubio.hztomel",
+      "target_module": "aubio",
+      "target_name": "hztomel"
+    },
+    {
+      "identity": "aubio.meltohz",
+      "target_module": "aubio",
+      "target_name": "meltohz"
+    },
+    {
+      "identity": "aubio.onset",
+      "target_module": "aubio",
+      "target_name": "onset"
+    },
+    {
+      "identity": "aubio.pitch",
+      "target_module": "aubio",
+      "target_name": "pitch"
+    },
+    {
+      "identity": "aubio.pvoc",
+      "target_module": "aubio",
+      "target_name": "pvoc"
+    },
+    {
+      "identity": "aubio.tempo",
+      "target_module": "aubio",
+      "target_name": "tempo"
+    },
+    {
+      "identity": "audio_hotplug.create_monitor",
+      "target_module": "audio_hotplug",
+      "target_name": "create_monitor"
+    },
+    {
+      "identity": "dotenv.load_dotenv",
+      "target_module": "dotenv",
+      "target_name": "load_dotenv"
+    },
+    {
+      "identity": "numpy.arange",
+      "target_module": "numpy",
+      "target_name": "arange"
+    },
+    {
+      "identity": "numpy.arcsinh",
+      "target_module": "numpy",
+      "target_name": "arcsinh"
+    },
+    {
+      "identity": "numpy.array",
+      "target_module": "numpy",
+      "target_name": "array"
+    },
+    {
+      "identity": "numpy.asarray",
+      "target_module": "numpy",
+      "target_name": "asarray"
+    },
+    {
+      "identity": "numpy.bincount",
+      "target_module": "numpy",
+      "target_name": "bincount"
+    },
+    {
+      "identity": "numpy.hstack",
+      "target_module": "numpy",
+      "target_name": "hstack"
+    },
+    {
+      "identity": "numpy.linspace",
+      "target_module": "numpy",
+      "target_name": "linspace"
+    },
+    {
+      "identity": "numpy.log",
+      "target_module": "numpy",
+      "target_name": "log"
+    },
+    {
+      "identity": "numpy.max",
+      "target_module": "numpy",
+      "target_name": "max"
+    },
+    {
+      "identity": "numpy.maximum",
+      "target_module": "numpy",
+      "target_name": "maximum"
+    },
+    {
+      "identity": "numpy.mean",
+      "target_module": "numpy",
+      "target_name": "mean"
+    },
+    {
+      "identity": "numpy.minimum",
+      "target_module": "numpy",
+      "target_name": "minimum"
+    },
+    {
+      "identity": "numpy.ones",
+      "target_module": "numpy",
+      "target_name": "ones"
+    },
+    {
+      "identity": "numpy.power",
+      "target_module": "numpy",
+      "target_name": "power"
+    },
+    {
+      "identity": "numpy.sinh",
+      "target_module": "numpy",
+      "target_name": "sinh"
+    },
+    {
+      "identity": "numpy.tan",
+      "target_module": "numpy",
+      "target_name": "tan"
+    },
+    {
+      "identity": "numpy.where",
+      "target_module": "numpy",
+      "target_name": "where"
+    },
+    {
+      "identity": "numpy.zeros",
+      "target_module": "numpy",
+      "target_name": "zeros"
+    },
+    {
+      "identity": "numpy.zeros_like",
+      "target_module": "numpy",
+      "target_name": "zeros_like"
+    },
+    {
+      "identity": "packaging.version.parse",
+      "target_module": "packaging.version",
+      "target_name": "parse"
+    },
+    {
+      "identity": "pandas.read_csv",
+      "target_module": "pandas",
+      "target_name": "read_csv"
+    },
+    {
+      "identity": "pandas.to_datetime",
+      "target_module": "pandas",
+      "target_name": "to_datetime"
+    },
+    {
+      "identity": "pandas.to_numeric",
+      "target_module": "pandas",
+      "target_name": "to_numeric"
+    },
+    {
+      "identity": "psutil.net_if_addrs",
+      "target_module": "psutil",
+      "target_name": "net_if_addrs"
+    },
+    {
+      "identity": "psutil.net_if_stats",
+      "target_module": "psutil",
+      "target_name": "net_if_stats"
+    },
+    {
+      "identity": "psutil.net_io_counters",
+      "target_module": "psutil",
+      "target_name": "net_io_counters"
+    },
+    {
+      "identity": "pystray.Icon",
+      "target_module": "pystray",
+      "target_name": "Icon"
+    },
+    {
+      "identity": "pystray.Menu",
+      "target_module": "pystray",
+      "target_name": "Menu"
+    },
+    {
+      "identity": "pystray.MenuItem",
+      "target_module": "pystray",
+      "target_name": "MenuItem"
+    },
+    {
+      "identity": "pytest.fail",
+      "target_module": "pytest",
+      "target_name": "fail"
+    },
+    {
+      "identity": "pytest.raises",
+      "target_module": "pytest",
+      "target_name": "raises"
+    },
+    {
+      "identity": "pytest.skip",
+      "target_module": "pytest",
+      "target_name": "skip"
+    },
+    {
+      "identity": "requests.delete",
+      "target_module": "requests",
+      "target_name": "delete"
+    },
+    {
+      "identity": "requests.get",
+      "target_module": "requests",
+      "target_name": "get"
+    },
+    {
+      "identity": "requests.post",
+      "target_module": "requests",
+      "target_name": "post"
+    },
+    {
+      "identity": "samplerate.Resampler",
+      "target_module": "samplerate",
+      "target_name": "Resampler"
+    },
+    {
+      "identity": "sentry_sdk.init",
+      "target_module": "sentry_sdk",
+      "target_name": "init"
+    },
+    {
+      "identity": "sentry_sdk.integrations.aiohttp.AioHttpIntegration",
+      "target_module": "sentry_sdk.integrations.aiohttp",
+      "target_name": "AioHttpIntegration"
+    },
+    {
+      "identity": "sounddevice._initialize",
+      "target_module": "sounddevice",
+      "target_name": "_initialize"
+    },
+    {
+      "identity": "sounddevice._terminate",
+      "target_module": "sounddevice",
+      "target_name": "_terminate"
+    },
+    {
+      "identity": "sounddevice.query_devices",
+      "target_module": "sounddevice",
+      "target_name": "query_devices"
+    },
+    {
+      "identity": "sounddevice.query_hostapis",
+      "target_module": "sounddevice",
+      "target_name": "query_hostapis"
+    },
+    {
+      "identity": "uvloop.new_event_loop",
+      "target_module": "uvloop",
+      "target_name": "new_event_loop"
+    },
+    {
+      "identity": "voluptuous.Optional",
+      "target_module": "voluptuous",
+      "target_name": "Optional"
+    },
+    {
+      "identity": "voluptuous.Required",
+      "target_module": "voluptuous",
+      "target_name": "Required"
+    },
+    {
+      "identity": "voluptuous.Schema",
+      "target_module": "voluptuous",
+      "target_name": "Schema"
+    },
+    {
+      "identity": "winloop.new_event_loop",
+      "target_module": "winloop",
+      "target_name": "new_event_loop"
+    },
+    {
+      "identity": "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionManager.request_async",
+      "target_module": "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionManager",
+      "target_name": "request_async"
+    }
+  ]
+}

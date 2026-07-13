@@ -1,0 +1,629 @@
+{
+  "schema_version": "1",
+  "project": {
+    "root": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist",
+    "fingerprint": "6fda9fe0039e7c59"
+  },
+  "fingerprint": {
+    "scanner_version": "0.3.0",
+    "config_hash": "default",
+    "python_version": "3.13"
+  },
+  "source_files": [
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\pyproject.toml"
+  ],
+  "resolver": "pyshare-static",
+  "dependencies": [
+    {
+      "name": "alembic",
+      "normalized_name": "alembic",
+      "version": "1.18.4",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": true,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "mako",
+        "sqlalchemy",
+        "typing-extensions"
+      ],
+      "purl": "pkg:pypi/alembic@1.18.4"
+    },
+    {
+      "name": "email-validator",
+      "normalized_name": "email-validator",
+      "version": "2.3.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": true,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "dnspython",
+        "idna"
+      ],
+      "purl": "pkg:pypi/email-validator@2.3.0"
+    },
+    {
+      "name": "flask",
+      "normalized_name": "flask",
+      "version": "3.1.3",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": true,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\flask",
+      "dependencies": [
+        "blinker",
+        "click",
+        "itsdangerous",
+        "jinja2",
+        "markupsafe",
+        "werkzeug"
+      ],
+      "purl": "pkg:pypi/flask@3.1.3"
+    },
+    {
+      "name": "flask-login",
+      "normalized_name": "flask-login",
+      "version": "0.6.3",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": true,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "flask",
+        "werkzeug"
+      ],
+      "purl": "pkg:pypi/flask-login@0.6.3"
+    },
+    {
+      "name": "flask-migrate",
+      "normalized_name": "flask-migrate",
+      "version": "4.1.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": true,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "alembic",
+        "flask",
+        "flask-sqlalchemy"
+      ],
+      "purl": "pkg:pypi/flask-migrate@4.1.0"
+    },
+    {
+      "name": "flask-sqlalchemy",
+      "normalized_name": "flask-sqlalchemy",
+      "version": "3.1.1",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": true,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "flask",
+        "sqlalchemy"
+      ],
+      "purl": "pkg:pypi/flask-sqlalchemy@3.1.1"
+    },
+    {
+      "name": "flask-wtf",
+      "normalized_name": "flask-wtf",
+      "version": "1.3.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": true,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "flask",
+        "itsdangerous",
+        "wtforms"
+      ],
+      "purl": "pkg:pypi/flask-wtf@1.3.0"
+    },
+    {
+      "name": "gunicorn",
+      "normalized_name": "gunicorn",
+      "version": "25.3.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": true,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "packaging"
+      ],
+      "purl": "pkg:pypi/gunicorn@25.3.0"
+    },
+    {
+      "name": "python-dotenv",
+      "normalized_name": "python-dotenv",
+      "version": "1.2.2",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": true,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\dotenv",
+      "dependencies": [],
+      "purl": "pkg:pypi/python-dotenv@1.2.2"
+    },
+    {
+      "name": "sqlalchemy",
+      "normalized_name": "sqlalchemy",
+      "version": "2.0.49",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": true,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "greenlet",
+        "typing-extensions"
+      ],
+      "purl": "pkg:pypi/sqlalchemy@2.0.49"
+    },
+    {
+      "name": "werkzeug",
+      "normalized_name": "werkzeug",
+      "version": "3.1.8",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": true,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\werkzeug",
+      "dependencies": [
+        "markupsafe"
+      ],
+      "purl": "pkg:pypi/werkzeug@3.1.8"
+    },
+    {
+      "name": "wtforms",
+      "normalized_name": "wtforms",
+      "version": "3.2.1",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": true,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "markupsafe"
+      ],
+      "purl": "pkg:pypi/wtforms@3.2.1"
+    },
+    {
+      "name": "blinker",
+      "normalized_name": "blinker",
+      "version": "1.9.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\blinker",
+      "dependencies": [],
+      "purl": "pkg:pypi/blinker@1.9.0"
+    },
+    {
+      "name": "click",
+      "normalized_name": "click",
+      "version": "8.3.3",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\click",
+      "dependencies": [
+        "colorama"
+      ],
+      "purl": "pkg:pypi/click@8.3.3"
+    },
+    {
+      "name": "colorama",
+      "normalized_name": "colorama",
+      "version": "0.4.6",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\colorama",
+      "dependencies": [],
+      "purl": "pkg:pypi/colorama@0.4.6"
+    },
+    {
+      "name": "deptry",
+      "normalized_name": "deptry",
+      "version": "0.25.1",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "click",
+        "colorama",
+        "packaging",
+        "requirements-parser",
+        "tomli"
+      ],
+      "purl": "pkg:pypi/deptry@0.25.1"
+    },
+    {
+      "name": "dnspython",
+      "normalized_name": "dnspython",
+      "version": "2.8.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\dns",
+      "dependencies": [],
+      "purl": "pkg:pypi/dnspython@2.8.0"
+    },
+    {
+      "name": "execnet",
+      "normalized_name": "execnet",
+      "version": "2.1.2",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [],
+      "purl": "pkg:pypi/execnet@2.1.2"
+    },
+    {
+      "name": "flask-todolist",
+      "normalized_name": "flask-todolist",
+      "version": "0.1.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "alembic",
+        "email-validator",
+        "flask",
+        "flask-login",
+        "flask-migrate",
+        "flask-sqlalchemy",
+        "flask-wtf",
+        "gunicorn",
+        "python-dotenv",
+        "sqlalchemy",
+        "werkzeug",
+        "wtforms"
+      ],
+      "purl": "pkg:pypi/flask-todolist@0.1.0"
+    },
+    {
+      "name": "forgerypy",
+      "normalized_name": "forgerypy",
+      "version": "0.1",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [],
+      "purl": "pkg:pypi/forgerypy@0.1"
+    },
+    {
+      "name": "greenlet",
+      "normalized_name": "greenlet",
+      "version": "3.4.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [],
+      "purl": "pkg:pypi/greenlet@3.4.0"
+    },
+    {
+      "name": "idna",
+      "normalized_name": "idna",
+      "version": "3.13",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\idna",
+      "dependencies": [],
+      "purl": "pkg:pypi/idna@3.13"
+    },
+    {
+      "name": "iniconfig",
+      "normalized_name": "iniconfig",
+      "version": "2.3.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\iniconfig",
+      "dependencies": [],
+      "purl": "pkg:pypi/iniconfig@2.3.0"
+    },
+    {
+      "name": "itsdangerous",
+      "normalized_name": "itsdangerous",
+      "version": "2.2.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\itsdangerous",
+      "dependencies": [],
+      "purl": "pkg:pypi/itsdangerous@2.2.0"
+    },
+    {
+      "name": "jinja2",
+      "normalized_name": "jinja2",
+      "version": "3.1.6",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\jinja2",
+      "dependencies": [
+        "markupsafe"
+      ],
+      "purl": "pkg:pypi/jinja2@3.1.6"
+    },
+    {
+      "name": "mako",
+      "normalized_name": "mako",
+      "version": "1.3.11",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "markupsafe"
+      ],
+      "purl": "pkg:pypi/mako@1.3.11"
+    },
+    {
+      "name": "markupsafe",
+      "normalized_name": "markupsafe",
+      "version": "3.0.3",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\markupsafe",
+      "dependencies": [],
+      "purl": "pkg:pypi/markupsafe@3.0.3"
+    },
+    {
+      "name": "packaging",
+      "normalized_name": "packaging",
+      "version": "26.2",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\packaging",
+      "dependencies": [],
+      "purl": "pkg:pypi/packaging@26.2"
+    },
+    {
+      "name": "pluggy",
+      "normalized_name": "pluggy",
+      "version": "1.6.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\pluggy",
+      "dependencies": [],
+      "purl": "pkg:pypi/pluggy@1.6.0"
+    },
+    {
+      "name": "pygments",
+      "normalized_name": "pygments",
+      "version": "2.20.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\pygments",
+      "dependencies": [],
+      "purl": "pkg:pypi/pygments@2.20.0"
+    },
+    {
+      "name": "pytest",
+      "normalized_name": "pytest",
+      "version": "9.0.3",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_pytest",
+      "dependencies": [
+        "colorama",
+        "iniconfig",
+        "packaging",
+        "pluggy",
+        "pygments"
+      ],
+      "purl": "pkg:pypi/pytest@9.0.3"
+    },
+    {
+      "name": "pytest-flask",
+      "normalized_name": "pytest-flask",
+      "version": "1.3.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "flask",
+        "pytest",
+        "werkzeug"
+      ],
+      "purl": "pkg:pypi/pytest-flask@1.3.0"
+    },
+    {
+      "name": "pytest-xdist",
+      "normalized_name": "pytest-xdist",
+      "version": "3.8.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "execnet",
+        "pytest"
+      ],
+      "purl": "pkg:pypi/pytest-xdist@3.8.0"
+    },
+    {
+      "name": "requirements-parser",
+      "normalized_name": "requirements-parser",
+      "version": "0.13.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [
+        "packaging"
+      ],
+      "purl": "pkg:pypi/requirements-parser@0.13.0"
+    },
+    {
+      "name": "ruff",
+      "normalized_name": "ruff",
+      "version": "0.15.12",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [],
+      "purl": "pkg:pypi/ruff@0.15.12"
+    },
+    {
+      "name": "tomli",
+      "normalized_name": "tomli",
+      "version": "2.4.1",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\tomli",
+      "dependencies": [],
+      "purl": "pkg:pypi/tomli@2.4.1"
+    },
+    {
+      "name": "ty",
+      "normalized_name": "ty",
+      "version": "0.0.32",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "",
+      "dependencies": [],
+      "purl": "pkg:pypi/ty@0.0.32"
+    },
+    {
+      "name": "typing-extensions",
+      "normalized_name": "typing-extensions",
+      "version": "4.15.0",
+      "specifier": "",
+      "ecosystem": "pypi",
+      "direct": false,
+      "dev": false,
+      "source_file": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\rtzll__flask-todolist\\uv.lock",
+      "source_type": "uv.lock",
+      "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\typing_extensions.py",
+      "dependencies": [],
+      "purl": "pkg:pypi/typing-extensions@4.15.0"
+    }
+  ],
+  "analysis_warnings": {}
+}

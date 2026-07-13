@@ -1,0 +1,51 @@
+{
+  "project": {
+    "id": "yezz123__authx",
+    "name": "yezz123__authx",
+    "repo_full_name": "yezz123/authx",
+    "repo_url": "https://github.com/yezz123/authx.git",
+    "commit": "ef6f00dc18a21961ec5c879b1b2b624d7d7415e1",
+    "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx",
+    "enabled": true,
+    "environment_status": "resolved_from_lockfile_or_manifest",
+    "version_source": "lockfile_or_manifest",
+    "manifest_files": [
+      "uv.lock",
+      "pyproject.toml"
+    ],
+    "resolved_package_count": 141
+  },
+  "status": "success",
+  "runner": "docker",
+  "jarvis_attempts": [
+    {
+      "runner": "docker",
+      "status": "success",
+      "elapsed_s": 11.532
+    }
+  ],
+  "dependency_graph": {
+    "status": "success",
+    "dependency_count": 187,
+    "elapsed_s": 0.584
+  },
+  "artifacts": {
+    "project_graph": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\yezz123__authx\\project_graph_jarvis.json",
+    "usage_index": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\yezz123__authx\\usage_index.json",
+    "package_summary_status": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\yezz123__authx\\package_summary_status.json",
+    "reachability": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\yezz123__authx\\reachability_report.json"
+  },
+  "counts": {
+    "project_nodes": 673,
+    "project_edges": 1275,
+    "usage_index": 30,
+    "records": 17,
+    "query_targets": 20,
+    "package_summary_status": {
+      "built": 11,
+      "missing_source": 49
+    },
+    "loaded_summaries": 11
+  },
+  "elapsed_s": 19.918
+}

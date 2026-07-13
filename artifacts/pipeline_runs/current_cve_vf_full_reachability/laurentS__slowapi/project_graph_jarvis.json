@@ -1,0 +1,924 @@
+{
+  "schema_version": "1",
+  "project": {
+    "root": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi",
+    "fingerprint": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi"
+  },
+  "fingerprint": {
+    "scanner_version": "0.3.0",
+    "config_hash": "default",
+    "python_version": "3.13"
+  },
+  "entry_points": [],
+  "usage_index": [
+    "hiro.Timeline",
+    "starlette.testclient.TestClient"
+  ],
+  "graph": {
+    "nodes": 27,
+    "edges": 54,
+    "edges_detail": [
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_single_decorator_async",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_single_decorator_sync",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_exempt_when_argument",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_shared_decorator",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_multiple_decorators",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_multiple_decorators_with_headers",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_headers_breach",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_headers_breach",
+        "callee": "<builtin>.int",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_headers_breach",
+        "callee": "<builtin>.str",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_retry_after",
+        "callee": "<builtin>.int",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_default_and_decorator_limit_merging",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_cost",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_callable_cost",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_single_decorator",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_single_decorator_with_headers",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_single_decorator_not_response",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_single_decorator_not_response_with_headers",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators_not_response",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators_not_response_with_headers",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_dynamic_limit_provider_depending_on_key",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_disabled_limiter",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_cost",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_callable_cost",
+        "callee": "<builtin>.range",
+        "callee_type": "external",
+        "edge_type": "confirmed_static",
+        "confidence": 0.95,
+        "resolver": "jarvis",
+        "reason": "Resolved by Jarvis static call graph backend.",
+        "call_expr": "",
+        "line_number": 0
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_single_decorator",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 20
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_single_decorator_with_headers",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 33
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_single_decorator_not_response",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 50
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_single_decorator_not_response_with_headers",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 63
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 84
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators",
+        "callee": "hiro.Timeline",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "hiro.Timeline()",
+        "line_number": 83
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators_not_response",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 109
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators_not_response",
+        "callee": "hiro.Timeline",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "hiro.Timeline()",
+        "line_number": 108
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators_not_response_with_headers",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 134
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators_not_response_with_headers",
+        "callee": "hiro.Timeline",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "hiro.Timeline()",
+        "line_number": 133
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_dynamic_limit_provider_depending_on_key",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 253
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_disabled_limiter",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 282
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_cost",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 308
+      },
+      {
+        "caller": "tests.test_fastapi_extension.TestDecorators.test_callable_cost",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 331
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_single_decorator_async",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 23
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_single_decorator_sync",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 39
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_exempt_when_argument",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 77
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_shared_decorator",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 117
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_multiple_decorators",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 135
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_multiple_decorators",
+        "callee": "hiro.Timeline",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "hiro.Timeline()",
+        "line_number": 134
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_multiple_decorators_with_headers",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 159
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_multiple_decorators_with_headers",
+        "callee": "hiro.Timeline",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "hiro.Timeline()",
+        "line_number": 158
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_headers_breach",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 217
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_headers_breach",
+        "callee": "hiro.Timeline",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "hiro.Timeline()",
+        "line_number": 216
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_retry_after",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 242
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_retry_after",
+        "callee": "hiro.Timeline",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "hiro.Timeline()",
+        "line_number": 241
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_default_and_decorator_limit_merging",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 304
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_default_and_decorator_limit_merging",
+        "callee": "hiro.Timeline",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "hiro.Timeline()",
+        "line_number": 303
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_cost",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 332
+      },
+      {
+        "caller": "tests.test_starlette_extension.TestDecorators.test_callable_cost",
+        "callee": "starlette.testclient.TestClient",
+        "callee_type": "external",
+        "edge_type": "confirmed_static_augmented",
+        "confidence": 0.9,
+        "resolver": "jarvis_external_usage_ast",
+        "reason": "Recovered statically resolvable external dependency call omitted by Jarvis output.",
+        "call_expr": "TestClient(app)",
+        "line_number": 365
+      }
+    ],
+    "metadata": {
+      "jarvis_external_usage_augmented_count": 30,
+      "jarvis_external_usage_augmented_edges": [
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_single_decorator",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 20,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_single_decorator_with_headers",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 33,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_single_decorator_not_response",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 50,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_single_decorator_not_response_with_headers",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 63,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 84,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators",
+          "callee": "hiro.Timeline",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 83,
+          "call_expr": "hiro.Timeline()"
+        },
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators_not_response",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 109,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators_not_response",
+          "callee": "hiro.Timeline",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 108,
+          "call_expr": "hiro.Timeline()"
+        },
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators_not_response_with_headers",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 134,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators_not_response_with_headers",
+          "callee": "hiro.Timeline",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 133,
+          "call_expr": "hiro.Timeline()"
+        },
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_dynamic_limit_provider_depending_on_key",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 253,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_disabled_limiter",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 282,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_cost",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 308,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_fastapi_extension.TestDecorators.test_callable_cost",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "line_number": 331,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_single_decorator_async",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 23,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_single_decorator_sync",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 39,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_exempt_when_argument",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 77,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_shared_decorator",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 117,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_multiple_decorators",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 135,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_multiple_decorators",
+          "callee": "hiro.Timeline",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 134,
+          "call_expr": "hiro.Timeline()"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_multiple_decorators_with_headers",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 159,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_multiple_decorators_with_headers",
+          "callee": "hiro.Timeline",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 158,
+          "call_expr": "hiro.Timeline()"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_headers_breach",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 217,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_headers_breach",
+          "callee": "hiro.Timeline",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 216,
+          "call_expr": "hiro.Timeline()"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_retry_after",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 242,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_retry_after",
+          "callee": "hiro.Timeline",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 241,
+          "call_expr": "hiro.Timeline()"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_default_and_decorator_limit_merging",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 304,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_default_and_decorator_limit_merging",
+          "callee": "hiro.Timeline",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 303,
+          "call_expr": "hiro.Timeline()"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_cost",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 332,
+          "call_expr": "TestClient(app)"
+        },
+        {
+          "caller": "tests.test_starlette_extension.TestDecorators.test_callable_cost",
+          "callee": "starlette.testclient.TestClient",
+          "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py",
+          "line_number": 365,
+          "call_expr": "TestClient(app)"
+        }
+      ],
+      "jarvis_usage_index_before_filter": [
+        "<builtin>.int",
+        "<builtin>.range",
+        "<builtin>.str",
+        "hiro.Timeline",
+        "starlette.testclient.TestClient"
+      ],
+      "jarvis_usage_index_after_filter": [
+        "hiro.Timeline",
+        "starlette.testclient.TestClient"
+      ],
+      "jarvis_usage_augmentation_warnings": [],
+      "analysis_mode": "jarvis",
+      "project_mode": "jarvis_EA_entrypoints",
+      "entry_points": [
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_base.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py"
+      ],
+      "jarvis_mode": "EA",
+      "jarvis_scope": "entrypoints",
+      "jarvis_scope_meta": {
+        "scope": "entrypoints",
+        "entrypoint_count": 62,
+        "entrypoint_names": [
+          "tests.test_base.test_import",
+          "tests.test_fastapi_extension.TestDecorators.t1",
+          "tests.test_fastapi_extension.TestDecorators.t1_func",
+          "tests.test_fastapi_extension.TestDecorators.t2",
+          "tests.test_fastapi_extension.TestDecorators.t3",
+          "tests.test_fastapi_extension.TestDecorators.t4",
+          "tests.test_fastapi_extension.TestDecorators.t5",
+          "tests.test_fastapi_extension.TestDecorators.test_callable_cost",
+          "tests.test_fastapi_extension.TestDecorators.test_cost",
+          "tests.test_fastapi_extension.TestDecorators.test_disabled_limiter",
+          "tests.test_fastapi_extension.TestDecorators.test_dynamic_limit_provider_depending_on_key",
+          "tests.test_fastapi_extension.TestDecorators.test_endpoint_missing_request_param",
+          "tests.test_fastapi_extension.TestDecorators.test_endpoint_missing_request_param_sync",
+          "tests.test_fastapi_extension.TestDecorators.test_endpoint_request_param_invalid",
+          "tests.test_fastapi_extension.TestDecorators.test_endpoint_request_param_invalid_sync",
+          "tests.test_fastapi_extension.TestDecorators.test_endpoint_response_param_invalid",
+          "tests.test_fastapi_extension.TestDecorators.test_endpoint_response_param_invalid_sync",
+          "tests.test_fastapi_extension.TestDecorators.test_key_style",
+          "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators",
+          "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators_not_response",
+          "tests.test_fastapi_extension.TestDecorators.test_multiple_decorators_not_response_with_headers",
+          "tests.test_fastapi_extension.TestDecorators.test_single_decorator",
+          "tests.test_fastapi_extension.TestDecorators.test_single_decorator_not_response",
+          "tests.test_fastapi_extension.TestDecorators.test_single_decorator_not_response_with_headers",
+          "tests.test_fastapi_extension.TestDecorators.test_single_decorator_with_headers",
+          "tests.test_starlette_extension.TestDecorators.t",
+          "tests.test_starlette_extension.TestDecorators.t1",
+          "tests.test_starlette_extension.TestDecorators.t2",
+          "tests.test_starlette_extension.TestDecorators.t3",
+          "tests.test_starlette_extension.TestDecorators.test_callable_cost",
+          "tests.test_starlette_extension.TestDecorators.test_cost",
+          "tests.test_starlette_extension.TestDecorators.test_default_and_decorator_limit_merging",
+          "tests.test_starlette_extension.TestDecorators.test_exempt_decorator",
+          "tests.test_starlette_extension.TestDecorators.test_exempt_when_argument",
+          "tests.test_starlette_extension.TestDecorators.test_headers_breach",
+          "tests.test_starlette_extension.TestDecorators.test_headers_no_breach",
+          "tests.test_starlette_extension.TestDecorators.test_key_style",
+          "tests.test_starlette_extension.TestDecorators.test_multiple_decorators",
+          "tests.test_starlette_extension.TestDecorators.test_multiple_decorators_with_headers",
+          "tests.test_starlette_extension.TestDecorators.test_retry_after",
+          "tests.test_starlette_extension.TestDecorators.test_shared_decorator",
+          "tests.test_starlette_extension.TestDecorators.test_single_decorator_async",
+          "tests.test_starlette_extension.TestDecorators.test_single_decorator_sync"
+        ],
+        "entrypoint_files": [
+          "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_base.py",
+          "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_fastapi_extension.py",
+          "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\laurents__slowapi\\tests\\test_starlette_extension.py"
+        ],
+        "fallback": false
+      },
+      "jarvis": {
+        "runner": "docker",
+        "mode": "EA",
+        "precision": true,
+        "jarvis_root": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.tools\\pythonJaRvis\\Jarvis",
+        "timeout_s": 300,
+        "module_count": 3,
+        "pip_install": "",
+        "stdout": "/workspace/data/raw/projects/laurents__slowapi/tests/test_base.py\n/workspace/data/raw/projects/laurents__slowapi/tests/test_fastapi_extension.py\n/workspace/data/raw/projects/laurents__slowapi/slowapi/util.py\n/workspace/data/raw/projects/laurents__slowapi/tests/__init__.py\n/workspace/data/raw/projects/laurents__slowapi/slowapi/errors.py\n/workspace/data/raw/projects/laurents__slowapi/slowapi/wrappers.py\n/workspace/data/raw/projects/laurents__slowapi/slowapi/extension.py\n/workspace/data/raw/projects/laurents__slowapi/slowapi/middleware.py\n/workspace/data/raw/projects/laurents__slowapi/slowapi/__init__.py\n/workspace/data/raw/projects/laurents__slowapi/tests/test_starlette_extension.py\n",
+        "stderr": ""
+      },
+      "function_type_graphs": {},
+      "unresolved_calls": [],
+      "candidate_edges": [],
+      "reanalyzed_contexts": []
+    }
+  },
+  "analysis_warnings": {}
+}

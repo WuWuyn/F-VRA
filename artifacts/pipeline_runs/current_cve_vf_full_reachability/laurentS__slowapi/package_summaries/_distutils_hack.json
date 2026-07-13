@@ -1,0 +1,2098 @@
+{
+  "schema_version": "1",
+  "inner_summary": {
+    "DistutilsMetaFinder.find_spec": [],
+    "DistutilsMetaFinder.frame_file_is_setup": [],
+    "DistutilsMetaFinder.is_cpython": [],
+    "DistutilsMetaFinder.pip_imported_during_build": [
+      "DistutilsMetaFinder.frame_file_is_setup"
+    ],
+    "DistutilsMetaFinder.spec_for_distutils": [
+      "DistutilsMetaFinder.is_cpython"
+    ],
+    "DistutilsMetaFinder.spec_for_pip": [
+      "DistutilsMetaFinder.pip_imported_during_build",
+      "DistutilsMetaFinder.frame_file_is_setup",
+      "clear_distutils"
+    ],
+    "DistutilsMetaFinder.spec_for_sensitive_tests": [
+      "clear_distutils"
+    ],
+    "_TrivialRe.__init__": [],
+    "_TrivialRe.match": [],
+    "__init__": [],
+    "_remove_shim": [],
+    "add_shim": [
+      "insert_shim"
+    ],
+    "clear_distutils": [],
+    "do_override": [
+      "warn_distutils_present",
+      "enabled",
+      "ensure_local_distutils",
+      "clear_distutils"
+    ],
+    "enabled": [],
+    "ensure_local_distutils": [
+      "clear_distutils"
+    ],
+    "insert_shim": [],
+    "override": [],
+    "shim.__enter__": [
+      "insert_shim"
+    ],
+    "shim.__exit__": [
+      "_remove_shim"
+    ],
+    "warn_distutils_present": []
+  },
+  "outer_summary": {
+    "DistutilsMetaFinder.find_spec": [
+      "startswith",
+      "format"
+    ],
+    "DistutilsMetaFinder.frame_file_is_setup": [
+      "endswith",
+      "get"
+    ],
+    "DistutilsMetaFinder.is_cpython": [
+      "os.path.isfile"
+    ],
+    "DistutilsMetaFinder.pip_imported_during_build": [
+      "endswith",
+      "get",
+      "traceback.walk_stack"
+    ],
+    "DistutilsMetaFinder.spec_for_distutils": [
+      "importlib.import_module",
+      "importlib.util.spec_from_loader",
+      "os.path.isfile"
+    ],
+    "DistutilsMetaFinder.spec_for_pip": [
+      "traceback.walk_stack",
+      "endswith",
+      "startswith",
+      "get",
+      "warnings.warn"
+    ],
+    "DistutilsMetaFinder.spec_for_sensitive_tests": [
+      "startswith",
+      "warnings.warn"
+    ],
+    "_TrivialRe.__init__": [],
+    "_TrivialRe.match": [],
+    "__init__": [],
+    "_remove_shim": [
+      "sys.meta_path.remove"
+    ],
+    "add_shim": [
+      "sys.meta_path.insert"
+    ],
+    "clear_distutils": [
+      "startswith",
+      "warnings.warn"
+    ],
+    "do_override": [
+      "startswith",
+      "importlib.import_module",
+      "warnings.warn",
+      "os.environ.get"
+    ],
+    "enabled": [
+      "warnings.warn",
+      "os.environ.get"
+    ],
+    "ensure_local_distutils": [
+      "startswith",
+      "importlib.import_module",
+      "warnings.warn"
+    ],
+    "insert_shim": [
+      "sys.meta_path.insert"
+    ],
+    "override": [
+      "_distutils_hack.do_override"
+    ],
+    "shim.__enter__": [
+      "sys.meta_path.insert"
+    ],
+    "shim.__exit__": [
+      "sys.meta_path.remove"
+    ],
+    "warn_distutils_present": [
+      "warnings.warn"
+    ]
+  },
+  "inner_paths": {
+    "DistutilsMetaFinder.find_spec": {},
+    "DistutilsMetaFinder.frame_file_is_setup": {},
+    "DistutilsMetaFinder.is_cpython": {},
+    "DistutilsMetaFinder.pip_imported_during_build": {
+      "DistutilsMetaFinder.frame_file_is_setup": [
+        "DistutilsMetaFinder.pip_imported_during_build",
+        "DistutilsMetaFinder.frame_file_is_setup"
+      ]
+    },
+    "DistutilsMetaFinder.spec_for_distutils": {
+      "DistutilsMetaFinder.is_cpython": [
+        "DistutilsMetaFinder.spec_for_distutils",
+        "DistutilsMetaFinder.is_cpython"
+      ]
+    },
+    "DistutilsMetaFinder.spec_for_pip": {
+      "DistutilsMetaFinder.frame_file_is_setup": [
+        "DistutilsMetaFinder.spec_for_pip",
+        "DistutilsMetaFinder.pip_imported_during_build",
+        "DistutilsMetaFinder.frame_file_is_setup"
+      ],
+      "DistutilsMetaFinder.pip_imported_during_build": [
+        "DistutilsMetaFinder.spec_for_pip",
+        "DistutilsMetaFinder.pip_imported_during_build"
+      ],
+      "clear_distutils": [
+        "DistutilsMetaFinder.spec_for_pip",
+        "clear_distutils"
+      ]
+    },
+    "DistutilsMetaFinder.spec_for_sensitive_tests": {
+      "clear_distutils": [
+        "DistutilsMetaFinder.spec_for_sensitive_tests",
+        "clear_distutils"
+      ]
+    },
+    "_TrivialRe.__init__": {},
+    "_TrivialRe.match": {},
+    "__init__": {},
+    "_remove_shim": {},
+    "add_shim": {
+      "insert_shim": [
+        "add_shim",
+        "insert_shim"
+      ]
+    },
+    "clear_distutils": {},
+    "do_override": {
+      "clear_distutils": [
+        "do_override",
+        "ensure_local_distutils",
+        "clear_distutils"
+      ],
+      "enabled": [
+        "do_override",
+        "enabled"
+      ],
+      "ensure_local_distutils": [
+        "do_override",
+        "ensure_local_distutils"
+      ],
+      "warn_distutils_present": [
+        "do_override",
+        "warn_distutils_present"
+      ]
+    },
+    "enabled": {},
+    "ensure_local_distutils": {
+      "clear_distutils": [
+        "ensure_local_distutils",
+        "clear_distutils"
+      ]
+    },
+    "insert_shim": {},
+    "override": {},
+    "shim.__enter__": {
+      "insert_shim": [
+        "shim.__enter__",
+        "insert_shim"
+      ]
+    },
+    "shim.__exit__": {
+      "_remove_shim": [
+        "shim.__exit__",
+        "_remove_shim"
+      ]
+    },
+    "warn_distutils_present": {}
+  },
+  "outer_paths": {
+    "DistutilsMetaFinder.find_spec": {
+      "format": [
+        "DistutilsMetaFinder.find_spec",
+        "format"
+      ],
+      "startswith": [
+        "DistutilsMetaFinder.find_spec",
+        "startswith"
+      ]
+    },
+    "DistutilsMetaFinder.frame_file_is_setup": {
+      "endswith": [
+        "DistutilsMetaFinder.frame_file_is_setup",
+        "endswith"
+      ],
+      "get": [
+        "DistutilsMetaFinder.frame_file_is_setup",
+        "get"
+      ]
+    },
+    "DistutilsMetaFinder.is_cpython": {
+      "os.path.isfile": [
+        "DistutilsMetaFinder.is_cpython",
+        "os.path.isfile"
+      ]
+    },
+    "DistutilsMetaFinder.pip_imported_during_build": {
+      "endswith": [
+        "DistutilsMetaFinder.pip_imported_during_build",
+        "DistutilsMetaFinder.frame_file_is_setup",
+        "endswith"
+      ],
+      "get": [
+        "DistutilsMetaFinder.pip_imported_during_build",
+        "DistutilsMetaFinder.frame_file_is_setup",
+        "get"
+      ],
+      "traceback.walk_stack": [
+        "DistutilsMetaFinder.pip_imported_during_build",
+        "traceback.walk_stack"
+      ]
+    },
+    "DistutilsMetaFinder.spec_for_distutils": {
+      "importlib.import_module": [
+        "DistutilsMetaFinder.spec_for_distutils",
+        "importlib.import_module"
+      ],
+      "importlib.util.spec_from_loader": [
+        "DistutilsMetaFinder.spec_for_distutils",
+        "importlib.util.spec_from_loader"
+      ],
+      "os.path.isfile": [
+        "DistutilsMetaFinder.spec_for_distutils",
+        "DistutilsMetaFinder.is_cpython",
+        "os.path.isfile"
+      ]
+    },
+    "DistutilsMetaFinder.spec_for_pip": {
+      "endswith": [
+        "DistutilsMetaFinder.spec_for_pip",
+        "DistutilsMetaFinder.pip_imported_during_build",
+        "DistutilsMetaFinder.frame_file_is_setup",
+        "endswith"
+      ],
+      "get": [
+        "DistutilsMetaFinder.spec_for_pip",
+        "DistutilsMetaFinder.pip_imported_during_build",
+        "DistutilsMetaFinder.frame_file_is_setup",
+        "get"
+      ],
+      "startswith": [
+        "DistutilsMetaFinder.spec_for_pip",
+        "clear_distutils",
+        "startswith"
+      ],
+      "traceback.walk_stack": [
+        "DistutilsMetaFinder.spec_for_pip",
+        "DistutilsMetaFinder.pip_imported_during_build",
+        "traceback.walk_stack"
+      ],
+      "warnings.warn": [
+        "DistutilsMetaFinder.spec_for_pip",
+        "clear_distutils",
+        "warnings.warn"
+      ]
+    },
+    "DistutilsMetaFinder.spec_for_sensitive_tests": {
+      "startswith": [
+        "DistutilsMetaFinder.spec_for_sensitive_tests",
+        "clear_distutils",
+        "startswith"
+      ],
+      "warnings.warn": [
+        "DistutilsMetaFinder.spec_for_sensitive_tests",
+        "clear_distutils",
+        "warnings.warn"
+      ]
+    },
+    "_TrivialRe.__init__": {},
+    "_TrivialRe.match": {},
+    "__init__": {},
+    "_remove_shim": {
+      "sys.meta_path.remove": [
+        "_remove_shim",
+        "sys.meta_path.remove"
+      ]
+    },
+    "add_shim": {
+      "sys.meta_path.insert": [
+        "add_shim",
+        "insert_shim",
+        "sys.meta_path.insert"
+      ]
+    },
+    "clear_distutils": {
+      "startswith": [
+        "clear_distutils",
+        "startswith"
+      ],
+      "warnings.warn": [
+        "clear_distutils",
+        "warnings.warn"
+      ]
+    },
+    "do_override": {
+      "importlib.import_module": [
+        "do_override",
+        "ensure_local_distutils",
+        "importlib.import_module"
+      ],
+      "os.environ.get": [
+        "do_override",
+        "enabled",
+        "os.environ.get"
+      ],
+      "startswith": [
+        "do_override",
+        "ensure_local_distutils",
+        "clear_distutils",
+        "startswith"
+      ],
+      "warnings.warn": [
+        "do_override",
+        "enabled",
+        "warnings.warn"
+      ]
+    },
+    "enabled": {
+      "os.environ.get": [
+        "enabled",
+        "os.environ.get"
+      ],
+      "warnings.warn": [
+        "enabled",
+        "warnings.warn"
+      ]
+    },
+    "ensure_local_distutils": {
+      "importlib.import_module": [
+        "ensure_local_distutils",
+        "importlib.import_module"
+      ],
+      "startswith": [
+        "ensure_local_distutils",
+        "clear_distutils",
+        "startswith"
+      ],
+      "warnings.warn": [
+        "ensure_local_distutils",
+        "clear_distutils",
+        "warnings.warn"
+      ]
+    },
+    "insert_shim": {
+      "sys.meta_path.insert": [
+        "insert_shim",
+        "sys.meta_path.insert"
+      ]
+    },
+    "override": {
+      "_distutils_hack.do_override": [
+        "override",
+        "_distutils_hack.do_override"
+      ]
+    },
+    "shim.__enter__": {
+      "sys.meta_path.insert": [
+        "shim.__enter__",
+        "insert_shim",
+        "sys.meta_path.insert"
+      ]
+    },
+    "shim.__exit__": {
+      "sys.meta_path.remove": [
+        "shim.__exit__",
+        "_remove_shim",
+        "sys.meta_path.remove"
+      ]
+    },
+    "warn_distutils_present": {
+      "warnings.warn": [
+        "warn_distutils_present",
+        "warnings.warn"
+      ]
+    }
+  },
+  "analysis_warnings": {
+    "candidate_edges": [
+      {
+        "caller": "override",
+        "callee": "do_override",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\override.py",
+        "line_number": 1,
+        "call_expr": "__import__('_distutils_hack').do_override()",
+        "confidence": 0.35,
+        "resolver": "coarse_name_arity",
+        "status": "candidate",
+        "reason": "matched unresolved call by simple function/method name and arity",
+        "arity": 0,
+        "receiver": "__import__('_distutils_hack')",
+        "caller_signature": "",
+        "callee_signature": "()",
+        "caller_source": "",
+        "callee_source": "def do_override():\n    \"\"\"\n    Ensure that the local copy of distutils is preferred over stdlib.\n\n    See https://github.com/pypa/setuptools/issues/417#issuecomment-392298401\n    for more motivation.\n    \"\"\"\n    if enabled():\n        warn_distutils_present()\n        ensure_local_distutils()"
+      },
+      {
+        "caller": "__init__",
+        "callee": "DistutilsMetaFinder",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 211,
+        "call_expr": "DistutilsMetaFinder()",
+        "confidence": 0.35,
+        "resolver": "coarse_class_name_arity",
+        "status": "candidate",
+        "reason": "matched unresolved constructor call by class name and arity",
+        "arity": 0,
+        "receiver": "",
+        "caller_signature": "",
+        "callee_signature": "",
+        "caller_source": "",
+        "callee_source": ""
+      },
+      {
+        "caller": "ensure_local_distutils",
+        "callee": "shim",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 71,
+        "call_expr": "shim()",
+        "confidence": 0.35,
+        "resolver": "coarse_class_name_arity",
+        "status": "candidate",
+        "reason": "matched unresolved constructor call by class name and arity",
+        "arity": 0,
+        "receiver": "",
+        "caller_signature": "()",
+        "callee_signature": "",
+        "caller_source": "def ensure_local_distutils():\n    import importlib\n\n    clear_distutils()\n\n    # With the DistutilsMetaFinder in place,\n    # perform an import to cause distutils to be\n    # loaded from setuptools._distutils. Ref #2906.\n    with shim():\n        importlib.import_module('distutils')\n\n    # check that submodules load as expected\n    core = importlib.import_module('distutils.core')\n    assert '_distutils' in core.__file__, core.__file__\n    assert 'setuptools._distutils.log' not in sys.modules",
+        "callee_source": ""
+      },
+      {
+        "caller": "override",
+        "callee": "do_override",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\override.py",
+        "line_number": 1,
+        "call_expr": "__import__('_distutils_hack').do_override()",
+        "confidence": 0.35,
+        "resolver": "coarse_name_arity",
+        "status": "candidate",
+        "reason": "matched unresolved call by simple function/method name and arity",
+        "arity": 0,
+        "receiver": "__import__('_distutils_hack')",
+        "caller_signature": "",
+        "callee_signature": "()",
+        "caller_source": "",
+        "callee_source": "def do_override():\n    \"\"\"\n    Ensure that the local copy of distutils is preferred over stdlib.\n\n    See https://github.com/pypa/setuptools/issues/417#issuecomment-392298401\n    for more motivation.\n    \"\"\"\n    if enabled():\n        warn_distutils_present()\n        ensure_local_distutils()"
+      },
+      {
+        "caller": "__init__",
+        "callee": "DistutilsMetaFinder",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 211,
+        "call_expr": "DistutilsMetaFinder()",
+        "confidence": 0.35,
+        "resolver": "coarse_class_name_arity",
+        "status": "candidate",
+        "reason": "matched unresolved constructor call by class name and arity",
+        "arity": 0,
+        "receiver": "",
+        "caller_signature": "",
+        "callee_signature": "",
+        "caller_source": "",
+        "callee_source": ""
+      },
+      {
+        "caller": "ensure_local_distutils",
+        "callee": "shim",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 71,
+        "call_expr": "shim()",
+        "confidence": 0.35,
+        "resolver": "coarse_class_name_arity",
+        "status": "candidate",
+        "reason": "matched unresolved constructor call by class name and arity",
+        "arity": 0,
+        "receiver": "",
+        "caller_signature": "()",
+        "callee_signature": "",
+        "caller_source": "def ensure_local_distutils():\n    import importlib\n\n    clear_distutils()\n\n    # With the DistutilsMetaFinder in place,\n    # perform an import to cause distutils to be\n    # loaded from setuptools._distutils. Ref #2906.\n    with shim():\n        importlib.import_module('distutils')\n\n    # check that submodules load as expected\n    core = importlib.import_module('distutils.core')\n    assert '_distutils' in core.__file__, core.__file__\n    assert 'setuptools._distutils.log' not in sys.modules",
+        "callee_source": ""
+      }
+    ],
+    "unresolved_calls": [
+      {
+        "caller": "__init__",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 204,
+        "call_expr": "setattr(DistutilsMetaFinder, f'spec_for_{name}', DistutilsMetaFinder.spec_for_sensitive_tests)",
+        "call_name": "setattr",
+        "receiver": "",
+        "arity": 3,
+        "reason": "static resolver found no target"
+      },
+      {
+        "caller": "__init__",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 211,
+        "call_expr": "DistutilsMetaFinder()",
+        "call_name": "DistutilsMetaFinder",
+        "receiver": "",
+        "arity": 0,
+        "reason": "static resolver found no target"
+      },
+      {
+        "caller": "ensure_local_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 71,
+        "call_expr": "shim()",
+        "call_name": "shim",
+        "receiver": "",
+        "arity": 0,
+        "reason": "static resolver found no target"
+      },
+      {
+        "caller": "DistutilsMetaFinder.find_spec",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 108,
+        "call_expr": "getattr(self, method_name, lambda: None)",
+        "call_name": "getattr",
+        "receiver": "",
+        "arity": 3,
+        "reason": "static resolver found no target"
+      },
+      {
+        "caller": "DistutilsMetaFinder.find_spec",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 109,
+        "call_expr": "method()",
+        "call_name": "method",
+        "receiver": "",
+        "arity": 0,
+        "reason": "static resolver found no target"
+      },
+      {
+        "caller": "DistutilsMetaFinder.spec_for_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 141,
+        "call_expr": "DistutilsLoader()",
+        "call_name": "DistutilsLoader",
+        "receiver": "",
+        "arity": 0,
+        "reason": "static resolver found no target"
+      },
+      {
+        "caller": "__init__",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 204,
+        "call_expr": "setattr(DistutilsMetaFinder, f'spec_for_{name}', DistutilsMetaFinder.spec_for_sensitive_tests)",
+        "call_name": "setattr",
+        "receiver": "",
+        "arity": 3,
+        "reason": "static resolver found no target"
+      },
+      {
+        "caller": "__init__",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 211,
+        "call_expr": "DistutilsMetaFinder()",
+        "call_name": "DistutilsMetaFinder",
+        "receiver": "",
+        "arity": 0,
+        "reason": "static resolver found no target"
+      },
+      {
+        "caller": "ensure_local_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 71,
+        "call_expr": "shim()",
+        "call_name": "shim",
+        "receiver": "",
+        "arity": 0,
+        "reason": "static resolver found no target"
+      },
+      {
+        "caller": "DistutilsMetaFinder.find_spec",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 108,
+        "call_expr": "getattr(self, method_name, lambda: None)",
+        "call_name": "getattr",
+        "receiver": "",
+        "arity": 3,
+        "reason": "static resolver found no target"
+      },
+      {
+        "caller": "DistutilsMetaFinder.find_spec",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 109,
+        "call_expr": "method()",
+        "call_name": "method",
+        "receiver": "",
+        "arity": 0,
+        "reason": "static resolver found no target"
+      },
+      {
+        "caller": "DistutilsMetaFinder.spec_for_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 141,
+        "call_expr": "DistutilsLoader()",
+        "call_name": "DistutilsLoader",
+        "receiver": "",
+        "arity": 0,
+        "reason": "static resolver found no target"
+      }
+    ]
+  },
+  "api_aliases": {},
+  "symbol_table": {
+    "DistutilsMetaFinder.find_spec": {
+      "canonical": "DistutilsMetaFinder.find_spec",
+      "kind": "method",
+      "module": "",
+      "scope": "DistutilsMetaFinder",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 101,
+      "signature": "(self, fullname, path, target=None)",
+      "arity": 3,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "DistutilsMetaFinder.frame_file_is_setup": {
+      "canonical": "DistutilsMetaFinder.frame_file_is_setup",
+      "kind": "method",
+      "module": "",
+      "scope": "DistutilsMetaFinder",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 174,
+      "signature": "(frame)",
+      "arity": 1,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "DistutilsMetaFinder.is_cpython": {
+      "canonical": "DistutilsMetaFinder.is_cpython",
+      "kind": "method",
+      "module": "",
+      "scope": "DistutilsMetaFinder",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 145,
+      "signature": "()",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "DistutilsMetaFinder.pip_imported_during_build": {
+      "canonical": "DistutilsMetaFinder.pip_imported_during_build",
+      "kind": "method",
+      "module": "",
+      "scope": "DistutilsMetaFinder",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 163,
+      "signature": "(cls)",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "DistutilsMetaFinder.spec_for_distutils": {
+      "canonical": "DistutilsMetaFinder.spec_for_distutils",
+      "kind": "method",
+      "module": "",
+      "scope": "DistutilsMetaFinder",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 111,
+      "signature": "(self)",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "DistutilsMetaFinder.spec_for_pip": {
+      "canonical": "DistutilsMetaFinder.spec_for_pip",
+      "kind": "method",
+      "module": "",
+      "scope": "DistutilsMetaFinder",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 152,
+      "signature": "(self)",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "DistutilsMetaFinder.spec_for_sensitive_tests": {
+      "canonical": "DistutilsMetaFinder.spec_for_sensitive_tests",
+      "kind": "method",
+      "module": "",
+      "scope": "DistutilsMetaFinder",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 181,
+      "signature": "(self)",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "_TrivialRe.__init__": {
+      "canonical": "_TrivialRe.__init__",
+      "kind": "constructor",
+      "module": "",
+      "scope": "_TrivialRe",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 93,
+      "signature": "(self, *patterns)",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "_TrivialRe.match": {
+      "canonical": "_TrivialRe.match",
+      "kind": "method",
+      "module": "",
+      "scope": "_TrivialRe",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 96,
+      "signature": "(self, string)",
+      "arity": 1,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "__init__": {
+      "canonical": "__init__",
+      "kind": "module",
+      "module": "__init__",
+      "scope": "<module>",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 1,
+      "signature": "()",
+      "arity": 0,
+      "entry_type": "main",
+      "public": false
+    },
+    "_remove_shim": {
+      "canonical": "_remove_shim",
+      "kind": "function",
+      "module": "",
+      "scope": "",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 230,
+      "signature": "()",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": false
+    },
+    "add_shim": {
+      "canonical": "add_shim",
+      "kind": "function",
+      "module": "",
+      "scope": "",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 214,
+      "signature": "()",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "clear_distutils": {
+      "canonical": "clear_distutils",
+      "kind": "function",
+      "module": "",
+      "scope": "",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 25,
+      "signature": "()",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "do_override": {
+      "canonical": "do_override",
+      "kind": "function",
+      "module": "",
+      "scope": "",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 80,
+      "signature": "()",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "enabled": {
+      "canonical": "enabled",
+      "kind": "function",
+      "module": "",
+      "scope": "",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 45,
+      "signature": "()",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "ensure_local_distutils": {
+      "canonical": "ensure_local_distutils",
+      "kind": "function",
+      "module": "",
+      "scope": "",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 63,
+      "signature": "()",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "insert_shim": {
+      "canonical": "insert_shim",
+      "kind": "function",
+      "module": "",
+      "scope": "",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 226,
+      "signature": "()",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": true
+    },
+    "override": {
+      "canonical": "override",
+      "kind": "module",
+      "module": "override",
+      "scope": "<module>",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\override.py",
+      "line_number": 1,
+      "signature": "()",
+      "arity": 0,
+      "entry_type": "main",
+      "public": false
+    },
+    "shim.__enter__": {
+      "canonical": "shim.__enter__",
+      "kind": "method",
+      "module": "",
+      "scope": "shim",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 219,
+      "signature": "(self)",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": false
+    },
+    "shim.__exit__": {
+      "canonical": "shim.__exit__",
+      "kind": "method",
+      "module": "",
+      "scope": "shim",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 222,
+      "signature": "(self, exc: object, value: object, tb: object)",
+      "arity": 3,
+      "entry_type": "unknown",
+      "public": false
+    },
+    "warn_distutils_present": {
+      "canonical": "warn_distutils_present",
+      "kind": "function",
+      "module": "",
+      "scope": "",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+      "line_number": 10,
+      "signature": "()",
+      "arity": 0,
+      "entry_type": "unknown",
+      "public": true
+    }
+  },
+  "export_table": {
+    "DistutilsMetaFinder.find_spec": {
+      "alias": "DistutilsMetaFinder.find_spec",
+      "canonical": "DistutilsMetaFinder.find_spec",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "DistutilsMetaFinder.frame_file_is_setup": {
+      "alias": "DistutilsMetaFinder.frame_file_is_setup",
+      "canonical": "DistutilsMetaFinder.frame_file_is_setup",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "DistutilsMetaFinder.is_cpython": {
+      "alias": "DistutilsMetaFinder.is_cpython",
+      "canonical": "DistutilsMetaFinder.is_cpython",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "DistutilsMetaFinder.pip_imported_during_build": {
+      "alias": "DistutilsMetaFinder.pip_imported_during_build",
+      "canonical": "DistutilsMetaFinder.pip_imported_during_build",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "DistutilsMetaFinder.spec_for_distutils": {
+      "alias": "DistutilsMetaFinder.spec_for_distutils",
+      "canonical": "DistutilsMetaFinder.spec_for_distutils",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "DistutilsMetaFinder.spec_for_pip": {
+      "alias": "DistutilsMetaFinder.spec_for_pip",
+      "canonical": "DistutilsMetaFinder.spec_for_pip",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "DistutilsMetaFinder.spec_for_sensitive_tests": {
+      "alias": "DistutilsMetaFinder.spec_for_sensitive_tests",
+      "canonical": "DistutilsMetaFinder.spec_for_sensitive_tests",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "_TrivialRe.__init__": {
+      "alias": "_TrivialRe.__init__",
+      "canonical": "_TrivialRe.__init__",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "_TrivialRe.match": {
+      "alias": "_TrivialRe.match",
+      "canonical": "_TrivialRe.match",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "add_shim": {
+      "alias": "add_shim",
+      "canonical": "add_shim",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "clear_distutils": {
+      "alias": "clear_distutils",
+      "canonical": "clear_distutils",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "do_override": {
+      "alias": "do_override",
+      "canonical": "do_override",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "enabled": {
+      "alias": "enabled",
+      "canonical": "enabled",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "ensure_local_distutils": {
+      "alias": "ensure_local_distutils",
+      "canonical": "ensure_local_distutils",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "insert_shim": {
+      "alias": "insert_shim",
+      "canonical": "insert_shim",
+      "export_kind": "public_api",
+      "confidence": "high"
+    },
+    "warn_distutils_present": {
+      "alias": "warn_distutils_present",
+      "canonical": "warn_distutils_present",
+      "export_kind": "public_api",
+      "confidence": "high"
+    }
+  },
+  "alias_table": {
+    "find_spec": [
+      {
+        "alias": "find_spec",
+        "canonical": "DistutilsMetaFinder.find_spec",
+        "source": "component suffix",
+        "confidence": "medium"
+      }
+    ],
+    "frame_file_is_setup": [
+      {
+        "alias": "frame_file_is_setup",
+        "canonical": "DistutilsMetaFinder.frame_file_is_setup",
+        "source": "component suffix",
+        "confidence": "medium"
+      }
+    ],
+    "is_cpython": [
+      {
+        "alias": "is_cpython",
+        "canonical": "DistutilsMetaFinder.is_cpython",
+        "source": "component suffix",
+        "confidence": "medium"
+      }
+    ],
+    "pip_imported_during_build": [
+      {
+        "alias": "pip_imported_during_build",
+        "canonical": "DistutilsMetaFinder.pip_imported_during_build",
+        "source": "component suffix",
+        "confidence": "medium"
+      }
+    ],
+    "spec_for_distutils": [
+      {
+        "alias": "spec_for_distutils",
+        "canonical": "DistutilsMetaFinder.spec_for_distutils",
+        "source": "component suffix",
+        "confidence": "medium"
+      }
+    ],
+    "spec_for_pip": [
+      {
+        "alias": "spec_for_pip",
+        "canonical": "DistutilsMetaFinder.spec_for_pip",
+        "source": "component suffix",
+        "confidence": "medium"
+      }
+    ],
+    "spec_for_sensitive_tests": [
+      {
+        "alias": "spec_for_sensitive_tests",
+        "canonical": "DistutilsMetaFinder.spec_for_sensitive_tests",
+        "source": "component suffix",
+        "confidence": "medium"
+      }
+    ],
+    "__init__": [
+      {
+        "alias": "__init__",
+        "canonical": "_TrivialRe.__init__",
+        "source": "component suffix",
+        "confidence": "medium"
+      }
+    ],
+    "match": [
+      {
+        "alias": "match",
+        "canonical": "_TrivialRe.match",
+        "source": "component suffix",
+        "confidence": "medium"
+      }
+    ],
+    "__enter__": [
+      {
+        "alias": "__enter__",
+        "canonical": "shim.__enter__",
+        "source": "component suffix",
+        "confidence": "medium"
+      }
+    ],
+    "__exit__": [
+      {
+        "alias": "__exit__",
+        "canonical": "shim.__exit__",
+        "source": "component suffix",
+        "confidence": "medium"
+      }
+    ]
+  },
+  "outer_edge_details": {
+    "DistutilsMetaFinder.find_spec": [
+      {
+        "target": "format",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.find_spec",
+          "format"
+        ],
+        "source": "callgraph",
+        "edge_type": "potential_pattern",
+        "confidence": 0.25,
+        "resolver": "unknown_receiver_method",
+        "reason": "method call on an unknown receiver is retained as a conservative boundary candidate",
+        "call_expr": "'spec_for_{fullname}'.format(**locals())",
+        "line_number": 107
+      },
+      {
+        "target": "startswith",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.find_spec",
+          "startswith"
+        ],
+        "source": "callgraph",
+        "edge_type": "potential_pattern",
+        "confidence": 0.25,
+        "resolver": "unknown_receiver_method",
+        "reason": "method call on an unknown receiver is retained as a conservative boundary candidate",
+        "call_expr": "fullname.startswith('test.')",
+        "line_number": 104
+      },
+      {
+        "target": "locals",
+        "status": "unresolved_external_call",
+        "caller": "DistutilsMetaFinder.find_spec",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 107,
+        "call_expr": "locals()",
+        "call_name": "locals",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "getattr",
+        "status": "unresolved_external_call",
+        "caller": "DistutilsMetaFinder.find_spec",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 108,
+        "call_expr": "getattr(self, method_name, lambda: None)",
+        "call_name": "getattr",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "method",
+        "status": "unresolved_external_call",
+        "caller": "DistutilsMetaFinder.find_spec",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 109,
+        "call_expr": "method()",
+        "call_name": "method",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "locals",
+        "status": "unresolved_external_call",
+        "caller": "DistutilsMetaFinder.find_spec",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 107,
+        "call_expr": "locals()",
+        "call_name": "locals",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "getattr",
+        "status": "unresolved_external_call",
+        "caller": "DistutilsMetaFinder.find_spec",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 108,
+        "call_expr": "getattr(self, method_name, lambda: None)",
+        "call_name": "getattr",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "method",
+        "status": "unresolved_external_call",
+        "caller": "DistutilsMetaFinder.find_spec",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 109,
+        "call_expr": "method()",
+        "call_name": "method",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      }
+    ],
+    "DistutilsMetaFinder.frame_file_is_setup": [
+      {
+        "target": "endswith",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.frame_file_is_setup",
+          "endswith"
+        ],
+        "source": "callgraph",
+        "edge_type": "potential_pattern",
+        "confidence": 0.45,
+        "resolver": "factory_unknown_receiver",
+        "reason": "receiver comes from unknown factory frame.f_globals.get",
+        "call_expr": "frame.f_globals.get('__file__', '').endswith('setup.py')",
+        "line_number": 179
+      },
+      {
+        "target": "get",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.frame_file_is_setup",
+          "get"
+        ],
+        "source": "callgraph",
+        "edge_type": "potential_pattern",
+        "confidence": 0.4,
+        "resolver": "fluent_chain",
+        "reason": "method call appears in a fluent or chained expression",
+        "call_expr": "frame.f_globals.get('__file__', '')",
+        "line_number": 179
+      }
+    ],
+    "DistutilsMetaFinder.is_cpython": [
+      {
+        "target": "os.path.isfile",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.is_cpython",
+          "os.path.isfile"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "os.path.isfile('pybuilddir.txt')",
+        "line_number": 150
+      }
+    ],
+    "DistutilsMetaFinder.pip_imported_during_build": [
+      {
+        "target": "endswith",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.pip_imported_during_build",
+          "DistutilsMetaFinder.frame_file_is_setup",
+          "endswith"
+        ],
+        "source": "callgraph",
+        "edge_type": "potential_pattern",
+        "confidence": 0.45,
+        "resolver": "factory_unknown_receiver",
+        "reason": "receiver comes from unknown factory frame.f_globals.get",
+        "call_expr": "frame.f_globals.get('__file__', '').endswith('setup.py')",
+        "line_number": 179
+      },
+      {
+        "target": "get",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.pip_imported_during_build",
+          "DistutilsMetaFinder.frame_file_is_setup",
+          "get"
+        ],
+        "source": "callgraph",
+        "edge_type": "potential_pattern",
+        "confidence": 0.4,
+        "resolver": "fluent_chain",
+        "reason": "method call appears in a fluent or chained expression",
+        "call_expr": "frame.f_globals.get('__file__', '')",
+        "line_number": 179
+      },
+      {
+        "target": "traceback.walk_stack",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.pip_imported_during_build",
+          "traceback.walk_stack"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "traceback.walk_stack(None)",
+        "line_number": 170
+      },
+      {
+        "target": "any",
+        "status": "unresolved_external_call",
+        "caller": "DistutilsMetaFinder.pip_imported_during_build",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 169,
+        "call_expr": "any((cls.frame_file_is_setup(frame) for frame, line in traceback.walk_stack(None)))",
+        "call_name": "any",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "any",
+        "status": "unresolved_external_call",
+        "caller": "DistutilsMetaFinder.pip_imported_during_build",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 169,
+        "call_expr": "any((cls.frame_file_is_setup(frame) for frame, line in traceback.walk_stack(None)))",
+        "call_name": "any",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      }
+    ],
+    "DistutilsMetaFinder.spec_for_distutils": [
+      {
+        "target": "importlib.import_module",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.spec_for_distutils",
+          "importlib.import_module"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "importlib.import_module('setuptools._distutils')",
+        "line_number": 120
+      },
+      {
+        "target": "importlib.util.spec_from_loader",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.spec_for_distutils",
+          "importlib.util.spec_from_loader"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "importlib.util.spec_from_loader('distutils', DistutilsLoader(), origin=mod.__file__)",
+        "line_number": 140
+      },
+      {
+        "target": "os.path.isfile",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.spec_for_distutils",
+          "DistutilsMetaFinder.is_cpython",
+          "os.path.isfile"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "os.path.isfile('pybuilddir.txt')",
+        "line_number": 150
+      },
+      {
+        "target": "DistutilsLoader",
+        "status": "unresolved_external_call",
+        "caller": "DistutilsMetaFinder.spec_for_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 141,
+        "call_expr": "DistutilsLoader()",
+        "call_name": "DistutilsLoader",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "DistutilsLoader",
+        "status": "unresolved_external_call",
+        "caller": "DistutilsMetaFinder.spec_for_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 141,
+        "call_expr": "DistutilsLoader()",
+        "call_name": "DistutilsLoader",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      }
+    ],
+    "DistutilsMetaFinder.spec_for_pip": [
+      {
+        "target": "endswith",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.spec_for_pip",
+          "DistutilsMetaFinder.pip_imported_during_build",
+          "DistutilsMetaFinder.frame_file_is_setup",
+          "endswith"
+        ],
+        "source": "callgraph",
+        "edge_type": "potential_pattern",
+        "confidence": 0.45,
+        "resolver": "factory_unknown_receiver",
+        "reason": "receiver comes from unknown factory frame.f_globals.get",
+        "call_expr": "frame.f_globals.get('__file__', '').endswith('setup.py')",
+        "line_number": 179
+      },
+      {
+        "target": "get",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.spec_for_pip",
+          "DistutilsMetaFinder.pip_imported_during_build",
+          "DistutilsMetaFinder.frame_file_is_setup",
+          "get"
+        ],
+        "source": "callgraph",
+        "edge_type": "potential_pattern",
+        "confidence": 0.4,
+        "resolver": "fluent_chain",
+        "reason": "method call appears in a fluent or chained expression",
+        "call_expr": "frame.f_globals.get('__file__', '')",
+        "line_number": 179
+      },
+      {
+        "target": "startswith",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.spec_for_pip",
+          "clear_distutils",
+          "startswith"
+        ],
+        "source": "callgraph",
+        "edge_type": "potential_pattern",
+        "confidence": 0.25,
+        "resolver": "unknown_receiver_method",
+        "reason": "method call on an unknown receiver is retained as a conservative boundary candidate",
+        "call_expr": "name.startswith('distutils.')",
+        "line_number": 39
+      },
+      {
+        "target": "traceback.walk_stack",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.spec_for_pip",
+          "DistutilsMetaFinder.pip_imported_during_build",
+          "traceback.walk_stack"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "traceback.walk_stack(None)",
+        "line_number": 170
+      },
+      {
+        "target": "warnings.warn",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.spec_for_pip",
+          "clear_distutils",
+          "warnings.warn"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "warnings.warn(f'Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at {report_url}')",
+        "line_number": 30
+      },
+      {
+        "target": "any",
+        "status": "unresolved_external_call",
+        "caller": "DistutilsMetaFinder.pip_imported_during_build",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 169,
+        "call_expr": "any((cls.frame_file_is_setup(frame) for frame, line in traceback.walk_stack(None)))",
+        "call_name": "any",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "any",
+        "status": "unresolved_external_call",
+        "caller": "DistutilsMetaFinder.pip_imported_during_build",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 169,
+        "call_expr": "any((cls.frame_file_is_setup(frame) for frame, line in traceback.walk_stack(None)))",
+        "call_name": "any",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      }
+    ],
+    "DistutilsMetaFinder.spec_for_sensitive_tests": [
+      {
+        "target": "startswith",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.spec_for_sensitive_tests",
+          "clear_distutils",
+          "startswith"
+        ],
+        "source": "callgraph",
+        "edge_type": "potential_pattern",
+        "confidence": 0.25,
+        "resolver": "unknown_receiver_method",
+        "reason": "method call on an unknown receiver is retained as a conservative boundary candidate",
+        "call_expr": "name.startswith('distutils.')",
+        "line_number": 39
+      },
+      {
+        "target": "warnings.warn",
+        "status": "resolved_external_call",
+        "path": [
+          "DistutilsMetaFinder.spec_for_sensitive_tests",
+          "clear_distutils",
+          "warnings.warn"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "warnings.warn(f'Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at {report_url}')",
+        "line_number": 30
+      }
+    ],
+    "_TrivialRe.__init__": [],
+    "_TrivialRe.match": [
+      {
+        "target": "all",
+        "status": "unresolved_external_call",
+        "caller": "_TrivialRe.match",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 97,
+        "call_expr": "all((pat in string for pat in self._patterns))",
+        "call_name": "all",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "all",
+        "status": "unresolved_external_call",
+        "caller": "_TrivialRe.match",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 97,
+        "call_expr": "all((pat in string for pat in self._patterns))",
+        "call_name": "all",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      }
+    ],
+    "__init__": [
+      {
+        "target": "setattr",
+        "status": "unresolved_external_call",
+        "caller": "__init__",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 204,
+        "call_expr": "setattr(DistutilsMetaFinder, f'spec_for_{name}', DistutilsMetaFinder.spec_for_sensitive_tests)",
+        "call_name": "setattr",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "DistutilsMetaFinder",
+        "status": "unresolved_external_call",
+        "caller": "__init__",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 211,
+        "call_expr": "DistutilsMetaFinder()",
+        "call_name": "DistutilsMetaFinder",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "setattr",
+        "status": "unresolved_external_call",
+        "caller": "__init__",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 204,
+        "call_expr": "setattr(DistutilsMetaFinder, f'spec_for_{name}', DistutilsMetaFinder.spec_for_sensitive_tests)",
+        "call_name": "setattr",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "DistutilsMetaFinder",
+        "status": "unresolved_external_call",
+        "caller": "__init__",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 211,
+        "call_expr": "DistutilsMetaFinder()",
+        "call_name": "DistutilsMetaFinder",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "DistutilsMetaFinder",
+        "status": "partially_resolved_external_call",
+        "caller": "__init__",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 211,
+        "call_expr": "DistutilsMetaFinder()",
+        "resolver": "coarse_class_name_arity",
+        "confidence": 0.35,
+        "reason": "matched unresolved constructor call by class name and arity",
+        "source": "candidate_edges"
+      },
+      {
+        "target": "DistutilsMetaFinder",
+        "status": "partially_resolved_external_call",
+        "caller": "__init__",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 211,
+        "call_expr": "DistutilsMetaFinder()",
+        "resolver": "coarse_class_name_arity",
+        "confidence": 0.35,
+        "reason": "matched unresolved constructor call by class name and arity",
+        "source": "candidate_edges"
+      }
+    ],
+    "_remove_shim": [
+      {
+        "target": "sys.meta_path.remove",
+        "status": "resolved_external_call",
+        "path": [
+          "_remove_shim",
+          "sys.meta_path.remove"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "sys.meta_path.remove(DISTUTILS_FINDER)",
+        "line_number": 232
+      }
+    ],
+    "add_shim": [
+      {
+        "target": "sys.meta_path.insert",
+        "status": "resolved_external_call",
+        "path": [
+          "add_shim",
+          "insert_shim",
+          "sys.meta_path.insert"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "sys.meta_path.insert(0, DISTUTILS_FINDER)",
+        "line_number": 227
+      }
+    ],
+    "clear_distutils": [
+      {
+        "target": "startswith",
+        "status": "resolved_external_call",
+        "path": [
+          "clear_distutils",
+          "startswith"
+        ],
+        "source": "callgraph",
+        "edge_type": "potential_pattern",
+        "confidence": 0.25,
+        "resolver": "unknown_receiver_method",
+        "reason": "method call on an unknown receiver is retained as a conservative boundary candidate",
+        "call_expr": "name.startswith('distutils.')",
+        "line_number": 39
+      },
+      {
+        "target": "warnings.warn",
+        "status": "resolved_external_call",
+        "path": [
+          "clear_distutils",
+          "warnings.warn"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "warnings.warn(f'Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at {report_url}')",
+        "line_number": 30
+      }
+    ],
+    "do_override": [
+      {
+        "target": "importlib.import_module",
+        "status": "resolved_external_call",
+        "path": [
+          "do_override",
+          "ensure_local_distutils",
+          "importlib.import_module"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "importlib.import_module('distutils.core')",
+        "line_number": 75
+      },
+      {
+        "target": "os.environ.get",
+        "status": "resolved_external_call",
+        "path": [
+          "do_override",
+          "enabled",
+          "os.environ.get"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "os.environ.get('SETUPTOOLS_USE_DISTUTILS', 'local')",
+        "line_number": 49
+      },
+      {
+        "target": "startswith",
+        "status": "resolved_external_call",
+        "path": [
+          "do_override",
+          "ensure_local_distutils",
+          "clear_distutils",
+          "startswith"
+        ],
+        "source": "callgraph",
+        "edge_type": "potential_pattern",
+        "confidence": 0.25,
+        "resolver": "unknown_receiver_method",
+        "reason": "method call on an unknown receiver is retained as a conservative boundary candidate",
+        "call_expr": "name.startswith('distutils.')",
+        "line_number": 39
+      },
+      {
+        "target": "warnings.warn",
+        "status": "resolved_external_call",
+        "path": [
+          "do_override",
+          "enabled",
+          "warnings.warn"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "warnings.warn(f'Reliance on distutils from stdlib is deprecated. Users must rely on setuptools to provide the distutils module. Avoid importing distutils or import setuptools first, and avoid setting SETUPTOOLS_USE_DISTUTILS=stdlib. Register concerns at {report_url}')",
+        "line_number": 53
+      },
+      {
+        "target": "shim",
+        "status": "unresolved_external_call",
+        "caller": "ensure_local_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 71,
+        "call_expr": "shim()",
+        "call_name": "shim",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "shim",
+        "status": "unresolved_external_call",
+        "caller": "ensure_local_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 71,
+        "call_expr": "shim()",
+        "call_name": "shim",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "shim",
+        "status": "partially_resolved_external_call",
+        "caller": "ensure_local_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 71,
+        "call_expr": "shim()",
+        "resolver": "coarse_class_name_arity",
+        "confidence": 0.35,
+        "reason": "matched unresolved constructor call by class name and arity",
+        "source": "candidate_edges"
+      },
+      {
+        "target": "shim",
+        "status": "partially_resolved_external_call",
+        "caller": "ensure_local_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 71,
+        "call_expr": "shim()",
+        "resolver": "coarse_class_name_arity",
+        "confidence": 0.35,
+        "reason": "matched unresolved constructor call by class name and arity",
+        "source": "candidate_edges"
+      }
+    ],
+    "enabled": [
+      {
+        "target": "os.environ.get",
+        "status": "resolved_external_call",
+        "path": [
+          "enabled",
+          "os.environ.get"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "os.environ.get('SETUPTOOLS_USE_DISTUTILS', 'local')",
+        "line_number": 49
+      },
+      {
+        "target": "warnings.warn",
+        "status": "resolved_external_call",
+        "path": [
+          "enabled",
+          "warnings.warn"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "warnings.warn(f'Reliance on distutils from stdlib is deprecated. Users must rely on setuptools to provide the distutils module. Avoid importing distutils or import setuptools first, and avoid setting SETUPTOOLS_USE_DISTUTILS=stdlib. Register concerns at {report_url}')",
+        "line_number": 53
+      }
+    ],
+    "ensure_local_distutils": [
+      {
+        "target": "importlib.import_module",
+        "status": "resolved_external_call",
+        "path": [
+          "ensure_local_distutils",
+          "importlib.import_module"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "importlib.import_module('distutils.core')",
+        "line_number": 75
+      },
+      {
+        "target": "startswith",
+        "status": "resolved_external_call",
+        "path": [
+          "ensure_local_distutils",
+          "clear_distutils",
+          "startswith"
+        ],
+        "source": "callgraph",
+        "edge_type": "potential_pattern",
+        "confidence": 0.25,
+        "resolver": "unknown_receiver_method",
+        "reason": "method call on an unknown receiver is retained as a conservative boundary candidate",
+        "call_expr": "name.startswith('distutils.')",
+        "line_number": 39
+      },
+      {
+        "target": "warnings.warn",
+        "status": "resolved_external_call",
+        "path": [
+          "ensure_local_distutils",
+          "clear_distutils",
+          "warnings.warn"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "warnings.warn(f'Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at {report_url}')",
+        "line_number": 30
+      },
+      {
+        "target": "shim",
+        "status": "unresolved_external_call",
+        "caller": "ensure_local_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 71,
+        "call_expr": "shim()",
+        "call_name": "shim",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "shim",
+        "status": "unresolved_external_call",
+        "caller": "ensure_local_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 71,
+        "call_expr": "shim()",
+        "call_name": "shim",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "shim",
+        "status": "partially_resolved_external_call",
+        "caller": "ensure_local_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 71,
+        "call_expr": "shim()",
+        "resolver": "coarse_class_name_arity",
+        "confidence": 0.35,
+        "reason": "matched unresolved constructor call by class name and arity",
+        "source": "candidate_edges"
+      },
+      {
+        "target": "shim",
+        "status": "partially_resolved_external_call",
+        "caller": "ensure_local_distutils",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py",
+        "line_number": 71,
+        "call_expr": "shim()",
+        "resolver": "coarse_class_name_arity",
+        "confidence": 0.35,
+        "reason": "matched unresolved constructor call by class name and arity",
+        "source": "candidate_edges"
+      }
+    ],
+    "insert_shim": [
+      {
+        "target": "sys.meta_path.insert",
+        "status": "resolved_external_call",
+        "path": [
+          "insert_shim",
+          "sys.meta_path.insert"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "sys.meta_path.insert(0, DISTUTILS_FINDER)",
+        "line_number": 227
+      }
+    ],
+    "override": [
+      {
+        "target": "_distutils_hack.do_override",
+        "status": "resolved_external_call",
+        "path": [
+          "override",
+          "_distutils_hack.do_override"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_type",
+        "confidence": 0.8,
+        "resolver": "external_constructor_receiver",
+        "reason": "receiver propagated from external constructor _distutils_hack",
+        "call_expr": "__import__('_distutils_hack').do_override()",
+        "line_number": 1
+      },
+      {
+        "target": "__import__",
+        "status": "unresolved_external_call",
+        "caller": "override",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\override.py",
+        "line_number": 1,
+        "call_expr": "__import__('_distutils_hack')",
+        "call_name": "__import__",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "__import__",
+        "status": "unresolved_external_call",
+        "caller": "override",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\override.py",
+        "line_number": 1,
+        "call_expr": "__import__('_distutils_hack')",
+        "call_name": "__import__",
+        "receiver": "",
+        "reason": "static resolver found no target",
+        "source": "unresolved_calls"
+      },
+      {
+        "target": "do_override",
+        "status": "partially_resolved_external_call",
+        "caller": "override",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\override.py",
+        "line_number": 1,
+        "call_expr": "__import__('_distutils_hack').do_override()",
+        "resolver": "coarse_name_arity",
+        "confidence": 0.35,
+        "reason": "matched unresolved call by simple function/method name and arity",
+        "source": "candidate_edges"
+      },
+      {
+        "target": "do_override",
+        "status": "partially_resolved_external_call",
+        "caller": "override",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack\\override.py",
+        "line_number": 1,
+        "call_expr": "__import__('_distutils_hack').do_override()",
+        "resolver": "coarse_name_arity",
+        "confidence": 0.35,
+        "reason": "matched unresolved call by simple function/method name and arity",
+        "source": "candidate_edges"
+      }
+    ],
+    "shim.__enter__": [
+      {
+        "target": "sys.meta_path.insert",
+        "status": "resolved_external_call",
+        "path": [
+          "shim.__enter__",
+          "insert_shim",
+          "sys.meta_path.insert"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "sys.meta_path.insert(0, DISTUTILS_FINDER)",
+        "line_number": 227
+      }
+    ],
+    "shim.__exit__": [
+      {
+        "target": "sys.meta_path.remove",
+        "status": "resolved_external_call",
+        "path": [
+          "shim.__exit__",
+          "_remove_shim",
+          "sys.meta_path.remove"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "sys.meta_path.remove(DISTUTILS_FINDER)",
+        "line_number": 232
+      }
+    ],
+    "warn_distutils_present": [
+      {
+        "target": "warnings.warn",
+        "status": "resolved_external_call",
+        "path": [
+          "warn_distutils_present",
+          "warnings.warn"
+        ],
+        "source": "callgraph",
+        "edge_type": "confirmed_static",
+        "confidence": 1.0,
+        "resolver": "static",
+        "reason": "",
+        "call_expr": "warnings.warn('Distutils was imported before Setuptools, but importing Setuptools also replaces the `distutils` module in `sys.modules`. This may lead to undesirable behaviors or errors. To avoid these issues, avoid using distutils directly, ensure that setuptools is installed in the traditional way (e.g. not an editable install), and/or make sure that setuptools is always imported before distutils.')",
+        "line_number": 15
+      }
+    ]
+  },
+  "diagnostics": {
+    "summary_key_count": 21,
+    "symbol_count": 21,
+    "export_count": 16,
+    "alias_count": 11,
+    "outer_edge_count": 36,
+    "resolved_outer_edge_count": 36,
+    "partial_outer_edge_count": 32,
+    "unresolved_call_count": 20,
+    "candidate_edge_count": 6,
+    "unresolved_public_export_count": 0,
+    "missing_public_api_count": 0,
+    "confidence": "low",
+    "verdict_affecting_warning_count": 18
+  }
+}

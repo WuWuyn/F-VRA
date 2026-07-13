@@ -1,0 +1,108 @@
+{
+  "nodes": 8,
+  "edges": 7,
+  "internal_edges": 0,
+  "external_edges": 7,
+  "usage_index_count": 2,
+  "entry_points": [
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\milesmcc__shynet\\shynet\\api\\tests\\test_mixins.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\milesmcc__shynet\\shynet\\api\\tests\\test_views.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\milesmcc__shynet\\shynet\\manage.py"
+  ],
+  "metadata": {
+    "jarvis_external_usage_augmented_count": 3,
+    "jarvis_external_usage_augmented_edges": [
+      {
+        "caller": "shynet.manage.main",
+        "callee": "django.core.management.execute_from_command_line",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\milesmcc__shynet\\shynet\\manage.py",
+        "line_number": 17,
+        "call_expr": "execute_from_command_line(sys.argv)"
+      },
+      {
+        "caller": "shynet.api.tests.test_views.TestDashboardApiView.test_get_with_authenticated_user",
+        "callee": "api.views.DashboardApiView.as_view",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\milesmcc__shynet\\shynet\\api\\tests\\test_views.py",
+        "line_number": 57,
+        "call_expr": "DashboardApiView.as_view()"
+      },
+      {
+        "caller": "shynet.api.tests.test_views.TestDashboardApiView.test_get_with_service_uuid",
+        "callee": "api.views.DashboardApiView.as_view",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\milesmcc__shynet\\shynet\\api\\tests\\test_views.py",
+        "line_number": 72,
+        "call_expr": "DashboardApiView.as_view()"
+      }
+    ],
+    "jarvis_usage_index_before_filter": [
+      "<builtin>.ImportError",
+      "<builtin>.len",
+      "<builtin>.str",
+      "api.views.DashboardApiView.as_view",
+      "django.core.management.execute_from_command_line"
+    ],
+    "jarvis_usage_index_after_filter": [
+      "api.views.DashboardApiView.as_view",
+      "django.core.management.execute_from_command_line"
+    ],
+    "jarvis_usage_augmentation_warnings": [],
+    "analysis_mode": "jarvis",
+    "project_mode": "jarvis_EA_entrypoints",
+    "entry_points": [
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\milesmcc__shynet\\shynet\\api\\tests\\test_mixins.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\milesmcc__shynet\\shynet\\api\\tests\\test_views.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\milesmcc__shynet\\shynet\\manage.py"
+    ],
+    "jarvis_mode": "EA",
+    "jarvis_scope": "entrypoints",
+    "jarvis_scope_meta": {
+      "scope": "entrypoints",
+      "entrypoint_count": 10,
+      "entrypoint_names": [
+        "shynet.api.tests.test_mixins.TestApiTokenRequiredMixin.test_dispatch_with_unauthenticated_user",
+        "shynet.api.tests.test_mixins.TestApiTokenRequiredMixin.test_get_user_by_token_with_invalid_authorization_token",
+        "shynet.api.tests.test_mixins.TestApiTokenRequiredMixin.test_get_user_by_token_with_invalid_token",
+        "shynet.api.tests.test_mixins.TestApiTokenRequiredMixin.test_get_user_by_token_with_valid_token",
+        "shynet.api.tests.test_mixins.TestApiTokenRequiredMixin.test_get_user_by_token_without_authorization_token",
+        "shynet.api.tests.test_views.TestDashboardApiView.test_get_returns_400",
+        "shynet.api.tests.test_views.TestDashboardApiView.test_get_with_authenticated_user",
+        "shynet.api.tests.test_views.TestDashboardApiView.test_get_with_service_uuid",
+        "shynet.api.tests.test_views.TestDashboardApiView.test_get_with_unauthenticated_user",
+        "shynet.manage.main"
+      ],
+      "entrypoint_files": [
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\milesmcc__shynet\\shynet\\api\\tests\\test_mixins.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\milesmcc__shynet\\shynet\\api\\tests\\test_views.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\milesmcc__shynet\\shynet\\manage.py"
+      ],
+      "fallback": false
+    },
+    "jarvis": {
+      "runner": "docker",
+      "mode": "EA",
+      "precision": true,
+      "jarvis_root": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.tools\\pythonJaRvis\\Jarvis",
+      "timeout_s": 300,
+      "module_count": 3,
+      "pip_install": "",
+      "stdout": "/workspace/data/raw/projects/milesmcc__shynet/shynet/api/tests/test_mixins.py\n/workspace/data/raw/projects/milesmcc__shynet/shynet/api/tests/test_views.py\n/workspace/data/raw/projects/milesmcc__shynet/shynet/manage.py\n",
+      "stderr": ""
+    },
+    "function_type_graphs": {},
+    "unresolved_calls": [],
+    "candidate_edges": [],
+    "reanalyzed_contexts": []
+  },
+  "usage_index": [
+    {
+      "identity": "api.views.DashboardApiView.as_view",
+      "target_module": "api.views.DashboardApiView",
+      "target_name": "as_view"
+    },
+    {
+      "identity": "django.core.management.execute_from_command_line",
+      "target_module": "django.core.management",
+      "target_name": "execute_from_command_line"
+    }
+  ]
+}

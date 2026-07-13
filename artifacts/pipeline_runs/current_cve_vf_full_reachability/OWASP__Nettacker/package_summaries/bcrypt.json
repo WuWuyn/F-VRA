@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "inner_summary": {
+    "__init__": []
+  },
+  "outer_summary": {
+    "__init__": []
+  },
+  "inner_paths": {
+    "__init__": {}
+  },
+  "outer_paths": {
+    "__init__": {}
+  },
+  "analysis_warnings": {},
+  "api_aliases": {},
+  "symbol_table": {
+    "__init__": {
+      "canonical": "__init__",
+      "kind": "module",
+      "module": "__init__",
+      "scope": "<module>",
+      "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\bcrypt\\__init__.py",
+      "line_number": 1,
+      "signature": "()",
+      "arity": 0,
+      "entry_type": "main",
+      "public": false
+    }
+  },
+  "export_table": {},
+  "alias_table": {},
+  "outer_edge_details": {
+    "__init__": []
+  },
+  "diagnostics": {
+    "summary_key_count": 1,
+    "symbol_count": 1,
+    "export_count": 0,
+    "alias_count": 0,
+    "outer_edge_count": 0,
+    "resolved_outer_edge_count": 0,
+    "partial_outer_edge_count": 0,
+    "unresolved_call_count": 0,
+    "candidate_edge_count": 0,
+    "unresolved_public_export_count": 0,
+    "missing_public_api_count": 0,
+    "confidence": "high",
+    "verdict_affecting_warning_count": 0
+  }
+}

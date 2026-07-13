@@ -1,0 +1,64 @@
+{
+  "benchmark": {
+    "accepted_records": 247,
+    "accepted_project_count": 28,
+    "project_cve_query_rows": 811,
+    "vf_target_count": 366,
+    "evidence_level_counts": {
+      "advisory_explicit": 4,
+      "patch_verified": 243
+    },
+    "mapping_type_counts": {
+      "multi_function_behavior": 54,
+      "multiple_independent_vfs": 41,
+      "single_vf": 152
+    }
+  },
+  "pipeline": {
+    "projects_requested": 28,
+    "projects_completed": 28,
+    "projects_failed": 0,
+    "failed_projects": [],
+    "jarvis_attempt_counts": {
+      "docker:success": 28
+    },
+    "package_summary_status_counts": {
+      "built": 175,
+      "failed_timeout": 6,
+      "missing_source": 1453
+    }
+  },
+  "reachability": {
+    "verdict_counts": {
+      "not_reachable": 198,
+      "potentially_reachable": 458,
+      "reachable": 155
+    },
+    "rows_with_paths": 155,
+    "total_paths": 5974,
+    "rows_with_hits": 155
+  },
+  "witness_paths": {
+    "median_path_length": 8.0,
+    "max_path_length": 19
+  },
+  "cost": {
+    "total_elapsed_s": 2639.551,
+    "aggregation_elapsed_s": 1.575,
+    "jarvis_elapsed_s": 548.518,
+    "package_summary_elapsed_s": 705.065,
+    "query_time_p50_ms": 130.711,
+    "query_time_p95_ms": 5371.082,
+    "query_time_p99_ms": 5567.721
+  },
+  "accuracy_and_safe_demotion": {
+    "status": "not_computable",
+    "reason": "Current artifacts provide CVE-to-VF annotations and evidence, but no adjudicated project-to-VF reachability labels."
+  },
+  "artifacts": {
+    "output_dir": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability",
+    "results_csv": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\results\\tables\\current_cve_vf_reachability_results.csv",
+    "results_json": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\results\\metrics\\current_cve_vf_full_reachability_summary.json",
+    "results_markdown": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\results\\tables\\current_cve_vf_reachability_report.md"
+  }
+}

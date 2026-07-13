@@ -1,0 +1,1800 @@
+{
+  "nodes": 128,
+  "edges": 228,
+  "internal_edges": 1,
+  "external_edges": 227,
+  "usage_index_count": 53,
+  "entry_points": [
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_episode.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_season.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_tv.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_metadata.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_search.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_services.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_tvdb.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\test_helpers.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\test_statistics.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\test_templatetags.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_home.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_media_details.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_media_search.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_progress.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_track_modal.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_anime.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_comic.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_main.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_notification.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_views.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_anilist.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_goodreads.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_helpers.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_imdb.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_kitsu.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_mal.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_simkl.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_steam.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_trakt.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\test_anime_mappings.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\test_oauth_views.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\test_webhooks_jellyfin.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\test_webhooks_plex.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\lists\\tests\\test_views.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\manage.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_forms.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_helpers.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_models.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_notifications.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_token.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\views.py"
+  ],
+  "metadata": {
+    "jarvis_external_usage_augmented_count": 146,
+    "jarvis_external_usage_augmented_edges": [
+      {
+        "caller": "src.manage.main",
+        "callee": "django.core.management.execute_from_command_line",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\manage.py",
+        "line_number": 17,
+        "call_expr": "execute_from_command_line(sys.argv)"
+      },
+      {
+        "caller": "src.users.tests.test_models.UserGetImportTasksTests.test_get_import_tasks_results",
+        "callee": "django_celery_results.models.TaskResult.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_models.py",
+        "line_number": 240,
+        "call_expr": "TaskResult.objects.create(task_id='task3', task_name='Import from Trakt', task_kwargs=f\"{{'user_id': {self.other_user.id}, 'username': 'otheruser'}}\", status='SUCCESS', date_done=timezone.now(), result='{}')"
+      },
+      {
+        "caller": "src.users.tests.test_models.UserGetImportTasksTests.test_get_import_tasks_results",
+        "callee": "django.utils.timezone.now",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_models.py",
+        "line_number": 247,
+        "call_expr": "timezone.now()"
+      },
+      {
+        "caller": "src.users.tests.test_models.UserGetImportTasksTests.test_get_import_tasks_schedules",
+        "callee": "django_celery_beat.models.PeriodicTask.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_models.py",
+        "line_number": 306,
+        "call_expr": "PeriodicTask.objects.create(name='Import from Trakt for otheruser at daily', task='Import from Trakt', kwargs=f'{{\"user_id\": {self.other_user.id}, \"username\": \"testuser\"}}', crontab=self.crontab, enabled=True)"
+      },
+      {
+        "caller": "src.users.tests.test_models.UserGetImportTasksTests.test_get_import_tasks_schedules",
+        "callee": "django.utils.timezone.now",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_models.py",
+        "line_number": 274,
+        "call_expr": "timezone.now()"
+      },
+      {
+        "caller": "src.users.tests.test_models.UserGetImportTasksTests.test_get_import_tasks_unknown_source",
+        "callee": "django_celery_results.models.TaskResult.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_models.py",
+        "line_number": 360,
+        "call_expr": "TaskResult.objects.create(task_id='task1', task_name='Import from Unknown', task_kwargs=f\"{{'user_id': {self.user.id}, 'username': 'testuser'}}\", status='SUCCESS', date_done=timezone.now(), result='{}')"
+      },
+      {
+        "caller": "src.users.tests.test_models.UserGetImportTasksTests.test_get_import_tasks_unknown_source",
+        "callee": "django.utils.timezone.now",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_models.py",
+        "line_number": 365,
+        "call_expr": "timezone.now()"
+      },
+      {
+        "caller": "src.users.tests.views.test_notifications.NotificationTests.test_notifications_post_invalid",
+        "callee": "django.contrib.messages.get_messages",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_notifications.py",
+        "line_number": 79,
+        "call_expr": "get_messages(response.wsgi_request)"
+      },
+      {
+        "caller": "src.users.tests.views.test_notifications.NotificationTests.test_notifications_post_invalid",
+        "callee": "django.urls.reverse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_notifications.py",
+        "line_number": 74,
+        "call_expr": "reverse('notifications')"
+      },
+      {
+        "caller": "src.users.tests.views.test_notifications.NotificationTests.test_test_notification",
+        "callee": "django.contrib.messages.get_messages",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_notifications.py",
+        "line_number": 184,
+        "call_expr": "get_messages(response.wsgi_request)"
+      },
+      {
+        "caller": "src.users.tests.views.test_notifications.NotificationTests.test_test_notification",
+        "callee": "django.urls.reverse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_notifications.py",
+        "line_number": 180,
+        "call_expr": "reverse('notifications')"
+      },
+      {
+        "caller": "src.users.tests.views.test_notifications.NotificationTests.test_test_notification_failure",
+        "callee": "django.contrib.messages.get_messages",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_notifications.py",
+        "line_number": 217,
+        "call_expr": "get_messages(response.wsgi_request)"
+      },
+      {
+        "caller": "src.users.tests.views.test_notifications.NotificationTests.test_test_notification_failure",
+        "callee": "django.urls.reverse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_notifications.py",
+        "line_number": 213,
+        "call_expr": "reverse('notifications')"
+      },
+      {
+        "caller": "src.users.tests.views.test_token.RegenerateTokenTests.test_regenerate_token_integrity_error",
+        "callee": "django.contrib.messages.get_messages",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_token.py",
+        "line_number": 48,
+        "call_expr": "get_messages(response.wsgi_request)"
+      },
+      {
+        "caller": "src.users.tests.views.test_token.RegenerateTokenTests.test_regenerate_token_integrity_error",
+        "callee": "django.urls.reverse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_token.py",
+        "line_number": 44,
+        "call_expr": "reverse('integrations')"
+      },
+      {
+        "caller": "src.users.tests.views.test_token.RegenerateTokenTests.test_regenerate_token_integrity_error",
+        "callee": "django.db.IntegrityError",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_token.py",
+        "line_number": 39,
+        "call_expr": "IntegrityError('Duplicate token')"
+      },
+      {
+        "caller": "src.lists.tests.test_views.ListsModalViewTests.test_lists_modal_view_with_existing_item",
+        "callee": "django.urls.reverse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\lists\\tests\\test_views.py",
+        "line_number": 669,
+        "call_expr": "reverse('lists_modal', args=[Sources.TMDB.value, MediaTypes.MOVIE.value, '123'])"
+      },
+      {
+        "caller": "src.lists.tests.test_views.ListsModalViewTests.test_lists_modal_view_with_existing_item",
+        "callee": "app.models.Item.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\lists\\tests\\test_views.py",
+        "line_number": 650,
+        "call_expr": "Item.objects.create(media_id='123', source=Sources.TMDB.value, media_type=MediaTypes.MOVIE.value, title='Existing Movie', image='http://example.com/image.jpg')"
+      },
+      {
+        "caller": "src.integrations.tests.imports.test_steam.ImportSteam.test_import_steam_private_profile",
+        "callee": "integrations.imports.steam.importer",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_steam.py",
+        "line_number": 111,
+        "call_expr": "steam.importer('76561198000000000', self.user, 'new')"
+      },
+      {
+        "caller": "src.integrations.tests.imports.test_steam.ImportSteam.test_import_steam_private_profile",
+        "callee": "requests.exceptions.HTTPError",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_steam.py",
+        "line_number": 108,
+        "call_expr": "HTTPError(response=response)"
+      },
+      {
+        "caller": "src.integrations.tests.imports.test_steam.ImportSteam.test_import_steam_private_profile",
+        "callee": "requests.Response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_steam.py",
+        "line_number": 106,
+        "call_expr": "Response()"
+      },
+      {
+        "caller": "src.integrations.tests.imports.test_trakt.ImportTrakt.test_process_watched_movie",
+        "callee": "integrations.imports.trakt.TraktImporter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_trakt.py",
+        "line_number": 45,
+        "call_expr": "TraktImporter('test', self.user, 'new')"
+      },
+      {
+        "caller": "src.integrations.tests.imports.test_trakt.ImportTrakt.test_process_watched_episode",
+        "callee": "integrations.imports.trakt.TraktImporter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_trakt.py",
+        "line_number": 88,
+        "call_expr": "TraktImporter('testuser', self.user, 'new')"
+      },
+      {
+        "caller": "src.integrations.tests.imports.test_trakt.ImportTrakt.test_process_watchlist",
+        "callee": "integrations.imports.trakt.TraktImporter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_trakt.py",
+        "line_number": 115,
+        "call_expr": "TraktImporter('testuser', self.user, 'new')"
+      },
+      {
+        "caller": "src.integrations.tests.imports.test_trakt.ImportTrakt.test_process_ratings",
+        "callee": "integrations.imports.trakt.TraktImporter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_trakt.py",
+        "line_number": 139,
+        "call_expr": "TraktImporter('testuser', self.user, 'new')"
+      },
+      {
+        "caller": "src.integrations.tests.imports.test_trakt.ImportTrakt.test_process_comments",
+        "callee": "integrations.imports.trakt.TraktImporter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_trakt.py",
+        "line_number": 171,
+        "call_expr": "TraktImporter('testuser', self.user, 'new')"
+      },
+      {
+        "caller": "src.events.tests.test_notification.NotificationTests.test_send_notifications",
+        "callee": "events.notifications.send_notifications",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_notification.py",
+        "line_number": 696,
+        "call_expr": "send_notifications(recent_events, users_with_notifications, 'Test Title')"
+      },
+      {
+        "caller": "src.events.tests.test_notification.NotificationTests.test_send_notifications",
+        "callee": "events.models.Event.objects.filter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_notification.py",
+        "line_number": 691,
+        "call_expr": "Event.objects.filter(notification_sent=False)"
+      },
+      {
+        "caller": "src.events.tests.test_notification.NotificationTests.test_send_notifications",
+        "callee": "django.db.models.Q",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_notification.py",
+        "line_number": 685,
+        "call_expr": "models.Q(notification_urls='')"
+      },
+      {
+        "caller": "src.events.tests.test_notification.NotificationTests.test_send_notifications",
+        "callee": "django.contrib.auth.get_user_model",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_notification.py",
+        "line_number": 683,
+        "call_expr": "get_user_model()"
+      },
+      {
+        "caller": "src.events.tests.test_notification.NotificationTests.test_exception_during_notification",
+        "callee": "events.notifications.send_notifications",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_notification.py",
+        "line_number": 826,
+        "call_expr": "send_notifications(recent_events, users_with_notifications, 'Test Title')"
+      },
+      {
+        "caller": "src.events.tests.test_notification.NotificationTests.test_exception_during_notification",
+        "callee": "events.models.Event.objects.filter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_notification.py",
+        "line_number": 821,
+        "call_expr": "Event.objects.filter(notification_sent=False)"
+      },
+      {
+        "caller": "src.events.tests.test_notification.NotificationTests.test_exception_during_notification",
+        "callee": "django.db.models.Q",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_notification.py",
+        "line_number": 815,
+        "call_expr": "models.Q(notification_urls='')"
+      },
+      {
+        "caller": "src.events.tests.test_notification.NotificationTests.test_exception_during_notification",
+        "callee": "django.contrib.auth.get_user_model",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_notification.py",
+        "line_number": 813,
+        "call_expr": "get_user_model()"
+      },
+      {
+        "caller": "src.events.tests.test_views.CalendarViewTests.test_calendar_with_events",
+        "callee": "django.urls.reverse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_views.py",
+        "line_number": 255,
+        "call_expr": "reverse('calendar')"
+      },
+      {
+        "caller": "src.events.tests.test_views.CalendarViewTests.test_calendar_with_events",
+        "callee": "events.models.Event",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_views.py",
+        "line_number": 245,
+        "call_expr": "Event(item=item2, datetime=timezone.make_aware(timezone.datetime(today.year, today.month, 20, 9, 0)))"
+      },
+      {
+        "caller": "src.events.tests.test_views.CalendarViewTests.test_calendar_with_events",
+        "callee": "django.utils.timezone.make_aware",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_views.py",
+        "line_number": 247,
+        "call_expr": "timezone.make_aware(timezone.datetime(today.year, today.month, 20, 9, 0))"
+      },
+      {
+        "caller": "src.events.tests.test_views.CalendarViewTests.test_calendar_with_events",
+        "callee": "django.utils.timezone.datetime",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_views.py",
+        "line_number": 248,
+        "call_expr": "timezone.datetime(today.year, today.month, 20, 9, 0)"
+      },
+      {
+        "caller": "src.events.tests.test_views.CalendarViewTests.test_calendar_with_events",
+        "callee": "django.utils.timezone.localdate",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_views.py",
+        "line_number": 231,
+        "call_expr": "timezone.localdate()"
+      },
+      {
+        "caller": "src.events.tests.test_views.CalendarViewTests.test_calendar_with_events",
+        "callee": "app.models.Item",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_views.py",
+        "line_number": 221,
+        "call_expr": "Item(id=2, media_id='456', source=Sources.MANUAL.value, media_type=MediaTypes.MOVIE.value, title='Test Movie', image='https://example.com/image2.jpg')"
+      },
+      {
+        "caller": "src.events.tests.test_views.CalendarViewTests.test_reload_calendar",
+        "callee": "django.contrib.messages.get_messages",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_views.py",
+        "line_number": 279,
+        "call_expr": "get_messages(response.wsgi_request)"
+      },
+      {
+        "caller": "src.events.tests.test_views.CalendarViewTests.test_reload_calendar",
+        "callee": "django.urls.reverse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_views.py",
+        "line_number": 273,
+        "call_expr": "reverse('calendar')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_anime.CalendarAnimeTests.test_get_anime_schedule_bulk",
+        "callee": "events.calendar.anime.get_anime_schedule_bulk",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_anime.py",
+        "line_number": 42,
+        "call_expr": "get_anime_schedule_bulk(['437'])"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_anime.CalendarAnimeTests.test_get_anime_schedule_bulk_no_airing_schedule",
+        "callee": "events.calendar.anime.get_anime_schedule_bulk",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_anime.py",
+        "line_number": 229,
+        "call_expr": "get_anime_schedule_bulk(['437'])"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_anime.CalendarAnimeTests.test_get_anime_schedule_bulk_filter_episodes",
+        "callee": "events.calendar.anime.get_anime_schedule_bulk",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_anime.py",
+        "line_number": 267,
+        "call_expr": "get_anime_schedule_bulk(['437'])"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_anime.CalendarAnimeTests.test_process_anime_bulk",
+        "callee": "events.calendar.anime.process_anime_bulk",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_anime.py",
+        "line_number": 327,
+        "call_expr": "process_anime_bulk([self.anime_item], events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_anime.CalendarAnimeTests.test_process_anime_bulk_no_matching_anime_anilist",
+        "callee": "events.calendar.anime.process_anime_bulk",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_anime.py",
+        "line_number": 358,
+        "call_expr": "process_anime_bulk([self.anime_item], events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_with_store_date",
+        "callee": "events.calendar.helpers.date_parser",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_comic.py",
+        "line_number": 45,
+        "call_expr": "date_parser('2023-04-15')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_with_store_date",
+        "callee": "events.calendar.comic.process_comic",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_comic.py",
+        "line_number": 40,
+        "call_expr": "process_comic(comic_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_with_store_date",
+        "callee": "app.models.Item.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_comic.py",
+        "line_number": 20,
+        "call_expr": "Item.objects.create(media_id='4050-18166', source=Sources.COMICVINE.value, media_type=MediaTypes.COMIC.value, title='Batman', image='http://example.com/batman.jpg')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_with_cover_date_only",
+        "callee": "events.calendar.helpers.date_parser",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_comic.py",
+        "line_number": 81,
+        "call_expr": "date_parser('2023-05-01')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_with_cover_date_only",
+        "callee": "events.calendar.comic.process_comic",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_comic.py",
+        "line_number": 76,
+        "call_expr": "process_comic(comic_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_with_cover_date_only",
+        "callee": "app.models.Item.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_comic.py",
+        "line_number": 56,
+        "call_expr": "Item.objects.create(media_id='4050-18167', source=Sources.COMICVINE.value, media_type=MediaTypes.COMIC.value, title='Superman', image='http://example.com/superman.jpg')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_no_dates",
+        "callee": "events.calendar.comic.process_comic",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_comic.py",
+        "line_number": 107,
+        "call_expr": "process_comic(comic_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_no_dates",
+        "callee": "app.models.Item.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_comic.py",
+        "line_number": 87,
+        "call_expr": "Item.objects.create(media_id='4050-18168', source=Sources.COMICVINE.value, media_type=MediaTypes.COMIC.value, title='Wonder Woman', image='http://example.com/wonderwoman.jpg')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_handles_issue_provider_error",
+        "callee": "events.calendar.comic.process_comic",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_comic.py",
+        "line_number": 154,
+        "call_expr": "process_comic(self.comic_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_handles_issue_provider_error",
+        "callee": "app.providers.services.ProviderAPIError",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_comic.py",
+        "line_number": 147,
+        "call_expr": "services.ProviderAPIError(provider=Sources.COMICVINE.value, error=type('Error', (), {'response': response})(), details='boom')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_main.CalendarMainTests.test_fetch_releases_all_types",
+        "callee": "events.models.Event.objects.filter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_main.py",
+        "line_number": 80,
+        "call_expr": "Event.objects.filter(item=self.comic_item)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_main.CalendarMainTests.test_fetch_releases_all_types",
+        "callee": "events.calendar.main.fetch_releases",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_main.py",
+        "line_number": 66,
+        "call_expr": "fetch_releases(self.user.id)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_movie",
+        "callee": "events.calendar.helpers.date_parser",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 33,
+        "call_expr": "date_parser('1999-10-15')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_movie",
+        "callee": "events.calendar.other.process_other",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 28,
+        "call_expr": "process_other(self.movie_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_book",
+        "callee": "events.calendar.helpers.date_parser",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 51,
+        "call_expr": "date_parser('1949-06-08')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_book",
+        "callee": "events.calendar.other.process_other",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 46,
+        "call_expr": "process_other(self.book_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_manga",
+        "callee": "events.calendar.helpers.date_parser",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 69,
+        "call_expr": "date_parser('2023-12-22')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_manga",
+        "callee": "events.calendar.other.process_other",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 64,
+        "call_expr": "process_other(self.manga_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_mangaupdates",
+        "callee": "events.calendar.other.process_other",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 88,
+        "call_expr": "process_other(mangaupdates_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_mangaupdates",
+        "callee": "app.models.Item.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 74,
+        "call_expr": "Item.objects.create(media_id='123', source=Sources.MANGAUPDATES.value, media_type=MediaTypes.MANGA.value, title='Some Manga', image='http://example.com/manga.jpg')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_uses_placeholder_when_date_is_unknown",
+        "callee": "events.calendar.other.process_other",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 110,
+        "call_expr": "process_other(self.book_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_game",
+        "callee": "events.calendar.helpers.date_parser",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 142,
+        "call_expr": "date_parser('2025-10-15')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_game",
+        "callee": "events.calendar.other.process_other",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 137,
+        "call_expr": "process_other(game_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_game",
+        "callee": "app.models.Item.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 121,
+        "call_expr": "Item.objects.create(media_id='52189', source=Sources.IGDB.value, media_type=MediaTypes.GAME.value, title='Grand Theft Auto VI', image='http://example.com/gta6.jpg')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_invalid_date",
+        "callee": "events.calendar.other.process_other",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 155,
+        "call_expr": "process_other(self.movie_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_no_date",
+        "callee": "events.calendar.other.process_other",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 168,
+        "call_expr": "process_other(self.movie_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_handles_provider_error",
+        "callee": "events.calendar.other.process_other",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 185,
+        "call_expr": "process_other(self.movie_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_handles_provider_error",
+        "callee": "app.providers.services.ProviderAPIError",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 178,
+        "call_expr": "services.ProviderAPIError(provider=Sources.TMDB.value, error=response_mock, details='boom')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_http_error_handling",
+        "callee": "events.calendar.other.process_other",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 203,
+        "call_expr": "process_other(self.movie_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_other.CalendarOtherTests.test_http_error_handling",
+        "callee": "app.providers.services.ProviderAPIError",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "line_number": 196,
+        "call_expr": "services.ProviderAPIError(provider=Sources.TMDB.value, error=response_mock, details='Movie not found')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process",
+        "callee": "events.calendar.selectors.get_items_to_process",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 87,
+        "call_expr": "get_items_to_process()"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process",
+        "callee": "app.models.Anime.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 71,
+        "call_expr": "Anime.objects.create(item=user2_item, user=user2, status=Status.PLANNING.value)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process",
+        "callee": "app.models.Item.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 64,
+        "call_expr": "Item.objects.create(media_id='888', source=Sources.MAL.value, media_type=MediaTypes.ANIME.value, title='User2 Anime', image='http://example.com/user2.jpg')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process",
+        "callee": "events.models.Event.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 58,
+        "call_expr": "Event.objects.create(item=self.comic_item, content_number=1, datetime=comic_recent_date)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process",
+        "callee": "django.utils.timezone.timedelta",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 57,
+        "call_expr": "timezone.timedelta(days=180)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process",
+        "callee": "django.utils.timezone.now",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 57,
+        "call_expr": "timezone.now()"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process",
+        "callee": "django.contrib.auth.get_user_model",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 29,
+        "call_expr": "get_user_model()"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_completed_changed_tv",
+        "callee": "events.calendar.selectors.get_items_to_process",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 111,
+        "call_expr": "get_items_to_process(self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_completed_changed_tv",
+        "callee": "events.models.Event.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 105,
+        "call_expr": "Event.objects.create(item=self.season_item, content_number=1, datetime=timezone.now() - timezone.timedelta(days=30))"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_completed_changed_tv",
+        "callee": "django.utils.timezone.timedelta",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 108,
+        "call_expr": "timezone.timedelta(days=30)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_completed_changed_tv",
+        "callee": "django.utils.timezone.now",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 108,
+        "call_expr": "timezone.now()"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_completed_changed_tv",
+        "callee": "app.models.TV.objects.filter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 101,
+        "call_expr": "TV.objects.filter(item=self.tv_item, user=self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_excludes_unchanged_tv_with_events",
+        "callee": "events.calendar.selectors.get_items_to_process",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 131,
+        "call_expr": "get_items_to_process(self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_excludes_unchanged_tv_with_events",
+        "callee": "events.models.Event.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 125,
+        "call_expr": "Event.objects.create(item=self.season_item, content_number=1, datetime=timezone.now() - timezone.timedelta(days=30))"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_excludes_unchanged_tv_with_events",
+        "callee": "django.utils.timezone.timedelta",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 128,
+        "call_expr": "timezone.timedelta(days=30)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_excludes_unchanged_tv_with_events",
+        "callee": "django.utils.timezone.now",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 128,
+        "call_expr": "timezone.now()"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_tv_without_season_events",
+        "callee": "events.calendar.selectors.get_items_to_process",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 146,
+        "call_expr": "get_items_to_process(self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_changed_tmdb_tv_ids_returns_empty_on_provider_error",
+        "callee": "events.calendar.selectors.get_changed_tmdb_tv_ids",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 165,
+        "call_expr": "get_changed_tmdb_tv_ids()"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_changed_tmdb_tv_ids_returns_empty_on_provider_error",
+        "callee": "app.providers.services.ProviderAPIError",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 159,
+        "call_expr": "services.ProviderAPIError(provider=Sources.TMDB.value, error=error, details='boom')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_excludes_unchanged_movie_with_events",
+        "callee": "events.calendar.selectors.get_items_to_process",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 183,
+        "call_expr": "get_items_to_process(self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_excludes_unchanged_movie_with_events",
+        "callee": "events.models.Event.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 177,
+        "call_expr": "Event.objects.create(item=self.movie_item, content_number=None, datetime=timezone.now() - timezone.timedelta(days=30))"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_excludes_unchanged_movie_with_events",
+        "callee": "django.utils.timezone.timedelta",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 180,
+        "call_expr": "timezone.timedelta(days=30)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_excludes_unchanged_movie_with_events",
+        "callee": "django.utils.timezone.now",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 180,
+        "call_expr": "timezone.now()"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_changed_movie_with_existing_event",
+        "callee": "events.calendar.selectors.get_items_to_process",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 203,
+        "call_expr": "get_items_to_process(self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_changed_movie_with_existing_event",
+        "callee": "events.models.Event.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 197,
+        "call_expr": "Event.objects.create(item=self.movie_item, content_number=None, datetime=timezone.now() - timezone.timedelta(days=30))"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_changed_movie_with_existing_event",
+        "callee": "django.utils.timezone.timedelta",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 200,
+        "call_expr": "timezone.timedelta(days=30)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_changed_movie_with_existing_event",
+        "callee": "django.utils.timezone.now",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 200,
+        "call_expr": "timezone.now()"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_movie_without_events",
+        "callee": "events.calendar.selectors.get_items_to_process",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 218,
+        "call_expr": "get_items_to_process(self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_changed_tmdb_movie_ids_returns_empty_on_provider_error",
+        "callee": "events.calendar.selectors.get_changed_tmdb_movie_ids",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 237,
+        "call_expr": "get_changed_tmdb_movie_ids()"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_changed_tmdb_movie_ids_returns_empty_on_provider_error",
+        "callee": "app.providers.services.ProviderAPIError",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "line_number": 231,
+        "call_expr": "services.ProviderAPIError(provider=Sources.TMDB.value, error=error, details='boom')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_season",
+        "callee": "events.calendar.tv.process_tv",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 84,
+        "call_expr": "process_tv(self.tv_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_reopens_completed_show_with_new_season_as_planning",
+        "callee": "app.models.TV.objects.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 146,
+        "call_expr": "TV.objects.get(item=self.tv_item, user=self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_reopens_completed_show_with_new_season_as_planning",
+        "callee": "app.models.Season.objects.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 145,
+        "call_expr": "Season.objects.get(item=season_two_item, user=self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_reopens_completed_show_with_new_season_as_planning",
+        "callee": "app.models.Item.objects.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 139,
+        "call_expr": "Item.objects.get(media_id=self.tv_item.media_id, source=self.tv_item.source, media_type=self.season_item.media_type, season_number=2)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_reopens_completed_show_with_new_season_as_planning",
+        "callee": "events.calendar.tv.process_tv",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 137,
+        "call_expr": "process_tv(self.tv_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_reopens_completed_show_with_new_season_as_planning",
+        "callee": "events.models.Event.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 109,
+        "call_expr": "Event.objects.create(item=self.season_item, content_number=1, datetime=date_parser('2008-01-20'))"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_reopens_completed_show_with_new_season_as_planning",
+        "callee": "events.calendar.helpers.date_parser",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 112,
+        "call_expr": "date_parser('2008-01-20')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_reopens_completed_show_with_new_season_as_planning",
+        "callee": "app.models.Season.objects.filter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 106,
+        "call_expr": "Season.objects.filter(item=self.season_item, user=self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_reopens_completed_show_with_new_season_as_planning",
+        "callee": "app.models.TV.objects.filter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 103,
+        "call_expr": "TV.objects.filter(item=self.tv_item, user=self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_does_not_reopen_completed_show_for_past_only_season",
+        "callee": "app.models.Season.objects.filter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 201,
+        "call_expr": "Season.objects.filter(item__media_id=self.tv_item.media_id, item__source=self.tv_item.source, item__season_number=2, user=self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_does_not_reopen_completed_show_for_past_only_season",
+        "callee": "app.models.TV.objects.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 198,
+        "call_expr": "TV.objects.get(item=self.tv_item, user=self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_does_not_reopen_completed_show_for_past_only_season",
+        "callee": "events.calendar.tv.process_tv",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 196,
+        "call_expr": "process_tv(self.tv_item, events_bulk)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_does_not_reopen_completed_show_for_past_only_season",
+        "callee": "events.models.Event.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 168,
+        "call_expr": "Event.objects.create(item=self.season_item, content_number=1, datetime=date_parser('2008-01-20'))"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_does_not_reopen_completed_show_for_past_only_season",
+        "callee": "events.calendar.helpers.date_parser",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 171,
+        "call_expr": "date_parser('2008-01-20')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_does_not_reopen_completed_show_for_past_only_season",
+        "callee": "app.models.TV.objects.filter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 162,
+        "call_expr": "TV.objects.filter(item=self.tv_item, user=self.user)"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_get_tvmaze_episode_map",
+        "callee": "events.calendar.tv.get_tvmaze_episode_map",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 249,
+        "call_expr": "get_tvmaze_episode_map('81189')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_get_tvmaze_episode_map",
+        "callee": "django.core.cache.cache.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 245,
+        "call_expr": "cache.get('tvmaze_map_81189')"
+      },
+      {
+        "caller": "src.events.tests.calendar.test_tv.CalendarTVTests.test_get_tvmaze_episode_map",
+        "callee": "django.core.cache.cache.clear",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "line_number": 213,
+        "call_expr": "cache.clear()"
+      },
+      {
+        "caller": "src.app.tests.test_statistics.StatisticsTests.test_get_activity_data",
+        "callee": "app.statistics.get_activity_data",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\test_statistics.py",
+        "line_number": 790,
+        "call_expr": "statistics.get_activity_data(self.user, start_date, end_date)"
+      },
+      {
+        "caller": "src.app.tests.test_statistics.StatisticsTests.test_get_filtered_historical_data",
+        "callee": "app.statistics.get_filtered_historical_data",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\test_statistics.py",
+        "line_number": 854,
+        "call_expr": "statistics.get_filtered_historical_data(start, end, self.user)"
+      },
+      {
+        "caller": "src.app.tests.models.test_season.SeasonGetRemainingEpsQuickWatchDateTests.test_get_remaining_eps_current_date",
+        "callee": "django.utils.timezone.localdate",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_season.py",
+        "line_number": 850,
+        "call_expr": "timezone.localdate()"
+      },
+      {
+        "caller": "src.app.tests.models.test_season.SeasonGetRemainingEpsQuickWatchDateTests.test_get_remaining_eps_current_date",
+        "callee": "app.models.Item.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_season.py",
+        "line_number": 838,
+        "call_expr": "Item.objects.create(media_id='1668', source=Sources.TMDB.value, media_type=MediaTypes.EPISODE.value, title=f'Episode {i}', image=f'img{i}.jpg', season_number=1, episode_number=i)"
+      },
+      {
+        "caller": "src.app.tests.models.test_season.SeasonGetRemainingEpsQuickWatchDateTests.test_get_remaining_eps_no_date",
+        "callee": "django.utils.timezone.localdate",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_season.py",
+        "line_number": 876,
+        "call_expr": "timezone.localdate()"
+      },
+      {
+        "caller": "src.app.tests.models.test_season.SeasonGetRemainingEpsQuickWatchDateTests.test_get_remaining_eps_no_date",
+        "callee": "app.models.Item.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_season.py",
+        "line_number": 864,
+        "call_expr": "Item.objects.create(media_id='1668', source=Sources.TMDB.value, media_type=MediaTypes.EPISODE.value, title=f'Episode {i}', image=f'img{i}.jpg', season_number=1, episode_number=i)"
+      },
+      {
+        "caller": "src.app.tests.models.test_season.SeasonGetRemainingEpsQuickWatchDateTests.test_get_remaining_eps_release_date",
+        "callee": "django.utils.timezone.localdate",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_season.py",
+        "line_number": 906,
+        "call_expr": "timezone.localdate()"
+      },
+      {
+        "caller": "src.app.tests.models.test_season.SeasonGetRemainingEpsQuickWatchDateTests.test_get_remaining_eps_release_date",
+        "callee": "app.models.Item.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_season.py",
+        "line_number": 891,
+        "call_expr": "Item.objects.create(media_id='1668', source=Sources.TMDB.value, media_type=MediaTypes.EPISODE.value, title=f'Episode {i}', image=f'img{i}.jpg', season_number=1, episode_number=i)"
+      },
+      {
+        "caller": "src.app.tests.providers.test_metadata.Metadata.test_tmdb_episode",
+        "callee": "app.providers.tmdb.episode",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_metadata.py",
+        "line_number": 289,
+        "call_expr": "tmdb.episode('1396', '1', '3')"
+      },
+      {
+        "caller": "src.app.tests.providers.test_metadata.Metadata.test_tmdb_episode",
+        "callee": "app.providers.tmdb.get_image_url",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_metadata.py",
+        "line_number": 286,
+        "call_expr": "tmdb.get_image_url('/path/to/still1.jpg')"
+      },
+      {
+        "caller": "src.app.tests.providers.test_search.Search.test_hardcover_title_query_is_capped",
+        "callee": "app.providers.hardcover.cap_search_query",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_search.py",
+        "line_number": 156,
+        "call_expr": "hardcover.cap_search_query(query)"
+      },
+      {
+        "caller": "src.app.tests.providers.test_search.Search.test_hardcover_title_query_is_capped",
+        "callee": "app.providers.hardcover.search",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_search.py",
+        "line_number": 152,
+        "call_expr": "hardcover.search(query, 1)"
+      },
+      {
+        "caller": "src.app.tests.providers.test_search.Search.test_hardcover_title_query_is_capped",
+        "callee": "django.core.cache.cache.delete",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_search.py",
+        "line_number": 129,
+        "call_expr": "cache.delete(f'search_{Sources.HARDCOVER.value}_{MediaTypes.BOOK.value}_{capped_query}_1')"
+      },
+      {
+        "caller": "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_tmdb_episode_not_found",
+        "callee": "app.providers.services.get_media_metadata",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_services.py",
+        "line_number": 397,
+        "call_expr": "services.get_media_metadata(MediaTypes.EPISODE.value, '1396', Sources.TMDB.value, season_numbers=[1], episode_number='3')"
+      },
+      {
+        "caller": "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_tmdb_episode_not_found",
+        "callee": "app.providers.services.ProviderAPIError",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_services.py",
+        "line_number": 391,
+        "call_expr": "services.ProviderAPIError(Sources.TMDB.value, mock_error)"
+      },
+      {
+        "caller": "src.app.tests.views.test_home.HomeViewTests.test_home_view_htmx_load_more",
+        "callee": "django.urls.reverse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_home.py",
+        "line_number": 253,
+        "call_expr": "reverse('home')"
+      },
+      {
+        "caller": "src.app.tests.views.test_home.HomeViewTests.test_home_view_htmx_load_more",
+        "callee": "app.models.Episode.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_home.py",
+        "line_number": 245,
+        "call_expr": "Episode.objects.create(item=episode_item, related_season=season, end_date=timezone.now())"
+      },
+      {
+        "caller": "src.app.tests.views.test_home.HomeViewTests.test_home_view_htmx_load_more",
+        "callee": "django.utils.timezone.now",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_home.py",
+        "line_number": 248,
+        "call_expr": "timezone.now()"
+      },
+      {
+        "caller": "src.app.tests.views.test_home.HomeViewTests.test_home_view_htmx_load_more",
+        "callee": "app.models.Item.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_home.py",
+        "line_number": 236,
+        "call_expr": "Item.objects.create(media_id=str(i), source=Sources.TMDB.value, media_type=MediaTypes.EPISODE.value, title=f'Test TV Show {i}', image='http://example.com/image.jpg', season_number=1, episode_number=1)"
+      },
+      {
+        "caller": "src.app.tests.views.test_home.HomeViewTests.test_home_view_htmx_load_more",
+        "callee": "app.models.Season.objects.create",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_home.py",
+        "line_number": 230,
+        "call_expr": "Season.objects.create(item=season_item, user=self.user, status=Status.IN_PROGRESS.value)"
+      },
+      {
+        "caller": "src.app.tests.views.test_media_details.MediaDetailsViewTests.test_season_details_view",
+        "callee": "django.urls.reverse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_media_details.py",
+        "line_number": 101,
+        "call_expr": "reverse('season_details', kwargs={'source': Sources.TMDB.value, 'media_id': '1668', 'title': 'test-tv-show', 'season_number': 1})"
+      }
+    ],
+    "jarvis_usage_index_before_filter": [
+      "<builtin>.Exception",
+      "<builtin>.all",
+      "<builtin>.len",
+      "<builtin>.list",
+      "<builtin>.range",
+      "<builtin>.set",
+      "<builtin>.str",
+      "<builtin>.type",
+      "app.models.Anime.objects.create",
+      "app.models.Episode.objects.create",
+      "app.models.Item",
+      "app.models.Item.objects.create",
+      "app.models.Item.objects.get",
+      "app.models.Season.objects.create",
+      "app.models.Season.objects.filter",
+      "app.models.Season.objects.get",
+      "app.models.TV.objects.filter",
+      "app.models.TV.objects.get",
+      "app.providers.hardcover.cap_search_query",
+      "app.providers.hardcover.search",
+      "app.providers.services.ProviderAPIError",
+      "app.providers.services.get_media_metadata",
+      "app.providers.tmdb.episode",
+      "app.providers.tmdb.get_image_url",
+      "app.statistics.get_activity_data",
+      "app.statistics.get_filtered_historical_data",
+      "append",
+      "django.contrib.auth.get_user_model",
+      "django.contrib.messages.get_messages",
+      "django.core.cache.cache.clear",
+      "django.core.cache.cache.delete",
+      "django.core.cache.cache.get",
+      "django.core.management.execute_from_command_line",
+      "django.db.IntegrityError",
+      "django.db.models.Q",
+      "django.urls.reverse",
+      "django.utils.timezone.datetime",
+      "django.utils.timezone.localdate",
+      "django.utils.timezone.make_aware",
+      "django.utils.timezone.now",
+      "django.utils.timezone.timedelta",
+      "django_celery_beat.models.PeriodicTask.objects.create",
+      "django_celery_results.models.TaskResult.objects.create",
+      "events.calendar.anime.get_anime_schedule_bulk",
+      "events.calendar.anime.process_anime_bulk",
+      "events.calendar.comic.process_comic",
+      "events.calendar.helpers.date_parser",
+      "events.calendar.main.fetch_releases",
+      "events.calendar.other.process_other",
+      "events.calendar.selectors.get_changed_tmdb_movie_ids",
+      "events.calendar.selectors.get_changed_tmdb_tv_ids",
+      "events.calendar.selectors.get_items_to_process",
+      "events.calendar.tv.get_tvmaze_episode_map",
+      "events.calendar.tv.process_tv",
+      "events.models.Event",
+      "events.models.Event.objects.create",
+      "events.models.Event.objects.filter",
+      "events.notifications.send_notifications",
+      "integrations.imports.steam.importer",
+      "integrations.imports.trakt.TraktImporter",
+      "requests.Response",
+      "requests.exceptions.HTTPError"
+    ],
+    "jarvis_usage_index_after_filter": [
+      "app.models.Anime.objects.create",
+      "app.models.Episode.objects.create",
+      "app.models.Item",
+      "app.models.Item.objects.create",
+      "app.models.Item.objects.get",
+      "app.models.Season.objects.create",
+      "app.models.Season.objects.filter",
+      "app.models.Season.objects.get",
+      "app.models.TV.objects.filter",
+      "app.models.TV.objects.get",
+      "app.providers.hardcover.cap_search_query",
+      "app.providers.hardcover.search",
+      "app.providers.services.ProviderAPIError",
+      "app.providers.services.get_media_metadata",
+      "app.providers.tmdb.episode",
+      "app.providers.tmdb.get_image_url",
+      "app.statistics.get_activity_data",
+      "app.statistics.get_filtered_historical_data",
+      "django.contrib.auth.get_user_model",
+      "django.contrib.messages.get_messages",
+      "django.core.cache.cache.clear",
+      "django.core.cache.cache.delete",
+      "django.core.cache.cache.get",
+      "django.core.management.execute_from_command_line",
+      "django.db.IntegrityError",
+      "django.db.models.Q",
+      "django.urls.reverse",
+      "django.utils.timezone.datetime",
+      "django.utils.timezone.localdate",
+      "django.utils.timezone.make_aware",
+      "django.utils.timezone.now",
+      "django.utils.timezone.timedelta",
+      "django_celery_beat.models.PeriodicTask.objects.create",
+      "django_celery_results.models.TaskResult.objects.create",
+      "events.calendar.anime.get_anime_schedule_bulk",
+      "events.calendar.anime.process_anime_bulk",
+      "events.calendar.comic.process_comic",
+      "events.calendar.helpers.date_parser",
+      "events.calendar.main.fetch_releases",
+      "events.calendar.other.process_other",
+      "events.calendar.selectors.get_changed_tmdb_movie_ids",
+      "events.calendar.selectors.get_changed_tmdb_tv_ids",
+      "events.calendar.selectors.get_items_to_process",
+      "events.calendar.tv.get_tvmaze_episode_map",
+      "events.calendar.tv.process_tv",
+      "events.models.Event",
+      "events.models.Event.objects.create",
+      "events.models.Event.objects.filter",
+      "events.notifications.send_notifications",
+      "integrations.imports.steam.importer",
+      "integrations.imports.trakt.TraktImporter",
+      "requests.Response",
+      "requests.exceptions.HTTPError"
+    ],
+    "jarvis_usage_augmentation_warnings": [],
+    "analysis_mode": "jarvis",
+    "project_mode": "jarvis_EA_entrypoints",
+    "entry_points": [
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_episode.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_season.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_tv.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_metadata.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_search.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_services.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_tvdb.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\test_helpers.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\test_statistics.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\test_templatetags.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_home.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_media_details.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_media_search.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_progress.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_track_modal.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_anime.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_comic.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_main.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_notification.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_views.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_anilist.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_goodreads.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_helpers.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_imdb.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_kitsu.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_mal.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_simkl.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_steam.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_trakt.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\test_anime_mappings.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\test_oauth_views.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\test_webhooks_jellyfin.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\test_webhooks_plex.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\lists\\tests\\test_views.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\manage.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_forms.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_helpers.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_models.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_notifications.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_token.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\views.py"
+    ],
+    "jarvis_mode": "EA",
+    "jarvis_scope": "entrypoints",
+    "jarvis_scope_meta": {
+      "scope": "entrypoints",
+      "entrypoint_count": 215,
+      "entrypoint_names": [
+        "src.app.tests.models.test_episode.EpisodeStatusTests.test_first_episode_sets_season_in_progress",
+        "src.app.tests.models.test_episode.EpisodeStatusTests.test_last_episode_sets_season_completed",
+        "src.app.tests.models.test_episode.EpisodeStatusTests.test_last_season_completes_tv_show",
+        "src.app.tests.models.test_episode.EpisodeStatusTests.test_middle_episode_does_not_change_status",
+        "src.app.tests.models.test_episode.EpisodeStatusTests.test_non_last_season_starts_next_season",
+        "src.app.tests.models.test_episode.EpisodeStatusTests.test_non_last_season_with_future_next_season_keeps_planning",
+        "src.app.tests.models.test_episode.EpisodeStatusTests.test_rewatch_last_episode_does_not_duplicate_completion_messages",
+        "src.app.tests.models.test_season.SeasonGetRemainingEpsQuickWatchDateTests.test_get_remaining_eps_current_date",
+        "src.app.tests.models.test_season.SeasonGetRemainingEpsQuickWatchDateTests.test_get_remaining_eps_no_date",
+        "src.app.tests.models.test_season.SeasonGetRemainingEpsQuickWatchDateTests.test_get_remaining_eps_release_date",
+        "src.app.tests.models.test_season.SeasonGetRemainingEpsQuickWatchDateTests.test_season_completion_with_no_date",
+        "src.app.tests.models.test_season.SeasonGetRemainingEpsQuickWatchDateTests.test_season_completion_with_release_date",
+        "src.app.tests.models.test_season.SeasonModel.test_unwatch_method",
+        "src.app.tests.models.test_season.SeasonModel.test_unwatch_nonexistent_episode",
+        "src.app.tests.models.test_season.SeasonModel.test_unwatch_with_repeats",
+        "src.app.tests.models.test_season.SeasonModel.test_watch_method",
+        "src.app.tests.models.test_season.SeasonModel.test_watch_with_none_date",
+        "src.app.tests.models.test_season.SeasonStatusTests.test_completed_last_season_completes_tv_show",
+        "src.app.tests.models.test_season.SeasonStatusTests.test_completed_status_creates_remaining_episodes",
+        "src.app.tests.models.test_season.SeasonStatusTests.test_completed_status_noop_if_no_remaining_episodes",
+        "src.app.tests.models.test_season.SeasonStatusTests.test_completed_status_starts_next_season",
+        "src.app.tests.models.test_season.SeasonStatusTests.test_completed_status_with_future_next_season_keeps_tv_in_progress",
+        "src.app.tests.models.test_season.SeasonStatusTests.test_completed_status_with_unaired_episodes_leaves_season_in_progress",
+        "src.app.tests.models.test_tv.TVStatusTests.test_completed_status_creates_all_seasons",
+        "src.app.tests.models.test_tv.TVStatusTests.test_completed_status_skips_unaired_episodes_and_future_seasons",
+        "src.app.tests.models.test_tv.TVStatusTests.test_in_progress_status_activates_next_season",
+        "src.app.tests.models.test_tv.TVStatusTests.test_in_progress_status_creates_new_season_if_needed",
+        "src.app.tests.providers.test_metadata.Metadata.test_anime_unknown",
+        "src.app.tests.providers.test_metadata.Metadata.test_movie_changes",
+        "src.app.tests.providers.test_metadata.Metadata.test_movie_changes_across_pages",
+        "src.app.tests.providers.test_metadata.Metadata.test_movie_unknown",
+        "src.app.tests.providers.test_metadata.Metadata.test_tmdb_episode",
+        "src.app.tests.providers.test_metadata.Metadata.test_tv_changes",
+        "src.app.tests.providers.test_metadata.Metadata.test_tv_changes_across_pages",
+        "src.app.tests.providers.test_search.Search.test_hardcover_title_query_is_capped",
+        "src.app.tests.providers.test_services.ServicesTests.test_api_request_get",
+        "src.app.tests.providers.test_services.ServicesTests.test_api_request_post",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_anime",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_book",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_comic",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_episode",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_game",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_hardcover_book",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_manga_mal",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_manga_mangaupdates",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_manual",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_manual_episode",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_manual_season",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_movie",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_season",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_tmdb_episode_not_found",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_tv",
+        "src.app.tests.providers.test_services.ServicesTests.test_get_media_metadata_tv_with_seasons",
+        "src.app.tests.providers.test_services.ServicesTests.test_handle_error_igdb_unauthorized",
+        "src.app.tests.providers.test_services.ServicesTests.test_request_error_handling_rate_limit",
+        "src.app.tests.providers.test_services.ServicesTests.test_search_anime",
+        "src.app.tests.providers.test_services.ServicesTests.test_search_comic",
+        "src.app.tests.providers.test_services.ServicesTests.test_search_game",
+        "src.app.tests.providers.test_services.ServicesTests.test_search_hardcover_book",
+        "src.app.tests.providers.test_services.ServicesTests.test_search_manga_mal",
+        "src.app.tests.providers.test_services.ServicesTests.test_search_manga_mangaupdates",
+        "src.app.tests.providers.test_services.ServicesTests.test_search_movie",
+        "src.app.tests.providers.test_services.ServicesTests.test_search_openlibrary_book",
+        "src.app.tests.providers.test_services.ServicesTests.test_search_tv",
+        "src.app.tests.providers.test_tvdb.TVDBProviderTests.test_episode_queries_episode_endpoint",
+        "src.app.tests.providers.test_tvdb.TVDBProviderTests.test_get_access_token_logs_in_and_caches_token",
+        "src.app.tests.providers.test_tvdb.TVDBProviderTests.test_series_tmdb_id_queries_extended_series_endpoint",
+        "src.app.tests.test_helpers.HelpersTest.test_form_error_messages",
+        "src.app.tests.test_helpers.HelpersTest.test_redirect_back_with_next",
+        "src.app.tests.test_helpers.HelpersTest.test_redirect_back_without_next",
+        "src.app.tests.test_statistics.GetActivityDataWeekStartTests.test_monday_week_start_labels_and_alignment",
+        "src.app.tests.test_statistics.GetActivityDataWeekStartTests.test_sunday_week_start_labels_and_alignment",
+        "src.app.tests.test_statistics.StatisticsTests.test_get_activity_data",
+        "src.app.tests.test_statistics.StatisticsTests.test_get_filtered_historical_data",
+        "src.app.tests.test_templatetags.AppTagsTests.test_get_static_file_mtime",
+        "src.app.tests.views.test_home.HomeViewTests.test_home_view_htmx_load_more",
+        "src.app.tests.views.test_media_details.MediaDetailsViewTests.test_media_details_keeps_existing_item_image",
+        "src.app.tests.views.test_media_details.MediaDetailsViewTests.test_media_details_refreshes_missing_item_image",
+        "src.app.tests.views.test_media_details.MediaDetailsViewTests.test_media_details_view",
+        "src.app.tests.views.test_media_details.MediaDetailsViewTests.test_season_details_view",
+        "src.app.tests.views.test_media_search.MediaSearchViewTests.test_media_search_view",
+        "src.app.tests.views.test_progress.ProgressEditPersistentMessages.test_progress_edit_htmx_appends_persistent_messages",
+        "src.app.tests.views.test_track_modal.TrackModalViewTests.test_track_modal_view_new_media",
+        "src.events.tests.calendar.test_anime.CalendarAnimeTests.test_get_anime_schedule_bulk",
+        "src.events.tests.calendar.test_anime.CalendarAnimeTests.test_get_anime_schedule_bulk_does_not_add_mal_episode_when_anilist_unknown",
+        "src.events.tests.calendar.test_anime.CalendarAnimeTests.test_get_anime_schedule_bulk_filter_episodes",
+        "src.events.tests.calendar.test_anime.CalendarAnimeTests.test_get_anime_schedule_bulk_no_airing_schedule",
+        "src.events.tests.calendar.test_anime.CalendarAnimeTests.test_get_anime_schedule_bulk_paginated_airing_schedule",
+        "src.events.tests.calendar.test_anime.CalendarAnimeTests.test_get_anime_schedule_bulk_uses_mal_when_anilist_episodes_unknown",
+        "src.events.tests.calendar.test_anime.CalendarAnimeTests.test_process_anime_bulk",
+        "src.events.tests.calendar.test_anime.CalendarAnimeTests.test_process_anime_bulk_no_matching_anime_anilist",
+        "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_handles_issue_provider_error",
+        "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_no_dates",
+        "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_returns_when_issue_is_already_saved",
+        "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_with_cover_date_only",
+        "src.events.tests.calendar.test_comic.CalendarComicTests.test_process_comic_with_store_date",
+        "src.events.tests.calendar.test_main.CalendarMainTests.test_fetch_releases_all_types",
+        "src.events.tests.calendar.test_main.CalendarMainTests.test_fetch_releases_returns_no_updates_message",
+        "src.events.tests.calendar.test_main.CalendarMainTests.test_fetch_releases_returns_when_no_items_to_process",
+        "src.events.tests.calendar.test_main.CalendarMainTests.test_fetch_releases_specific_items",
+        "src.events.tests.calendar.test_other.CalendarOtherTests.test_http_error_handling",
+        "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_book",
+        "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_game",
+        "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_handles_provider_error",
+        "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_invalid_date",
+        "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_manga",
+        "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_mangaupdates",
+        "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_movie",
+        "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_no_date",
+        "src.events.tests.calendar.test_other.CalendarOtherTests.test_process_other_uses_placeholder_when_date_is_unknown",
+        "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_changed_tmdb_movie_ids_returns_empty_on_provider_error",
+        "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_changed_tmdb_tv_ids_returns_empty_on_provider_error",
+        "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process",
+        "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_excludes_unchanged_movie_with_events",
+        "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_excludes_unchanged_tv_with_events",
+        "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_changed_movie_with_existing_event",
+        "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_completed_changed_tv",
+        "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_movie_without_events",
+        "src.events.tests.calendar.test_selectors.CalendarSelectorTests.test_get_items_to_process_includes_tv_without_season_events",
+        "src.events.tests.calendar.test_tv.CalendarTVTests.test_get_seasons_to_process_returns_empty_when_no_seasons",
+        "src.events.tests.calendar.test_tv.CalendarTVTests.test_get_tvmaze_episode_map",
+        "src.events.tests.calendar.test_tv.CalendarTVTests.test_get_tvmaze_episode_map_lookup_failure",
+        "src.events.tests.calendar.test_tv.CalendarTVTests.test_get_tvmaze_response_returns_empty_on_not_found",
+        "src.events.tests.calendar.test_tv.CalendarTVTests.test_get_tvmaze_response_returns_empty_when_episode_fetch_fails",
+        "src.events.tests.calendar.test_tv.CalendarTVTests.test_get_tvmaze_response_returns_empty_when_lookup_has_no_id",
+        "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_does_not_reopen_completed_show_for_past_only_season",
+        "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_reopens_completed_show_with_new_season_as_planning",
+        "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_returns_when_no_seasons_need_processing",
+        "src.events.tests.calendar.test_tv.CalendarTVTests.test_process_tv_season",
+        "src.events.tests.test_notification.NotificationTests.test_all_users_notifications_disabled",
+        "src.events.tests.test_notification.NotificationTests.test_daily_digest_excluded_items",
+        "src.events.tests.test_notification.NotificationTests.test_daily_digest_no_releases",
+        "src.events.tests.test_notification.NotificationTests.test_daily_digest_no_users",
+        "src.events.tests.test_notification.NotificationTests.test_daily_digest_timezone_handling",
+        "src.events.tests.test_notification.NotificationTests.test_daily_digest_with_notification_urls",
+        "src.events.tests.test_notification.NotificationTests.test_end_to_end_notification",
+        "src.events.tests.test_notification.NotificationTests.test_exception_during_notification",
+        "src.events.tests.test_notification.NotificationTests.test_exclude_then_notify",
+        "src.events.tests.test_notification.NotificationTests.test_multiple_media_types",
+        "src.events.tests.test_notification.NotificationTests.test_no_recent_events",
+        "src.events.tests.test_notification.NotificationTests.test_no_users_with_notifications",
+        "src.events.tests.test_notification.NotificationTests.test_release_notifications_disabled",
+        "src.events.tests.test_notification.NotificationTests.test_send_daily_digest",
+        "src.events.tests.test_notification.NotificationTests.test_send_notifications",
+        "src.events.tests.test_notification.NotificationTests.test_send_releases",
+        "src.events.tests.test_views.CalendarViewTests.test_calendar_december_navigation",
+        "src.events.tests.test_views.CalendarViewTests.test_calendar_default_view",
+        "src.events.tests.test_views.CalendarViewTests.test_calendar_january_navigation",
+        "src.events.tests.test_views.CalendarViewTests.test_calendar_with_events",
+        "src.events.tests.test_views.CalendarViewTests.test_calendar_with_invalid_month_year",
+        "src.events.tests.test_views.CalendarViewTests.test_calendar_with_month_year_params",
+        "src.events.tests.test_views.CalendarViewTests.test_calendar_with_view_param",
+        "src.events.tests.test_views.CalendarViewTests.test_reload_calendar",
+        "src.events.tests.test_views.CalendarWeekStartDayTests.test_calendar_monday_start",
+        "src.events.tests.test_views.CalendarWeekStartDayTests.test_calendar_sunday_start",
+        "src.events.tests.test_views.DownloadCalendarViewTests.test_download_calendar_empty",
+        "src.events.tests.test_views.DownloadCalendarViewTests.test_download_calendar_no_auth_required",
+        "src.events.tests.test_views.DownloadCalendarViewTests.test_download_calendar_with_events",
+        "src.integrations.tests.imports.test_anilist.ImportAniList.test_import_anilist_private",
+        "src.integrations.tests.imports.test_anilist.ImportAniList.test_import_anilist_public",
+        "src.integrations.tests.imports.test_goodreads.ImportGoodreadsProviderErrors.test_provider_error_warns_with_goodreads_fields",
+        "src.integrations.tests.imports.test_helpers.HelpersTest.test_create_import_schedule",
+        "src.integrations.tests.imports.test_helpers.HelpersTest.test_create_import_schedule_invalid_time",
+        "src.integrations.tests.imports.test_imdb.ImportIMDB.test_lookup_in_tmdb_not_found",
+        "src.integrations.tests.imports.test_kitsu.ImportKitsu.test_get_kitsu_id",
+        "src.integrations.tests.imports.test_kitsu.ImportKitsu.test_get_media_response",
+        "src.integrations.tests.imports.test_mal.ImportMAL.test_import_animelist",
+        "src.integrations.tests.imports.test_simkl.ImportSimkl.test_importer",
+        "src.integrations.tests.imports.test_simkl.ImportSimkl.test_season_status_logic_with_completed_seasons",
+        "src.integrations.tests.imports.test_steam.ImportSteam.test_import_steam_game_not_found_in_igdb",
+        "src.integrations.tests.imports.test_steam.ImportSteam.test_import_steam_games",
+        "src.integrations.tests.imports.test_steam.ImportSteam.test_import_steam_no_api_key",
+        "src.integrations.tests.imports.test_steam.ImportSteam.test_import_steam_private_profile",
+        "src.integrations.tests.imports.test_trakt.ImportTrakt.test_get_access_token_uses_redirect_uri",
+        "src.integrations.tests.imports.test_trakt.ImportTrakt.test_oauth_import_full_flow",
+        "src.integrations.tests.imports.test_trakt.ImportTrakt.test_process_comments",
+        "src.integrations.tests.imports.test_trakt.ImportTrakt.test_process_ratings",
+        "src.integrations.tests.imports.test_trakt.ImportTrakt.test_process_watched_episode",
+        "src.integrations.tests.imports.test_trakt.ImportTrakt.test_process_watched_movie",
+        "src.integrations.tests.imports.test_trakt.ImportTrakt.test_process_watchlist",
+        "src.integrations.tests.imports.test_trakt.ImportTrakt.test_public_import_full_flow",
+        "src.integrations.tests.test_anime_mappings.AnimeMappingsWebhookPayloadTests.test_jellyfin_bleach_payload_uses_tvdb_mapping",
+        "src.integrations.tests.test_anime_mappings.AnimeMappingsWebhookPayloadTests.test_plex_anidb_guid_payload_uses_anidb_mapping",
+        "src.integrations.tests.test_oauth_views.TraktOAuthViewTests.test_trakt_callback_rejects_missing_state",
+        "src.integrations.tests.test_oauth_views.TraktOAuthViewTests.test_trakt_callback_reuses_stored_redirect_uri",
+        "src.integrations.tests.test_webhooks_jellyfin.JellyfinWebhookTests.test_mark_unplayed_completed_episode_updates_parent_statuses",
+        "src.integrations.tests.test_webhooks_jellyfin.JellyfinWebhookTests.test_tv_episode_uses_imdb_fallback_when_tvdb_missing",
+        "src.integrations.tests.test_webhooks_jellyfin.JellyfinWebhookTests.test_tv_episode_uses_imdb_fallback_when_tvdb_tmdb_lookup_misses",
+        "src.integrations.tests.test_webhooks_jellyfin.JellyfinWebhookTests.test_tv_episode_uses_tvdb_series_tmdb_id_when_tmdb_find_misses",
+        "src.integrations.tests.test_webhooks_plex.PlexWebhookTests.test_anime_episode_anidb_guid_mark_played",
+        "src.lists.tests.test_views.ListsModalViewTests.test_lists_modal_view_with_existing_item",
+        "src.lists.tests.test_views.ListsModalViewTests.test_lists_modal_view_with_new_item",
+        "src.lists.tests.test_views.ListsModalViewTests.test_lists_modal_view_with_season",
+        "src.manage.main",
+        "src.users.tests.test_forms.NotificationSettingsFormTests.test_empty_lines_are_ignored",
+        "src.users.tests.test_forms.NotificationSettingsFormTests.test_empty_urls",
+        "src.users.tests.test_forms.NotificationSettingsFormTests.test_form_saves_correctly",
+        "src.users.tests.test_forms.NotificationSettingsFormTests.test_invalid_url",
+        "src.users.tests.test_forms.NotificationSettingsFormTests.test_mixed_valid_invalid_urls",
+        "src.users.tests.test_forms.NotificationSettingsFormTests.test_urls_with_extra_whitespace",
+        "src.users.tests.test_forms.NotificationSettingsFormTests.test_valid_multiple_urls",
+        "src.users.tests.test_forms.NotificationSettingsFormTests.test_valid_single_url",
+        "src.users.tests.test_forms.NotificationSettingsFormTests.test_whitespace_only_urls",
+        "src.users.tests.test_helpers.HelpersTest.test_get_next_run_info_daily",
+        "src.users.tests.test_helpers.HelpersTest.test_get_next_run_info_every_2_days",
+        "src.users.tests.test_helpers.HelpersTest.test_get_next_run_info_every_2_days_after_todays_run",
+        "src.users.tests.test_models.UserGetImportTasksTests.test_get_import_tasks_empty",
+        "src.users.tests.test_models.UserGetImportTasksTests.test_get_import_tasks_results",
+        "src.users.tests.test_models.UserGetImportTasksTests.test_get_import_tasks_schedules",
+        "src.users.tests.test_models.UserGetImportTasksTests.test_get_import_tasks_unknown_source",
+        "src.users.tests.views.test_notifications.NotificationTests.test_notifications_post_invalid",
+        "src.users.tests.views.test_notifications.NotificationTests.test_test_notification",
+        "src.users.tests.views.test_notifications.NotificationTests.test_test_notification_failure",
+        "src.users.tests.views.test_token.RegenerateTokenTests.test_regenerate_token_integrity_error",
+        "src.users.views.test_notification"
+      ],
+      "entrypoint_files": [
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_episode.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_season.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\models\\test_tv.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_metadata.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_search.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_services.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\providers\\test_tvdb.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\test_helpers.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\test_statistics.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\test_templatetags.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_home.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_media_details.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_media_search.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_progress.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\app\\tests\\views\\test_track_modal.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_anime.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_comic.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_main.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_other.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_selectors.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\calendar\\test_tv.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_notification.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\events\\tests\\test_views.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_anilist.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_goodreads.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_helpers.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_imdb.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_kitsu.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_mal.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_simkl.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_steam.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\imports\\test_trakt.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\test_anime_mappings.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\test_oauth_views.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\test_webhooks_jellyfin.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\integrations\\tests\\test_webhooks_plex.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\lists\\tests\\test_views.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\manage.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_forms.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_helpers.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\test_models.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_notifications.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\tests\\views\\test_token.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\fuzzygrim__yamtrack\\src\\users\\views.py"
+      ],
+      "fallback": false
+    },
+    "jarvis": {
+      "runner": "docker",
+      "mode": "EA",
+      "precision": true,
+      "jarvis_root": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.tools\\pythonJaRvis\\Jarvis",
+      "timeout_s": 300,
+      "module_count": 44,
+      "pip_install": "",
+      "stdout": "/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/models/test_episode.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/models/test_season.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/models/test_tv.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/providers/test_metadata.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/providers/test_search.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/providers/test_services.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/providers/test_tvdb.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/test_helpers.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/test_statistics.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/test_templatetags.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/views/test_home.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/views/test_media_details.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/views/test_media_search.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/views/test_progress.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/app/tests/views/test_track_modal.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/events/tests/calendar/test_anime.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/events/tests/calendar/test_comic.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/events/tests/calendar/test_main.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/events/tests/calendar/test_other.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/events/tests/calendar/test_selectors.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/events/tests/calendar/test_tv.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/events/tests/test_notification.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/events/tests/test_views.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/integrations/tests/imports/test_anilist.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/integrations/tests/imports/test_goodreads.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/integrations/tests/imports/test_helpers.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/integrations/tests/imports/test_imdb.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/integrations/tests/imports/test_kitsu.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/integrations/tests/imports/test_mal.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/integrations/tests/imports/test_simkl.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/integrations/tests/imports/test_steam.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/integrations/tests/imports/test_trakt.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/integrations/tests/test_anime_mappings.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/integrations/tests/test_oauth_views.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/integrations/tests/test_webhooks_jellyfin.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/integrations/tests/test_webhooks_plex.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/lists/tests/test_views.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/manage.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/users/tests/test_forms.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/users/tests/test_helpers.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/users/tests/test_models.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/users/tests/views/test_notifications.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/users/tests/views/test_token.py\n/workspace/data/raw/projects/fuzzygrim__yamtrack/src/users/views.py\n",
+      "stderr": ""
+    },
+    "function_type_graphs": {},
+    "unresolved_calls": [],
+    "candidate_edges": [],
+    "reanalyzed_contexts": []
+  },
+  "usage_index": [
+    {
+      "identity": "app.models.Anime.objects.create",
+      "target_module": "app.models.Anime.objects",
+      "target_name": "create"
+    },
+    {
+      "identity": "app.models.Episode.objects.create",
+      "target_module": "app.models.Episode.objects",
+      "target_name": "create"
+    },
+    {
+      "identity": "app.models.Item",
+      "target_module": "app.models",
+      "target_name": "Item"
+    },
+    {
+      "identity": "app.models.Item.objects.create",
+      "target_module": "app.models.Item.objects",
+      "target_name": "create"
+    },
+    {
+      "identity": "app.models.Item.objects.get",
+      "target_module": "app.models.Item.objects",
+      "target_name": "get"
+    },
+    {
+      "identity": "app.models.Season.objects.create",
+      "target_module": "app.models.Season.objects",
+      "target_name": "create"
+    },
+    {
+      "identity": "app.models.Season.objects.filter",
+      "target_module": "app.models.Season.objects",
+      "target_name": "filter"
+    },
+    {
+      "identity": "app.models.Season.objects.get",
+      "target_module": "app.models.Season.objects",
+      "target_name": "get"
+    },
+    {
+      "identity": "app.models.TV.objects.filter",
+      "target_module": "app.models.TV.objects",
+      "target_name": "filter"
+    },
+    {
+      "identity": "app.models.TV.objects.get",
+      "target_module": "app.models.TV.objects",
+      "target_name": "get"
+    },
+    {
+      "identity": "app.providers.hardcover.cap_search_query",
+      "target_module": "app.providers.hardcover",
+      "target_name": "cap_search_query"
+    },
+    {
+      "identity": "app.providers.hardcover.search",
+      "target_module": "app.providers.hardcover",
+      "target_name": "search"
+    },
+    {
+      "identity": "app.providers.services.ProviderAPIError",
+      "target_module": "app.providers.services",
+      "target_name": "ProviderAPIError"
+    },
+    {
+      "identity": "app.providers.services.get_media_metadata",
+      "target_module": "app.providers.services",
+      "target_name": "get_media_metadata"
+    },
+    {
+      "identity": "app.providers.tmdb.episode",
+      "target_module": "app.providers.tmdb",
+      "target_name": "episode"
+    },
+    {
+      "identity": "app.providers.tmdb.get_image_url",
+      "target_module": "app.providers.tmdb",
+      "target_name": "get_image_url"
+    },
+    {
+      "identity": "app.statistics.get_activity_data",
+      "target_module": "app.statistics",
+      "target_name": "get_activity_data"
+    },
+    {
+      "identity": "app.statistics.get_filtered_historical_data",
+      "target_module": "app.statistics",
+      "target_name": "get_filtered_historical_data"
+    },
+    {
+      "identity": "django.contrib.auth.get_user_model",
+      "target_module": "django.contrib.auth",
+      "target_name": "get_user_model"
+    },
+    {
+      "identity": "django.contrib.messages.get_messages",
+      "target_module": "django.contrib.messages",
+      "target_name": "get_messages"
+    },
+    {
+      "identity": "django.core.cache.cache.clear",
+      "target_module": "django.core.cache.cache",
+      "target_name": "clear"
+    },
+    {
+      "identity": "django.core.cache.cache.delete",
+      "target_module": "django.core.cache.cache",
+      "target_name": "delete"
+    },
+    {
+      "identity": "django.core.cache.cache.get",
+      "target_module": "django.core.cache.cache",
+      "target_name": "get"
+    },
+    {
+      "identity": "django.core.management.execute_from_command_line",
+      "target_module": "django.core.management",
+      "target_name": "execute_from_command_line"
+    },
+    {
+      "identity": "django.db.IntegrityError",
+      "target_module": "django.db",
+      "target_name": "IntegrityError"
+    },
+    {
+      "identity": "django.db.models.Q",
+      "target_module": "django.db.models",
+      "target_name": "Q"
+    },
+    {
+      "identity": "django.urls.reverse",
+      "target_module": "django.urls",
+      "target_name": "reverse"
+    },
+    {
+      "identity": "django.utils.timezone.datetime",
+      "target_module": "django.utils.timezone",
+      "target_name": "datetime"
+    },
+    {
+      "identity": "django.utils.timezone.localdate",
+      "target_module": "django.utils.timezone",
+      "target_name": "localdate"
+    },
+    {
+      "identity": "django.utils.timezone.make_aware",
+      "target_module": "django.utils.timezone",
+      "target_name": "make_aware"
+    },
+    {
+      "identity": "django.utils.timezone.now",
+      "target_module": "django.utils.timezone",
+      "target_name": "now"
+    },
+    {
+      "identity": "django.utils.timezone.timedelta",
+      "target_module": "django.utils.timezone",
+      "target_name": "timedelta"
+    },
+    {
+      "identity": "django_celery_beat.models.PeriodicTask.objects.create",
+      "target_module": "django_celery_beat.models.PeriodicTask.objects",
+      "target_name": "create"
+    },
+    {
+      "identity": "django_celery_results.models.TaskResult.objects.create",
+      "target_module": "django_celery_results.models.TaskResult.objects",
+      "target_name": "create"
+    },
+    {
+      "identity": "events.calendar.anime.get_anime_schedule_bulk",
+      "target_module": "events.calendar.anime",
+      "target_name": "get_anime_schedule_bulk"
+    },
+    {
+      "identity": "events.calendar.anime.process_anime_bulk",
+      "target_module": "events.calendar.anime",
+      "target_name": "process_anime_bulk"
+    },
+    {
+      "identity": "events.calendar.comic.process_comic",
+      "target_module": "events.calendar.comic",
+      "target_name": "process_comic"
+    },
+    {
+      "identity": "events.calendar.helpers.date_parser",
+      "target_module": "events.calendar.helpers",
+      "target_name": "date_parser"
+    },
+    {
+      "identity": "events.calendar.main.fetch_releases",
+      "target_module": "events.calendar.main",
+      "target_name": "fetch_releases"
+    },
+    {
+      "identity": "events.calendar.other.process_other",
+      "target_module": "events.calendar.other",
+      "target_name": "process_other"
+    },
+    {
+      "identity": "events.calendar.selectors.get_changed_tmdb_movie_ids",
+      "target_module": "events.calendar.selectors",
+      "target_name": "get_changed_tmdb_movie_ids"
+    },
+    {
+      "identity": "events.calendar.selectors.get_changed_tmdb_tv_ids",
+      "target_module": "events.calendar.selectors",
+      "target_name": "get_changed_tmdb_tv_ids"
+    },
+    {
+      "identity": "events.calendar.selectors.get_items_to_process",
+      "target_module": "events.calendar.selectors",
+      "target_name": "get_items_to_process"
+    },
+    {
+      "identity": "events.calendar.tv.get_tvmaze_episode_map",
+      "target_module": "events.calendar.tv",
+      "target_name": "get_tvmaze_episode_map"
+    },
+    {
+      "identity": "events.calendar.tv.process_tv",
+      "target_module": "events.calendar.tv",
+      "target_name": "process_tv"
+    },
+    {
+      "identity": "events.models.Event",
+      "target_module": "events.models",
+      "target_name": "Event"
+    },
+    {
+      "identity": "events.models.Event.objects.create",
+      "target_module": "events.models.Event.objects",
+      "target_name": "create"
+    },
+    {
+      "identity": "events.models.Event.objects.filter",
+      "target_module": "events.models.Event.objects",
+      "target_name": "filter"
+    },
+    {
+      "identity": "events.notifications.send_notifications",
+      "target_module": "events.notifications",
+      "target_name": "send_notifications"
+    },
+    {
+      "identity": "integrations.imports.steam.importer",
+      "target_module": "integrations.imports.steam",
+      "target_name": "importer"
+    },
+    {
+      "identity": "integrations.imports.trakt.TraktImporter",
+      "target_module": "integrations.imports.trakt",
+      "target_name": "TraktImporter"
+    },
+    {
+      "identity": "requests.Response",
+      "target_module": "requests",
+      "target_name": "Response"
+    },
+    {
+      "identity": "requests.exceptions.HTTPError",
+      "target_module": "requests.exceptions",
+      "target_name": "HTTPError"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "project": {
+    "id": "alexferl__flask-simpleldap",
+    "name": "alexferl__flask-simpleldap",
+    "repo_full_name": "alexferl/flask-simpleldap",
+    "repo_url": "https://github.com/alexferl/flask-simpleldap.git",
+    "commit": "d6253303025d2764929c1f6110f0fa146354dc58",
+    "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap",
+    "enabled": true,
+    "environment_status": "resolved_from_lockfile_or_manifest",
+    "version_source": "lockfile_or_manifest",
+    "manifest_files": [
+      "uv.lock",
+      "requirements.txt",
+      "pyproject.toml"
+    ],
+    "resolved_package_count": 23
+  },
+  "status": "success",
+  "runner": "docker",
+  "jarvis_attempts": [
+    {
+      "runner": "docker",
+      "status": "success",
+      "elapsed_s": 4.838
+    }
+  ],
+  "dependency_graph": {
+    "status": "success",
+    "dependency_count": 28,
+    "elapsed_s": 0.326
+  },
+  "artifacts": {
+    "project_graph": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\alexferl__flask-simpleldap\\project_graph_jarvis.json",
+    "usage_index": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\alexferl__flask-simpleldap\\usage_index.json",
+    "package_summary_status": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\alexferl__flask-simpleldap\\package_summary_status.json",
+    "reachability": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\alexferl__flask-simpleldap\\reachability_report.json"
+  },
+  "counts": {
+    "project_nodes": 17,
+    "project_edges": 21,
+    "usage_index": 5,
+    "records": 4,
+    "query_targets": 3,
+    "package_summary_status": {
+      "built": 3,
+      "missing_source": 57
+    },
+    "loaded_summaries": 3
+  },
+  "elapsed_s": 8.404
+}

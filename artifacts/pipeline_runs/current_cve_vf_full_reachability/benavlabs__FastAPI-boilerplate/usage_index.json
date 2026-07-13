@@ -1,0 +1,1554 @@
+{
+  "nodes": 212,
+  "edges": 312,
+  "internal_edges": 91,
+  "external_edges": 221,
+  "usage_index_count": 43,
+  "entry_points": [
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_first_superuser.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_first_tier.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_tables.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\setup_initial_data.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\infrastructure\\app_factory.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\infrastructure\\auth\\routes.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\interfaces\\main.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\rate_limit\\routes.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\tier\\routes.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\user\\routes.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\conftest.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\api\\v1\\users\\test_create.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\api\\v1\\users\\test_delete.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\api\\v1\\users\\test_read.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\api\\v1\\users\\test_update.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\auth\\test_endpoints.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\auth\\test_dependencies.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\backends\\test_memcached.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\backends\\test_redis.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\test_decorator.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\test_integration.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\test_provider.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\test_utils.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\config\\test_settings.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\database\\test_session.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\logging\\test_correlation_id.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\backends\\test_fail_open.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\backends\\test_memcached.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\backends\\test_redis.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_fail_open_middleware.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_fail_open_provider.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_middleware.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_provider.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\api_keys\\test_service.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\common\\test_error_handler.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\user\\test_models.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\app.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\commands\\deploy.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\commands\\env.py"
+  ],
+  "metadata": {
+    "jarvis_external_usage_augmented_count": 109,
+    "jarvis_external_usage_augmented_edges": [
+      {
+        "caller": "cli.src.cli.commands.deploy.generate",
+        "callee": "typer.Exit",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\commands\\deploy.py",
+        "line_number": 53,
+        "call_expr": "typer.Exit(code=1)"
+      },
+      {
+        "caller": "cli.src.cli.commands.env.validate",
+        "callee": "typer.Exit",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\commands\\env.py",
+        "line_number": 97,
+        "call_expr": "typer.Exit(code=1)"
+      },
+      {
+        "caller": "cli.src.cli.commands.env.validate",
+        "callee": "typer.secho",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\commands\\env.py",
+        "line_number": 94,
+        "call_expr": "typer.secho(f'  \u2022 {item}', fg=typer.colors.YELLOW)"
+      },
+      {
+        "caller": "cli.src.cli.commands.env.validate",
+        "callee": "infrastructure.config.settings.get_settings",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\commands\\env.py",
+        "line_number": 50,
+        "call_expr": "get_settings()"
+      },
+      {
+        "caller": "cli.src.cli.lib.prompts.confirm_overwrite",
+        "callee": "typer.confirm",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\lib\\prompts.py",
+        "line_number": 16,
+        "call_expr": "typer.confirm(f'{path} already exists. Overwrite?', default=False)"
+      },
+      {
+        "caller": "cli.src.cli.lib.prompts.info",
+        "callee": "typer.echo",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\lib\\prompts.py",
+        "line_number": 20,
+        "call_expr": "typer.echo(message)"
+      },
+      {
+        "caller": "cli.src.cli.lib.prompts.success",
+        "callee": "typer.secho",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\lib\\prompts.py",
+        "line_number": 24,
+        "call_expr": "typer.secho(message, fg=typer.colors.GREEN)"
+      },
+      {
+        "caller": "cli.src.cli.lib.prompts.warn",
+        "callee": "typer.secho",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\lib\\prompts.py",
+        "line_number": 28,
+        "call_expr": "typer.secho(message, fg=typer.colors.YELLOW)"
+      },
+      {
+        "caller": "cli.src.cli.lib.prompts.error",
+        "callee": "typer.secho",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\lib\\prompts.py",
+        "line_number": 32,
+        "call_expr": "typer.secho(message, fg=typer.colors.RED, err=True)"
+      },
+      {
+        "caller": "cli.src.cli.lib.render.Renderer.__init__",
+        "callee": "jinja2.Environment",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\lib\\render.py",
+        "line_number": 23,
+        "call_expr": "Environment(loader=FileSystemLoader(str(templates_root)), keep_trailing_newline=True, undefined=StrictUndefined, autoescape=False)"
+      },
+      {
+        "caller": "cli.src.cli.lib.render.Renderer.__init__",
+        "callee": "jinja2.FileSystemLoader",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\lib\\render.py",
+        "line_number": 24,
+        "call_expr": "FileSystemLoader(str(templates_root))"
+      },
+      {
+        "caller": "backend.scripts.create_first_superuser.create_first_superuser",
+        "callee": "sqlalchemy.update",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_first_superuser.py",
+        "line_number": 70,
+        "call_expr": "update(User)"
+      },
+      {
+        "caller": "backend.scripts.create_first_superuser.create_first_superuser",
+        "callee": "src.modules.user.schemas.UserCreate",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_first_superuser.py",
+        "line_number": 61,
+        "call_expr": "UserCreate(name=name, email=email, username=username, password=password)"
+      },
+      {
+        "caller": "backend.scripts.create_first_superuser.create_first_superuser",
+        "callee": "src.modules.user.service.UserService",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_first_superuser.py",
+        "line_number": 46,
+        "call_expr": "UserService()"
+      },
+      {
+        "caller": "backend.scripts.create_first_superuser.create_first_superuser",
+        "callee": "src.infrastructure.database.session.local_session",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_first_superuser.py",
+        "line_number": 45,
+        "call_expr": "local_session()"
+      },
+      {
+        "caller": "backend.scripts.create_first_tier.create_first_tier",
+        "callee": "src.modules.tier.models.Tier",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_first_tier.py",
+        "line_number": 38,
+        "call_expr": "Tier(name=tier_name)"
+      },
+      {
+        "caller": "backend.scripts.create_first_tier.create_first_tier",
+        "callee": "sqlalchemy.select",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_first_tier.py",
+        "line_number": 30,
+        "call_expr": "select(Tier)"
+      },
+      {
+        "caller": "backend.scripts.create_first_tier.create_first_tier",
+        "callee": "src.infrastructure.database.session.local_session",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_first_tier.py",
+        "line_number": 29,
+        "call_expr": "local_session()"
+      },
+      {
+        "caller": "backend.scripts.create_tables.main",
+        "callee": "src.infrastructure.database.session.create_tables",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_tables.py",
+        "line_number": 20,
+        "call_expr": "create_tables()"
+      },
+      {
+        "caller": "backend.scripts.setup_initial_data.setup_initial_data",
+        "callee": "scripts.create_first_superuser.create_first_superuser",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\setup_initial_data.py",
+        "line_number": 37,
+        "call_expr": "create_first_superuser()"
+      },
+      {
+        "caller": "backend.scripts.setup_initial_data.setup_initial_data",
+        "callee": "scripts.create_first_tier.create_first_tier",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\setup_initial_data.py",
+        "line_number": 34,
+        "call_expr": "create_first_tier()"
+      },
+      {
+        "caller": "backend.scripts.setup_initial_data.setup_initial_data",
+        "callee": "src.infrastructure.database.session.create_tables",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\setup_initial_data.py",
+        "line_number": 27,
+        "call_expr": "create_tables()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.test_middleware._create_app_with_middleware",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+        "line_number": 16,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.test_middleware.test_api_paths_get_no_cache",
+        "callee": "httpx.AsyncClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+        "line_number": 40,
+        "call_expr": "AsyncClient(transport=ASGITransport(app=app), base_url='http://test')"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.test_middleware.test_api_paths_get_no_cache",
+        "callee": "httpx.ASGITransport",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+        "line_number": 40,
+        "call_expr": "ASGITransport(app=app)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.test_middleware.test_static_paths_get_public_cache",
+        "callee": "httpx.AsyncClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+        "line_number": 50,
+        "call_expr": "AsyncClient(transport=ASGITransport(app=app), base_url='http://test')"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.test_middleware.test_static_paths_get_public_cache",
+        "callee": "httpx.ASGITransport",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+        "line_number": 50,
+        "call_expr": "ASGITransport(app=app)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.test_middleware.test_security_headers_present_in_dev",
+        "callee": "httpx.AsyncClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+        "line_number": 63,
+        "call_expr": "AsyncClient(transport=ASGITransport(app=app), base_url='http://test')"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.test_middleware.test_security_headers_present_in_dev",
+        "callee": "httpx.ASGITransport",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+        "line_number": 63,
+        "call_expr": "ASGITransport(app=app)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.test_middleware.test_hsts_set_in_production",
+        "callee": "httpx.AsyncClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+        "line_number": 78,
+        "call_expr": "AsyncClient(transport=ASGITransport(app=app), base_url='http://test')"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.test_middleware.test_hsts_set_in_production",
+        "callee": "httpx.ASGITransport",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+        "line_number": 78,
+        "call_expr": "ASGITransport(app=app)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.test_middleware.test_hsts_set_in_staging",
+        "callee": "httpx.AsyncClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+        "line_number": 89,
+        "call_expr": "AsyncClient(transport=ASGITransport(app=app), base_url='http://test')"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.test_middleware.test_hsts_set_in_staging",
+        "callee": "httpx.ASGITransport",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+        "line_number": 89,
+        "call_expr": "ASGITransport(app=app)"
+      },
+      {
+        "caller": "backend.tests.unit.modules.api_keys.test_service.test_create_api_key",
+        "callee": "src.modules.api_keys.schemas.APIKeyCreate",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\api_keys\\test_service.py",
+        "line_number": 43,
+        "call_expr": "APIKeyCreate(name='Test Key', permissions={'read': True, 'write': True}, usage_limits={'requests_per_day': 1000})"
+      },
+      {
+        "caller": "backend.tests.unit.modules.api_keys.test_service.test_get_key_usage",
+        "callee": "src.modules.api_keys.schemas.KeyUsageCreate",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\api_keys\\test_service.py",
+        "line_number": 280,
+        "call_expr": "KeyUsageCreate(api_key_id=test_api_key['id'], user_id=test_user['id'], endpoint='/api/v1/test', method='GET', status_code=200, response_time_ms=100)"
+      },
+      {
+        "caller": "backend.tests.unit.modules.api_keys.test_service.test_get_usage_analytics",
+        "callee": "src.modules.api_keys.schemas.KeyUsageCreate",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\api_keys\\test_service.py",
+        "line_number": 310,
+        "call_expr": "KeyUsageCreate(api_key_id=test_api_key['id'], user_id=test_user['id'], endpoint=endpoint, method='GET', status_code=status_codes[i], response_time_ms=100 + i * 50, tokens_used=10 + i * 5, cost_microcents=1000 * (i + 1))"
+      },
+      {
+        "caller": "backend.tests.unit.modules.api_keys.test_service.test_get_user_summary",
+        "callee": "src.modules.api_keys.schemas.KeyUsageCreate",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\api_keys\\test_service.py",
+        "line_number": 350,
+        "call_expr": "KeyUsageCreate(api_key_id=test_api_key['id'], user_id=test_user['id'], endpoint='/api/v1/test', method='GET', status_code=200, cost_microcents=2500)"
+      },
+      {
+        "caller": "backend.tests.unit.modules.api_keys.test_service.test_usage_pagination",
+        "callee": "src.modules.api_keys.schemas.KeyUsageCreate",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\api_keys\\test_service.py",
+        "line_number": 430,
+        "call_expr": "KeyUsageCreate(api_key_id=test_api_key['id'], user_id=test_user['id'], endpoint=f'/api/v1/test{i}', method='GET', status_code=200)"
+      },
+      {
+        "caller": "backend.tests.unit.modules.common.test_error_handler.test_generate_support_id_length",
+        "callee": "src.modules.common.utils.error_handler._generate_support_id",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\common\\test_error_handler.py",
+        "line_number": 22,
+        "call_expr": "_generate_support_id()"
+      },
+      {
+        "caller": "backend.tests.unit.modules.common.test_error_handler.test_generate_support_id_unique",
+        "callee": "src.modules.common.utils.error_handler._generate_support_id",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\common\\test_error_handler.py",
+        "line_number": 27,
+        "call_expr": "_generate_support_id()"
+      },
+      {
+        "caller": "backend.tests.unit.modules.common.test_error_handler._create_test_app",
+        "callee": "src.modules.common.utils.error_handler.register_exception_handlers",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\common\\test_error_handler.py",
+        "line_number": 34,
+        "call_expr": "register_exception_handlers(app)"
+      },
+      {
+        "caller": "backend.tests.unit.modules.common.test_error_handler._create_test_app",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\common\\test_error_handler.py",
+        "line_number": 33,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "backend.tests.unit.modules.common.test_error_handler.test_domain_error_returns_generic_message",
+        "callee": "httpx.AsyncClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\common\\test_error_handler.py",
+        "line_number": 62,
+        "call_expr": "AsyncClient(transport=ASGITransport(app=test_app), base_url='http://test')"
+      },
+      {
+        "caller": "backend.tests.unit.modules.common.test_error_handler.test_domain_error_returns_generic_message",
+        "callee": "httpx.ASGITransport",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\common\\test_error_handler.py",
+        "line_number": 62,
+        "call_expr": "ASGITransport(app=test_app)"
+      },
+      {
+        "caller": "backend.tests.unit.modules.user.test_models._make_user",
+        "callee": "src.modules.user.models.User",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\user\\test_models.py",
+        "line_number": 7,
+        "call_expr": "User(name='Test User', username='testuser', email='test@example.com', hashed_password='hashed')"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.cache.test_decorator.test_cache_get_request_hit.mock_endpoint",
+        "callee": "pytest.fail",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\test_decorator.py",
+        "line_number": 34,
+        "call_expr": "pytest.fail('Endpoint was called despite cache hit')"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.config.test_settings.TestSettings.test_settings_creation",
+        "callee": "src.infrastructure.config.settings.Settings",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\config\\test_settings.py",
+        "line_number": 16,
+        "call_expr": "Settings()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.config.test_settings.TestSettings.test_debug_mode_setting",
+        "callee": "src.infrastructure.config.settings.Settings",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\config\\test_settings.py",
+        "line_number": 64,
+        "call_expr": "Settings()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.config.test_settings.TestSettings.test_required_settings_exist",
+        "callee": "src.infrastructure.config.settings.get_settings",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\config\\test_settings.py",
+        "line_number": 71,
+        "call_expr": "get_settings()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.config.test_settings.TestSettings.test_test_database_override",
+        "callee": "src.infrastructure.config.settings.Settings",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\config\\test_settings.py",
+        "line_number": 86,
+        "call_expr": "Settings()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.config.test_settings.TestTaskiqSettings.test_taskiq_required_settings_exist",
+        "callee": "src.infrastructure.config.settings.get_settings",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\config\\test_settings.py",
+        "line_number": 210,
+        "call_expr": "get_settings()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.database.test_session.TestDatabaseSession.test_async_session",
+        "callee": "src.infrastructure.database.session.async_session",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\database\\test_session.py",
+        "line_number": 17,
+        "call_expr": "async_session()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.logging.test_correlation_id.test_generate_correlation_id",
+        "callee": "src.infrastructure.logging.config.generate_correlation_id",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\logging\\test_correlation_id.py",
+        "line_number": 68,
+        "call_expr": "generate_correlation_id()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_filter_request_state",
+        "callee": "src.infrastructure.logging.config.set_correlation_id",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\logging\\test_correlation_id.py",
+        "line_number": 208,
+        "call_expr": "set_correlation_id(test_id)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_filter_request_state",
+        "callee": "src.infrastructure.logging.config.CorrelationIdFilter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\logging\\test_correlation_id.py",
+        "line_number": 198,
+        "call_expr": "CorrelationIdFilter()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_filter_error_handling",
+        "callee": "src.infrastructure.logging.config.CorrelationIdFilter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\logging\\test_correlation_id.py",
+        "line_number": 224,
+        "call_expr": "CorrelationIdFilter()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.logging.test_correlation_id.test_add_correlation_id_filter",
+        "callee": "src.infrastructure.logging.config.add_correlation_id_filter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\logging\\test_correlation_id.py",
+        "line_number": 256,
+        "call_expr": "add_correlation_id_filter()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_filter_performance",
+        "callee": "src.infrastructure.logging.config.set_correlation_id",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\logging\\test_correlation_id.py",
+        "line_number": 328,
+        "call_expr": "set_correlation_id('performance-test-id')"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_filter_performance",
+        "callee": "src.infrastructure.logging.config.CorrelationIdFilter",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\logging\\test_correlation_id.py",
+        "line_number": 320,
+        "call_expr": "CorrelationIdFilter()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.rate_limit.test_fail_open_provider.test_increment_and_check_with_fail_open_override",
+        "callee": "src.infrastructure.rate_limit.provider.increment_and_check",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_fail_open_provider.py",
+        "line_number": 82,
+        "call_expr": "increment_and_check(key='test:key', limit=5, period=60, backend_name='test', fail_open=True)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.rate_limit.test_fail_open_provider.test_increment_and_check_with_fail_closed_override",
+        "callee": "src.infrastructure.rate_limit.provider.increment_and_check",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_fail_open_provider.py",
+        "line_number": 99,
+        "call_expr": "increment_and_check(key='test:key', limit=5, period=60, backend_name='test', fail_open=False)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_non_production_environment_skips_validation",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 72,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_secure_production_config_passes",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 80,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_insecure_secret_key_raises_error",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 103,
+        "call_expr": "pytest.raises(ProductionSecurityError)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_insecure_secret_key_raises_error",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 101,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_admin_disabled_does_not_check_credentials",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 112,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_default_database_password_raises_error",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 122,
+        "call_expr": "pytest.raises(ProductionSecurityError)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_default_database_password_raises_error",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 120,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_empty_database_password_raises_error",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 133,
+        "call_expr": "pytest.raises(ProductionSecurityError)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_empty_database_password_raises_error",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 131,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_multiple_critical_errors_combined",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 143,
+        "call_expr": "pytest.raises(ProductionSecurityError)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_multiple_critical_errors_combined",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 141,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_redis_without_password_logs_warning",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 153,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_shared_redis_instance_logs_warning",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 178,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_permissive_cors_logs_warning",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 190,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_debug_enabled_logs_warning",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 202,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_docs_enabled_logs_warning",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 214,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_insecure_session_config_logs_warning",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 230,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_weak_admin_credentials_logs_warning",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 248,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_convenience_function",
+        "callee": "src.infrastructure.security.production_validator.validate_production_security",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 266,
+        "call_expr": "validate_production_security(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_convenience_function",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 265,
+        "call_expr": "pytest.raises(ProductionSecurityError)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_no_admin_credentials_skips_admin_checks",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 271,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_redis_ssl_with_external_host",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 286,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_localhost_redis_no_ssl_warning",
+        "callee": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "line_number": 298,
+        "call_expr": "ProductionSecurityValidator(settings)"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.rate_limit.backends.test_memcached.test_init_error",
+        "callee": "src.infrastructure.rate_limit.backends.memcached.MemcachedBackend",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\backends\\test_memcached.py",
+        "line_number": 39,
+        "call_expr": "MemcachedBackend(settings=MemcachedSettings())"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.rate_limit.backends.test_memcached.test_init_error",
+        "callee": "src.infrastructure.rate_limit.backends.memcached.MemcachedSettings",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\backends\\test_memcached.py",
+        "line_number": 39,
+        "call_expr": "MemcachedSettings()"
+      },
+      {
+        "caller": "backend.tests.unit.infrastructure.rate_limit.backends.test_memcached.test_init_error",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\backends\\test_memcached.py",
+        "line_number": 38,
+        "call_expr": "pytest.raises(RateLimiterBackendException)"
+      },
+      {
+        "caller": "backend.src.modules.api_keys.routes.create_api_key",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+        "line_number": 67,
+        "call_expr": "HTTPException(status_code=500, detail='Internal server error')"
+      },
+      {
+        "caller": "backend.src.modules.api_keys.routes.get_user_api_keys",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+        "line_number": 117,
+        "call_expr": "HTTPException(status_code=500, detail='Internal server error')"
+      },
+      {
+        "caller": "backend.src.modules.api_keys.routes.get_user_api_keys",
+        "callee": "fastcrud.paginated_response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+        "line_number": 108,
+        "call_expr": "paginated_response(crud_data=result, page=page, items_per_page=items_per_page)"
+      },
+      {
+        "caller": "backend.src.modules.api_keys.routes.get_user_api_keys",
+        "callee": "fastcrud.compute_offset",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+        "line_number": 104,
+        "call_expr": "compute_offset(page, items_per_page)"
+      },
+      {
+        "caller": "backend.src.modules.api_keys.routes.get_api_key",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+        "line_number": 160,
+        "call_expr": "HTTPException(status_code=500, detail='Internal server error')"
+      },
+      {
+        "caller": "backend.src.modules.api_keys.routes.update_api_key",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+        "line_number": 206,
+        "call_expr": "HTTPException(status_code=500, detail='Internal server error')"
+      },
+      {
+        "caller": "backend.src.modules.api_keys.routes.delete_api_key",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+        "line_number": 251,
+        "call_expr": "HTTPException(status_code=500, detail='Internal server error')"
+      },
+      {
+        "caller": "backend.src.modules.api_keys.routes.get_key_usage",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+        "line_number": 307,
+        "call_expr": "HTTPException(status_code=500, detail='Internal server error')"
+      },
+      {
+        "caller": "backend.src.modules.api_keys.routes.get_key_usage",
+        "callee": "fastcrud.paginated_response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+        "line_number": 294,
+        "call_expr": "paginated_response(crud_data=result, page=page, items_per_page=items_per_page)"
+      },
+      {
+        "caller": "backend.src.modules.api_keys.routes.get_key_usage",
+        "callee": "fastcrud.compute_offset",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+        "line_number": 290,
+        "call_expr": "compute_offset(page, items_per_page)"
+      },
+      {
+        "caller": "backend.src.modules.api_keys.routes.get_key_analytics",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+        "line_number": 357,
+        "call_expr": "HTTPException(status_code=500, detail='Internal server error')"
+      },
+      {
+        "caller": "backend.src.modules.api_keys.routes.get_user_summary",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+        "line_number": 395,
+        "call_expr": "HTTPException(status_code=500, detail='Internal server error')"
+      },
+      {
+        "caller": "backend.src.modules.rate_limit.routes.get_rate_limits",
+        "callee": "fastcrud.paginated_response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\rate_limit\\routes.py",
+        "line_number": 55,
+        "call_expr": "paginated_response(crud_data=rate_limits_data, page=page, items_per_page=items_per_page)"
+      },
+      {
+        "caller": "backend.src.modules.rate_limit.routes.get_rate_limits",
+        "callee": "fastcrud.compute_offset",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\rate_limit\\routes.py",
+        "line_number": 51,
+        "call_expr": "compute_offset(page, items_per_page)"
+      },
+      {
+        "caller": "backend.src.modules.tier.routes.get_tiers",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\tier\\routes.py",
+        "line_number": 35,
+        "call_expr": "HTTPException(status_code=500, detail='An unexpected error occurred')"
+      },
+      {
+        "caller": "backend.src.modules.tier.routes.get_tiers",
+        "callee": "fastcrud.paginated_response",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\tier\\routes.py",
+        "line_number": 30,
+        "call_expr": "paginated_response(crud_data=tiers_data, page=page, items_per_page=items_per_page)"
+      },
+      {
+        "caller": "backend.src.modules.tier.routes.get_tiers",
+        "callee": "fastcrud.compute_offset",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\tier\\routes.py",
+        "line_number": 27,
+        "call_expr": "compute_offset(page, items_per_page)"
+      },
+      {
+        "caller": "backend.src.modules.tier.routes.get_tier_by_name",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\tier\\routes.py",
+        "line_number": 53,
+        "call_expr": "HTTPException(status_code=500, detail='An unexpected error occurred')"
+      },
+      {
+        "caller": "backend.src.infrastructure.auth.routes.oauth_google_login",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\infrastructure\\auth\\routes.py",
+        "line_number": 181,
+        "call_expr": "HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail='Failed to initiate Google login')"
+      },
+      {
+        "caller": "backend.src.infrastructure.auth.routes.oauth_google_login",
+        "callee": "crudauth.oauth.OAuthState",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\infrastructure\\auth\\routes.py",
+        "line_number": 171,
+        "call_expr": "OAuthState(state=auth_data['state'], provider=OAuthProvider.GOOGLE.value, redirect_to=redirect_uri, code_verifier=auth_data.get('code_verifier'))"
+      },
+      {
+        "caller": "backend.src.infrastructure.auth.routes.oauth_google_callback",
+        "callee": "fastapi.responses.RedirectResponse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\infrastructure\\auth\\routes.py",
+        "line_number": 290,
+        "call_expr": "RedirectResponse(url=f'/login?error=oauth_error&provider={OAuthProvider.GOOGLE.value}', status_code=status.HTTP_302_FOUND)"
+      },
+      {
+        "caller": "backend.src.infrastructure.auth.routes.oauth_google_callback",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\infrastructure\\auth\\routes.py",
+        "line_number": 286,
+        "call_expr": "HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=f'OAuth authentication failed: {str(e)}')"
+      }
+    ],
+    "jarvis_usage_index_before_filter": [
+      "<builtin>.Exception",
+      "<builtin>.FileNotFoundError",
+      "<builtin>.NotImplementedError",
+      "<builtin>.RuntimeError",
+      "<builtin>.all",
+      "<builtin>.any",
+      "<builtin>.dict",
+      "<builtin>.enumerate",
+      "<builtin>.getattr",
+      "<builtin>.hasattr",
+      "<builtin>.isinstance",
+      "<builtin>.issubclass",
+      "<builtin>.len",
+      "<builtin>.range",
+      "<builtin>.set",
+      "<builtin>.setattr",
+      "<builtin>.str",
+      "<builtin>.super",
+      "<builtin>.type",
+      "<map>.items",
+      "<map>.update",
+      "<map>.values",
+      "<str>.capitalize",
+      "append",
+      "crudauth.oauth.OAuthState",
+      "fastapi.FastAPI",
+      "fastapi.HTTPException",
+      "fastapi.responses.RedirectResponse",
+      "fastcrud.compute_offset",
+      "fastcrud.paginated_response",
+      "httpx.ASGITransport",
+      "httpx.AsyncClient",
+      "infrastructure.config.settings.get_settings",
+      "jinja2.Environment",
+      "jinja2.FileSystemLoader",
+      "pytest.fail",
+      "pytest.raises",
+      "scripts.create_first_superuser.create_first_superuser",
+      "scripts.create_first_tier.create_first_tier",
+      "sqlalchemy.select",
+      "sqlalchemy.update",
+      "src.infrastructure.config.settings.Settings",
+      "src.infrastructure.config.settings.get_settings",
+      "src.infrastructure.database.session.async_session",
+      "src.infrastructure.database.session.create_tables",
+      "src.infrastructure.database.session.local_session",
+      "src.infrastructure.logging.config.CorrelationIdFilter",
+      "src.infrastructure.logging.config.add_correlation_id_filter",
+      "src.infrastructure.logging.config.generate_correlation_id",
+      "src.infrastructure.logging.config.set_correlation_id",
+      "src.infrastructure.rate_limit.backends.memcached.MemcachedBackend",
+      "src.infrastructure.rate_limit.backends.memcached.MemcachedSettings",
+      "src.infrastructure.rate_limit.provider.increment_and_check",
+      "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+      "src.infrastructure.security.production_validator.validate_production_security",
+      "src.modules.api_keys.schemas.APIKeyCreate",
+      "src.modules.api_keys.schemas.KeyUsageCreate",
+      "src.modules.common.utils.error_handler._generate_support_id",
+      "src.modules.common.utils.error_handler.register_exception_handlers",
+      "src.modules.tier.models.Tier",
+      "src.modules.user.models.User",
+      "src.modules.user.schemas.UserCreate",
+      "src.modules.user.service.UserService",
+      "typer.Exit",
+      "typer.confirm",
+      "typer.echo",
+      "typer.secho"
+    ],
+    "jarvis_usage_index_after_filter": [
+      "crudauth.oauth.OAuthState",
+      "fastapi.FastAPI",
+      "fastapi.HTTPException",
+      "fastapi.responses.RedirectResponse",
+      "fastcrud.compute_offset",
+      "fastcrud.paginated_response",
+      "httpx.ASGITransport",
+      "httpx.AsyncClient",
+      "infrastructure.config.settings.get_settings",
+      "jinja2.Environment",
+      "jinja2.FileSystemLoader",
+      "pytest.fail",
+      "pytest.raises",
+      "scripts.create_first_superuser.create_first_superuser",
+      "scripts.create_first_tier.create_first_tier",
+      "sqlalchemy.select",
+      "sqlalchemy.update",
+      "src.infrastructure.config.settings.Settings",
+      "src.infrastructure.config.settings.get_settings",
+      "src.infrastructure.database.session.async_session",
+      "src.infrastructure.database.session.create_tables",
+      "src.infrastructure.database.session.local_session",
+      "src.infrastructure.logging.config.CorrelationIdFilter",
+      "src.infrastructure.logging.config.add_correlation_id_filter",
+      "src.infrastructure.logging.config.generate_correlation_id",
+      "src.infrastructure.logging.config.set_correlation_id",
+      "src.infrastructure.rate_limit.backends.memcached.MemcachedBackend",
+      "src.infrastructure.rate_limit.backends.memcached.MemcachedSettings",
+      "src.infrastructure.rate_limit.provider.increment_and_check",
+      "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+      "src.infrastructure.security.production_validator.validate_production_security",
+      "src.modules.api_keys.schemas.APIKeyCreate",
+      "src.modules.api_keys.schemas.KeyUsageCreate",
+      "src.modules.common.utils.error_handler._generate_support_id",
+      "src.modules.common.utils.error_handler.register_exception_handlers",
+      "src.modules.tier.models.Tier",
+      "src.modules.user.models.User",
+      "src.modules.user.schemas.UserCreate",
+      "src.modules.user.service.UserService",
+      "typer.Exit",
+      "typer.confirm",
+      "typer.echo",
+      "typer.secho"
+    ],
+    "jarvis_usage_augmentation_warnings": [],
+    "analysis_mode": "jarvis",
+    "project_mode": "jarvis_EA_entrypoints",
+    "entry_points": [
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_first_superuser.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_first_tier.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_tables.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\setup_initial_data.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\infrastructure\\app_factory.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\infrastructure\\auth\\routes.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\interfaces\\main.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\rate_limit\\routes.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\tier\\routes.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\user\\routes.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\conftest.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\api\\v1\\users\\test_create.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\api\\v1\\users\\test_delete.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\api\\v1\\users\\test_read.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\api\\v1\\users\\test_update.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\auth\\test_endpoints.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\auth\\test_dependencies.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\backends\\test_memcached.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\backends\\test_redis.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\test_decorator.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\test_integration.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\test_provider.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\test_utils.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\config\\test_settings.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\database\\test_session.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\logging\\test_correlation_id.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\backends\\test_fail_open.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\backends\\test_memcached.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\backends\\test_redis.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_fail_open_middleware.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_fail_open_provider.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_middleware.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_provider.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\api_keys\\test_service.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\common\\test_error_handler.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\user\\test_models.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\app.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\commands\\deploy.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\commands\\env.py"
+    ],
+    "jarvis_mode": "EA",
+    "jarvis_scope": "entrypoints",
+    "jarvis_scope_meta": {
+      "scope": "entrypoints",
+      "entrypoint_count": 289,
+      "entrypoint_names": [
+        "backend.scripts.create_first_superuser.main",
+        "backend.scripts.create_first_tier.main",
+        "backend.scripts.create_tables.main",
+        "backend.scripts.setup_initial_data.setup_initial_data",
+        "backend.src.infrastructure.app_factory.get_redoc_documentation",
+        "backend.src.infrastructure.app_factory.get_swagger_documentation",
+        "backend.src.infrastructure.app_factory.openapi",
+        "backend.src.infrastructure.auth.routes.check_auth",
+        "backend.src.infrastructure.auth.routes.login",
+        "backend.src.infrastructure.auth.routes.logout",
+        "backend.src.infrastructure.auth.routes.oauth_google_callback",
+        "backend.src.infrastructure.auth.routes.oauth_google_login",
+        "backend.src.infrastructure.auth.routes.refresh_csrf_token",
+        "backend.src.interfaces.main.health_check",
+        "backend.src.modules.api_keys.routes.create_api_key",
+        "backend.src.modules.api_keys.routes.delete_api_key",
+        "backend.src.modules.api_keys.routes.get_api_key",
+        "backend.src.modules.api_keys.routes.get_key_analytics",
+        "backend.src.modules.api_keys.routes.get_key_usage",
+        "backend.src.modules.api_keys.routes.get_user_api_keys",
+        "backend.src.modules.api_keys.routes.get_user_summary",
+        "backend.src.modules.api_keys.routes.update_api_key",
+        "backend.src.modules.rate_limit.routes.delete_rate_limit",
+        "backend.src.modules.rate_limit.routes.get_rate_limit",
+        "backend.src.modules.rate_limit.routes.get_rate_limits",
+        "backend.src.modules.rate_limit.routes.update_rate_limit",
+        "backend.src.modules.tier.routes.get_tier_by_name",
+        "backend.src.modules.tier.routes.get_tiers",
+        "backend.src.modules.user.routes.create_user",
+        "backend.src.modules.user.routes.delete_user_account",
+        "backend.src.modules.user.routes.gdpr_delete_user",
+        "backend.src.modules.user.routes.get_active_and_inactive_user_by_username",
+        "backend.src.modules.user.routes.get_current_user_profile",
+        "backend.src.modules.user.routes.get_user_by_username",
+        "backend.src.modules.user.routes.get_user_rate_limits",
+        "backend.src.modules.user.routes.get_user_tier",
+        "backend.src.modules.user.routes.get_users",
+        "backend.src.modules.user.routes.update_user_profile",
+        "backend.src.modules.user.routes.update_user_tier",
+        "backend.tests.conftest.test_db",
+        "backend.tests.conftest.test_db_engine",
+        "backend.tests.conftest.test_db_url",
+        "backend.tests.conftest.test_superuser",
+        "backend.tests.conftest.test_tier",
+        "backend.tests.conftest.test_user",
+        "backend.tests.conftest.test_user_2",
+        "backend.tests.integration.api.v1.users.test_create.test_create_superuser",
+        "backend.tests.integration.api.v1.users.test_create.test_create_user_duplicate_email",
+        "backend.tests.integration.api.v1.users.test_create.test_create_user_duplicate_username",
+        "backend.tests.integration.api.v1.users.test_create.test_create_user_invalid_email",
+        "backend.tests.integration.api.v1.users.test_create.test_create_user_success",
+        "backend.tests.integration.api.v1.users.test_delete.test_delete_cascade_effects",
+        "backend.tests.integration.api.v1.users.test_delete.test_permanent_delete_inactive_user",
+        "backend.tests.integration.api.v1.users.test_delete.test_permanent_delete_nonexistent_user",
+        "backend.tests.integration.api.v1.users.test_delete.test_permanent_delete_success",
+        "backend.tests.integration.api.v1.users.test_delete.test_permanent_delete_unauthorized",
+        "backend.tests.integration.api.v1.users.test_delete.test_soft_delete_nonexistent_user",
+        "backend.tests.integration.api.v1.users.test_delete.test_soft_delete_success",
+        "backend.tests.integration.api.v1.users.test_delete.test_soft_delete_unauthorized",
+        "backend.tests.integration.api.v1.users.test_delete.test_soft_delete_wrong_user",
+        "backend.tests.integration.api.v1.users.test_read.test_get_current_user_profile",
+        "backend.tests.integration.api.v1.users.test_read.test_get_user_by_username_not_found",
+        "backend.tests.integration.api.v1.users.test_read.test_get_user_by_username_success",
+        "backend.tests.integration.api.v1.users.test_read.test_get_user_rate_limits",
+        "backend.tests.integration.api.v1.users.test_read.test_get_user_tier_info",
+        "backend.tests.integration.api.v1.users.test_read.test_get_users_pagination",
+        "backend.tests.integration.api.v1.users.test_read.test_get_users_superuser_success",
+        "backend.tests.integration.api.v1.users.test_read.test_get_users_unauthorized",
+        "backend.tests.integration.api.v1.users.test_update.test_update_user_profile_duplicate_email",
+        "backend.tests.integration.api.v1.users.test_update.test_update_user_profile_duplicate_username",
+        "backend.tests.integration.api.v1.users.test_update.test_update_user_profile_invalid_email",
+        "backend.tests.integration.api.v1.users.test_update.test_update_user_profile_success",
+        "backend.tests.integration.api.v1.users.test_update.test_update_user_profile_unauthorized",
+        "backend.tests.integration.api.v1.users.test_update.test_update_user_profile_wrong_user",
+        "backend.tests.integration.api.v1.users.test_update.test_update_user_tier_regular_user",
+        "backend.tests.integration.api.v1.users.test_update.test_update_user_tier_superuser",
+        "backend.tests.integration.auth.test_endpoints.test_check_auth_authenticated",
+        "backend.tests.integration.auth.test_endpoints.test_check_auth_no_session_cookie_returns_unauthenticated",
+        "backend.tests.integration.auth.test_endpoints.test_check_auth_not_authenticated",
+        "backend.tests.integration.auth.test_endpoints.test_check_auth_user_not_found",
+        "backend.tests.integration.auth.test_endpoints.test_login_soft_deleted_user_rejected",
+        "backend.tests.integration.auth.test_endpoints.test_login_success",
+        "backend.tests.integration.auth.test_endpoints.test_login_then_logout",
+        "backend.tests.integration.auth.test_endpoints.test_login_wrong_password",
+        "backend.tests.integration.auth.test_endpoints.test_logout_unauthenticated_returns_401",
+        "backend.tests.integration.auth.test_endpoints.test_logout_without_csrf_token_rejected",
+        "backend.tests.integration.auth.test_endpoints.test_oauth_callback_invalid_state",
+        "backend.tests.integration.auth.test_endpoints.test_oauth_callback_provider_mismatch",
+        "backend.tests.integration.auth.test_endpoints.test_oauth_callback_success_creates_user",
+        "backend.tests.integration.auth.test_endpoints.test_oauth_google_login",
+        "backend.tests.integration.auth.test_endpoints.test_oauth_google_login_provider_failure_returns_500",
+        "backend.tests.integration.auth.test_endpoints.test_refresh_csrf_token_no_session_returns_401",
+        "backend.tests.integration.auth.test_endpoints.test_refresh_csrf_token_success",
+        "backend.tests.unit.infrastructure.auth.test_dependencies.test_get_current_superuser_allows_superuser",
+        "backend.tests.unit.infrastructure.auth.test_dependencies.test_get_current_superuser_denies_non_superuser",
+        "backend.tests.unit.infrastructure.auth.test_dependencies.test_get_current_user_missing_row_raises",
+        "backend.tests.unit.infrastructure.auth.test_dependencies.test_get_current_user_no_principal_raises",
+        "backend.tests.unit.infrastructure.auth.test_dependencies.test_get_current_user_returns_dict_and_filters_soft_deleted",
+        "backend.tests.unit.infrastructure.auth.test_dependencies.test_get_optional_user_none_principal_returns_none",
+        "backend.tests.unit.infrastructure.auth.test_dependencies.test_get_optional_user_returns_dict",
+        "backend.tests.unit.infrastructure.cache.backends.test_memcached.test_delete_key",
+        "backend.tests.unit.infrastructure.cache.backends.test_memcached.test_delete_pattern_raises_error",
+        "backend.tests.unit.infrastructure.cache.backends.test_memcached.test_get_existing_key",
+        "backend.tests.unit.infrastructure.cache.backends.test_memcached.test_get_nonexistent_key",
+        "backend.tests.unit.infrastructure.cache.backends.test_memcached.test_set_key",
+        "backend.tests.unit.infrastructure.cache.backends.test_redis.test_delete_key",
+        "backend.tests.unit.infrastructure.cache.backends.test_redis.test_delete_pattern",
+        "backend.tests.unit.infrastructure.cache.backends.test_redis.test_delete_pattern_pages_cursor",
+        "backend.tests.unit.infrastructure.cache.backends.test_redis.test_get_existing_key",
+        "backend.tests.unit.infrastructure.cache.backends.test_redis.test_get_nonexistent_key",
+        "backend.tests.unit.infrastructure.cache.backends.test_redis.test_set_key",
+        "backend.tests.unit.infrastructure.cache.test_decorator.test_cache_extra_invalidation",
+        "backend.tests.unit.infrastructure.cache.test_decorator.test_cache_get_request_hit",
+        "backend.tests.unit.infrastructure.cache.test_decorator.test_cache_get_request_miss",
+        "backend.tests.unit.infrastructure.cache.test_decorator.test_cache_get_with_invalidation_raises_error",
+        "backend.tests.unit.infrastructure.cache.test_decorator.test_cache_non_get_request_invalidation",
+        "backend.tests.unit.infrastructure.cache.test_decorator.test_cache_pattern_invalidation",
+        "backend.tests.unit.infrastructure.cache.test_integration.get_user",
+        "backend.tests.unit.infrastructure.cache.test_integration.test_get_with_cache_hit",
+        "backend.tests.unit.infrastructure.cache.test_integration.test_get_with_cache_miss",
+        "backend.tests.unit.infrastructure.cache.test_integration.test_post_invalidates_cache",
+        "backend.tests.unit.infrastructure.cache.test_integration.test_put_with_extra_invalidation",
+        "backend.tests.unit.infrastructure.cache.test_integration.update_org_user",
+        "backend.tests.unit.infrastructure.cache.test_integration.update_user",
+        "backend.tests.unit.infrastructure.cache.test_provider.test_get_backend_default",
+        "backend.tests.unit.infrastructure.cache.test_provider.test_get_backend_not_found",
+        "backend.tests.unit.infrastructure.cache.test_provider.test_get_backend_specific",
+        "backend.tests.unit.infrastructure.cache.test_provider.test_register_backend",
+        "backend.tests.unit.infrastructure.cache.test_provider.test_set_default_backend",
+        "backend.tests.unit.infrastructure.cache.test_provider.test_set_default_backend_not_found",
+        "backend.tests.unit.infrastructure.cache.test_utils.test_format_extra_data_missing_key",
+        "backend.tests.unit.infrastructure.cache.test_utils.test_format_extra_data_multiple",
+        "backend.tests.unit.infrastructure.cache.test_utils.test_format_extra_data_simple",
+        "backend.tests.unit.infrastructure.cache.test_utils.test_format_prefix_simple",
+        "backend.tests.unit.infrastructure.cache.test_utils.test_format_prefix_with_multiple_variables",
+        "backend.tests.unit.infrastructure.cache.test_utils.test_format_prefix_with_variables",
+        "backend.tests.unit.infrastructure.cache.test_utils.test_infer_resource_id_integer",
+        "backend.tests.unit.infrastructure.cache.test_utils.test_infer_resource_id_multiple_types",
+        "backend.tests.unit.infrastructure.cache.test_utils.test_infer_resource_id_no_match",
+        "backend.tests.unit.infrastructure.cache.test_utils.test_infer_resource_id_string",
+        "backend.tests.unit.infrastructure.config.test_settings.TestSettings.test_database_url_env_var_override",
+        "backend.tests.unit.infrastructure.config.test_settings.TestSettings.test_database_url_fallback_to_constructed",
+        "backend.tests.unit.infrastructure.config.test_settings.TestSettings.test_database_url_format",
+        "backend.tests.unit.infrastructure.config.test_settings.TestSettings.test_debug_mode_setting",
+        "backend.tests.unit.infrastructure.config.test_settings.TestSettings.test_get_settings_singleton",
+        "backend.tests.unit.infrastructure.config.test_settings.TestSettings.test_required_settings_exist",
+        "backend.tests.unit.infrastructure.config.test_settings.TestSettings.test_settings_creation",
+        "backend.tests.unit.infrastructure.config.test_settings.TestSettings.test_settings_from_env",
+        "backend.tests.unit.infrastructure.config.test_settings.TestSettings.test_test_database_override",
+        "backend.tests.unit.infrastructure.config.test_settings.TestTaskiqSettings.test_taskiq_invalid_broker_type_raises_error",
+        "backend.tests.unit.infrastructure.config.test_settings.TestTaskiqSettings.test_taskiq_rabbitmq_broker_url_generation",
+        "backend.tests.unit.infrastructure.config.test_settings.TestTaskiqSettings.test_taskiq_rabbitmq_settings_from_env",
+        "backend.tests.unit.infrastructure.config.test_settings.TestTaskiqSettings.test_taskiq_redis_broker_url_generation",
+        "backend.tests.unit.infrastructure.config.test_settings.TestTaskiqSettings.test_taskiq_redis_broker_url_with_password",
+        "backend.tests.unit.infrastructure.config.test_settings.TestTaskiqSettings.test_taskiq_required_settings_exist",
+        "backend.tests.unit.infrastructure.config.test_settings.TestTaskiqSettings.test_taskiq_settings_defaults",
+        "backend.tests.unit.infrastructure.config.test_settings.TestTaskiqSettings.test_taskiq_settings_from_env",
+        "backend.tests.unit.infrastructure.database.test_session.TestDatabaseSession.test_async_session",
+        "backend.tests.unit.infrastructure.database.test_session.TestDatabaseSession.test_session_commit",
+        "backend.tests.unit.infrastructure.database.test_session.TestDatabaseSession.test_session_rollback",
+        "backend.tests.unit.infrastructure.database.test_session.TestDatabaseSession.test_session_transaction",
+        "backend.tests.unit.infrastructure.logging.test_correlation_id.test_add_correlation_id_filter",
+        "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_context_management",
+        "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_filter_error_handling",
+        "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_filter_no_context",
+        "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_filter_performance",
+        "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_filter_request_headers",
+        "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_filter_request_id_header",
+        "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_filter_request_state",
+        "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_filter_thread_local",
+        "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_filter_with_context",
+        "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_inheritance",
+        "backend.tests.unit.infrastructure.logging.test_correlation_id.test_correlation_id_multiple_contexts",
+        "backend.tests.unit.infrastructure.logging.test_correlation_id.test_generate_correlation_id",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_fail_open.test_memcached_error_fail_closed",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_fail_open.test_memcached_error_fail_open",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_fail_open.test_redis_error_handling_fail_closed",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_fail_open.test_redis_error_handling_fail_open",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_fail_open.test_redis_general_error_fail_closed",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_fail_open.test_redis_general_error_fail_open",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_memcached.test_get_count",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_memcached.test_increment_and_check_existing_key",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_memcached.test_increment_and_check_new_key",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_memcached.test_increment_error_handling",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_memcached.test_init_error",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_memcached.test_ping_failure",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_memcached.test_ping_success",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_memcached.test_rate_limited",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_memcached.test_reset",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_redis.test_get_count",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_redis.test_increment_and_check_existing_key",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_redis.test_increment_and_check_new_key",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_redis.test_ping_failure",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_redis.test_ping_success",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_redis.test_rate_limited",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_redis.test_redis_error_handling",
+        "backend.tests.unit.infrastructure.rate_limit.backends.test_redis.test_reset",
+        "backend.tests.unit.infrastructure.rate_limit.test_fail_open_middleware.test_middleware_fail_closed_behavior",
+        "backend.tests.unit.infrastructure.rate_limit.test_fail_open_middleware.test_middleware_fail_open_behavior",
+        "backend.tests.unit.infrastructure.rate_limit.test_fail_open_middleware.test_middleware_respects_rate_limit_exception",
+        "backend.tests.unit.infrastructure.rate_limit.test_fail_open_middleware.test_middleware_sets_correct_headers",
+        "backend.tests.unit.infrastructure.rate_limit.test_fail_open_provider.test_increment_and_check_with_fail_closed_override",
+        "backend.tests.unit.infrastructure.rate_limit.test_fail_open_provider.test_increment_and_check_with_fail_open_override",
+        "backend.tests.unit.infrastructure.rate_limit.test_fail_open_provider.test_provider_no_override_needed",
+        "backend.tests.unit.infrastructure.rate_limit.test_fail_open_provider.test_provider_temp_override_behavior",
+        "backend.tests.unit.infrastructure.rate_limit.test_middleware.test_check_rate_limit_disabled",
+        "backend.tests.unit.infrastructure.rate_limit.test_middleware.test_check_rate_limit_exceeded",
+        "backend.tests.unit.infrastructure.rate_limit.test_middleware.test_check_rate_limit_no_specific_limits",
+        "backend.tests.unit.infrastructure.rate_limit.test_middleware.test_check_rate_limit_no_user",
+        "backend.tests.unit.infrastructure.rate_limit.test_middleware.test_check_rate_limit_with_user",
+        "backend.tests.unit.infrastructure.rate_limit.test_middleware.test_rate_limiter_middleware",
+        "backend.tests.unit.infrastructure.rate_limit.test_middleware.test_rate_limiter_middleware_no_headers",
+        "backend.tests.unit.infrastructure.rate_limit.test_provider.test_get_backend_not_found",
+        "backend.tests.unit.infrastructure.rate_limit.test_provider.test_get_count_convenience",
+        "backend.tests.unit.infrastructure.rate_limit.test_provider.test_increment_and_check_convenience",
+        "backend.tests.unit.infrastructure.rate_limit.test_provider.test_list_backends",
+        "backend.tests.unit.infrastructure.rate_limit.test_provider.test_ping_all",
+        "backend.tests.unit.infrastructure.rate_limit.test_provider.test_register_backend",
+        "backend.tests.unit.infrastructure.rate_limit.test_provider.test_register_multiple_backends",
+        "backend.tests.unit.infrastructure.rate_limit.test_provider.test_reset_convenience",
+        "backend.tests.unit.infrastructure.rate_limit.test_provider.test_set_default_backend",
+        "backend.tests.unit.infrastructure.rate_limit.test_provider.test_set_default_backend_not_found",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_admin_disabled_does_not_check_credentials",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_convenience_function",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_debug_enabled_logs_warning",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_default_database_password_raises_error",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_docs_enabled_logs_warning",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_empty_database_password_raises_error",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_insecure_secret_key_raises_error",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_insecure_session_config_logs_warning",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_localhost_redis_no_ssl_warning",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_multiple_critical_errors_combined",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_no_admin_credentials_skips_admin_checks",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_non_production_environment_skips_validation",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_permissive_cors_logs_warning",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_redis_ssl_with_external_host",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_redis_without_password_logs_warning",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_secure_production_config_passes",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_shared_redis_instance_logs_warning",
+        "backend.tests.unit.infrastructure.security.test_production_validator.TestProductionSecurityValidator.test_weak_admin_credentials_logs_warning",
+        "backend.tests.unit.infrastructure.test_middleware.api_route",
+        "backend.tests.unit.infrastructure.test_middleware.static_route",
+        "backend.tests.unit.infrastructure.test_middleware.test_api_paths_get_no_cache",
+        "backend.tests.unit.infrastructure.test_middleware.test_hsts_set_in_production",
+        "backend.tests.unit.infrastructure.test_middleware.test_hsts_set_in_staging",
+        "backend.tests.unit.infrastructure.test_middleware.test_security_headers_present_in_dev",
+        "backend.tests.unit.infrastructure.test_middleware.test_static_paths_get_public_cache",
+        "backend.tests.unit.modules.api_keys.test_service.test_api_key",
+        "backend.tests.unit.modules.api_keys.test_service.test_api_key_generation_unique",
+        "backend.tests.unit.modules.api_keys.test_service.test_api_key_hash_roundtrip",
+        "backend.tests.unit.modules.api_keys.test_service.test_create_api_key",
+        "backend.tests.unit.modules.api_keys.test_service.test_delete_api_key",
+        "backend.tests.unit.modules.api_keys.test_service.test_get_api_key_not_found",
+        "backend.tests.unit.modules.api_keys.test_service.test_get_api_key_permission_denied",
+        "backend.tests.unit.modules.api_keys.test_service.test_get_api_key_success",
+        "backend.tests.unit.modules.api_keys.test_service.test_get_key_usage",
+        "backend.tests.unit.modules.api_keys.test_service.test_get_usage_analytics",
+        "backend.tests.unit.modules.api_keys.test_service.test_get_user_api_keys",
+        "backend.tests.unit.modules.api_keys.test_service.test_get_user_api_keys_active_only",
+        "backend.tests.unit.modules.api_keys.test_service.test_get_user_summary",
+        "backend.tests.unit.modules.api_keys.test_service.test_record_usage",
+        "backend.tests.unit.modules.api_keys.test_service.test_update_api_key",
+        "backend.tests.unit.modules.api_keys.test_service.test_usage_pagination",
+        "backend.tests.unit.modules.api_keys.test_service.test_validate_api_key_expired",
+        "backend.tests.unit.modules.api_keys.test_service.test_validate_api_key_inactive",
+        "backend.tests.unit.modules.api_keys.test_service.test_validate_api_key_invalid",
+        "backend.tests.unit.modules.api_keys.test_service.test_validate_api_key_no_permission",
+        "backend.tests.unit.modules.api_keys.test_service.test_validate_api_key_success",
+        "backend.tests.unit.modules.api_keys.test_service.test_validate_api_key_with_underscore_in_prefix",
+        "backend.tests.unit.modules.api_keys.test_service.test_wildcard_permissions",
+        "backend.tests.unit.modules.common.test_error_handler.raise_credits",
+        "backend.tests.unit.modules.common.test_error_handler.raise_not_found",
+        "backend.tests.unit.modules.common.test_error_handler.raise_unhandled",
+        "backend.tests.unit.modules.common.test_error_handler.raise_validation",
+        "backend.tests.unit.modules.common.test_error_handler.test_app",
+        "backend.tests.unit.modules.common.test_error_handler.test_domain_error_returns_generic_message",
+        "backend.tests.unit.modules.common.test_error_handler.test_generate_support_id_length",
+        "backend.tests.unit.modules.common.test_error_handler.test_generate_support_id_unique",
+        "backend.tests.unit.modules.common.test_error_handler.test_handle_exception_returns_generic_for_domain_errors",
+        "backend.tests.unit.modules.common.test_error_handler.test_insufficient_credits_preserves_message",
+        "backend.tests.unit.modules.common.test_error_handler.test_map_exception_insufficient_credits_preserves_detail",
+        "backend.tests.unit.modules.common.test_error_handler.test_map_exception_not_found_uses_generic_detail",
+        "backend.tests.unit.modules.common.test_error_handler.test_unhandled_error_returns_generic_500",
+        "backend.tests.unit.modules.user.test_models.test_is_active_false_when_soft_deleted",
+        "backend.tests.unit.modules.user.test_models.test_is_active_true_when_not_deleted",
+        "cli.src.cli.app._root",
+        "cli.src.cli.commands.deploy.generate",
+        "cli.src.cli.commands.env.gen_secret",
+        "cli.src.cli.commands.env.validate"
+      ],
+      "entrypoint_files": [
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_first_superuser.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_first_tier.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\create_tables.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\scripts\\setup_initial_data.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\infrastructure\\app_factory.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\infrastructure\\auth\\routes.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\interfaces\\main.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\api_keys\\routes.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\rate_limit\\routes.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\tier\\routes.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\src\\modules\\user\\routes.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\conftest.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\api\\v1\\users\\test_create.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\api\\v1\\users\\test_delete.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\api\\v1\\users\\test_read.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\api\\v1\\users\\test_update.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\integration\\auth\\test_endpoints.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\auth\\test_dependencies.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\backends\\test_memcached.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\backends\\test_redis.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\test_decorator.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\test_integration.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\test_provider.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\cache\\test_utils.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\config\\test_settings.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\database\\test_session.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\logging\\test_correlation_id.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\backends\\test_fail_open.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\backends\\test_memcached.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\backends\\test_redis.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_fail_open_middleware.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_fail_open_provider.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_middleware.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\rate_limit\\test_provider.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\security\\test_production_validator.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\infrastructure\\test_middleware.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\api_keys\\test_service.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\common\\test_error_handler.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\backend\\tests\\unit\\modules\\user\\test_models.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\app.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\commands\\deploy.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate\\cli\\src\\cli\\commands\\env.py"
+      ],
+      "fallback": false
+    },
+    "jarvis": {
+      "runner": "docker",
+      "mode": "EA",
+      "precision": true,
+      "jarvis_root": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.tools\\pythonJaRvis\\Jarvis",
+      "timeout_s": 300,
+      "module_count": 42,
+      "pip_install": "",
+      "stdout": "tAPI-boilerplate/backend/tests/integration/auth/test_endpoints.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/auth/test_dependencies.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/cache/backends/test_memcached.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/cache/backends/test_redis.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/cache/test_decorator.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/cache/test_integration.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/cache/test_provider.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/cache/test_utils.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/config/test_settings.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/database/test_session.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/logging/test_correlation_id.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/rate_limit/backends/test_fail_open.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/rate_limit/backends/test_memcached.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/rate_limit/backends/test_redis.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/rate_limit/test_fail_open_middleware.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/rate_limit/test_fail_open_provider.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/rate_limit/test_middleware.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/rate_limit/test_provider.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/security/test_production_validator.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/infrastructure/test_middleware.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/modules/api_keys/test_service.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/modules/common/test_error_handler.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/backend/tests/unit/modules/user/test_models.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/app.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/plugins.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/features/base.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/lib/project.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/commands/deploy.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/features/installer.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/lib/prompts.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/lib/render.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/features/registry.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/__init__.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/features/_builtins/deploy/feature.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/commands/env.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/commands/deploy.py\n/workspace/data/raw/projects/benavlabs__FastAPI-boilerplate/cli/src/cli/commands/env.py\n",
+      "stderr": ""
+    },
+    "function_type_graphs": {},
+    "unresolved_calls": [],
+    "candidate_edges": [],
+    "reanalyzed_contexts": []
+  },
+  "usage_index": [
+    {
+      "identity": "crudauth.oauth.OAuthState",
+      "target_module": "crudauth.oauth",
+      "target_name": "OAuthState"
+    },
+    {
+      "identity": "fastapi.FastAPI",
+      "target_module": "fastapi",
+      "target_name": "FastAPI"
+    },
+    {
+      "identity": "fastapi.HTTPException",
+      "target_module": "fastapi",
+      "target_name": "HTTPException"
+    },
+    {
+      "identity": "fastapi.responses.RedirectResponse",
+      "target_module": "fastapi.responses",
+      "target_name": "RedirectResponse"
+    },
+    {
+      "identity": "fastcrud.compute_offset",
+      "target_module": "fastcrud",
+      "target_name": "compute_offset"
+    },
+    {
+      "identity": "fastcrud.paginated_response",
+      "target_module": "fastcrud",
+      "target_name": "paginated_response"
+    },
+    {
+      "identity": "httpx.ASGITransport",
+      "target_module": "httpx",
+      "target_name": "ASGITransport"
+    },
+    {
+      "identity": "httpx.AsyncClient",
+      "target_module": "httpx",
+      "target_name": "AsyncClient"
+    },
+    {
+      "identity": "infrastructure.config.settings.get_settings",
+      "target_module": "infrastructure.config.settings",
+      "target_name": "get_settings"
+    },
+    {
+      "identity": "jinja2.Environment",
+      "target_module": "jinja2",
+      "target_name": "Environment"
+    },
+    {
+      "identity": "jinja2.FileSystemLoader",
+      "target_module": "jinja2",
+      "target_name": "FileSystemLoader"
+    },
+    {
+      "identity": "pytest.fail",
+      "target_module": "pytest",
+      "target_name": "fail"
+    },
+    {
+      "identity": "pytest.raises",
+      "target_module": "pytest",
+      "target_name": "raises"
+    },
+    {
+      "identity": "scripts.create_first_superuser.create_first_superuser",
+      "target_module": "scripts.create_first_superuser",
+      "target_name": "create_first_superuser"
+    },
+    {
+      "identity": "scripts.create_first_tier.create_first_tier",
+      "target_module": "scripts.create_first_tier",
+      "target_name": "create_first_tier"
+    },
+    {
+      "identity": "sqlalchemy.select",
+      "target_module": "sqlalchemy",
+      "target_name": "select"
+    },
+    {
+      "identity": "sqlalchemy.update",
+      "target_module": "sqlalchemy",
+      "target_name": "update"
+    },
+    {
+      "identity": "src.infrastructure.config.settings.Settings",
+      "target_module": "src.infrastructure.config.settings",
+      "target_name": "Settings"
+    },
+    {
+      "identity": "src.infrastructure.config.settings.get_settings",
+      "target_module": "src.infrastructure.config.settings",
+      "target_name": "get_settings"
+    },
+    {
+      "identity": "src.infrastructure.database.session.async_session",
+      "target_module": "src.infrastructure.database.session",
+      "target_name": "async_session"
+    },
+    {
+      "identity": "src.infrastructure.database.session.create_tables",
+      "target_module": "src.infrastructure.database.session",
+      "target_name": "create_tables"
+    },
+    {
+      "identity": "src.infrastructure.database.session.local_session",
+      "target_module": "src.infrastructure.database.session",
+      "target_name": "local_session"
+    },
+    {
+      "identity": "src.infrastructure.logging.config.CorrelationIdFilter",
+      "target_module": "src.infrastructure.logging.config",
+      "target_name": "CorrelationIdFilter"
+    },
+    {
+      "identity": "src.infrastructure.logging.config.add_correlation_id_filter",
+      "target_module": "src.infrastructure.logging.config",
+      "target_name": "add_correlation_id_filter"
+    },
+    {
+      "identity": "src.infrastructure.logging.config.generate_correlation_id",
+      "target_module": "src.infrastructure.logging.config",
+      "target_name": "generate_correlation_id"
+    },
+    {
+      "identity": "src.infrastructure.logging.config.set_correlation_id",
+      "target_module": "src.infrastructure.logging.config",
+      "target_name": "set_correlation_id"
+    },
+    {
+      "identity": "src.infrastructure.rate_limit.backends.memcached.MemcachedBackend",
+      "target_module": "src.infrastructure.rate_limit.backends.memcached",
+      "target_name": "MemcachedBackend"
+    },
+    {
+      "identity": "src.infrastructure.rate_limit.backends.memcached.MemcachedSettings",
+      "target_module": "src.infrastructure.rate_limit.backends.memcached",
+      "target_name": "MemcachedSettings"
+    },
+    {
+      "identity": "src.infrastructure.rate_limit.provider.increment_and_check",
+      "target_module": "src.infrastructure.rate_limit.provider",
+      "target_name": "increment_and_check"
+    },
+    {
+      "identity": "src.infrastructure.security.production_validator.ProductionSecurityValidator",
+      "target_module": "src.infrastructure.security.production_validator",
+      "target_name": "ProductionSecurityValidator"
+    },
+    {
+      "identity": "src.infrastructure.security.production_validator.validate_production_security",
+      "target_module": "src.infrastructure.security.production_validator",
+      "target_name": "validate_production_security"
+    },
+    {
+      "identity": "src.modules.api_keys.schemas.APIKeyCreate",
+      "target_module": "src.modules.api_keys.schemas",
+      "target_name": "APIKeyCreate"
+    },
+    {
+      "identity": "src.modules.api_keys.schemas.KeyUsageCreate",
+      "target_module": "src.modules.api_keys.schemas",
+      "target_name": "KeyUsageCreate"
+    },
+    {
+      "identity": "src.modules.common.utils.error_handler._generate_support_id",
+      "target_module": "src.modules.common.utils.error_handler",
+      "target_name": "_generate_support_id"
+    },
+    {
+      "identity": "src.modules.common.utils.error_handler.register_exception_handlers",
+      "target_module": "src.modules.common.utils.error_handler",
+      "target_name": "register_exception_handlers"
+    },
+    {
+      "identity": "src.modules.tier.models.Tier",
+      "target_module": "src.modules.tier.models",
+      "target_name": "Tier"
+    },
+    {
+      "identity": "src.modules.user.models.User",
+      "target_module": "src.modules.user.models",
+      "target_name": "User"
+    },
+    {
+      "identity": "src.modules.user.schemas.UserCreate",
+      "target_module": "src.modules.user.schemas",
+      "target_name": "UserCreate"
+    },
+    {
+      "identity": "src.modules.user.service.UserService",
+      "target_module": "src.modules.user.service",
+      "target_name": "UserService"
+    },
+    {
+      "identity": "typer.Exit",
+      "target_module": "typer",
+      "target_name": "Exit"
+    },
+    {
+      "identity": "typer.confirm",
+      "target_module": "typer",
+      "target_name": "confirm"
+    },
+    {
+      "identity": "typer.echo",
+      "target_module": "typer",
+      "target_name": "echo"
+    },
+    {
+      "identity": "typer.secho",
+      "target_module": "typer",
+      "target_name": "secho"
+    }
+  ]
+}

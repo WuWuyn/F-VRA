@@ -1,0 +1,52 @@
+{
+  "project": {
+    "id": "sparckles__Robyn",
+    "name": "sparckles__Robyn",
+    "repo_full_name": "sparckles/Robyn",
+    "repo_url": "https://github.com/sparckles/Robyn.git",
+    "commit": "749e571b653361bbd0486e5c97bfadc7f6eb9cd0",
+    "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\sparckles__Robyn",
+    "enabled": true,
+    "environment_status": "resolved_from_lockfile_or_manifest",
+    "version_source": "lockfile_or_manifest",
+    "manifest_files": [
+      "poetry.lock",
+      "pyproject.toml",
+      "setup.py"
+    ],
+    "resolved_package_count": 27
+  },
+  "status": "success",
+  "runner": "docker",
+  "jarvis_attempts": [
+    {
+      "runner": "docker",
+      "status": "success",
+      "elapsed_s": 11.286
+    }
+  ],
+  "dependency_graph": {
+    "status": "success",
+    "dependency_count": 27,
+    "elapsed_s": 0.266
+  },
+  "artifacts": {
+    "project_graph": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\sparckles__Robyn\\project_graph_jarvis.json",
+    "usage_index": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\sparckles__Robyn\\usage_index.json",
+    "package_summary_status": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\sparckles__Robyn\\package_summary_status.json",
+    "reachability": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\sparckles__Robyn\\reachability_report.json"
+  },
+  "counts": {
+    "project_nodes": 665,
+    "project_edges": 1015,
+    "usage_index": 22,
+    "records": 9,
+    "query_targets": 12,
+    "package_summary_status": {
+      "built": 4,
+      "missing_source": 56
+    },
+    "loaded_summaries": 4
+  },
+  "elapsed_s": 22.516
+}

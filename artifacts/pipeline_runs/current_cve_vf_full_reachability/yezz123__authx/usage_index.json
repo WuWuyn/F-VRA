@@ -1,0 +1,2372 @@
+{
+  "nodes": 673,
+  "edges": 1275,
+  "internal_edges": 893,
+  "external_edges": 382,
+  "usage_index_count": 30,
+  "entry_points": [
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\basic_auth.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\dual_token_location.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\fresh_token.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\jinja2_templates.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\key_rotation.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\rate_limiting.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\refresh_token.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\scopes.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\session_management.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_blocklist.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_locations.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\websocket_auth.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_access_location.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_blocklist_token.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_fresh_token.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_get_subject.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_scopes.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_token_protected_access.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\extend\\test_authx_extend.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\internal\\test_logger.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\internal\\test_scopes.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\internal\\test_signature.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\internal\\test_utils.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_asymmetric.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_callback.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_config.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_dependencies.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_errors.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_implicit_middleware.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_key_rotation.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_policy.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_ratelimit.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_schema.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_session.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token_pair.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_websocket.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\utils.py"
+  ],
+  "metadata": {
+    "jarvis_external_usage_augmented_count": 196,
+    "jarvis_external_usage_augmented_edges": [
+      {
+        "caller": "authx.config.AuthXConfig._get_key",
+        "callee": "jwt.algorithms.get_default_algorithms",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\config.py",
+        "line_number": 115,
+        "call_expr": "get_default_algorithms()"
+      },
+      {
+        "caller": "authx.main.AuthX._openapi_header_security_scheme",
+        "callee": "fastapi.security.APIKeyHeader",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\main.py",
+        "line_number": 790,
+        "call_expr": "APIKeyHeader(name=self.config.JWT_HEADER_NAME, scheme_name='AuthXHeader', description=_OPENAPI_HEADER_DESCRIPTION, auto_error=False)"
+      },
+      {
+        "caller": "authx.main.AuthX._openapi_header_security_scheme",
+        "callee": "fastapi.security.HTTPBearer",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\main.py",
+        "line_number": 784,
+        "call_expr": "HTTPBearer(scheme_name='AuthXBearer', bearerFormat='JWT', description=_OPENAPI_BEARER_DESCRIPTION, auto_error=False)"
+      },
+      {
+        "caller": "authx.main.AuthX._openapi_cookie_security_scheme",
+        "callee": "fastapi.security.APIKeyCookie",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\main.py",
+        "line_number": 805,
+        "call_expr": "APIKeyCookie(name=self.config.JWT_ACCESS_COOKIE_NAME, scheme_name='AuthXAccessCookie', description=_OPENAPI_ACCESS_COOKIE_DESCRIPTION, auto_error=False)"
+      },
+      {
+        "caller": "authx.main.AuthX._openapi_query_security_scheme",
+        "callee": "fastapi.security.APIKeyQuery",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\main.py",
+        "line_number": 813,
+        "call_expr": "APIKeyQuery(name=self.config.JWT_QUERY_STRING_NAME, scheme_name='AuthXQuery', description=_OPENAPI_QUERY_DESCRIPTION, auto_error=False)"
+      },
+      {
+        "caller": "authx.main.AuthX.scopes_required",
+        "callee": "fastapi.Depends",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\main.py",
+        "line_number": 964,
+        "call_expr": "Depends(query_scheme)"
+      },
+      {
+        "caller": "authx.manager.AuthManager.token_required",
+        "callee": "fastapi.Depends",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\manager.py",
+        "line_number": 151,
+        "call_expr": "Depends(query_scheme)"
+      },
+      {
+        "caller": "authx.manager.AuthManager._openapi_security_dependencies",
+        "callee": "fastapi.security.HTTPBearer",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\manager.py",
+        "line_number": 182,
+        "call_expr": "HTTPBearer(scheme_name='AuthXBearer', bearerFormat='JWT', description=_OPENAPI_BEARER_DESCRIPTION, auto_error=False)"
+      },
+      {
+        "caller": "authx.token.create_token",
+        "callee": "jwt.encode",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\token.py",
+        "line_number": 108,
+        "call_expr": "jwt.encode(payload=payload, key=key, algorithm=algorithm, headers=headers)"
+      },
+      {
+        "caller": "authx.token.decode_token",
+        "callee": "jwt.decode",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\token.py",
+        "line_number": 138,
+        "call_expr": "jwt.decode(jwt=token, key=key, algorithms=algorithm, audience=audience, issuer=issuer, options={'verify_signature': verify})"
+      },
+      {
+        "caller": "tests.test_asymmetric.TestLowLevelAsymmetric.test_ec_round_trip",
+        "callee": "cryptography.hazmat.primitives.serialization.NoEncryption",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_asymmetric.py",
+        "line_number": 34,
+        "call_expr": "serialization.NoEncryption()"
+      },
+      {
+        "caller": "tests.test_asymmetric.TestLowLevelAsymmetric.test_ec_round_trip",
+        "callee": "cryptography.hazmat.primitives.asymmetric.ec.generate_private_key",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_asymmetric.py",
+        "line_number": 30,
+        "call_expr": "ec.generate_private_key(curve)"
+      },
+      {
+        "caller": "tests.test_asymmetric.TestLowLevelAsymmetric.test_ec_round_trip",
+        "callee": "cryptography.hazmat.primitives.asymmetric.ec.SECP384R1",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_asymmetric.py",
+        "line_number": 29,
+        "call_expr": "ec.SECP384R1()"
+      },
+      {
+        "caller": "tests.test_asymmetric.TestLowLevelAsymmetric.test_ec_round_trip",
+        "callee": "cryptography.hazmat.primitives.asymmetric.ec.SECP256R1",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_asymmetric.py",
+        "line_number": 29,
+        "call_expr": "ec.SECP256R1()"
+      },
+      {
+        "caller": "tests.test_asymmetric.TestLowLevelAsymmetric.test_rsa_wrong_public_key_fails",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_asymmetric.py",
+        "line_number": 54,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_asymmetric.TestLowLevelAsymmetric.test_ec_wrong_public_key_fails",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_asymmetric.py",
+        "line_number": 61,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_asymmetric.TestLowLevelAsymmetric.test_algorithm_mismatch_fails",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_asymmetric.py",
+        "line_number": 67,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_asymmetric.TestAuthXAsymmetric.test_wrong_keypair_fails_decode",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_asymmetric.py",
+        "line_number": 185,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_authx.test_set_access_cookies",
+        "callee": "fastapi.responses.JSONResponse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+        "line_number": 91,
+        "call_expr": "JSONResponse(content={'foo': 'bar'})"
+      },
+      {
+        "caller": "tests.test_authx.test_set_refresh_cookies",
+        "callee": "fastapi.responses.JSONResponse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+        "line_number": 103,
+        "call_expr": "JSONResponse(content={'foo': 'bar'})"
+      },
+      {
+        "caller": "tests.test_authx.test_unset_access_cookies",
+        "callee": "fastapi.responses.JSONResponse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+        "line_number": 115,
+        "call_expr": "JSONResponse(content={'foo': 'bar'})"
+      },
+      {
+        "caller": "tests.test_authx.test_unset_refresh_cookies",
+        "callee": "fastapi.responses.JSONResponse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+        "line_number": 126,
+        "call_expr": "JSONResponse(content={'foo': 'bar'})"
+      },
+      {
+        "caller": "tests.test_authx.test_unset_cookies",
+        "callee": "fastapi.responses.JSONResponse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+        "line_number": 137,
+        "call_expr": "JSONResponse(content={'foo': 'bar'})"
+      },
+      {
+        "caller": "tests.test_authx.test_get_token_from_request_access",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+        "line_number": 164,
+        "call_expr": "Request(scope={'method': 'GET', 'type': 'http', 'headers': [[b'authorization', f'Bearer {access_token}'.encode()]]})"
+      },
+      {
+        "caller": "tests.test_authx.test_get_token_from_request_refresh",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+        "line_number": 180,
+        "call_expr": "Request(scope={'method': 'GET', 'type': 'http', 'headers': [[b'cookie', f'{authx.config.JWT_REFRESH_COOKIE_NAME}={refresh_token};'.encode()]]})"
+      },
+      {
+        "caller": "tests.test_authx.test_get_refresh_token_from_headers",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+        "line_number": 214,
+        "call_expr": "Request(scope={'method': 'POST', 'type': 'http', 'headers': [[b'authorization', f'Bearer {refresh_token}'.encode()]]})"
+      },
+      {
+        "caller": "tests.test_authx.test__auth_required",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+        "line_number": 247,
+        "call_expr": "Request(scope={'method': 'GET', 'type': 'http', 'headers': [[b'content-type', b'application/json'], [b'authorization', f'Bearer {refresh_token}'.encode()]]})"
+      },
+      {
+        "caller": "tests.test_authx.test_token_required",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+        "line_number": 263,
+        "call_expr": "Request(scope={'method': 'GET', 'type': 'http', 'headers': [[b'content-type', b'application/json'], [b'authorization', f'Bearer {access_token}'.encode()], [b'cookie', f'{authx.config.JWT_REFRESH_COOKIE_NAME}={refresh_token};'.encode()]]})"
+      },
+      {
+        "caller": "tests.test_authx.test_get_token_from_request_direct_access",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+        "line_number": 344,
+        "call_expr": "Request(scope={'method': 'GET', 'type': 'http', 'headers': [[b'authorization', f'Bearer {access_token}'.encode()]]})"
+      },
+      {
+        "caller": "tests.test_authx.test_get_token_from_request_direct_refresh",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+        "line_number": 363,
+        "call_expr": "Request(scope={'method': 'GET', 'type': 'http', 'headers': [[b'authorization', f'Bearer {refresh_token}'.encode()]]})"
+      },
+      {
+        "caller": "tests.test_callback.test_callback_not_set_exceptions",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_callback.py",
+        "line_number": 73,
+        "call_expr": "pytest.raises(AttributeError)"
+      },
+      {
+        "caller": "tests.test_callback.test_check_model_callback_is_set",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_callback.py",
+        "line_number": 186,
+        "call_expr": "pytest.raises(AttributeError)"
+      },
+      {
+        "caller": "tests.test_callback.test_check_token_callback_is_set",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_callback.py",
+        "line_number": 203,
+        "call_expr": "pytest.raises(AttributeError)"
+      },
+      {
+        "caller": "tests.test_callback.test_async_callback_raises_exception",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_callback.py",
+        "line_number": 388,
+        "call_expr": "pytest.raises(ValueError, match='Database connection failed')"
+      },
+      {
+        "caller": "tests.test_core.test_get_token_from_query",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "line_number": 101,
+        "call_expr": "Request(scope={'type': 'http', 'query_string': request_query})"
+      },
+      {
+        "caller": "tests.test_core.test_get_token_from_headers",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "line_number": 130,
+        "call_expr": "Request(scope={'type': 'http', 'headers': [*request_headers]})"
+      },
+      {
+        "caller": "tests.test_core.test_get_token_from_headers_without_header_type",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "line_number": 147,
+        "call_expr": "Request(scope={'type': 'http', 'headers': [[f'{config.JWT_HEADER_NAME.lower()}'.encode(), b'TOKEN']]})"
+      },
+      {
+        "caller": "tests.test_core.test_get_token_from_cookies_get",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "line_number": 178,
+        "call_expr": "Request(scope={'method': 'GET', 'type': 'http', 'headers': [*request_cookies]})"
+      },
+      {
+        "caller": "tests.test_core.test_get_token_from_cookies_post",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "line_number": 207,
+        "call_expr": "Request(scope={'method': 'POST', 'type': 'http', 'headers': [*request_cookies, *request_csrf_headers]})"
+      },
+      {
+        "caller": "tests.test_core.test_get_token_from_cookies_post_without_csrf_exception",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "line_number": 236,
+        "call_expr": "Request(scope={'method': 'POST', 'type': 'http', 'headers': [*request_cookies]})"
+      },
+      {
+        "caller": "tests.test_core.test_csrf_error_message_is_detailed",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "line_number": 275,
+        "call_expr": "pytest.raises(MissingCSRFTokenError)"
+      },
+      {
+        "caller": "tests.test_core.test_csrf_error_message_is_detailed",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "line_number": 268,
+        "call_expr": "Request(scope={'method': 'POST', 'type': 'http', 'headers': [*request_cookies]})"
+      },
+      {
+        "caller": "tests.test_core.test_get_token_from_json_post",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "line_number": 323,
+        "call_expr": "Request(scope={'method': 'POST', 'type': 'http', 'headers': [[b'content-type', b'application/json']]}, receive=request_body)"
+      },
+      {
+        "caller": "tests.test_core.test_get_token_from_request_with_locations",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "line_number": 451,
+        "call_expr": "pytest.raises(MissingTokenError)"
+      },
+      {
+        "caller": "tests.test_core.test_get_token_from_cookies_with_csrf_form_data",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "line_number": 515,
+        "call_expr": "pytest.raises(MissingCSRFTokenError)"
+      },
+      {
+        "caller": "tests.test_core.test_get_token_from_cookies_with_csrf_form_data",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "line_number": 502,
+        "call_expr": "Request(scope={'type': 'http', 'method': 'POST', 'headers': [(b'content-type', b'application/x-www-form-urlencoded'), (b'cookie', b'access_token_cookie=mock_access_token')]}, receive=lambda: {})"
+      },
+      {
+        "caller": "tests.test_core.test_get_token_from_cookies_with_csrf_form_data.create_mock_request",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "line_number": 468,
+        "call_expr": "Request(scope={'type': 'http', 'method': 'POST', 'headers': [(b'content-type', b'application/x-www-form-urlencoded'), (b'cookie', b'access_token_cookie=mock_access_token')]}, receive=lambda: {})"
+      },
+      {
+        "caller": "tests.test_coverage_edges.make_request",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 23,
+        "call_expr": "Request(scope={'type': 'http', 'method': method, 'path': path, 'headers': [], 'client': ('127.0.0.1', 1234)})"
+      },
+      {
+        "caller": "tests.test_coverage_edges.test_handle_errors_rate_limit_wrapper_response",
+        "callee": "fastapi.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 64,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "tests.test_coverage_edges.test_handle_errors_rate_limit_wrapper_response",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 57,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_coverage_edges.test_decode_token_preserves_existing_exception_login_type",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 112,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_coverage_edges.test_unset_access_cookies_without_csrf_cookie_branch",
+        "callee": "fastapi.responses.JSONResponse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 121,
+        "call_expr": "JSONResponse(content={})"
+      },
+      {
+        "caller": "tests.test_coverage_edges.test_auth_required_with_explicit_csrf_false_branch",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 139,
+        "call_expr": "Request(scope={'type': 'http', 'method': 'POST', 'headers': [[b'authorization', f'Bearer {token}'.encode()]]})"
+      },
+      {
+        "caller": "tests.test_coverage_edges.test_verify_token_preserves_existing_exception_login_type",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 157,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_coverage_edges.test_access_token_optional_dependency_closure_returns_token",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 167,
+        "call_expr": "Request(scope={'type': 'http', 'method': 'GET', 'headers': [[b'authorization', f'Bearer {token}'.encode()]]})"
+      },
+      {
+        "caller": "tests.test_coverage_edges.test_websocket_missing_token_has_login_type",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 189,
+        "call_expr": "pytest.raises(Exception)"
+      },
+      {
+        "caller": "tests.test_coverage_edges.test_implicit_refresh_middleware_refreshes_expiring_cookie_token",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 209,
+        "call_expr": "Request(scope={'type': 'http', 'method': 'GET', 'path': '/refresh-me', 'headers': [[b'cookie', f'{auth.config.JWT_ACCESS_COOKIE_NAME}={old_token};'.encode()]]})"
+      },
+      {
+        "caller": "tests.test_coverage_edges.test_implicit_refresh_middleware_refreshes_expiring_cookie_token.call_next",
+        "callee": "fastapi.responses.JSONResponse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 219,
+        "call_expr": "JSONResponse(content={'ok': True})"
+      },
+      {
+        "caller": "tests.test_coverage_edges.test_implicit_refresh_middleware_skips_non_expiring_cookie_token",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 233,
+        "call_expr": "Request(scope={'type': 'http', 'method': 'GET', 'path': '/skip-refresh', 'headers': [[b'cookie', f'{auth.config.JWT_ACCESS_COOKIE_NAME}={old_token};'.encode()]]})"
+      },
+      {
+        "caller": "tests.test_coverage_edges.test_implicit_refresh_middleware_skips_non_expiring_cookie_token.call_next",
+        "callee": "fastapi.responses.JSONResponse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 243,
+        "call_expr": "JSONResponse(content={'ok': True})"
+      },
+      {
+        "caller": "tests.test_coverage_edges.test_rate_limited_dependency_runs_limiter_and_auth",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "line_number": 254,
+        "call_expr": "Request(scope={'type': 'http', 'method': 'GET', 'headers': [[b'authorization', f'Bearer {token}'.encode()]], 'client': ('127.0.0.1', 1234)})"
+      },
+      {
+        "caller": "tests.test_errors.test_error_handler",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_errors.py",
+        "line_number": 36,
+        "call_expr": "Request(scope={'type': 'http', 'method': 'GET'})"
+      },
+      {
+        "caller": "tests.test_errors.test_error_handler_without_message",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_errors.py",
+        "line_number": 54,
+        "call_expr": "Request(scope={'type': 'http', 'method': 'GET'})"
+      },
+      {
+        "caller": "tests.test_errors.test_request_exception_handler_checks_starlette_scope_and_parent_handlers",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_errors.py",
+        "line_number": 167,
+        "call_expr": "Request(scope={'type': 'http', 'method': 'GET', 'starlette.exception_handlers': (exception_handlers, {})})"
+      },
+      {
+        "caller": "tests.test_errors.test_set_request_rate_limit_handler_adds_request_local_handler",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_errors.py",
+        "line_number": 231,
+        "call_expr": "Request(scope={'type': 'http', 'method': 'GET', 'starlette.exception_handlers': (exception_handlers, {})})"
+      },
+      {
+        "caller": "tests.test_errors.test_set_request_rate_limit_handler_preserves_existing_parent_handler",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_errors.py",
+        "line_number": 255,
+        "call_expr": "Request(scope={'type': 'http', 'method': 'GET', 'starlette.exception_handlers': (exception_handlers, {})})"
+      },
+      {
+        "caller": "tests.test_key_rotation.TestSymmetricKeyRotation.test_token_signed_with_unknown_key_fails",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_key_rotation.py",
+        "line_number": 48,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_key_rotation.TestSymmetricKeyRotation.test_no_previous_key_does_not_fallback",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_key_rotation.py",
+        "line_number": 56,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_key_rotation.TestSymmetricKeyRotation.test_verify_token_falls_back_to_previous_key",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_key_rotation.py",
+        "line_number": 90,
+        "call_expr": "Request(scope={'type': 'http', 'headers': [(b'authorization', f'Bearer {token}'.encode())], 'method': 'GET', 'path': '/', 'scheme': 'http', 'server': ('testserver', 80)})"
+      },
+      {
+        "caller": "tests.test_key_rotation.TestAsymmetricKeyRotation.test_rsa_no_previous_key_fails",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_key_rotation.py",
+        "line_number": 152,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_manager.test_access_dependency_accepts_matching_login_type",
+        "callee": "fastapi.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 85,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "tests.test_manager.test_access_dependency_accepts_matching_login_type",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 77,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_manager.test_access_dependency_rejects_cross_type_token_with_mismatch_error",
+        "callee": "fastapi.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 103,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "tests.test_manager.test_access_dependency_rejects_cross_type_token_with_mismatch_error",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 95,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_manager.test_login_types_and_unknown_login_type",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 120,
+        "call_expr": "pytest.raises(BadConfigurationError, match='Unknown login_type')"
+      },
+      {
+        "caller": "tests.test_manager.test_refresh_and_fresh_dependencies_accept_matching_tokens",
+        "callee": "fastapi.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 153,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "tests.test_manager.test_refresh_and_fresh_dependencies_accept_matching_tokens",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 142,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_manager.test_token_required_custom_locations_accepts_query_token",
+        "callee": "fastapi.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 177,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "tests.test_manager.test_token_required_custom_locations_accepts_query_token",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 169,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_manager.test_access_dependency_reraises_jwt_decode_error_when_no_registered_type_matches",
+        "callee": "fastapi.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 194,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "tests.test_manager.test_access_dependency_reraises_jwt_decode_error_when_no_registered_type_matches",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 186,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_manager.test_verify_login_type_rejects_missing_login_type",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 204,
+        "call_expr": "pytest.raises(LoginTypeMismatchError)"
+      },
+      {
+        "caller": "tests.test_manager.test_authorize_without_request_or_payload_denies",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 230,
+        "call_expr": "pytest.raises(PolicyDeniedError, match='request or token payload')"
+      },
+      {
+        "caller": "tests.test_manager.test_authorize_with_payload_mismatched_login_type_raises",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "line_number": 251,
+        "call_expr": "pytest.raises(LoginTypeMismatchError)"
+      },
+      {
+        "caller": "tests.test_openapi.test_access_token_required_adds_openapi_bearer_security_metadata",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 17,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_openapi.test_route_level_access_token_required_adds_openapi_security_metadata",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 38,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_openapi.test_custom_header_token_location_adds_api_key_header_security_metadata",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 58,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_openapi.test_token_locations_add_matching_openapi_security_schemes",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 82,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_openapi.test_openapi_security_dependency_does_not_require_authorization_header_for_cookie_tokens",
+        "callee": "fastapi.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 131,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "tests.test_openapi.test_openapi_security_dependency_does_not_require_authorization_header_for_cookie_tokens",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 124,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_openapi.test_access_token_required_accepts_valid_swagger_bearer_token",
+        "callee": "fastapi.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 146,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "tests.test_openapi.test_access_token_required_accepts_valid_swagger_bearer_token",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 139,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_openapi.test_access_token_required_handles_invalid_token_without_registered_error_handlers",
+        "callee": "fastapi.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 160,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "tests.test_openapi.test_access_token_required_handles_invalid_token_without_registered_error_handlers",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 154,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_openapi.test_access_token_required_handles_missing_token_without_registered_error_handlers",
+        "callee": "fastapi.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 177,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "tests.test_openapi.test_access_token_required_handles_missing_token_without_registered_error_handlers",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 171,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_openapi.test_access_token_required_uses_registered_error_handlers_when_present",
+        "callee": "fastapi.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 196,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "tests.test_openapi.test_access_token_required_uses_registered_error_handlers_when_present",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 189,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_openapi.test_manager_access_token_required_adds_openapi_security_metadata",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 216,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_openapi.test_manager_unknown_login_type_still_adds_default_openapi_security_metadata",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "line_number": 230,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_policy.test_policy_required_dependency_denies_without_matching_policy",
+        "callee": "fastapi.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_policy.py",
+        "line_number": 155,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "tests.test_policy.test_policy_required_dependency_denies_without_matching_policy",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_policy.py",
+        "line_number": 147,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_policy.test_policy_required_dependency_allows_matching_policy",
+        "callee": "fastapi.testclient.TestClient",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_policy.py",
+        "line_number": 173,
+        "call_expr": "TestClient(app)"
+      },
+      {
+        "caller": "tests.test_policy.test_policy_required_dependency_allows_matching_policy",
+        "callee": "fastapi.FastAPI",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_policy.py",
+        "line_number": 165,
+        "call_expr": "FastAPI()"
+      },
+      {
+        "caller": "tests.test_policy.test_build_policy_environment_with_request_and_overrides",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_policy.py",
+        "line_number": 304,
+        "call_expr": "Request(scope={'type': 'http', 'method': 'POST', 'path': '/admin/users', 'headers': [], 'client': ('127.0.0.1', 1234)})"
+      },
+      {
+        "caller": "tests.test_ratelimit.TestRateLimiter.test_raises_on_exceeded",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_ratelimit.py",
+        "line_number": 99,
+        "call_expr": "pytest.raises(RateLimitExceeded)"
+      },
+      {
+        "caller": "tests.test_ratelimit.TestRateLimiter.test_custom_key_func",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_ratelimit.py",
+        "line_number": 120,
+        "call_expr": "pytest.raises(RateLimitExceeded)"
+      },
+      {
+        "caller": "tests.test_schema.test_token_verify_none_csrf_claim_exception",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_schema.py",
+        "line_number": 255,
+        "call_expr": "pytest.raises(CSRFError)"
+      },
+      {
+        "caller": "tests.test_schema.test_payload_issued_at_property",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_schema.py",
+        "line_number": 300,
+        "call_expr": "pytest.raises(TypeError)"
+      },
+      {
+        "caller": "tests.test_schema.test_payload_expiry_datetime_property",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_schema.py",
+        "line_number": 317,
+        "call_expr": "pytest.raises(TypeError)"
+      },
+      {
+        "caller": "tests.test_schema.test_verify_token_type_exception",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_schema.py",
+        "line_number": 375,
+        "call_expr": "pytest.raises(TokenTypeError)"
+      },
+      {
+        "caller": "tests.test_schema.test_token_payload_nbf_validator",
+        "callee": "pytest.approx",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_schema.py",
+        "line_number": 436,
+        "call_expr": "pytest.approx(future_time.timestamp(), abs=1)"
+      },
+      {
+        "caller": "tests.test_schema.test_verify_propagates_token_expired_error",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_schema.py",
+        "line_number": 460,
+        "call_expr": "pytest.raises(TokenExpiredError)"
+      },
+      {
+        "caller": "tests.test_schema.test_verify_propagates_token_invalid_signature_error",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_schema.py",
+        "line_number": 480,
+        "call_expr": "pytest.raises(TokenInvalidSignatureError)"
+      },
+      {
+        "caller": "tests.test_schema.test_verify_propagates_token_invalid_issuer_error",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_schema.py",
+        "line_number": 506,
+        "call_expr": "pytest.raises(TokenInvalidIssuerError)"
+      },
+      {
+        "caller": "tests.test_schema.test_verify_propagates_token_invalid_audience_error",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_schema.py",
+        "line_number": 533,
+        "call_expr": "pytest.raises(TokenInvalidAudienceError)"
+      },
+      {
+        "caller": "tests.test_token.test_create_token_with_issuer",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token.py",
+        "line_number": 182,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_token.test_create_token_with_audience",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token.py",
+        "line_number": 207,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_token.test_verify_token",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token.py",
+        "line_number": 304,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_token.test_decode_token_raise_data_argument_deprecated",
+        "callee": "pytest.warns",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token.py",
+        "line_number": 318,
+        "call_expr": "pytest.warns(AuthxArgumentDeprecationWarning, match=expected_warning_message)"
+      },
+      {
+        "caller": "tests.test_token.test_decode_token_expired_raises_token_expired_error",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token.py",
+        "line_number": 346,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_token.test_decode_token_invalid_signature_raises_token_invalid_signature_error",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token.py",
+        "line_number": 361,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_token.test_decode_token_invalid_issuer_raises_token_invalid_issuer_error",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token.py",
+        "line_number": 382,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_token.test_decode_token_invalid_audience_raises_token_invalid_audience_error",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token.py",
+        "line_number": 403,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_websocket._ws",
+        "callee": "fastapi.WebSocket",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_websocket.py",
+        "line_number": 26,
+        "call_expr": "WebSocket(scope={'type': 'websocket', 'headers': headers or [], 'query_string': query_string, 'path': '/ws', 'scheme': 'ws', 'server': ('testserver', 80)}, receive=_noop_receive, send=_noop_send)"
+      },
+      {
+        "caller": "tests.test_websocket.TestWebSocketAuthRequired.test_missing_token_raises",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_websocket.py",
+        "line_number": 84,
+        "call_expr": "pytest.raises(MissingTokenError, match='Missing token in WebSocket')"
+      },
+      {
+        "caller": "tests.test_websocket.TestWebSocketAuthRequired.test_invalid_token_raises",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_websocket.py",
+        "line_number": 90,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_websocket.TestWebSocketAuthRequired.test_wrong_key_raises",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_websocket.py",
+        "line_number": 100,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.test_websocket.TestWebSocketAuthRequired.test_revoked_token_raises",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_websocket.py",
+        "line_number": 109,
+        "call_expr": "pytest.raises(RevokedTokenError)"
+      },
+      {
+        "caller": "tests.test_websocket.TestWebSocketAuthRequired.test_expired_token_raises",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_websocket.py",
+        "line_number": 141,
+        "call_expr": "pytest.raises(JWTDecodeError)"
+      },
+      {
+        "caller": "tests.utils.generate_rsa_keypair",
+        "callee": "cryptography.hazmat.primitives.serialization.NoEncryption",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\utils.py",
+        "line_number": 16,
+        "call_expr": "serialization.NoEncryption()"
+      },
+      {
+        "caller": "tests.utils.generate_rsa_keypair",
+        "callee": "cryptography.hazmat.primitives.asymmetric.rsa.generate_private_key",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\utils.py",
+        "line_number": 12,
+        "call_expr": "rsa.generate_private_key(public_exponent=65537, key_size=2048)"
+      },
+      {
+        "caller": "tests.utils.generate_ec_keypair",
+        "callee": "cryptography.hazmat.primitives.serialization.NoEncryption",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\utils.py",
+        "line_number": 35,
+        "call_expr": "serialization.NoEncryption()"
+      },
+      {
+        "caller": "tests.utils.generate_ec_keypair",
+        "callee": "cryptography.hazmat.primitives.asymmetric.ec.generate_private_key",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\utils.py",
+        "line_number": 31,
+        "call_expr": "ec.generate_private_key(curve or ec.SECP256R1())"
+      },
+      {
+        "caller": "tests.utils.generate_ec_keypair",
+        "callee": "cryptography.hazmat.primitives.asymmetric.ec.SECP256R1",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\utils.py",
+        "line_number": 31,
+        "call_expr": "ec.SECP256R1()"
+      },
+      {
+        "caller": "tests.extend.test_authx_extend._make_request",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\extend\\test_authx_extend.py",
+        "line_number": 13,
+        "call_expr": "Request(scope={'type': 'http', 'headers': [(b'authorization', f'Bearer {token}'.encode())], 'method': 'GET', 'path': '/', 'scheme': 'http', 'server': ('testserver', 80)})"
+      },
+      {
+        "caller": "tests.extend.test_authx_extend.test_implicit_refresh_middleware",
+        "callee": "fastapi.Request",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\extend\\test_authx_extend.py",
+        "line_number": 99,
+        "call_expr": "Request(scope={'type': 'http', 'headers': [(b'cookie', cookie_header)], 'method': 'GET', 'path': '/dashboard', 'query_string': b'', 'root_path': '', 'scheme': 'http', 'server': ('testserver', 80)})"
+      },
+      {
+        "caller": "tests.internal.test_utils.test_time_diff",
+        "callee": "dateutil.relativedelta.relativedelta",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\internal\\test_utils.py",
+        "line_number": 75,
+        "call_expr": "relativedelta(days=1)"
+      },
+      {
+        "caller": "examples.examples.basic_auth.login",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\basic_auth.py",
+        "line_number": 47,
+        "call_expr": "HTTPException(status_code=401, detail='Invalid username or password')"
+      },
+      {
+        "caller": "examples.examples.basic_auth.protected_route",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\basic_auth.py",
+        "line_number": 72,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.dual_token_location.login",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\dual_token_location.py",
+        "line_number": 79,
+        "call_expr": "HTTPException(status_code=401, detail='Invalid username or password')"
+      },
+      {
+        "caller": "examples.examples.dual_token_location.refresh",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\dual_token_location.py",
+        "line_number": 121,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.dual_token_location.protected_route",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\dual_token_location.py",
+        "line_number": 154,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.dual_token_location.protected_action",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\dual_token_location.py",
+        "line_number": 180,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.fresh_token.login",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\fresh_token.py",
+        "line_number": 47,
+        "call_expr": "HTTPException(status_code=401, detail='Invalid username or password')"
+      },
+      {
+        "caller": "examples.examples.fresh_token.refresh_token",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\fresh_token.py",
+        "line_number": 66,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.fresh_token.protected_route",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\fresh_token.py",
+        "line_number": 91,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.fresh_token.fresh_required_route",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\fresh_token.py",
+        "line_number": 119,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.jinja2_templates.login_page",
+        "callee": "fastapi.responses.RedirectResponse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\jinja2_templates.py",
+        "line_number": 128,
+        "call_expr": "RedirectResponse(url=next, status_code=303)"
+      },
+      {
+        "caller": "examples.examples.jinja2_templates.login_submit",
+        "callee": "fastapi.responses.RedirectResponse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\jinja2_templates.py",
+        "line_number": 158,
+        "call_expr": "RedirectResponse(url=next, status_code=303)"
+      },
+      {
+        "caller": "examples.examples.jinja2_templates.logout",
+        "callee": "fastapi.responses.RedirectResponse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\jinja2_templates.py",
+        "line_number": 170,
+        "call_expr": "RedirectResponse(url='/login', status_code=303)"
+      },
+      {
+        "caller": "examples.examples.key_rotation.login",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\key_rotation.py",
+        "line_number": 46,
+        "call_expr": "HTTPException(status_code=401, detail='Invalid username or password')"
+      },
+      {
+        "caller": "examples.examples.rate_limiting.login",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\rate_limiting.py",
+        "line_number": 39,
+        "call_expr": "HTTPException(status_code=401, detail='Invalid username or password')"
+      },
+      {
+        "caller": "examples.examples.refresh_token.login",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\refresh_token.py",
+        "line_number": 55,
+        "call_expr": "HTTPException(status_code=401, detail='Invalid username or password')"
+      },
+      {
+        "caller": "examples.examples.refresh_token.refresh_token",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\refresh_token.py",
+        "line_number": 72,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.refresh_token.protected_route",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\refresh_token.py",
+        "line_number": 93,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.scopes.login",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\scopes.py",
+        "line_number": 99,
+        "call_expr": "HTTPException(status_code=401, detail='Invalid credentials')"
+      },
+      {
+        "caller": "examples.examples.session_management.login",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\session_management.py",
+        "line_number": 46,
+        "call_expr": "HTTPException(status_code=401, detail='Invalid username or password')"
+      },
+      {
+        "caller": "examples.examples.token_blocklist.login",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_blocklist.py",
+        "line_number": 62,
+        "call_expr": "HTTPException(status_code=401, detail='Invalid username or password')"
+      },
+      {
+        "caller": "examples.examples.token_blocklist.logout",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_blocklist.py",
+        "line_number": 80,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.token_blocklist.protected_route",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_blocklist.py",
+        "line_number": 112,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.token_locations.login",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_locations.py",
+        "line_number": 89,
+        "call_expr": "HTTPException(status_code=401, detail='Invalid username or password')"
+      },
+      {
+        "caller": "examples.examples.token_locations.protected_route",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_locations.py",
+        "line_number": 109,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.token_locations.protected_post_route",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_locations.py",
+        "line_number": 122,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.token_locations.protected_headers",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_locations.py",
+        "line_number": 139,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.token_locations.protected_cookies",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_locations.py",
+        "line_number": 152,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.token_locations.protected_json",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_locations.py",
+        "line_number": 165,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.token_locations.protected_query",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_locations.py",
+        "line_number": 178,
+        "call_expr": "HTTPException(status_code=401, detail=str(e))"
+      },
+      {
+        "caller": "examples.examples.websocket_auth.login",
+        "callee": "fastapi.HTTPException",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\websocket_auth.py",
+        "line_number": 45,
+        "call_expr": "HTTPException(status_code=401, detail='Invalid username or password')"
+      },
+      {
+        "caller": "examples.tests.test_examples.ExampleServer.__enter__",
+        "callee": "pytest.skip",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 72,
+        "call_expr": "pytest.skip(f'Server for {self.example_file.name} failed to start')"
+      },
+      {
+        "caller": "examples.tests.test_examples.ExampleServer.__enter__",
+        "callee": "httpx.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 62,
+        "call_expr": "httpx.get(f'{BASE_URL}/', timeout=1)"
+      },
+      {
+        "caller": "examples.tests.test_examples.test_example_root_endpoint",
+        "callee": "pytest.fail",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 113,
+        "call_expr": "pytest.fail(f'Could not connect to server: {e}')"
+      },
+      {
+        "caller": "examples.tests.test_examples.test_example_root_endpoint",
+        "callee": "httpx.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 107,
+        "call_expr": "httpx.get(f'{BASE_URL}/', timeout=5)"
+      },
+      {
+        "caller": "examples.tests.test_examples.test_example_login",
+        "callee": "pytest.fail",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 136,
+        "call_expr": "pytest.fail(f'Could not connect to server: {e}')"
+      },
+      {
+        "caller": "examples.tests.test_examples.test_example_login",
+        "callee": "httpx.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 133,
+        "call_expr": "httpx.post(f'{BASE_URL}/login', json={'username': 'invalid', 'password': 'invalid'}, timeout=5)"
+      },
+      {
+        "caller": "examples.tests.test_examples.test_example_protected_route",
+        "callee": "pytest.fail",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 167,
+        "call_expr": "pytest.fail(f'Could not connect to server: {e}')"
+      },
+      {
+        "caller": "examples.tests.test_examples.test_example_protected_route",
+        "callee": "httpx.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 164,
+        "call_expr": "httpx.get(f'{BASE_URL}/protected', timeout=5)"
+      },
+      {
+        "caller": "examples.tests.test_examples.test_example_protected_route",
+        "callee": "httpx.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 145,
+        "call_expr": "httpx.post(f'{BASE_URL}/login', json={'username': 'user1', 'password': 'password1'}, timeout=5)"
+      },
+      {
+        "caller": "examples.tests.test_examples.test_refresh_token_flow",
+        "callee": "pytest.fail",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 178,
+        "call_expr": "pytest.fail(f'Could not connect to server: {e}')"
+      },
+      {
+        "caller": "examples.tests.test_examples.refresh_token_flow",
+        "callee": "httpx.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 194,
+        "call_expr": "httpx.post(f'{BASE_URL}/refresh', json={'refresh_token': refresh_token}, timeout=5)"
+      },
+      {
+        "caller": "examples.tests.test_examples.test_token_blocklist_flow",
+        "callee": "pytest.fail",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 211,
+        "call_expr": "pytest.fail(f'Could not connect to server: {e}')"
+      },
+      {
+        "caller": "examples.tests.test_examples.token_blocklist_flow",
+        "callee": "httpx.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 232,
+        "call_expr": "httpx.get(f'{BASE_URL}/protected', headers={'Authorization': f'Bearer {access_token}'}, timeout=5)"
+      },
+      {
+        "caller": "examples.tests.test_examples.token_blocklist_flow",
+        "callee": "httpx.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 228,
+        "call_expr": "httpx.post(f'{BASE_URL}/logout', headers={'Authorization': f'Bearer {access_token}'}, timeout=5)"
+      },
+      {
+        "caller": "examples.tests.test_examples.test_token_locations",
+        "callee": "pytest.fail",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 244,
+        "call_expr": "pytest.fail(f'Could not connect to server: {e}')"
+      },
+      {
+        "caller": "examples.tests.test_examples.token_locations",
+        "callee": "httpx.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 270,
+        "call_expr": "httpx.post(f'{BASE_URL}/protected-post', json={'access_token': access_token}, timeout=5)"
+      },
+      {
+        "caller": "examples.tests.test_examples.token_locations",
+        "callee": "httpx.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 266,
+        "call_expr": "httpx.get(f'{BASE_URL}/protected', cookies=cookies, timeout=5)"
+      },
+      {
+        "caller": "examples.tests.test_examples.test_fresh_token_flow",
+        "callee": "pytest.fail",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 282,
+        "call_expr": "pytest.fail(f'Could not connect to server: {e}')"
+      },
+      {
+        "caller": "examples.tests.test_examples.fresh_token_flow",
+        "callee": "httpx.get",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 315,
+        "call_expr": "httpx.get(f'{BASE_URL}/fresh-required', headers={'Authorization': f'Bearer {non_fresh_token}'}, timeout=5)"
+      },
+      {
+        "caller": "examples.tests.test_examples.fresh_token_flow",
+        "callee": "httpx.post",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "line_number": 303,
+        "call_expr": "httpx.post(f'{BASE_URL}/refresh', headers={'Authorization': f'Bearer {fresh_token}'}, timeout=5)"
+      },
+      {
+        "caller": "authx._internal._error._ErrorHandler._rate_limit_handler",
+        "callee": "fastapi.responses.JSONResponse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\_internal\\_error.py",
+        "line_number": 33,
+        "call_expr": "JSONResponse(status_code=429, content={'message': str(exc), 'error_type': 'RateLimitExceeded', 'retry_after': exc.retry_after}, headers={'Retry-After': str(exc.retry_after)})"
+      },
+      {
+        "caller": "authx._internal._signature.SignatureSerializer.__init__",
+        "callee": "itsdangerous.URLSafeTimedSerializer",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\_internal\\_signature.py",
+        "line_number": 13,
+        "call_expr": "URLSafeTimedSerializer(secret_key)"
+      },
+      {
+        "caller": "authx._internal._utils.time_diff",
+        "callee": "dateutil.relativedelta.relativedelta",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\_internal\\_utils.py",
+        "line_number": 42,
+        "call_expr": "relativedelta(dt1, dt2)"
+      },
+      {
+        "caller": "authx._internal._utils.to_UTC",
+        "callee": "dateutil.parser.parse",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\_internal\\_utils.py",
+        "line_number": 49,
+        "call_expr": "dateutil_parser.parse(event_timestamp)"
+      },
+      {
+        "caller": "authx._internal._utils.months_ago",
+        "callee": "dateutil.relativedelta.relativedelta",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\_internal\\_utils.py",
+        "line_number": 90,
+        "call_expr": "relativedelta(months=months)"
+      },
+      {
+        "caller": "authx._internal._utils.months_after",
+        "callee": "dateutil.relativedelta.relativedelta",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\_internal\\_utils.py",
+        "line_number": 94,
+        "call_expr": "relativedelta(months=months)"
+      },
+      {
+        "caller": "authx._internal._utils.years_ago",
+        "callee": "dateutil.relativedelta.relativedelta",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\authx\\_internal\\_utils.py",
+        "line_number": 98,
+        "call_expr": "relativedelta(years=years)"
+      }
+    ],
+    "jarvis_usage_index_before_filter": [
+      "<builtin>.AttributeError",
+      "<builtin>.Exception",
+      "<builtin>.ValueError",
+      "<builtin>.abs",
+      "<builtin>.all",
+      "<builtin>.any",
+      "<builtin>.callable",
+      "<builtin>.float",
+      "<builtin>.getattr",
+      "<builtin>.hasattr",
+      "<builtin>.int",
+      "<builtin>.isinstance",
+      "<builtin>.len",
+      "<builtin>.list",
+      "<builtin>.object",
+      "<builtin>.print",
+      "<builtin>.range",
+      "<builtin>.set",
+      "<builtin>.str",
+      "<builtin>.super",
+      "<map>.copy",
+      "<map>.get",
+      "<map>.items",
+      "<map>.keys",
+      "<str>.encode",
+      "<str>.endswith",
+      "<str>.lower",
+      "<str>.split",
+      "<str>.startswith",
+      "<str>.strip",
+      "cryptography.hazmat.primitives.asymmetric.ec.SECP256R1",
+      "cryptography.hazmat.primitives.asymmetric.ec.SECP384R1",
+      "cryptography.hazmat.primitives.asymmetric.ec.generate_private_key",
+      "cryptography.hazmat.primitives.asymmetric.rsa.generate_private_key",
+      "cryptography.hazmat.primitives.serialization.NoEncryption",
+      "dateutil.parser.parse",
+      "dateutil.relativedelta.relativedelta",
+      "fastapi.Depends",
+      "fastapi.FastAPI",
+      "fastapi.HTTPException",
+      "fastapi.Request",
+      "fastapi.WebSocket",
+      "fastapi.responses.JSONResponse",
+      "fastapi.responses.RedirectResponse",
+      "fastapi.security.APIKeyCookie",
+      "fastapi.security.APIKeyHeader",
+      "fastapi.security.APIKeyQuery",
+      "fastapi.security.HTTPBearer",
+      "fastapi.testclient.TestClient",
+      "httpx.get",
+      "httpx.post",
+      "itsdangerous.URLSafeTimedSerializer",
+      "jwt.algorithms.get_default_algorithms",
+      "jwt.decode",
+      "jwt.encode",
+      "pytest.approx",
+      "pytest.fail",
+      "pytest.raises",
+      "pytest.skip",
+      "pytest.warns"
+    ],
+    "jarvis_usage_index_after_filter": [
+      "cryptography.hazmat.primitives.asymmetric.ec.SECP256R1",
+      "cryptography.hazmat.primitives.asymmetric.ec.SECP384R1",
+      "cryptography.hazmat.primitives.asymmetric.ec.generate_private_key",
+      "cryptography.hazmat.primitives.asymmetric.rsa.generate_private_key",
+      "cryptography.hazmat.primitives.serialization.NoEncryption",
+      "dateutil.parser.parse",
+      "dateutil.relativedelta.relativedelta",
+      "fastapi.Depends",
+      "fastapi.FastAPI",
+      "fastapi.HTTPException",
+      "fastapi.Request",
+      "fastapi.WebSocket",
+      "fastapi.responses.JSONResponse",
+      "fastapi.responses.RedirectResponse",
+      "fastapi.security.APIKeyCookie",
+      "fastapi.security.APIKeyHeader",
+      "fastapi.security.APIKeyQuery",
+      "fastapi.security.HTTPBearer",
+      "fastapi.testclient.TestClient",
+      "httpx.get",
+      "httpx.post",
+      "itsdangerous.URLSafeTimedSerializer",
+      "jwt.algorithms.get_default_algorithms",
+      "jwt.decode",
+      "jwt.encode",
+      "pytest.approx",
+      "pytest.fail",
+      "pytest.raises",
+      "pytest.skip",
+      "pytest.warns"
+    ],
+    "jarvis_usage_augmentation_warnings": [],
+    "analysis_mode": "jarvis",
+    "project_mode": "jarvis_EA_entrypoints",
+    "entry_points": [
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\basic_auth.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\dual_token_location.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\fresh_token.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\jinja2_templates.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\key_rotation.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\rate_limiting.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\refresh_token.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\scopes.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\session_management.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_blocklist.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_locations.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\websocket_auth.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_access_location.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_blocklist_token.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_fresh_token.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_get_subject.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_scopes.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_token_protected_access.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\extend\\test_authx_extend.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\internal\\test_logger.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\internal\\test_scopes.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\internal\\test_signature.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\internal\\test_utils.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_asymmetric.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_callback.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_config.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_dependencies.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_errors.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_implicit_middleware.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_key_rotation.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_policy.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_ratelimit.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_schema.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_session.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token_pair.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_websocket.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\utils.py"
+    ],
+    "jarvis_mode": "EA",
+    "jarvis_scope": "entrypoints",
+    "jarvis_scope_meta": {
+      "scope": "entrypoints",
+      "entrypoint_count": 594,
+      "entrypoint_names": [
+        "examples.examples.basic_auth.login",
+        "examples.examples.basic_auth.protected_route",
+        "examples.examples.basic_auth.read_root",
+        "examples.examples.dual_token_location.login",
+        "examples.examples.dual_token_location.logout",
+        "examples.examples.dual_token_location.protected_action",
+        "examples.examples.dual_token_location.protected_route",
+        "examples.examples.dual_token_location.read_root",
+        "examples.examples.dual_token_location.refresh",
+        "examples.examples.fresh_token.fresh_required_route",
+        "examples.examples.fresh_token.login",
+        "examples.examples.fresh_token.protected_route",
+        "examples.examples.fresh_token.read_root",
+        "examples.examples.fresh_token.refresh_token",
+        "examples.examples.jinja2_templates.dashboard",
+        "examples.examples.jinja2_templates.home",
+        "examples.examples.jinja2_templates.login_page",
+        "examples.examples.jinja2_templates.login_submit",
+        "examples.examples.jinja2_templates.logout",
+        "examples.examples.jinja2_templates.process_action",
+        "examples.examples.jinja2_templates.process_page",
+        "examples.examples.jinja2_templates.route1",
+        "examples.examples.jinja2_templates.route2",
+        "examples.examples.jinja2_templates.route3",
+        "examples.examples.jinja2_templates.route4",
+        "examples.examples.key_rotation.login",
+        "examples.examples.key_rotation.protected",
+        "examples.examples.key_rotation.read_root",
+        "examples.examples.rate_limiting.login",
+        "examples.examples.rate_limiting.protected",
+        "examples.examples.rate_limiting.read_root",
+        "examples.examples.refresh_token.login",
+        "examples.examples.refresh_token.protected_route",
+        "examples.examples.refresh_token.read_root",
+        "examples.examples.refresh_token.refresh_token",
+        "examples.examples.scopes.admin_dashboard",
+        "examples.examples.scopes.admin_settings",
+        "examples.examples.scopes.admin_users",
+        "examples.examples.scopes.create_post",
+        "examples.examples.scopes.delete_post",
+        "examples.examples.scopes.get_profile",
+        "examples.examples.scopes.list_posts",
+        "examples.examples.scopes.login",
+        "examples.examples.scopes.moderate_content",
+        "examples.examples.scopes.read_root",
+        "examples.examples.session_management.list_sessions",
+        "examples.examples.session_management.login",
+        "examples.examples.session_management.protected",
+        "examples.examples.session_management.read_root",
+        "examples.examples.session_management.revoke_all_sessions",
+        "examples.examples.session_management.revoke_session",
+        "examples.examples.token_blocklist.get_blocklist",
+        "examples.examples.token_blocklist.login",
+        "examples.examples.token_blocklist.logout",
+        "examples.examples.token_blocklist.protected_route",
+        "examples.examples.token_blocklist.read_root",
+        "examples.examples.token_locations.login",
+        "examples.examples.token_locations.logout",
+        "examples.examples.token_locations.protected_cookies",
+        "examples.examples.token_locations.protected_headers",
+        "examples.examples.token_locations.protected_json",
+        "examples.examples.token_locations.protected_post_route",
+        "examples.examples.token_locations.protected_query",
+        "examples.examples.token_locations.protected_route",
+        "examples.examples.token_locations.read_root",
+        "examples.examples.websocket_auth.login",
+        "examples.examples.websocket_auth.read_root",
+        "examples.examples.websocket_auth.websocket_endpoint",
+        "examples.examples.websocket_auth.websocket_manual_auth",
+        "examples.tests.test_examples.test_example_login",
+        "examples.tests.test_examples.test_example_protected_route",
+        "examples.tests.test_examples.test_example_root_endpoint",
+        "examples.tests.test_examples.test_fresh_token_flow",
+        "examples.tests.test_examples.test_refresh_token_flow",
+        "examples.tests.test_examples.test_token_blocklist_flow",
+        "examples.tests.test_examples.test_token_locations",
+        "tests.app.test_access_location.test_access_location_cookies",
+        "tests.app.test_access_location.test_access_location_cookies_disabled_csrf",
+        "tests.app.test_access_location.test_access_location_cookies_no_csrf",
+        "tests.app.test_access_location.test_access_location_headers",
+        "tests.app.test_access_location.test_access_location_json",
+        "tests.app.test_access_location.test_access_location_query",
+        "tests.app.test_blocklist_token.test_blocklist_access_token",
+        "tests.app.test_blocklist_token.test_blocklist_refresh_token",
+        "tests.app.test_fresh_token.test_access_fresh_token_protected_fresh",
+        "tests.app.test_fresh_token.test_access_token_protected_refresh",
+        "tests.app.test_fresh_token.test_fresh_token_protected_fresh_cookies_csrf_cookies",
+        "tests.app.test_fresh_token.test_fresh_token_protected_fresh_headers",
+        "tests.app.test_fresh_token.test_fresh_token_protected_fresh_json",
+        "tests.app.test_fresh_token.test_fresh_token_protected_fresh_query",
+        "tests.app.test_fresh_token.test_fresh_token_protected_refresh",
+        "tests.app.test_fresh_token.test_no_token_protected_fresh",
+        "tests.app.test_fresh_token.test_no_token_protected_refresh",
+        "tests.app.test_fresh_token.test_refresh_fresh_token_protected_fresh",
+        "tests.app.test_fresh_token.test_refresh_token_protected_refresh",
+        "tests.app.test_get_subject.test_get_subject",
+        "tests.app.test_get_subject.test_get_subject_access_token",
+        "tests.app.test_get_subject.test_get_subject_refresh_token",
+        "tests.app.test_get_subject.test_get_subject_resources",
+        "tests.app.test_get_subject.test_no_authorization_get_subject",
+        "tests.app.test_scopes.TestInsufficientScopeError.test_exception_attributes",
+        "tests.app.test_scopes.TestInsufficientScopeError.test_exception_custom_message",
+        "tests.app.test_scopes.TestInsufficientScopeError.test_exception_message",
+        "tests.app.test_scopes.TestInsufficientScopeError.test_exception_none_provided",
+        "tests.app.test_scopes.TestScopesRequiredDependency.test_hierarchical_scope_exact_match",
+        "tests.app.test_scopes.TestScopesRequiredDependency.test_multiple_scopes_and_logic_denied",
+        "tests.app.test_scopes.TestScopesRequiredDependency.test_multiple_scopes_and_logic_granted",
+        "tests.app.test_scopes.TestScopesRequiredDependency.test_multiple_scopes_or_logic_denied",
+        "tests.app.test_scopes.TestScopesRequiredDependency.test_multiple_scopes_or_logic_granted_first",
+        "tests.app.test_scopes.TestScopesRequiredDependency.test_multiple_scopes_or_logic_granted_second",
+        "tests.app.test_scopes.TestScopesRequiredDependency.test_no_scopes_in_token",
+        "tests.app.test_scopes.TestScopesRequiredDependency.test_payload_returned",
+        "tests.app.test_scopes.TestScopesRequiredDependency.test_single_scope_access_denied",
+        "tests.app.test_scopes.TestScopesRequiredDependency.test_single_scope_access_granted",
+        "tests.app.test_scopes.TestScopesRequiredDependency.test_wildcard_scope_grants_access",
+        "tests.app.test_scopes.TestScopesRequiredDependency.test_wildcard_scope_wrong_namespace",
+        "tests.app.test_scopes.TestScopesWithOtherFeatures.test_scopes_preserved_in_encode_decode",
+        "tests.app.test_scopes.TestScopesWithOtherFeatures.test_scopes_with_additional_data",
+        "tests.app.test_scopes.TestScopesWithOtherFeatures.test_scopes_with_fresh_token",
+        "tests.app.test_scopes.TestTokenCreationWithScopes.test_create_access_token_with_empty_scopes",
+        "tests.app.test_scopes.TestTokenCreationWithScopes.test_create_access_token_with_scopes",
+        "tests.app.test_scopes.TestTokenCreationWithScopes.test_create_access_token_without_scopes",
+        "tests.app.test_scopes.TestTokenCreationWithScopes.test_create_refresh_token_with_scopes",
+        "tests.app.test_scopes.TestTokenCreationWithScopes.test_create_token_with_hierarchical_scopes",
+        "tests.app.test_scopes.TestTokenCreationWithScopes.test_create_token_with_wildcard_scope",
+        "tests.app.test_scopes.TestTokenPayloadHasScopes.test_has_scopes_empty",
+        "tests.app.test_scopes.TestTokenPayloadHasScopes.test_has_scopes_multiple_all_required",
+        "tests.app.test_scopes.TestTokenPayloadHasScopes.test_has_scopes_multiple_any_required",
+        "tests.app.test_scopes.TestTokenPayloadHasScopes.test_has_scopes_none",
+        "tests.app.test_scopes.TestTokenPayloadHasScopes.test_has_scopes_simple_match",
+        "tests.app.test_scopes.TestTokenPayloadHasScopes.test_has_scopes_wildcard_match",
+        "tests.app.test_scopes.admin_or_moderator_route",
+        "tests.app.test_scopes.admin_users_route",
+        "tests.app.test_scopes.profile_route",
+        "tests.app.test_scopes.read_route",
+        "tests.app.test_scopes.read_write_route",
+        "tests.app.test_scopes.users_read_route",
+        "tests.app.test_token_protected_access.test_access_token_protected_access_cookies_csrf_cookies",
+        "tests.app.test_token_protected_access.test_access_token_protected_access_cookies_no_csrf",
+        "tests.app.test_token_protected_access.test_access_token_protected_access_headers",
+        "tests.app.test_token_protected_access.test_access_token_protected_access_json",
+        "tests.app.test_token_protected_access.test_access_token_protected_access_query",
+        "tests.app.test_token_protected_access.test_fresh_token_protected_access_headers",
+        "tests.app.test_token_protected_access.test_no_token_protected_access",
+        "tests.app.test_token_protected_access.test_refresh_token_protected_access_headers",
+        "tests.extend.test_authx_extend.test_auth_required_revoked_token",
+        "tests.extend.test_authx_extend.test_get_current_subject",
+        "tests.extend.test_authx_extend.test_get_current_subject_no_callback_raises",
+        "tests.extend.test_authx_extend.test_get_current_subject_sync_callback",
+        "tests.extend.test_authx_extend.test_implicit_refresh_middleware",
+        "tests.internal.test_logger.test_build_log_msg_no_loc_or_method",
+        "tests.internal.test_logger.test_build_log_msg_with_loc",
+        "tests.internal.test_logger.test_build_log_msg_with_loc_and_method",
+        "tests.internal.test_logger.test_build_log_msg_with_method",
+        "tests.internal.test_logger.test_get_logger",
+        "tests.internal.test_logger.test_log_debug",
+        "tests.internal.test_logger.test_log_error",
+        "tests.internal.test_logger.test_log_info",
+        "tests.internal.test_logger.test_set_log_level",
+        "tests.internal.test_scopes.TestHasRequiredScopes.test_all_required_false",
+        "tests.internal.test_scopes.TestHasRequiredScopes.test_all_required_true",
+        "tests.internal.test_scopes.TestHasRequiredScopes.test_empty_provided",
+        "tests.internal.test_scopes.TestHasRequiredScopes.test_empty_required",
+        "tests.internal.test_scopes.TestHasRequiredScopes.test_multiple_scopes_all_present",
+        "tests.internal.test_scopes.TestHasRequiredScopes.test_multiple_scopes_some_missing",
+        "tests.internal.test_scopes.TestHasRequiredScopes.test_none_provided",
+        "tests.internal.test_scopes.TestHasRequiredScopes.test_single_scope_missing",
+        "tests.internal.test_scopes.TestHasRequiredScopes.test_single_scope_present",
+        "tests.internal.test_scopes.TestHasRequiredScopes.test_wildcard_multiple_namespaces",
+        "tests.internal.test_scopes.TestHasRequiredScopes.test_wildcard_satisfaction",
+        "tests.internal.test_scopes.TestMatchScope.test_exact_match",
+        "tests.internal.test_scopes.TestMatchScope.test_exact_mismatch",
+        "tests.internal.test_scopes.TestMatchScope.test_hierarchical_exact_match",
+        "tests.internal.test_scopes.TestMatchScope.test_hierarchical_mismatch",
+        "tests.internal.test_scopes.TestMatchScope.test_multiple_wildcards",
+        "tests.internal.test_scopes.TestMatchScope.test_wildcard_match_namespace",
+        "tests.internal.test_scopes.TestMatchScope.test_wildcard_match_nested",
+        "tests.internal.test_scopes.TestMatchScope.test_wildcard_match_simple",
+        "tests.internal.test_scopes.TestMatchScope.test_wildcard_no_cross_namespace",
+        "tests.internal.test_scopes.TestMatchScope.test_wildcard_partial_no_match",
+        "tests.internal.test_scopes.TestNormalizeScope.test_combined",
+        "tests.internal.test_scopes.TestNormalizeScope.test_lowercase",
+        "tests.internal.test_scopes.TestNormalizeScope.test_strip_whitespace",
+        "tests.internal.test_scopes.TestParseScopeString.test_custom_delimiter",
+        "tests.internal.test_scopes.TestParseScopeString.test_empty_string",
+        "tests.internal.test_scopes.TestParseScopeString.test_extra_whitespace",
+        "tests.internal.test_scopes.TestParseScopeString.test_hierarchical_scopes",
+        "tests.internal.test_scopes.TestParseScopeString.test_single_scope",
+        "tests.internal.test_scopes.TestParseScopeString.test_space_separated",
+        "tests.internal.test_signature.TestSignatureSerializerDifferentKeys.test_different_keys_cannot_decode",
+        "tests.internal.test_signature.TestSignatureSerializerDifferentKeys.test_same_key_can_decode",
+        "tests.internal.test_signature.TestSignatureSerializerEncodeDecode.test_different_data_produces_different_tokens",
+        "tests.internal.test_signature.TestSignatureSerializerEncodeDecode.test_encode_returns_string",
+        "tests.internal.test_signature.TestSignatureSerializerEncodeDecode.test_round_trip_complex_dict",
+        "tests.internal.test_signature.TestSignatureSerializerEncodeDecode.test_round_trip_empty_dict",
+        "tests.internal.test_signature.TestSignatureSerializerEncodeDecode.test_round_trip_simple_dict",
+        "tests.internal.test_signature.TestSignatureSerializerEncodeDecode.test_round_trip_string_values",
+        "tests.internal.test_signature.TestSignatureSerializerExpiry.test_expired_token_returns_error",
+        "tests.internal.test_signature.TestSignatureSerializerExpiry.test_valid_within_expiry_window",
+        "tests.internal.test_signature.TestSignatureSerializerInvalidInput.test_empty_string_returns_bad_signature",
+        "tests.internal.test_signature.TestSignatureSerializerInvalidInput.test_garbage_token_returns_error",
+        "tests.internal.test_signature.TestSignatureSerializerInvalidInput.test_none_token_returns_no_token_specified",
+        "tests.internal.test_signature.TestSignatureSerializerInvalidInput.test_tampered_token_returns_invalid_signature",
+        "tests.internal.test_signature.TestSignatureSerializerInvalidInput.test_wrong_secret_key_fails",
+        "tests.internal.test_signature.TestSignatureSerializerNoExpiry.test_default_expired_in_is_zero",
+        "tests.internal.test_signature.TestSignatureSerializerNoExpiry.test_no_expiry_decode_always_works",
+        "tests.internal.test_utils.test_IST_time",
+        "tests.internal.test_utils.test_beginning_of_day",
+        "tests.internal.test_utils.test_days_after",
+        "tests.internal.test_utils.test_days_ago",
+        "tests.internal.test_utils.test_end_of_day",
+        "tests.internal.test_utils.test_end_of_last_week",
+        "tests.internal.test_utils.test_end_of_week",
+        "tests.internal.test_utils.test_hours_ago",
+        "tests.internal.test_utils.test_is_today",
+        "tests.internal.test_utils.test_is_tomorrow",
+        "tests.internal.test_utils.test_is_yesterday",
+        "tests.internal.test_utils.test_minutes_after",
+        "tests.internal.test_utils.test_minutes_ago",
+        "tests.internal.test_utils.test_months_after",
+        "tests.internal.test_utils.test_months_ago",
+        "tests.internal.test_utils.test_start_of_week",
+        "tests.internal.test_utils.test_time_diff",
+        "tests.internal.test_utils.test_to_UTC",
+        "tests.internal.test_utils.test_to_UTC_without_tz",
+        "tests.internal.test_utils.test_tz_from_iso",
+        "tests.internal.test_utils.test_tz_now",
+        "tests.internal.test_utils.test_util_get_now",
+        "tests.internal.test_utils.test_util_get_now_ts",
+        "tests.internal.test_utils.test_util_get_uuid",
+        "tests.internal.test_utils.test_years_ago",
+        "tests.test_asymmetric.TestAuthXAsymmetric.test_config_detects_asymmetric_algorithm",
+        "tests.test_asymmetric.TestAuthXAsymmetric.test_config_detects_symmetric_algorithm",
+        "tests.test_asymmetric.TestAuthXAsymmetric.test_create_and_decode_access_token",
+        "tests.test_asymmetric.TestAuthXAsymmetric.test_create_and_decode_refresh_token",
+        "tests.test_asymmetric.TestAuthXAsymmetric.test_es256_with_additional_data",
+        "tests.test_asymmetric.TestAuthXAsymmetric.test_es256_with_custom_expiry",
+        "tests.test_asymmetric.TestAuthXAsymmetric.test_rs256_with_scopes",
+        "tests.test_asymmetric.TestAuthXAsymmetric.test_wrong_keypair_fails_decode",
+        "tests.test_asymmetric.TestLowLevelAsymmetric.test_algorithm_mismatch_fails",
+        "tests.test_asymmetric.TestLowLevelAsymmetric.test_ec_round_trip",
+        "tests.test_asymmetric.TestLowLevelAsymmetric.test_ec_wrong_public_key_fails",
+        "tests.test_asymmetric.TestLowLevelAsymmetric.test_rsa_round_trip",
+        "tests.test_asymmetric.TestLowLevelAsymmetric.test_rsa_wrong_public_key_fails",
+        "tests.test_authx.test__auth_required",
+        "tests.test_authx.test_create_access_token",
+        "tests.test_authx.test_create_refresh_token",
+        "tests.test_authx.test_create_refresh_token_with_custom_data",
+        "tests.test_authx.test_get_refresh_token_from_headers",
+        "tests.test_authx.test_get_token_from_request_access",
+        "tests.test_authx.test_get_token_from_request_direct_access",
+        "tests.test_authx.test_get_token_from_request_direct_not_optional",
+        "tests.test_authx.test_get_token_from_request_direct_optional",
+        "tests.test_authx.test_get_token_from_request_direct_refresh",
+        "tests.test_authx.test_get_token_from_request_not_optional",
+        "tests.test_authx.test_get_token_from_request_optional",
+        "tests.test_authx.test_get_token_from_request_refresh",
+        "tests.test_authx.test_get_token_from_request_without_auth",
+        "tests.test_authx.test_load_config",
+        "tests.test_authx.test_set_access_cookies",
+        "tests.test_authx.test_set_and_unset_cookies",
+        "tests.test_authx.test_set_refresh_cookies",
+        "tests.test_authx.test_set_wrong_token_type_cookie_exception",
+        "tests.test_authx.test_token_required",
+        "tests.test_authx.test_token_required_dependency",
+        "tests.test_authx.test_unset_access_cookies",
+        "tests.test_authx.test_unset_cookies",
+        "tests.test_authx.test_unset_refresh_cookies",
+        "tests.test_authx.test_unset_wrong_token_type_cookie_exception",
+        "tests.test_authx.test_verify_token",
+        "tests.test_authx.test_verify_token_with_csrf",
+        "tests.test_callback.test_async_callback_raises_exception",
+        "tests.test_callback.test_async_model_callback",
+        "tests.test_callback.test_async_token_blocklist_callback",
+        "tests.test_callback.test_callback_handler_initialization",
+        "tests.test_callback.test_callback_not_set_exceptions",
+        "tests.test_callback.test_check_model_callback_is_set",
+        "tests.test_callback.test_check_token_callback_is_set",
+        "tests.test_callback.test_edge_case_empty_string_inputs",
+        "tests.test_callback.test_edge_case_kwargs_passing_normal",
+        "tests.test_callback.test_edge_case_kwargs_passing_special",
+        "tests.test_callback.test_edge_case_model_with_handler",
+        "tests.test_callback.test_edge_case_none_inputs",
+        "tests.test_callback.test_get_current_subject",
+        "tests.test_callback.test_is_token_in_blocklist",
+        "tests.test_callback.test_is_token_in_blocklist_callback_execution",
+        "tests.test_callback.test_is_token_in_blocklist_detailed",
+        "tests.test_callback.test_is_token_in_blocklist_none_callback",
+        "tests.test_callback.test_mixed_sync_and_async_callbacks",
+        "tests.test_callback.test_set_and_check_callbacks",
+        "tests.test_callback.test_set_subject_getter_alias",
+        "tests.test_callback.test_set_token_blocklist_alias",
+        "tests.test_callback.test_token_in_blocklist",
+        "tests.test_callback.test_token_not_in_blocklist",
+        "tests.test_config.test_bad_algorithm_config_exception",
+        "tests.test_config.test_config__get_key",
+        "tests.test_config.test_config_asymmetric_key",
+        "tests.test_config.test_config_has_location",
+        "tests.test_config.test_config_symmetric_key",
+        "tests.test_config.test_none_secret_config_exception",
+        "tests.test_core.test_csrf_error_message_is_detailed",
+        "tests.test_core.test_get_token_from_cookies_get",
+        "tests.test_core.test_get_token_from_cookies_post",
+        "tests.test_core.test_get_token_from_cookies_post_with_csrf_exception",
+        "tests.test_core.test_get_token_from_cookies_post_with_missing_token_exception",
+        "tests.test_core.test_get_token_from_cookies_post_without_csrf_exception",
+        "tests.test_core.test_get_token_from_cookies_with_csrf_form_data",
+        "tests.test_core.test_get_token_from_headers",
+        "tests.test_core.test_get_token_from_headers_with_token_exception",
+        "tests.test_core.test_get_token_from_headers_without_header_type",
+        "tests.test_core.test_get_token_from_json_post",
+        "tests.test_core.test_get_token_from_json_post_content_type_exception",
+        "tests.test_core.test_get_token_from_json_post_with_bad_data_exception",
+        "tests.test_core.test_get_token_from_json_post_with_exception",
+        "tests.test_core.test_get_token_from_query",
+        "tests.test_core.test_get_token_from_query_with_exception",
+        "tests.test_core.test_get_token_from_request",
+        "tests.test_core.test_get_token_from_request_with_exception",
+        "tests.test_core.test_get_token_from_request_with_locations",
+        "tests.test_coverage_edges.limited_route",
+        "tests.test_coverage_edges.test_access_token_optional_dependency_closure_returns_token",
+        "tests.test_coverage_edges.test_auth_required_with_explicit_csrf_false_branch",
+        "tests.test_coverage_edges.test_callback_model_check_true_with_none_callback_returns_none",
+        "tests.test_coverage_edges.test_create_session_without_request_client_branch",
+        "tests.test_coverage_edges.test_decode_token_preserves_existing_exception_login_type",
+        "tests.test_coverage_edges.test_dependency_alias_properties_return_depends",
+        "tests.test_coverage_edges.test_error_handler_rate_limit_direct_response",
+        "tests.test_coverage_edges.test_handle_errors_rate_limit_wrapper_response",
+        "tests.test_coverage_edges.test_implicit_refresh_include_route_branch",
+        "tests.test_coverage_edges.test_implicit_refresh_middleware_refreshes_expiring_cookie_token",
+        "tests.test_coverage_edges.test_implicit_refresh_middleware_skips_non_expiring_cookie_token",
+        "tests.test_coverage_edges.test_login_type_mismatch_custom_message_branch",
+        "tests.test_coverage_edges.test_login_type_mismatch_default_actual_unknown",
+        "tests.test_coverage_edges.test_policy_helper_fallbacks_and_protocol_stub",
+        "tests.test_coverage_edges.test_previous_public_key_with_unsupported_algorithm_returns_none",
+        "tests.test_coverage_edges.test_protocol_stub_methods_execute",
+        "tests.test_coverage_edges.test_rate_limited_dependency_runs_limiter_and_auth",
+        "tests.test_coverage_edges.test_session_store_update_ignores_unknown_and_filters_inactive",
+        "tests.test_coverage_edges.test_unset_access_cookies_without_csrf_cookie_branch",
+        "tests.test_coverage_edges.test_verify_token_preserves_existing_exception_login_type",
+        "tests.test_coverage_edges.test_websocket_missing_token_has_login_type",
+        "tests.test_dependencies.test_authx_dependency_properties",
+        "tests.test_dependencies.test_create_access_token_delegates",
+        "tests.test_dependencies.test_create_refresh_token_delegates",
+        "tests.test_dependencies.test_get_current_subject_delegates",
+        "tests.test_dependencies.test_set_access_cookies_delegates",
+        "tests.test_dependencies.test_set_access_cookies_with_custom_response",
+        "tests.test_dependencies.test_set_refresh_cookies_delegates",
+        "tests.test_dependencies.test_unset_access_and_refresh_are_independent",
+        "tests.test_dependencies.test_unset_access_cookies_delegates",
+        "tests.test_dependencies.test_unset_cookies_delegates",
+        "tests.test_dependencies.test_unset_refresh_cookies_delegates",
+        "tests.test_dependencies.test_unset_refresh_cookies_with_custom_response",
+        "tests.test_errors.csrf_error_route",
+        "tests.test_errors.login_type_error_route",
+        "tests.test_errors.route",
+        "tests.test_errors.test_error_handler",
+        "tests.test_errors.test_error_handler_without_message",
+        "tests.test_errors.test_handle_app_errors",
+        "tests.test_errors.test_invalid_token_init",
+        "tests.test_errors.test_login_type_mismatch_error_response_has_context",
+        "tests.test_errors.test_missing_csrf_token_error_shows_detailed_message",
+        "tests.test_errors.test_request_exception_handler_checks_starlette_scope_and_parent_handlers",
+        "tests.test_errors.test_set_app_exception_handler",
+        "tests.test_errors.test_set_request_exception_handler_adds_request_local_handler",
+        "tests.test_errors.test_set_request_exception_handler_ignores_requests_without_starlette_scope",
+        "tests.test_errors.test_set_request_rate_limit_handler_adds_request_local_handler",
+        "tests.test_errors.test_set_request_rate_limit_handler_preserves_existing_parent_handler",
+        "tests.test_implicit_middleware.excluded_route",
+        "tests.test_implicit_middleware.test_implicit_refresh_enabled_for_request",
+        "tests.test_implicit_middleware.test_implicit_refresh_middleware_excluded_method",
+        "tests.test_implicit_middleware.test_implicit_refresh_middleware_excluded_route",
+        "tests.test_implicit_middleware.test_implicit_refresh_middleware_no_refresh_needed",
+        "tests.test_implicit_middleware.test_implicit_refresh_middleware_with_refresh",
+        "tests.test_implicit_middleware.test_implicit_refresh_middleware_with_refresh_once",
+        "tests.test_implicit_middleware.test_route",
+        "tests.test_key_rotation.TestAsymmetricKeyRotation.test_rsa_no_previous_key_fails",
+        "tests.test_key_rotation.TestAsymmetricKeyRotation.test_token_signed_with_previous_rsa_key",
+        "tests.test_key_rotation.TestConfigPreviousKey.test_asymmetric_returns_none_when_not_set",
+        "tests.test_key_rotation.TestConfigPreviousKey.test_asymmetric_returns_previous_public",
+        "tests.test_key_rotation.TestConfigPreviousKey.test_symmetric_returns_none_when_not_set",
+        "tests.test_key_rotation.TestConfigPreviousKey.test_symmetric_returns_previous_secret",
+        "tests.test_key_rotation.TestSymmetricKeyRotation.test_new_tokens_always_use_current_key",
+        "tests.test_key_rotation.TestSymmetricKeyRotation.test_no_previous_key_does_not_fallback",
+        "tests.test_key_rotation.TestSymmetricKeyRotation.test_token_signed_with_current_key",
+        "tests.test_key_rotation.TestSymmetricKeyRotation.test_token_signed_with_previous_key",
+        "tests.test_key_rotation.TestSymmetricKeyRotation.test_token_signed_with_unknown_key_fails",
+        "tests.test_key_rotation.TestSymmetricKeyRotation.test_verify_token_falls_back_to_previous_key",
+        "tests.test_manager.admin_route",
+        "tests.test_manager.fresh_route",
+        "tests.test_manager.query_route",
+        "tests.test_manager.refresh_route",
+        "tests.test_manager.test_access_dependency_accepts_matching_login_type",
+        "tests.test_manager.test_access_dependency_rejects_cross_type_token_with_mismatch_error",
+        "tests.test_manager.test_access_dependency_reraises_jwt_decode_error_when_no_registered_type_matches",
+        "tests.test_manager.test_add_policy_rule_and_evaluator_delegate_to_policy_engine",
+        "tests.test_manager.test_authorize_with_payload_and_matching_policy_returns_payload",
+        "tests.test_manager.test_authorize_with_payload_mismatched_login_type_raises",
+        "tests.test_manager.test_authorize_without_request_or_payload_denies",
+        "tests.test_manager.test_create_access_token_uses_registered_context",
+        "tests.test_manager.test_create_refresh_token_uses_registered_context",
+        "tests.test_manager.test_create_token_pair_includes_login_type",
+        "tests.test_manager.test_login_types_and_unknown_login_type",
+        "tests.test_manager.test_payload_login_type_returns_none_for_missing_claim",
+        "tests.test_manager.test_refresh_and_fresh_dependencies_accept_matching_tokens",
+        "tests.test_manager.test_register_rejects_duplicate_login_type",
+        "tests.test_manager.test_register_requires_login_type",
+        "tests.test_manager.test_token_required_custom_locations_accepts_query_token",
+        "tests.test_manager.test_try_verify_with_auth_returns_none_for_bad_token",
+        "tests.test_manager.test_verify_login_type_rejects_missing_login_type",
+        "tests.test_openapi.admin",
+        "tests.test_openapi.protected",
+        "tests.test_openapi.test_access_token_required_accepts_valid_swagger_bearer_token",
+        "tests.test_openapi.test_access_token_required_adds_openapi_bearer_security_metadata",
+        "tests.test_openapi.test_access_token_required_handles_invalid_token_without_registered_error_handlers",
+        "tests.test_openapi.test_access_token_required_handles_missing_token_without_registered_error_handlers",
+        "tests.test_openapi.test_access_token_required_uses_registered_error_handlers_when_present",
+        "tests.test_openapi.test_custom_header_token_location_adds_api_key_header_security_metadata",
+        "tests.test_openapi.test_manager_access_token_required_adds_openapi_security_metadata",
+        "tests.test_openapi.test_manager_unknown_login_type_still_adds_default_openapi_security_metadata",
+        "tests.test_openapi.test_openapi_security_dependency_does_not_require_authorization_header_for_cookie_tokens",
+        "tests.test_openapi.test_route_level_access_token_required_adds_openapi_security_metadata",
+        "tests.test_openapi.test_token_locations_add_matching_openapi_security_schemes",
+        "tests.test_policy.route",
+        "tests.test_policy.test_build_policy_environment_with_request_and_overrides",
+        "tests.test_policy.test_default_subject_from_payload",
+        "tests.test_policy.test_policy_allows_matching_action_resource_and_scope",
+        "tests.test_policy.test_policy_condition_operators_and_sources",
+        "tests.test_policy.test_policy_condition_unsupported_source_raises",
+        "tests.test_policy.test_policy_context_token_source_without_payload",
+        "tests.test_policy.test_policy_custom_callable_evaluator",
+        "tests.test_policy.test_policy_deny_rule_wins_over_allow_rule",
+        "tests.test_policy.test_policy_engine_add_rule_global_async_evaluator_and_rules_copy",
+        "tests.test_policy.test_policy_engine_rule_mismatch_and_default_allow_branches",
+        "tests.test_policy.test_policy_required_dependency_allows_matching_policy",
+        "tests.test_policy.test_policy_required_dependency_denies_without_matching_policy",
+        "tests.test_policy.test_policy_rule_scopes_without_payload_and_or_logic",
+        "tests.test_policy.test_policy_subject_resource_and_environment_conditions",
+        "tests.test_ratelimit.TestAuthXRateLimited.test_returns_callable",
+        "tests.test_ratelimit.TestDefaultKeyFunc.test_with_client",
+        "tests.test_ratelimit.TestDefaultKeyFunc.test_without_client",
+        "tests.test_ratelimit.TestInMemoryBackend.test_cleanup",
+        "tests.test_ratelimit.TestInMemoryBackend.test_increment_first_request",
+        "tests.test_ratelimit.TestInMemoryBackend.test_increment_multiple_requests",
+        "tests.test_ratelimit.TestInMemoryBackend.test_increment_separate_keys",
+        "tests.test_ratelimit.TestInMemoryBackend.test_reset",
+        "tests.test_ratelimit.TestInMemoryBackend.test_reset_nonexistent_key",
+        "tests.test_ratelimit.TestInMemoryBackend.test_window_expiry",
+        "tests.test_ratelimit.TestRateLimitExceededException.test_custom_message",
+        "tests.test_ratelimit.TestRateLimitExceededException.test_default_message",
+        "tests.test_ratelimit.TestRateLimiter.test_allows_within_limit",
+        "tests.test_ratelimit.TestRateLimiter.test_custom_backend",
+        "tests.test_ratelimit.TestRateLimiter.test_custom_key_func",
+        "tests.test_ratelimit.TestRateLimiter.test_default_values",
+        "tests.test_ratelimit.TestRateLimiter.test_different_clients_independent",
+        "tests.test_ratelimit.TestRateLimiter.test_raises_on_exceeded",
+        "tests.test_schema.test_invalid_refresh_type_exception",
+        "tests.test_schema.test_payload_decode",
+        "tests.test_schema.test_payload_encode",
+        "tests.test_schema.test_payload_expiry_datetime_property",
+        "tests.test_schema.test_payload_extra_dict",
+        "tests.test_schema.test_payload_has_scopes",
+        "tests.test_schema.test_payload_has_scopes_empty",
+        "tests.test_schema.test_payload_has_scopes_valid",
+        "tests.test_schema.test_payload_issued_at_property",
+        "tests.test_schema.test_payload_time_since_issued_property",
+        "tests.test_schema.test_payload_time_until_expiry_property",
+        "tests.test_schema.test_token_payload_creation",
+        "tests.test_schema.test_token_payload_encode_decode",
+        "tests.test_schema.test_token_payload_expiry",
+        "tests.test_schema.test_token_payload_extra_fields",
+        "tests.test_schema.test_token_payload_invalid_decode",
+        "tests.test_schema.test_token_payload_issued_at",
+        "tests.test_schema.test_token_payload_nbf_validator",
+        "tests.test_schema.test_token_payload_scopes",
+        "tests.test_schema.test_token_verify_invalid",
+        "tests.test_schema.test_token_verify_none_csrf_claim_exception",
+        "tests.test_schema.test_token_verify_none_csrf_exception",
+        "tests.test_schema.test_token_verify_valid",
+        "tests.test_schema.test_validation_error_on_verify",
+        "tests.test_schema.test_verify_propagates_token_expired_error",
+        "tests.test_schema.test_verify_propagates_token_invalid_audience_error",
+        "tests.test_schema.test_verify_propagates_token_invalid_issuer_error",
+        "tests.test_schema.test_verify_propagates_token_invalid_signature_error",
+        "tests.test_schema.test_verify_token_type_exception",
+        "tests.test_session.TestAuthXSessionManagement.test_create_session_basic",
+        "tests.test_session.TestAuthXSessionManagement.test_create_session_no_client",
+        "tests.test_session.TestAuthXSessionManagement.test_create_session_with_device_info",
+        "tests.test_session.TestAuthXSessionManagement.test_create_session_with_request",
+        "tests.test_session.TestAuthXSessionManagement.test_get_session",
+        "tests.test_session.TestAuthXSessionManagement.test_get_session_nonexistent",
+        "tests.test_session.TestAuthXSessionManagement.test_list_sessions",
+        "tests.test_session.TestAuthXSessionManagement.test_no_store_create_still_returns_session",
+        "tests.test_session.TestAuthXSessionManagement.test_no_store_get_returns_none",
+        "tests.test_session.TestAuthXSessionManagement.test_no_store_returns_empty",
+        "tests.test_session.TestAuthXSessionManagement.test_no_store_revoke_does_not_error",
+        "tests.test_session.TestAuthXSessionManagement.test_revoke_all_sessions",
+        "tests.test_session.TestAuthXSessionManagement.test_revoke_session",
+        "tests.test_session.TestInMemorySessionStore.test_create_and_get",
+        "tests.test_session.TestInMemorySessionStore.test_delete",
+        "tests.test_session.TestInMemorySessionStore.test_delete_all_by_user",
+        "tests.test_session.TestInMemorySessionStore.test_delete_nonexistent",
+        "tests.test_session.TestInMemorySessionStore.test_get_nonexistent",
+        "tests.test_session.TestInMemorySessionStore.test_list_by_user",
+        "tests.test_session.TestInMemorySessionStore.test_list_by_user_excludes_inactive",
+        "tests.test_session.TestInMemorySessionStore.test_update",
+        "tests.test_session.TestInMemorySessionStore.test_update_nonexistent",
+        "tests.test_session.TestSessionInfo.test_custom_fields",
+        "tests.test_session.TestSessionInfo.test_default_fields",
+        "tests.test_session.TestSessionInfo.test_serialization",
+        "tests.test_token.test_create_token",
+        "tests.test_token.test_create_token_with_additional_claims",
+        "tests.test_token.test_create_token_with_additional_claims_exception",
+        "tests.test_token.test_create_token_with_audience",
+        "tests.test_token.test_create_token_with_csrf_claim",
+        "tests.test_token.test_create_token_with_fresh_claims",
+        "tests.test_token.test_create_token_with_iat_claims",
+        "tests.test_token.test_create_token_with_issuer",
+        "tests.test_token.test_create_token_with_timed_claims",
+        "tests.test_token.test_decode_token_empty_raises_jwt_decode_error",
+        "tests.test_token.test_decode_token_expired_raises_token_expired_error",
+        "tests.test_token.test_decode_token_invalid_audience_raises_token_invalid_audience_error",
+        "tests.test_token.test_decode_token_invalid_issuer_raises_token_invalid_issuer_error",
+        "tests.test_token.test_decode_token_invalid_signature_raises_token_invalid_signature_error",
+        "tests.test_token.test_decode_token_raise_data_argument_deprecated",
+        "tests.test_token.test_encode_decode_token",
+        "tests.test_token.test_verify_token",
+        "tests.test_token_pair.TestCreateTokenPair.test_access_and_refresh_are_different",
+        "tests.test_token_pair.TestCreateTokenPair.test_access_scopes",
+        "tests.test_token_pair.TestCreateTokenPair.test_additional_data",
+        "tests.test_token_pair.TestCreateTokenPair.test_audience_claim",
+        "tests.test_token_pair.TestCreateTokenPair.test_custom_access_expiry",
+        "tests.test_token_pair.TestCreateTokenPair.test_custom_refresh_expiry",
+        "tests.test_token_pair.TestCreateTokenPair.test_fresh_flag",
+        "tests.test_token_pair.TestCreateTokenPair.test_model_dump_for_api_response",
+        "tests.test_token_pair.TestCreateTokenPair.test_refresh_scopes",
+        "tests.test_token_pair.TestCreateTokenPair.test_returns_token_response",
+        "tests.test_token_pair.TestCreateTokenPair.test_separate_access_and_refresh_scopes",
+        "tests.test_token_pair.TestCreateTokenPair.test_tokens_are_valid_jwts",
+        "tests.test_token_pair.TestCreateTokenPairDependency.test_delegates_to_authx",
+        "tests.test_token_pair.TestCreateTokenPairDependency.test_passes_all_params",
+        "tests.test_token_pair.TestTokenResponseSchema.test_basic_construction",
+        "tests.test_token_pair.TestTokenResponseSchema.test_custom_token_type",
+        "tests.test_token_pair.TestTokenResponseSchema.test_json_serialization",
+        "tests.test_token_pair.TestTokenResponseSchema.test_serialization",
+        "tests.test_websocket.TestWebSocketAuthRequired.test_custom_query_param_name",
+        "tests.test_websocket.TestWebSocketAuthRequired.test_expired_token_raises",
+        "tests.test_websocket.TestWebSocketAuthRequired.test_invalid_token_raises",
+        "tests.test_websocket.TestWebSocketAuthRequired.test_missing_token_raises",
+        "tests.test_websocket.TestWebSocketAuthRequired.test_query_param_takes_precedence",
+        "tests.test_websocket.TestWebSocketAuthRequired.test_revoked_token_raises",
+        "tests.test_websocket.TestWebSocketAuthRequired.test_token_from_authorization_header",
+        "tests.test_websocket.TestWebSocketAuthRequired.test_token_from_header_without_bearer_prefix",
+        "tests.test_websocket.TestWebSocketAuthRequired.test_token_from_query_param",
+        "tests.test_websocket.TestWebSocketAuthRequired.test_token_with_scopes",
+        "tests.test_websocket.TestWebSocketAuthRequired.test_wrong_key_raises",
+        "tests.utils._access_token_cookies_route",
+        "tests.utils._access_token_headers_route",
+        "tests.utils._access_token_json_route",
+        "tests.utils._access_token_query_route",
+        "tests.utils._access_token_route",
+        "tests.utils._blocklist_access_route",
+        "tests.utils._fresh_token_route",
+        "tests.utils._get_blocklist",
+        "tests.utils._protected_access_post",
+        "tests.utils._protected_fresh_route",
+        "tests.utils._protected_refresh_route",
+        "tests.utils._refresh_token_cookies_route",
+        "tests.utils._refresh_token_headers_route",
+        "tests.utils._refresh_token_json_route",
+        "tests.utils._refresh_token_query_route",
+        "tests.utils._refresh_token_route",
+        "tests.utils._resource_post",
+        "tests.utils._resources_get",
+        "tests.utils._subject_resources_route",
+        "tests.utils._subject_route",
+        "tests.utils._subjects_route"
+      ],
+      "entrypoint_files": [
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\basic_auth.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\dual_token_location.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\fresh_token.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\jinja2_templates.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\key_rotation.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\rate_limiting.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\refresh_token.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\scopes.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\session_management.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_blocklist.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\token_locations.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\examples\\websocket_auth.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\examples\\tests\\test_examples.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_access_location.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_blocklist_token.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_fresh_token.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_get_subject.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_scopes.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\app\\test_token_protected_access.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\extend\\test_authx_extend.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\internal\\test_logger.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\internal\\test_scopes.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\internal\\test_signature.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\internal\\test_utils.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_asymmetric.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_authx.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_callback.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_config.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_core.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_coverage_edges.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_dependencies.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_errors.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_implicit_middleware.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_key_rotation.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_manager.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_openapi.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_policy.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_ratelimit.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_schema.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_session.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_token_pair.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\test_websocket.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\yezz123__authx\\tests\\utils.py"
+      ],
+      "fallback": false
+    },
+    "jarvis": {
+      "runner": "docker",
+      "mode": "EA",
+      "precision": true,
+      "jarvis_root": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.tools\\pythonJaRvis\\Jarvis",
+      "timeout_s": 300,
+      "module_count": 44,
+      "pip_install": "",
+      "stdout": "x/authx/dependencies.py\n/workspace/data/raw/projects/yezz123__authx/authx/schema.py\n/workspace/data/raw/projects/yezz123__authx/authx/_internal/_scopes.py\n/workspace/data/raw/projects/yezz123__authx/authx/token.py\n/workspace/data/raw/projects/yezz123__authx/authx/main.py\n/workspace/data/raw/projects/yezz123__authx/authx/_internal/_callback.py\n/workspace/data/raw/projects/yezz123__authx/authx/_internal/_error.py\n/workspace/data/raw/projects/yezz123__authx/authx/core.py\n/workspace/data/raw/projects/yezz123__authx/authx/manager.py\n/workspace/data/raw/projects/yezz123__authx/authx/policy.py\n/workspace/data/raw/projects/yezz123__authx/examples/examples/dual_token_location.py\n/workspace/data/raw/projects/yezz123__authx/examples/examples/fresh_token.py\n/workspace/data/raw/projects/yezz123__authx/examples/examples/jinja2_templates.py\n/workspace/data/raw/projects/yezz123__authx/examples/examples/key_rotation.py\n/workspace/data/raw/projects/yezz123__authx/examples/examples/rate_limiting.py\n/workspace/data/raw/projects/yezz123__authx/examples/examples/refresh_token.py\n/workspace/data/raw/projects/yezz123__authx/examples/examples/scopes.py\n/workspace/data/raw/projects/yezz123__authx/examples/examples/session_management.py\n/workspace/data/raw/projects/yezz123__authx/examples/examples/token_blocklist.py\n/workspace/data/raw/projects/yezz123__authx/examples/examples/token_locations.py\n/workspace/data/raw/projects/yezz123__authx/examples/examples/websocket_auth.py\n/workspace/data/raw/projects/yezz123__authx/examples/tests/test_examples.py\n/workspace/data/raw/projects/yezz123__authx/tests/app/test_access_location.py\n/workspace/data/raw/projects/yezz123__authx/tests/app/test_blocklist_token.py\n/workspace/data/raw/projects/yezz123__authx/tests/app/test_fresh_token.py\n/workspace/data/raw/projects/yezz123__authx/tests/app/test_get_subject.py\n/workspace/data/raw/projects/yezz123__authx/tests/app/test_scopes.py\n/workspace/data/raw/projects/yezz123__authx/tests/app/test_token_protected_access.py\n/workspace/data/raw/projects/yezz123__authx/tests/extend/test_authx_extend.py\n/workspace/data/raw/projects/yezz123__authx/tests/internal/test_logger.py\n/workspace/data/raw/projects/yezz123__authx/authx/_internal/_logger.py\n/workspace/data/raw/projects/yezz123__authx/tests/internal/test_scopes.py\n/workspace/data/raw/projects/yezz123__authx/tests/internal/test_signature.py\n/workspace/data/raw/projects/yezz123__authx/authx/_internal/_signature.py\n/workspace/data/raw/projects/yezz123__authx/tests/internal/test_utils.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_asymmetric.py\n/workspace/data/raw/projects/yezz123__authx/tests/utils.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_authx.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_callback.py\n/workspace/data/raw/projects/yezz123__authx/authx/_internal/__init__.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_config.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_core.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_coverage_edges.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_dependencies.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_errors.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_implicit_middleware.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_key_rotation.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_manager.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_openapi.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_policy.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_ratelimit.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_schema.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_session.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_token.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_token_pair.py\n/workspace/data/raw/projects/yezz123__authx/tests/test_websocket.py\n/workspace/data/raw/projects/yezz123__authx/tests/utils.py\n",
+      "stderr": ""
+    },
+    "function_type_graphs": {},
+    "unresolved_calls": [],
+    "candidate_edges": [],
+    "reanalyzed_contexts": []
+  },
+  "usage_index": [
+    {
+      "identity": "cryptography.hazmat.primitives.asymmetric.ec.SECP256R1",
+      "target_module": "cryptography.hazmat.primitives.asymmetric.ec",
+      "target_name": "SECP256R1"
+    },
+    {
+      "identity": "cryptography.hazmat.primitives.asymmetric.ec.SECP384R1",
+      "target_module": "cryptography.hazmat.primitives.asymmetric.ec",
+      "target_name": "SECP384R1"
+    },
+    {
+      "identity": "cryptography.hazmat.primitives.asymmetric.ec.generate_private_key",
+      "target_module": "cryptography.hazmat.primitives.asymmetric.ec",
+      "target_name": "generate_private_key"
+    },
+    {
+      "identity": "cryptography.hazmat.primitives.asymmetric.rsa.generate_private_key",
+      "target_module": "cryptography.hazmat.primitives.asymmetric.rsa",
+      "target_name": "generate_private_key"
+    },
+    {
+      "identity": "cryptography.hazmat.primitives.serialization.NoEncryption",
+      "target_module": "cryptography.hazmat.primitives.serialization",
+      "target_name": "NoEncryption"
+    },
+    {
+      "identity": "dateutil.parser.parse",
+      "target_module": "dateutil.parser",
+      "target_name": "parse"
+    },
+    {
+      "identity": "dateutil.relativedelta.relativedelta",
+      "target_module": "dateutil.relativedelta",
+      "target_name": "relativedelta"
+    },
+    {
+      "identity": "fastapi.Depends",
+      "target_module": "fastapi",
+      "target_name": "Depends"
+    },
+    {
+      "identity": "fastapi.FastAPI",
+      "target_module": "fastapi",
+      "target_name": "FastAPI"
+    },
+    {
+      "identity": "fastapi.HTTPException",
+      "target_module": "fastapi",
+      "target_name": "HTTPException"
+    },
+    {
+      "identity": "fastapi.Request",
+      "target_module": "fastapi",
+      "target_name": "Request"
+    },
+    {
+      "identity": "fastapi.WebSocket",
+      "target_module": "fastapi",
+      "target_name": "WebSocket"
+    },
+    {
+      "identity": "fastapi.responses.JSONResponse",
+      "target_module": "fastapi.responses",
+      "target_name": "JSONResponse"
+    },
+    {
+      "identity": "fastapi.responses.RedirectResponse",
+      "target_module": "fastapi.responses",
+      "target_name": "RedirectResponse"
+    },
+    {
+      "identity": "fastapi.security.APIKeyCookie",
+      "target_module": "fastapi.security",
+      "target_name": "APIKeyCookie"
+    },
+    {
+      "identity": "fastapi.security.APIKeyHeader",
+      "target_module": "fastapi.security",
+      "target_name": "APIKeyHeader"
+    },
+    {
+      "identity": "fastapi.security.APIKeyQuery",
+      "target_module": "fastapi.security",
+      "target_name": "APIKeyQuery"
+    },
+    {
+      "identity": "fastapi.security.HTTPBearer",
+      "target_module": "fastapi.security",
+      "target_name": "HTTPBearer"
+    },
+    {
+      "identity": "fastapi.testclient.TestClient",
+      "target_module": "fastapi.testclient",
+      "target_name": "TestClient"
+    },
+    {
+      "identity": "httpx.get",
+      "target_module": "httpx",
+      "target_name": "get"
+    },
+    {
+      "identity": "httpx.post",
+      "target_module": "httpx",
+      "target_name": "post"
+    },
+    {
+      "identity": "itsdangerous.URLSafeTimedSerializer",
+      "target_module": "itsdangerous",
+      "target_name": "URLSafeTimedSerializer"
+    },
+    {
+      "identity": "jwt.algorithms.get_default_algorithms",
+      "target_module": "jwt.algorithms",
+      "target_name": "get_default_algorithms"
+    },
+    {
+      "identity": "jwt.decode",
+      "target_module": "jwt",
+      "target_name": "decode"
+    },
+    {
+      "identity": "jwt.encode",
+      "target_module": "jwt",
+      "target_name": "encode"
+    },
+    {
+      "identity": "pytest.approx",
+      "target_module": "pytest",
+      "target_name": "approx"
+    },
+    {
+      "identity": "pytest.fail",
+      "target_module": "pytest",
+      "target_name": "fail"
+    },
+    {
+      "identity": "pytest.raises",
+      "target_module": "pytest",
+      "target_name": "raises"
+    },
+    {
+      "identity": "pytest.skip",
+      "target_module": "pytest",
+      "target_name": "skip"
+    },
+    {
+      "identity": "pytest.warns",
+      "target_module": "pytest",
+      "target_name": "warns"
+    }
+  ]
+}

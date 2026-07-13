@@ -16,6 +16,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 SRC_ROOT = REPO_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
+DEFAULT_BENCHMARK = REPO_ROOT / "data" / "final" / "cve_vf_benchmark_accepted.jsonl"
 
 from pyshare.analysis.callgraph.jarvis_backend import (  # noqa: E402
     JarvisOptions,
@@ -62,6 +63,16 @@ def _load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _load_jsonl(path: Path) -> list[dict[str, Any]]:
+    if not path.exists():
+        return []
+    return [
+        json.loads(line)
+        for line in path.read_text(encoding="utf-8-sig").splitlines()
+        if line.strip()
+    ]
+
+
 def _project_from_manifest(manifest_path: Path, project_id: str) -> dict[str, Any]:
     manifest = _load_json(manifest_path)
     for project in manifest.get("projects", []):
@@ -70,6 +81,53 @@ def _project_from_manifest(manifest_path: Path, project_id: str) -> dict[str, An
                 raise RuntimeError(f"project is disabled in local manifest: {project_id}")
             return project
     raise RuntimeError(f"project is not listed in local manifest: {project_id}")
+
+
+def _target_vfs(record: dict[str, Any]) -> list[str]:
+    targets: list[str] = []
+    for item in record.get("target_vfs") or []:
+        value = str(item.get("qualified_name") or "").strip()
+        if value and value not in targets:
+            targets.append(value)
+    fallback = str(record.get("vf_qualified_name") or "").strip()
+    if fallback and fallback not in targets:
+        targets.append(fallback)
+    return targets
+
+
+def _benchmark_records_for_project(benchmark_path: Path, project_id: str) -> list[dict[str, Any]]:
+    records = []
+    for record in _load_jsonl(benchmark_path):
+        if record.get("benchmark_status") != "accepted":
+            continue
+        if project_id not in set(record.get("projects") or []):
+            continue
+        targets = _target_vfs(record)
+        if not targets:
+            continue
+        records.append(
+            {
+                "group_id": record.get("group_id", ""),
+                "cve_id": record.get("cve_id", ""),
+                "package": record.get("package", ""),
+                "evidence_level": record.get("evidence_level", ""),
+                "mapping_type": record.get("mapping_type", ""),
+                "confidence": record.get("confidence", ""),
+                "target_vfs": targets,
+            }
+        )
+    return records
+
+
+def _target_root(target: str) -> str:
+    parts = [part for part in str(target or "").split(".") if part]
+    if not parts:
+        return ""
+    if parts[0] == "src" and len(parts) > 1:
+        return parts[1]
+    if parts[0] == "python" and len(parts) > 1:
+        return parts[1]
+    return parts[0]
 
 
 def _default_jarvis_root() -> Path | None:
@@ -274,7 +332,16 @@ def run(args: argparse.Namespace) -> int:
     vulnerable_packages = _vulnerable_packages(audit)
     _write_json(run_dir / "package_vulnerabilities.json", vulnerable_packages)
 
-    roots = sorted({node.target_module.split(".", 1)[0] for node in usage_index if node.target_module})
+    benchmark_records = _benchmark_records_for_project(_resolve(args.benchmark), args.project_id)
+    true_vf_targets = {
+        record["group_id"] or record["cve_id"]: record["target_vfs"]
+        for record in benchmark_records
+    }
+    targets = sorted({target for values in true_vf_targets.values() for target in values})
+
+    usage_roots = {node.target_module.split(".", 1)[0] for node in usage_index if node.target_module}
+    target_roots = {_target_root(target) for target in targets if _target_root(target)}
+    roots = sorted(usage_roots | target_roots)
     summaries: dict[str, LibrarySummary] = {}
     summary_status: list[dict[str, Any]] = []
     summary_dir = run_dir / "package_summaries"
@@ -288,8 +355,6 @@ def run(args: argparse.Namespace) -> int:
     _write_json(run_dir / "package_summary_status.json", summary_status)
 
     proxy_targets = _proxy_targets_from_usage(usage_index, vulnerable_packages)
-    true_vf_targets: dict[str, list[str]] = {}
-    targets = sorted({target for values in true_vf_targets.values() for target in values})
     proxy_target_set = sorted({target for values in proxy_targets.values() for target in values})
 
     if targets:
@@ -327,6 +392,7 @@ def run(args: argparse.Namespace) -> int:
         "vulnerable_packages": vulnerable_packages,
         "proxy_vf_targets": proxy_targets,
         "true_vf_targets": true_vf_targets,
+        "benchmark_records": benchmark_records,
         "query_targets": sorted(query_targets),
         "hit_set": sorted({path.vulnerable_target for path in query_report.paths}),
         "paths": [
@@ -366,6 +432,8 @@ def run(args: argparse.Namespace) -> int:
             "dependencies": len(dependency_graph.dependencies),
             "vulnerable_packages": len(vulnerable_packages),
             "package_summary_roots": len(summaries),
+            "vf_annotation_records": len(benchmark_records),
+            "vf_targets": len(targets),
             "query_targets": len(query_targets),
             "reachable_paths": len(query_report.paths),
         },
@@ -396,6 +464,7 @@ def main() -> int:
     parser.add_argument("--timeout", type=int, default=300)
     parser.add_argument("--max-depth", type=int, default=25)
     parser.add_argument("--max-paths", type=int, default=100)
+    parser.add_argument("--benchmark", type=Path, default=DEFAULT_BENCHMARK)
     parser.add_argument("--output-dir", type=Path, default=REPO_ROOT / "artifacts" / "pipeline_runs" / "alerta_full_reachability")
     return run(parser.parse_args())
 

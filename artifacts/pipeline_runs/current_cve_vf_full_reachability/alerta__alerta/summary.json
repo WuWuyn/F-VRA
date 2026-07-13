@@ -1,0 +1,54 @@
+{
+  "project": {
+    "id": "alerta__alerta",
+    "name": "alerta__alerta",
+    "repo_full_name": "alerta/alerta",
+    "repo_url": "https://github.com/alerta/alerta.git",
+    "commit": "4ac0106300cd428b26ad4b373cf4a78f55f6b542",
+    "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alerta__alerta",
+    "enabled": true,
+    "environment_status": "resolved_from_lockfile_or_manifest",
+    "version_source": "lockfile_or_manifest",
+    "manifest_files": [
+      "requirements-ci.txt",
+      "requirements-dev.txt",
+      "requirements.txt",
+      "pyproject.toml",
+      "setup.py"
+    ],
+    "resolved_package_count": 26
+  },
+  "status": "success",
+  "runner": "docker",
+  "jarvis_attempts": [
+    {
+      "runner": "docker",
+      "status": "success",
+      "elapsed_s": 26.265
+    }
+  ],
+  "dependency_graph": {
+    "status": "success",
+    "dependency_count": 72,
+    "elapsed_s": 60.28
+  },
+  "artifacts": {
+    "project_graph": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\alerta__alerta\\project_graph_jarvis.json",
+    "usage_index": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\alerta__alerta\\usage_index.json",
+    "package_summary_status": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\alerta__alerta\\package_summary_status.json",
+    "reachability": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\alerta__alerta\\reachability_report.json"
+  },
+  "counts": {
+    "project_nodes": 403,
+    "project_edges": 995,
+    "usage_index": 36,
+    "records": 2,
+    "query_targets": 2,
+    "package_summary_status": {
+      "built": 7,
+      "missing_source": 53
+    },
+    "loaded_summaries": 7
+  },
+  "elapsed_s": 95.937
+}

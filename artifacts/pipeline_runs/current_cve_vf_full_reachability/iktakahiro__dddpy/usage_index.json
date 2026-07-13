@@ -1,0 +1,213 @@
+{
+  "nodes": 40,
+  "edges": 57,
+  "internal_edges": 29,
+  "external_edges": 28,
+  "usage_index_count": 1,
+  "entry_points": [
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\dddpy\\presentation\\api\\todo\\handlers\\todo_api_route_handler.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\entities\\test_todo.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\value_objects\\test_todo_description.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\value_objects\\test_todo_id.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\value_objects\\test_todo_status.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\value_objects\\test_todo_title.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_complete_todo_usecase.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_create_todo_usecase.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_delete_todo_usecase.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_find_todo_by_id_usecase.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_find_todos_usecase.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_start_todo_usecase.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_update_todo_usecase.py"
+  ],
+  "metadata": {
+    "jarvis_external_usage_augmented_count": 9,
+    "jarvis_external_usage_augmented_edges": [
+      {
+        "caller": "tests.usecase.todo.test_complete_todo_usecase.test_complete_todo_not_found",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_complete_todo_usecase.py",
+        "line_number": 59,
+        "call_expr": "pytest.raises(Exception)"
+      },
+      {
+        "caller": "tests.usecase.todo.test_complete_todo_usecase.test_complete_already_completed_todo",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_complete_todo_usecase.py",
+        "line_number": 73,
+        "call_expr": "pytest.raises(Exception)"
+      },
+      {
+        "caller": "tests.usecase.todo.test_create_todo_usecase.test_create_todo_repository_error",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_create_todo_usecase.py",
+        "line_number": 58,
+        "call_expr": "pytest.raises(Exception)"
+      },
+      {
+        "caller": "tests.usecase.todo.test_delete_todo_usecase.test_delete_todo_not_found",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_delete_todo_usecase.py",
+        "line_number": 54,
+        "call_expr": "pytest.raises(Exception)"
+      },
+      {
+        "caller": "tests.usecase.todo.test_find_todo_by_id_usecase.test_find_todo_by_id_not_found",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_find_todo_by_id_usecase.py",
+        "line_number": 55,
+        "call_expr": "pytest.raises(Exception)"
+      },
+      {
+        "caller": "tests.usecase.todo.test_start_todo_usecase.test_start_todo_not_found",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_start_todo_usecase.py",
+        "line_number": 56,
+        "call_expr": "pytest.raises(Exception)"
+      },
+      {
+        "caller": "tests.usecase.todo.test_start_todo_usecase.test_start_completed_todo",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_start_todo_usecase.py",
+        "line_number": 68,
+        "call_expr": "pytest.raises(Exception)"
+      },
+      {
+        "caller": "tests.usecase.todo.test_update_todo_usecase.test_update_todo_not_found",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_update_todo_usecase.py",
+        "line_number": 94,
+        "call_expr": "pytest.raises(Exception)"
+      },
+      {
+        "caller": "tests.domain.todo.entities.test_todo.test_complete_already_completed_todo",
+        "callee": "pytest.raises",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\entities\\test_todo.py",
+        "line_number": 116,
+        "call_expr": "pytest.raises(ValueError, match='Already completed')"
+      }
+    ],
+    "jarvis_usage_index_before_filter": [
+      "<builtin>.Exception",
+      "<builtin>.ValueError",
+      "<builtin>.isinstance",
+      "<builtin>.len",
+      "<builtin>.str",
+      "pytest.raises"
+    ],
+    "jarvis_usage_index_after_filter": [
+      "pytest.raises"
+    ],
+    "jarvis_usage_augmentation_warnings": [],
+    "analysis_mode": "jarvis",
+    "project_mode": "jarvis_EA_entrypoints",
+    "entry_points": [
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\dddpy\\presentation\\api\\todo\\handlers\\todo_api_route_handler.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\entities\\test_todo.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\value_objects\\test_todo_description.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\value_objects\\test_todo_id.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\value_objects\\test_todo_status.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\value_objects\\test_todo_title.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_complete_todo_usecase.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_create_todo_usecase.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_delete_todo_usecase.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_find_todo_by_id_usecase.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_find_todos_usecase.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_start_todo_usecase.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_update_todo_usecase.py"
+    ],
+    "jarvis_mode": "EA",
+    "jarvis_scope": "entrypoints",
+    "jarvis_scope_meta": {
+      "scope": "entrypoints",
+      "entrypoint_count": 48,
+      "entrypoint_names": [
+        "dddpy.presentation.api.todo.handlers.todo_api_route_handler.TodoApiRouteHandler.complete_todo",
+        "dddpy.presentation.api.todo.handlers.todo_api_route_handler.TodoApiRouteHandler.create_todo",
+        "dddpy.presentation.api.todo.handlers.todo_api_route_handler.TodoApiRouteHandler.get_todo",
+        "dddpy.presentation.api.todo.handlers.todo_api_route_handler.TodoApiRouteHandler.get_todos",
+        "dddpy.presentation.api.todo.handlers.todo_api_route_handler.TodoApiRouteHandler.start_todo",
+        "dddpy.presentation.api.todo.handlers.todo_api_route_handler.TodoApiRouteHandler.update_todo",
+        "tests.domain.todo.entities.test_todo.test_clear_description",
+        "tests.domain.todo.entities.test_todo.test_complete_already_completed_todo",
+        "tests.domain.todo.entities.test_todo.test_complete_todo",
+        "tests.domain.todo.entities.test_todo.test_create_todo",
+        "tests.domain.todo.entities.test_todo.test_is_overdue",
+        "tests.domain.todo.entities.test_todo.test_start_todo",
+        "tests.domain.todo.entities.test_todo.test_todo_equality",
+        "tests.domain.todo.entities.test_todo.test_todo_properties",
+        "tests.domain.todo.entities.test_todo.test_update_description",
+        "tests.domain.todo.entities.test_todo.test_update_title",
+        "tests.domain.todo.value_objects.test_todo_description.test_create_description_exceeding_length_limit",
+        "tests.domain.todo.value_objects.test_todo_description.test_create_valid_description",
+        "tests.domain.todo.value_objects.test_todo_description.test_str_representation",
+        "tests.domain.todo.value_objects.test_todo_id.test_generate_creates_unique_ids",
+        "tests.domain.todo.value_objects.test_todo_id.test_generate_creates_valid_uuid",
+        "tests.domain.todo.value_objects.test_todo_id.test_str_representation",
+        "tests.domain.todo.value_objects.test_todo_status.test_str_representation",
+        "tests.domain.todo.value_objects.test_todo_status.test_todo_status_enum_members",
+        "tests.domain.todo.value_objects.test_todo_status.test_todo_status_values",
+        "tests.domain.todo.value_objects.test_todo_title.test_create_valid_title",
+        "tests.domain.todo.value_objects.test_todo_title.test_empty_title_raises_error",
+        "tests.domain.todo.value_objects.test_todo_title.test_str_representation",
+        "tests.domain.todo.value_objects.test_todo_title.test_title_too_long_raises_error",
+        "tests.usecase.todo.test_complete_todo_usecase.test_complete_already_completed_todo",
+        "tests.usecase.todo.test_complete_todo_usecase.test_complete_todo_not_found",
+        "tests.usecase.todo.test_complete_todo_usecase.test_complete_todo_success",
+        "tests.usecase.todo.test_create_todo_usecase.test_create_todo_repository_error",
+        "tests.usecase.todo.test_create_todo_usecase.test_create_todo_with_title_and_description",
+        "tests.usecase.todo.test_create_todo_usecase.test_create_todo_with_title_only",
+        "tests.usecase.todo.test_delete_todo_usecase.test_delete_todo_not_found",
+        "tests.usecase.todo.test_delete_todo_usecase.test_delete_todo_success",
+        "tests.usecase.todo.test_find_todo_by_id_usecase.test_find_todo_by_id_not_found",
+        "tests.usecase.todo.test_find_todo_by_id_usecase.test_find_todo_by_id_success",
+        "tests.usecase.todo.test_find_todos_usecase.test_find_todos_empty_list",
+        "tests.usecase.todo.test_find_todos_usecase.test_find_todos_with_items",
+        "tests.usecase.todo.test_start_todo_usecase.test_start_completed_todo",
+        "tests.usecase.todo.test_start_todo_usecase.test_start_todo_not_found",
+        "tests.usecase.todo.test_start_todo_usecase.test_start_todo_success",
+        "tests.usecase.todo.test_update_todo_usecase.test_update_todo_both_fields",
+        "tests.usecase.todo.test_update_todo_usecase.test_update_todo_description_only",
+        "tests.usecase.todo.test_update_todo_usecase.test_update_todo_not_found",
+        "tests.usecase.todo.test_update_todo_usecase.test_update_todo_title_only"
+      ],
+      "entrypoint_files": [
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\dddpy\\presentation\\api\\todo\\handlers\\todo_api_route_handler.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\entities\\test_todo.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\value_objects\\test_todo_description.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\value_objects\\test_todo_id.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\value_objects\\test_todo_status.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\domain\\todo\\value_objects\\test_todo_title.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_complete_todo_usecase.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_create_todo_usecase.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_delete_todo_usecase.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_find_todo_by_id_usecase.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_find_todos_usecase.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_start_todo_usecase.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\iktakahiro__dddpy\\tests\\usecase\\todo\\test_update_todo_usecase.py"
+      ],
+      "fallback": false
+    },
+    "jarvis": {
+      "runner": "docker",
+      "mode": "EA",
+      "precision": true,
+      "jarvis_root": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.tools\\pythonJaRvis\\Jarvis",
+      "timeout_s": 300,
+      "module_count": 13,
+      "pip_install": "",
+      "stdout": "py/dddpy/domain/todo/value_objects/todo_description.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/domain/todo/value_objects/todo_id.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/domain/todo/value_objects/todo_status.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/domain/todo/value_objects/todo_title.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/infrastructure/di/injection.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/domain/todo/repositories/__init__.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/domain/todo/repositories/todo_repository.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/domain/todo/entities/__init__.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/domain/todo/entities/todo.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/infrastructure/sqlite/database.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/infrastructure/sqlite/todo/todo_repository.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/infrastructure/sqlite/todo/__init__.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/infrastructure/sqlite/todo/todo_dto.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/usecase/todo/__init__.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/usecase/todo/complete_todo_usecase.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/usecase/todo/create_todo_usecase.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/usecase/todo/delete_todo_usecase.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/usecase/todo/find_todo_by_id_usecase.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/usecase/todo/find_todos_usecase.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/usecase/todo/start_todo_usecase.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/usecase/todo/update_todo_usecase.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/presentation/api/todo/error_messages/__init__.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/presentation/api/todo/error_messages/todo_already_completed_error_message.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/presentation/api/todo/error_messages/todo_already_started_error_message.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/presentation/api/todo/error_messages/todo_not_found_error_message.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/presentation/api/todo/error_messages/todo_not_started_error_message.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/presentation/api/todo/schemas/__init__.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/presentation/api/todo/schemas/todo_create_schema.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/presentation/api/todo/schemas/todo_schema.py\n/workspace/data/raw/projects/iktakahiro__dddpy/dddpy/presentation/api/todo/schemas/todo_update_schema.py\n/workspace/data/raw/projects/iktakahiro__dddpy/tests/domain/todo/entities/test_todo.py\n/workspace/data/raw/projects/iktakahiro__dddpy/tests/domain/todo/value_objects/test_todo_description.py\n/workspace/data/raw/projects/iktakahiro__dddpy/tests/domain/todo/value_objects/test_todo_id.py\n/workspace/data/raw/projects/iktakahiro__dddpy/tests/domain/todo/value_objects/test_todo_status.py\n/workspace/data/raw/projects/iktakahiro__dddpy/tests/domain/todo/value_objects/test_todo_title.py\n/workspace/data/raw/projects/iktakahiro__dddpy/tests/usecase/todo/test_complete_todo_usecase.py\n/workspace/data/raw/projects/iktakahiro__dddpy/tests/usecase/todo/test_create_todo_usecase.py\n/workspace/data/raw/projects/iktakahiro__dddpy/tests/usecase/todo/test_delete_todo_usecase.py\n/workspace/data/raw/projects/iktakahiro__dddpy/tests/usecase/todo/test_find_todo_by_id_usecase.py\n/workspace/data/raw/projects/iktakahiro__dddpy/tests/usecase/todo/test_find_todos_usecase.py\n/workspace/data/raw/projects/iktakahiro__dddpy/tests/usecase/todo/test_start_todo_usecase.py\n/workspace/data/raw/projects/iktakahiro__dddpy/tests/usecase/todo/test_update_todo_usecase.py\n",
+      "stderr": ""
+    },
+    "function_type_graphs": {},
+    "unresolved_calls": [],
+    "candidate_edges": [],
+    "reanalyzed_contexts": []
+  },
+  "usage_index": [
+    {
+      "identity": "pytest.raises",
+      "target_module": "pytest",
+      "target_name": "raises"
+    }
+  ]
+}

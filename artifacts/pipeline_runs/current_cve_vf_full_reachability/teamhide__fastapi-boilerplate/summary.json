@@ -1,0 +1,51 @@
+{
+  "project": {
+    "id": "teamhide__fastapi-boilerplate",
+    "name": "teamhide__fastapi-boilerplate",
+    "repo_full_name": "teamhide/fastapi-boilerplate",
+    "repo_url": "https://github.com/teamhide/fastapi-boilerplate.git",
+    "commit": "df4e6d4f817ec187eeaf2d1c5a877b27c06bb77b",
+    "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\teamhide__fastapi-boilerplate",
+    "enabled": true,
+    "environment_status": "resolved_from_lockfile_or_manifest",
+    "version_source": "lockfile_or_manifest",
+    "manifest_files": [
+      "poetry.lock",
+      "pyproject.toml"
+    ],
+    "resolved_package_count": 46
+  },
+  "status": "success",
+  "runner": "docker",
+  "jarvis_attempts": [
+    {
+      "runner": "docker",
+      "status": "success",
+      "elapsed_s": 8.181
+    }
+  ],
+  "dependency_graph": {
+    "status": "success",
+    "dependency_count": 46,
+    "elapsed_s": 0.264
+  },
+  "artifacts": {
+    "project_graph": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\teamhide__fastapi-boilerplate\\project_graph_jarvis.json",
+    "usage_index": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\teamhide__fastapi-boilerplate\\usage_index.json",
+    "package_summary_status": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\teamhide__fastapi-boilerplate\\package_summary_status.json",
+    "reachability": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\teamhide__fastapi-boilerplate\\reachability_report.json"
+  },
+  "counts": {
+    "project_nodes": 91,
+    "project_edges": 109,
+    "usage_index": 12,
+    "records": 12,
+    "query_targets": 17,
+    "package_summary_status": {
+      "built": 6,
+      "missing_source": 54
+    },
+    "loaded_summaries": 6
+  },
+  "elapsed_s": 46.618
+}

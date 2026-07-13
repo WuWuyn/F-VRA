@@ -1,0 +1,191 @@
+{
+  "nodes": 17,
+  "edges": 21,
+  "internal_edges": 9,
+  "external_edges": 12,
+  "usage_index_count": 5,
+  "entry_points": [
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\basic_auth\\app.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\basic_auth\\app_oldap.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\blueprints\\blueprints\\core\\views.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\blueprints\\blueprints\\foo\\views.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\groups\\app.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\groups\\app_oldap.py",
+    "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\tests\\test_simpleldap.py"
+  ],
+  "metadata": {
+    "jarvis_external_usage_augmented_count": 9,
+    "jarvis_external_usage_augmented_edges": [
+      {
+        "caller": "flask_simpleldap.LDAP.init_app",
+        "callee": "ldap.set_option",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\flask_simpleldap\\__init__.py",
+        "line_number": 68,
+        "call_expr": "ldap.set_option(ldap.OPT_X_TLS_CACERTFILE, app.config['LDAP_CERT_PATH'])"
+      },
+      {
+        "caller": "flask_simpleldap.LDAP.get_object_details",
+        "callee": "ldap.filter.filter_format",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\flask_simpleldap\\__init__.py",
+        "line_number": 223,
+        "call_expr": "ldap_filter.filter_format(query_filter, (group,))"
+      },
+      {
+        "caller": "tests.test_simpleldap.TestLDAP.test_instantiate",
+        "callee": "flask.Flask",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\tests\\test_simpleldap.py",
+        "line_number": 10,
+        "call_expr": "Flask(__name__)"
+      },
+      {
+        "caller": "examples.groups.app.login",
+        "callee": "flask.redirect",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\groups\\app.py",
+        "line_number": 47,
+        "call_expr": "redirect('/')"
+      },
+      {
+        "caller": "examples.groups.app.login",
+        "callee": "flask.url_for",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\groups\\app.py",
+        "line_number": 38,
+        "call_expr": "url_for('index')"
+      },
+      {
+        "caller": "examples.groups.app_oldap.login",
+        "callee": "flask.redirect",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\groups\\app_oldap.py",
+        "line_number": 57,
+        "call_expr": "redirect('/')"
+      },
+      {
+        "caller": "examples.groups.app_oldap.login",
+        "callee": "flask.url_for",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\groups\\app_oldap.py",
+        "line_number": 48,
+        "call_expr": "url_for('index')"
+      },
+      {
+        "caller": "examples.blueprints.blueprints.core.views.login",
+        "callee": "flask.redirect",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\blueprints\\blueprints\\core\\views.py",
+        "line_number": 26,
+        "call_expr": "redirect('/')"
+      },
+      {
+        "caller": "examples.blueprints.blueprints.core.views.login",
+        "callee": "flask.url_for",
+        "file_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\blueprints\\blueprints\\core\\views.py",
+        "line_number": 17,
+        "call_expr": "url_for('index')"
+      }
+    ],
+    "jarvis_usage_index_before_filter": [
+      "<builtin>.isinstance",
+      "<builtin>.list",
+      "flask.Flask",
+      "flask.redirect",
+      "flask.url_for",
+      "ldap.filter.filter_format",
+      "ldap.set_option"
+    ],
+    "jarvis_usage_index_after_filter": [
+      "flask.Flask",
+      "flask.redirect",
+      "flask.url_for",
+      "ldap.filter.filter_format",
+      "ldap.set_option"
+    ],
+    "jarvis_usage_augmentation_warnings": [],
+    "analysis_mode": "jarvis",
+    "project_mode": "jarvis_EA_entrypoints",
+    "entry_points": [
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\basic_auth\\app.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\basic_auth\\app_oldap.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\blueprints\\blueprints\\core\\views.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\blueprints\\blueprints\\foo\\views.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\groups\\app.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\groups\\app_oldap.py",
+      "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\tests\\test_simpleldap.py"
+    ],
+    "jarvis_mode": "EA",
+    "jarvis_scope": "entrypoints",
+    "jarvis_scope_meta": {
+      "scope": "entrypoints",
+      "entrypoint_count": 19,
+      "entrypoint_names": [
+        "examples.basic_auth.app.index",
+        "examples.basic_auth.app_oldap.index",
+        "examples.blueprints.blueprints.core.views.group",
+        "examples.blueprints.blueprints.core.views.index",
+        "examples.blueprints.blueprints.core.views.login",
+        "examples.blueprints.blueprints.core.views.logout",
+        "examples.blueprints.blueprints.foo.views.group",
+        "examples.groups.app.group",
+        "examples.groups.app.index",
+        "examples.groups.app.login",
+        "examples.groups.app.logout",
+        "examples.groups.app_oldap.group",
+        "examples.groups.app_oldap.index",
+        "examples.groups.app_oldap.login",
+        "examples.groups.app_oldap.logout",
+        "tests.test_simpleldap.TestLDAP.test_instantiate",
+        "tests.test_simpleldap.TestLDAP.test_instantiate_no_dn",
+        "tests.test_simpleldap.TestLDAP.test_instantiate_no_password",
+        "tests.test_simpleldap.TestLDAP.test_instantiate_no_username"
+      ],
+      "entrypoint_files": [
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\basic_auth\\app.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\basic_auth\\app_oldap.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\blueprints\\blueprints\\core\\views.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\blueprints\\blueprints\\foo\\views.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\groups\\app.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\examples\\groups\\app_oldap.py",
+        "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\alexferl__flask-simpleldap\\tests\\test_simpleldap.py"
+      ],
+      "fallback": false
+    },
+    "jarvis": {
+      "runner": "docker",
+      "mode": "EA",
+      "precision": true,
+      "jarvis_root": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.tools\\pythonJaRvis\\Jarvis",
+      "timeout_s": 300,
+      "module_count": 7,
+      "pip_install": "",
+      "stdout": "/workspace/data/raw/projects/alexferl__flask-simpleldap/examples/basic_auth/app.py\n/workspace/data/raw/projects/alexferl__flask-simpleldap/flask_simpleldap/__init__.py\n/workspace/data/raw/projects/alexferl__flask-simpleldap/examples/basic_auth/app_oldap.py\n/workspace/data/raw/projects/alexferl__flask-simpleldap/examples/blueprints/blueprints/core/views.py\n/workspace/data/raw/projects/alexferl__flask-simpleldap/examples/blueprints/blueprints/extensions.py\n/workspace/data/raw/projects/alexferl__flask-simpleldap/examples/blueprints/blueprints/foo/views.py\n/workspace/data/raw/projects/alexferl__flask-simpleldap/examples/groups/app.py\n/workspace/data/raw/projects/alexferl__flask-simpleldap/examples/groups/app_oldap.py\n/workspace/data/raw/projects/alexferl__flask-simpleldap/tests/test_simpleldap.py\n",
+      "stderr": ""
+    },
+    "function_type_graphs": {},
+    "unresolved_calls": [],
+    "candidate_edges": [],
+    "reanalyzed_contexts": []
+  },
+  "usage_index": [
+    {
+      "identity": "flask.Flask",
+      "target_module": "flask",
+      "target_name": "Flask"
+    },
+    {
+      "identity": "flask.redirect",
+      "target_module": "flask",
+      "target_name": "redirect"
+    },
+    {
+      "identity": "flask.url_for",
+      "target_module": "flask",
+      "target_name": "url_for"
+    },
+    {
+      "identity": "ldap.filter.filter_format",
+      "target_module": "ldap.filter",
+      "target_name": "filter_format"
+    },
+    {
+      "identity": "ldap.set_option",
+      "target_module": "ldap",
+      "target_name": "set_option"
+    }
+  ]
+}

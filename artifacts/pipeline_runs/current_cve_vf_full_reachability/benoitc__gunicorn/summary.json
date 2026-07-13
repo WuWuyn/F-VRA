@@ -1,0 +1,53 @@
+{
+  "project": {
+    "id": "benoitc__gunicorn",
+    "name": "benoitc__gunicorn",
+    "repo_full_name": "benoitc/gunicorn",
+    "repo_url": "https://github.com/benoitc/gunicorn.git",
+    "commit": "a8283bbf5e1416d0dd13f994f71ec2761988aeab",
+    "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\raw\\projects\\benoitc__gunicorn",
+    "enabled": true,
+    "environment_status": "resolved_from_lockfile_or_manifest",
+    "version_source": "lockfile_or_manifest",
+    "manifest_files": [
+      "uv.lock",
+      "requirements_dev.txt",
+      "requirements_test.txt",
+      "pyproject.toml"
+    ],
+    "resolved_package_count": 34
+  },
+  "status": "success",
+  "runner": "docker",
+  "jarvis_attempts": [
+    {
+      "runner": "docker",
+      "status": "success",
+      "elapsed_s": 31.142
+    }
+  ],
+  "dependency_graph": {
+    "status": "success",
+    "dependency_count": 50,
+    "elapsed_s": 0.419
+  },
+  "artifacts": {
+    "project_graph": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\benoitc__gunicorn\\project_graph_jarvis.json",
+    "usage_index": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\benoitc__gunicorn\\usage_index.json",
+    "package_summary_status": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\benoitc__gunicorn\\package_summary_status.json",
+    "reachability": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\artifacts\\pipeline_runs\\current_cve_vf_full_reachability\\benoitc__gunicorn\\reachability_report.json"
+  },
+  "counts": {
+    "project_nodes": 2849,
+    "project_edges": 7624,
+    "usage_index": 39,
+    "records": 1,
+    "query_targets": 1,
+    "package_summary_status": {
+      "built": 5,
+      "missing_source": 55
+    },
+    "loaded_summaries": 5
+  },
+  "elapsed_s": 121.905
+}

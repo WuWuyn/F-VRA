@@ -1,0 +1,544 @@
+[
+  {
+    "root": "_pytest",
+    "status": "built_cached",
+    "cache_key": "pytest==9.1.1",
+    "package": {
+      "name": "pytest",
+      "version": "9.1.1",
+      "normalized_name": "pytest",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_pytest",
+    "summary_counts": {
+      "inner_keys": 2010,
+      "outer_keys": 2010,
+      "outer_targets": 16746
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "babel",
+    "status": "missing_source",
+    "elapsed_s": 0.105,
+    "depth": 0
+  },
+  {
+    "root": "click",
+    "status": "built_cached",
+    "cache_key": "click==8.4.2",
+    "package": {
+      "name": "click",
+      "version": "8.4.2",
+      "normalized_name": "click",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\click",
+    "summary_counts": {
+      "inner_keys": 601,
+      "outer_keys": 601,
+      "outer_targets": 2745
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "dateutil",
+    "status": "built",
+    "cache_key": "python-dateutil==2.9.0.post0",
+    "package": {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "normalized_name": "python-dateutil",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\dateutil",
+    "summary_counts": {
+      "inner_keys": 327,
+      "outer_keys": 327,
+      "outer_targets": 1560
+    },
+    "elapsed_s": 1.336,
+    "depth": 0
+  },
+  {
+    "root": "debts",
+    "status": "missing_source",
+    "elapsed_s": 0.106,
+    "depth": 0
+  },
+  {
+    "root": "flask",
+    "status": "built_cached",
+    "cache_key": "flask==3.1.3",
+    "package": {
+      "name": "Flask",
+      "version": "3.1.3",
+      "normalized_name": "flask",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\flask",
+    "summary_counts": {
+      "inner_keys": 391,
+      "outer_keys": 391,
+      "outer_targets": 1245
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "flask_babel",
+    "status": "missing_source",
+    "elapsed_s": 0.104,
+    "depth": 0
+  },
+  {
+    "root": "flask_mail",
+    "status": "missing_source",
+    "elapsed_s": 0.104,
+    "depth": 0
+  },
+  {
+    "root": "flask_migrate",
+    "status": "missing_source",
+    "elapsed_s": 0.102,
+    "depth": 0
+  },
+  {
+    "root": "flask_talisman",
+    "status": "missing_source",
+    "elapsed_s": 0.103,
+    "depth": 0
+  },
+  {
+    "root": "itsdangerous",
+    "status": "built",
+    "cache_key": "itsdangerous==2.2.0",
+    "package": {
+      "name": "itsdangerous",
+      "version": "2.2.0",
+      "normalized_name": "itsdangerous",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\itsdangerous",
+    "summary_counts": {
+      "inner_keys": 85,
+      "outer_keys": 85,
+      "outer_targets": 283
+    },
+    "elapsed_s": 0.23,
+    "depth": 0
+  },
+  {
+    "root": "jaraco",
+    "status": "missing_source",
+    "elapsed_s": 0.102,
+    "depth": 0
+  },
+  {
+    "root": "jinja2",
+    "status": "built_cached",
+    "cache_key": "jinja2==3.1.6",
+    "package": {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "normalized_name": "jinja2",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\jinja2",
+    "summary_counts": {
+      "inner_keys": 771,
+      "outer_keys": 771,
+      "outer_targets": 4389
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "mako",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "markupsafe",
+    "status": "built",
+    "cache_key": "markupsafe==3.0.3",
+    "package": {
+      "name": "MarkupSafe",
+      "version": "3.0.3",
+      "normalized_name": "markupsafe",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\markupsafe",
+    "summary_counts": {
+      "inner_keys": 58,
+      "outer_keys": 58,
+      "outer_targets": 88
+    },
+    "elapsed_s": 0.235,
+    "depth": 0
+  },
+  {
+    "root": "pytest",
+    "status": "built_cached",
+    "cache_key": "pytest==9.1.1",
+    "package": {
+      "name": "pytest",
+      "version": "9.1.1",
+      "normalized_name": "pytest",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_pytest",
+    "summary_counts": {
+      "inner_keys": 2010,
+      "outer_keys": 2010,
+      "outer_targets": 16746
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "pytz",
+    "status": "built",
+    "cache_key": "pytz==2026.1.post1",
+    "package": {
+      "name": "pytz",
+      "version": "2026.1.post1",
+      "normalized_name": "pytz",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\pytz",
+    "summary_counts": {
+      "inner_keys": 86,
+      "outer_keys": 86,
+      "outer_targets": 245
+    },
+    "elapsed_s": 0.28,
+    "depth": 0
+  },
+  {
+    "root": "qrcode",
+    "status": "missing_source",
+    "elapsed_s": 0.107,
+    "depth": 0
+  },
+  {
+    "root": "requests",
+    "status": "built_cached",
+    "cache_key": "requests==2.32.5",
+    "package": {
+      "name": "requests",
+      "version": "2.32.5",
+      "normalized_name": "requests",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\requests",
+    "summary_counts": {
+      "inner_keys": 278,
+      "outer_keys": 278,
+      "outer_targets": 4271
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "setuptools",
+    "status": "built_cached",
+    "cache_key": "setuptools==80.10.2",
+    "package": {
+      "name": "setuptools",
+      "version": "80.10.2",
+      "normalized_name": "setuptools",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\_distutils_hack",
+    "summary_counts": {
+      "inner_keys": 21,
+      "outer_keys": 21,
+      "outer_targets": 36
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "sqlalchemy",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "sqlalchemy_continuum",
+    "status": "missing_source",
+    "elapsed_s": 0.106,
+    "depth": 0
+  },
+  {
+    "root": "urllib3",
+    "status": "built_cached",
+    "cache_key": "urllib3==2.7.0",
+    "package": {
+      "name": "urllib3",
+      "version": "2.7.0",
+      "normalized_name": "urllib3",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\urllib3",
+    "summary_counts": {
+      "inner_keys": 548,
+      "outer_keys": 548,
+      "outer_targets": 3021
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "werkzeug",
+    "status": "built_cached",
+    "cache_key": "werkzeug==3.1.7",
+    "package": {
+      "name": "Werkzeug",
+      "version": "3.1.7",
+      "normalized_name": "werkzeug",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\werkzeug",
+    "summary_counts": {
+      "inner_keys": 1096,
+      "outer_keys": 1096,
+      "outer_targets": 7843
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "wheel",
+    "status": "built",
+    "cache_key": "wheel==0.47.0",
+    "package": {
+      "name": "wheel",
+      "version": "0.47.0",
+      "normalized_name": "wheel",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\wheel",
+    "summary_counts": {
+      "inner_keys": 95,
+      "outer_keys": 95,
+      "outer_targets": 1392
+    },
+    "elapsed_s": 0.613,
+    "depth": 0
+  },
+  {
+    "root": "wtforms",
+    "status": "missing_source",
+    "elapsed_s": 0.102,
+    "depth": 0
+  },
+  {
+    "root": "CollectError",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "DocTestParser",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "EINVAL",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "ENOENT",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "Exception",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "Failed",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "ImportMismatchError",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "Interrupted",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "InvocationParams",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "Path",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__call__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__class__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__enter__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__exit__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__getitem__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__init__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__new__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__preserve",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__setattr__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_add_verbosity_ini",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_assertion_pass",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_create",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_ensuredirs",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_explicit_tearDown",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_find_spec",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_for_parametrize",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_format_action_invocation",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_get_directory",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_getaction",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_getreprcrash",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_initrequest",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_new",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_parse_exc",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "_parse_parametrize_args",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  }
+]

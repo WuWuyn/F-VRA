@@ -1,0 +1,401 @@
+[
+  {
+    "root": "filelock",
+    "status": "built_cached",
+    "cache_key": "filelock==3.29.7",
+    "package": {
+      "name": "filelock",
+      "version": "3.29.7",
+      "normalized_name": "filelock",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\filelock",
+    "summary_counts": {
+      "inner_keys": 200,
+      "outer_keys": 200,
+      "outer_targets": 926
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "flask",
+    "status": "built_cached",
+    "cache_key": "flask==3.1.3",
+    "package": {
+      "name": "Flask",
+      "version": "3.1.3",
+      "normalized_name": "flask",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\flask",
+    "summary_counts": {
+      "inner_keys": 391,
+      "outer_keys": 391,
+      "outer_targets": 1245
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "ldap",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "pyasn1",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "werkzeug",
+    "status": "built_cached",
+    "cache_key": "werkzeug==3.1.7",
+    "package": {
+      "name": "Werkzeug",
+      "version": "3.1.7",
+      "normalized_name": "werkzeug",
+      "python_version": "3.13"
+    },
+    "source_path": "C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\.venv\\Lib\\site-packages\\werkzeug",
+    "summary_counts": {
+      "inner_keys": 1096,
+      "outer_keys": 1096,
+      "outer_targets": 7843
+    },
+    "elapsed_s": 0.0,
+    "depth": 0
+  },
+  {
+    "root": "CloseHandle",
+    "status": "missing_source",
+    "elapsed_s": 0.092,
+    "depth": 1
+  },
+  {
+    "root": "GetLastError",
+    "status": "missing_source",
+    "elapsed_s": 0.086,
+    "depth": 1
+  },
+  {
+    "root": "GetProcessTimes",
+    "status": "missing_source",
+    "elapsed_s": 0.082,
+    "depth": 1
+  },
+  {
+    "root": "OpenProcess",
+    "status": "missing_source",
+    "elapsed_s": 0.088,
+    "depth": 1
+  },
+  {
+    "root": "__call__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__init__",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "__init_subclass__",
+    "status": "missing_source",
+    "elapsed_s": 0.082,
+    "depth": 1
+  },
+  {
+    "root": "_refresh",
+    "status": "missing_source",
+    "elapsed_s": 0.089,
+    "depth": 1
+  },
+  {
+    "root": "add",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "append",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "atexit",
+    "status": "missing_source",
+    "elapsed_s": 0.085,
+    "depth": 1
+  },
+  {
+    "root": "clear",
+    "status": "missing_source",
+    "elapsed_s": 0.098,
+    "depth": 1
+  },
+  {
+    "root": "concurrent",
+    "status": "missing_source",
+    "elapsed_s": 0.09,
+    "depth": 1
+  },
+  {
+    "root": "contextlib",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "create_task",
+    "status": "missing_source",
+    "elapsed_s": 0.099,
+    "depth": 1
+  },
+  {
+    "root": "ctypes",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "debug",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "decode",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "discard",
+    "status": "missing_source",
+    "elapsed_s": 0.096,
+    "depth": 1
+  },
+  {
+    "root": "encode",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "functools",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "get",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "get_running_loop",
+    "status": "missing_source",
+    "elapsed_s": 0.089,
+    "depth": 1
+  },
+  {
+    "root": "hmac",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "inspect",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "is_closed",
+    "status": "missing_source",
+    "elapsed_s": 0.09,
+    "depth": 1
+  },
+  {
+    "root": "is_running",
+    "status": "missing_source",
+    "elapsed_s": 0.084,
+    "depth": 1
+  },
+  {
+    "root": "items",
+    "status": "missing_source",
+    "elapsed_s": 0.092,
+    "depth": 1
+  },
+  {
+    "root": "join",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "logging",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "mkdir",
+    "status": "missing_source",
+    "elapsed_s": 0.093,
+    "depth": 1
+  },
+  {
+    "root": "os",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "pathlib",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "pop",
+    "status": "missing_source",
+    "elapsed_s": 0.085,
+    "depth": 1
+  },
+  {
+    "root": "re",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "resolve",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "run_in_executor",
+    "status": "missing_source",
+    "elapsed_s": 0.086,
+    "depth": 1
+  },
+  {
+    "root": "run_until_complete",
+    "status": "missing_source",
+    "elapsed_s": 0.084,
+    "depth": 1
+  },
+  {
+    "root": "secrets",
+    "status": "missing_source",
+    "elapsed_s": 0.082,
+    "depth": 1
+  },
+  {
+    "root": "set",
+    "status": "missing_source",
+    "elapsed_s": 0.081,
+    "depth": 1
+  },
+  {
+    "root": "shutdown",
+    "status": "missing_source",
+    "elapsed_s": 0.081,
+    "depth": 1
+  },
+  {
+    "root": "sleep",
+    "status": "missing_source",
+    "elapsed_s": 0.081,
+    "depth": 1
+  },
+  {
+    "root": "socket",
+    "status": "missing_source",
+    "elapsed_s": 0.08,
+    "depth": 1
+  },
+  {
+    "root": "splitlines",
+    "status": "missing_source",
+    "elapsed_s": 0.086,
+    "depth": 1
+  },
+  {
+    "root": "sqlite3",
+    "status": "missing_source",
+    "elapsed_s": 0.087,
+    "depth": 1
+  },
+  {
+    "root": "start",
+    "status": "missing_source",
+    "elapsed_s": 0.084,
+    "depth": 1
+  },
+  {
+    "root": "startswith",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "stat",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "strip",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "threading",
+    "status": "missing_source",
+    "elapsed_s": 0.085,
+    "depth": 1
+  },
+  {
+    "root": "time",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "typing",
+    "status": "missing_source_cached",
+    "elapsed_s": 0.0,
+    "depth": 1
+  },
+  {
+    "root": "uuid",
+    "status": "missing_source",
+    "elapsed_s": 0.082,
+    "depth": 1
+  },
+  {
+    "root": "values",
+    "status": "missing_source",
+    "elapsed_s": 0.086,
+    "depth": 1
+  },
+  {
+    "root": "wait",
+    "status": "missing_source",
+    "elapsed_s": 0.084,
+    "depth": 1
+  }
+]
