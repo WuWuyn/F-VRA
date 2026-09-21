@@ -21,10 +21,11 @@ The project intentionally excludes baseline SCA. Its production scope is:
 | Project analysis | Entrypoints, reachable project graph and Usage Index | [Project analysis](docs/project-analysis.md) |
 | Reachability | Compose Usage Index and package summaries into paths | [Reachability](docs/reachability.md) |
 | Knowledge base | Vulnerable-function records and repository contract | [Knowledge base](docs/knowledge-base.md) |
+| Evaluation | Compare VFDetector, VFFinder, and VFArCHE on PyShare data | [Evaluation](docs/evaluation.md) |
 
-Other directories such as `reporting`, `storage`, `integrations`, and
-`evaluation` are reserved product boundaries. Their module documentation should
-be added when they expose runnable behavior.
+The research harness is integrated under `src/pyshare/evaluation/`, including
+all three method implementations. Configuration and generated results stay in
+`configs/evaluation/` and `results/evaluation/`.
 
 ## Quick Start
 
@@ -51,7 +52,8 @@ repository cache automatically.
 
 LLM and embedding calls use an OpenAI-compatible provider configured through
 `LOCAL_LLM_*` and `LOCAL_EMBEDDING_*` environment variables. The local `.env`
-can point both chat and embedding traffic at the same `/v1` endpoint.
+can point both chat and embedding traffic at the same `/v1` endpoint. This root
+`.env` is also the only environment file used by VFFinder and VFArCHE.
 
 See the [documentation index](docs/index.md) or the
 [localization guide](docs/localization.md)
@@ -102,7 +104,14 @@ the runnable transitive reachability check today.
 pyshare/
 |-- README.md
 |-- configs/
+|   `-- evaluation/
 |-- src/
+|   `-- pyshare/
+|       `-- evaluation/
+|           |-- adapters/
+|           |-- methods/
+|           |-- metrics/
+|           `-- scripts/
 |-- data/
 |   |-- raw/
 |   |-- interim/
@@ -111,6 +120,7 @@ pyshare/
 |-- artifacts/
 |-- experiments/
 |-- results/
+|   |-- evaluation/
 |   |-- tables/
 |   |-- figures/
 |   |-- metrics/
@@ -118,6 +128,9 @@ pyshare/
 |-- tools/
 `-- docs/
 ```
+
+To build the evaluation dataset from PyShare's canonical data and run a smoke
+experiment, see [CVE-to-VF evaluation](docs/evaluation.md).
 
 ## Source Layout
 
@@ -143,6 +156,13 @@ src/pyshare/
 |-- storage/
 |-- integrations/
 `-- evaluation/
+    |-- adapters/
+    |-- methods/
+    |   |-- vfdetector/
+    |   |-- vffinder/
+    |   `-- vfarche/
+    |-- metrics/
+    `-- scripts/
 ```
 
 `pyshare` is the single import root. Analysis, localization, reachability,

@@ -1,0 +1,6 @@
+# Full CVE-to-VF evaluation environment. PyShare's product dependencies remain
+# in pyproject.toml; method-specific lists are authoritative for research runs.
+-r configs/evaluation/requirements/harness.txt
+-r configs/evaluation/requirements/vfdetector.txt
+-r configs/evaluation/requirements/vffinder.txt
+-r configs/evaluation/requirements/vfarche.txt

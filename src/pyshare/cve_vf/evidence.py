@@ -518,7 +518,7 @@ def _display_path(path: Path, repo_root: Path) -> str:
 
 
 def _load_env_file() -> None:
-    env_path = Path.cwd() / ".env"
+    env_path = Path(__file__).resolve().parents[3] / ".env"
     if not env_path.exists():
         return
     for line in env_path.read_text(encoding="utf-8", errors="ignore").splitlines():

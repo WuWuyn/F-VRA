@@ -65,7 +65,19 @@ artifacts/patch_diffs/**
 !artifacts/patch_diffs/.gitkeep
 docs/output_file/**
 
-# Experiment outputs
+# Integrated evaluation outputs
+results/evaluation/**
+!results/evaluation/
+!results/evaluation/predictions/
+!results/evaluation/predictions/.gitkeep
+!results/evaluation/ablation/
+!results/evaluation/ablation/.gitkeep
+!results/evaluation/metrics/
+!results/evaluation/metrics/.gitkeep
+!results/evaluation/stats/
+!results/evaluation/stats/.gitkeep
+!results/evaluation/adapters/
+!results/evaluation/adapters/.gitkeep
 results/logs/**
 !results/logs/
 !results/logs/.gitkeep

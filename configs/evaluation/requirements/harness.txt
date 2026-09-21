@@ -1,0 +1,4 @@
+# Metric layer (evaluation/metrics/). The auto-run driver/adapters themselves need
+# only the standard library; these are for compute_metrics.py + stats_tests.py.
+numpy
+scipy

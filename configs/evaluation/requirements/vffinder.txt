@@ -1,0 +1,15 @@
+nltk
+numpy
+openai
+python-dotenv
+rank-bm25
+requests
+sentence-transformers
+spacy
+torch
+tqdm
+benepar
+# After installing, download the spaCy model used for entity extraction:
+#   python -m spacy download en_core_web_sm
+# P-ICL also needs the benepar model:
+#   python -c "import benepar; benepar.download('benepar_en3')"

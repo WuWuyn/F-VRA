@@ -2,10 +2,13 @@ from pathlib import Path
 import os
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+REPO_ROOT = Path(__file__).resolve().parents[3]
+SHARED_ENV_FILE = REPO_ROOT / ".env"
+
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=SHARED_ENV_FILE,
         env_file_encoding="utf-8",
         extra="ignore",
     )

@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "dataset": "data/processed/cve_to_vf_evaluation.jsonl",
+  "methods": [
+    {
+      "method_id": "vfdetector",
+      "paper": "VFDetector",
+      "status": "paper-adapted",
+      "implemented_components": [
+        "Python function extraction",
+        "tVSM lexical ranking",
+        "function-level prediction export"
+      ],
+      "variants": [
+        {
+          "variant": "default",
+          "experiment_group": "main",
+          "status": "available",
+          "paper_faithful": true,
+          "notes": "Python tVSM adaptation run through the common evaluation harness."
+        },
+        {
+          "variant": "wo_length_normalization",
+          "experiment_group": "diagnostic",
+          "status": "planned",
+          "paper_faithful": false,
+          "notes": "Study-designed diagnostic only; VFDetector paper does not define this ablation."
+        }
+      ],
+      "ablation_axes": [
+        {"axis": "synonym_expansion", "variants": ["no-expand", "expand"]}
+      ],
+      "required_env": [],
+      "required_artifacts": [],
+      "command": "pyshare eval run --methods vfdetector"
+    },
+    {
+      "method_id": "vffinder",
+      "paper": "VFFinder",
+      "status": "paper-adapted",
+      "implemented_components": [
+        "Direct/S-ICL/P-ICL description extraction",
+        "Repo-wide API/entity function corpus",
+        "Priority semantic retrieval (Algorithm 1)",
+        "function-level prediction export"
+      ],
+      "variants": [
+        {
+          "variant": "direct",
+          "experiment_group": "main",
+          "status": "available",
+          "paper_faithful": true,
+          "notes": "Direct extractor with repo-wide corpus, class priority, and invocation augmentation. Code path is faithful with documented Python/model/case-pool adaptations; local artifacts still need rerun after recent fixes."
+        },
+        {
+          "variant": "s-icl",
+          "experiment_group": "main",
+          "status": "available",
+          "paper_faithful": true,
+          "notes": "S-ICL uses semantic cosine demo selection and Algorithm 1 retrieval. Code path is faithful with documented Python/model/case-pool adaptations; local artifacts still need rerun after recent fixes."
+        },
+        {
+          "variant": "p-icl",
+          "experiment_group": "main",
+          "status": "available",
+          "paper_faithful": true,
+          "notes": "P-ICL uses constituency-pattern autoencoder demo selection and Algorithm 1 retrieval. Code path is faithful with documented Python/model/case-pool adaptations; local artifacts still need rerun after recent fixes."
+        },
+        {
+          "variant": "wo_icl_extractor",
+          "experiment_group": "paper_ablation",
+          "status": "planned",
+          "paper_faithful": true,
+          "notes": "Paper ablation: remove ICL-enhanced extraction."
+        },
+        {
+          "variant": "wo_description_weighting",
+          "experiment_group": "paper_ablation",
+          "status": "planned",
+          "paper_faithful": true,
+          "notes": "Paper ablation: remove description entity weighting."
+        },
+        {
+          "variant": "wo_class_matching",
+          "experiment_group": "paper_ablation",
+          "status": "planned",
+          "paper_faithful": true,
+          "notes": "Paper ablation: remove class-priority matching. Default code path has class hints on/auto-derived; standalone toggle is not wired yet."
+        },
+        {
+          "variant": "wo_invocation_augmentation",
+          "experiment_group": "paper_ablation",
+          "status": "planned",
+          "paper_faithful": true,
+          "notes": "Paper ablation: remove caller-parameter and callee-inline augmentation. Default corpus builder includes the augmentation; standalone toggle is not wired yet."
+        }
+      ],
+      "ablation_axes": [
+        {"axis": "function_representation", "variants": ["sig", "sig+body", "sig+body+calls"]},
+        {"axis": "llm_ranking", "variants": ["pointwise", "pairwise"]}
+      ],
+      "required_env": [
+        "OPENROUTER_API_KEY or VFFINDER_API_KEY"
+      ],
+      "required_artifacts": [
+        "results/evaluation/adapters/vffinder/*_phase1.json checkpoints or a valid LLM key to regenerate them"
+      ],
+      "command": "pyshare eval run --methods vffinder"
+    },
+    {
+      "method_id": "vfarche",
+      "paper": "VFArCHE",
+      "status": "paper-adapted",
+      "implemented_components": [
+        "Benchmark-to-VFArCHE input conversion",
+        "Repository checkout at vulnerable_ref",
+        "PATCH-PRESENT Tracker candidate selection",
+        "PATCH-ABSENT CodeBERT selector inference path",
+        "CodeBERT training-pair builder and fine-tuning script",
+        "BM25 ranking over selected candidates",
+        "Optional LLM reranking and CWE/PRF/LSA description expansion",
+        "MongoDB-backed top-k export"
+      ],
+      "variants": [
+        {
+          "variant": "skip-llm",
+          "experiment_group": "main",
+          "status": "available",
+          "paper_faithful": false,
+          "notes": "Tracker/CodeBERT candidate selection plus BM25 ranking. Paper ranking still expects pairwise LLM ranking for the final stage."
+        },
+        {
+          "variant": "chat",
+          "experiment_group": "main",
+          "status": "available",
+          "paper_faithful": false,
+          "notes": "LLM chat reranking over Tracker/CodeBERT candidates; diagnostic alternative to paper pairwise ranking."
+        },
+        {
+          "variant": "embedding",
+          "experiment_group": "main",
+          "status": "available",
+          "paper_faithful": false,
+          "notes": "Embedding reranking over Tracker/CodeBERT candidates; diagnostic alternative to paper pairwise ranking."
+        },
+        {
+          "variant": "pairwise",
+          "experiment_group": "main",
+          "status": "available",
+          "paper_faithful": false,
+          "notes": "Closest paper mode: Tracker/CodeBERT candidate selection, optional QE, Swiss tournament, and exhaustive pairwise finals. Python Tracker approximates JavaParser data-flow."
+        },
+        {
+          "variant": "wo_qe",
+          "experiment_group": "paper_ablation",
+          "status": "planned",
+          "paper_faithful": true,
+          "notes": "Paper ablation: remove query/description expansion."
+        },
+        {
+          "variant": "wo_selection",
+          "experiment_group": "paper_ablation",
+          "status": "planned",
+          "paper_faithful": true,
+          "notes": "Paper ablation: remove candidate selection."
+        },
+        {
+          "variant": "wo_rank",
+          "experiment_group": "paper_ablation",
+          "status": "planned",
+          "paper_faithful": true,
+          "notes": "Paper ablation: remove LLM ranking."
+        },
+        {
+          "variant": "wo_tracker",
+          "experiment_group": "paper_ablation",
+          "status": "planned",
+          "paper_faithful": false,
+          "notes": "Can be implemented as selector=bm25-fallback against the new Tracker path."
+        }
+      ],
+      "ablation_axes": [
+        {
+          "axis": "rerank_strategy",
+          "variants": ["bm25", "chat", "embedding", "pairwise"]
+        },
+        {
+          "axis": "description_expansion",
+          "variants": ["no-expand", "expand"]
+        },
+        {
+          "axis": "candidate_selection",
+          "variants": ["tracker", "bm25-fallback"]
+        }
+      ],
+      "required_env": [
+        "MONGO_URI",
+        "MONGO_DB",
+        "OPENROUTER_API_KEY for LLM variants"
+      ],
+      "required_artifacts": [
+        "Reachable MongoDB top-k storage",
+        "Fine-tuned CodeBERT checkpoint for PATCH-ABSENT paper-faithful runs"
+      ],
+      "command": "pyshare eval run --methods vfarche"
+    }
+  ]
+}
