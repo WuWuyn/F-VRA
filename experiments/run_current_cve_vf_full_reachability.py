@@ -117,36 +117,51 @@ def _try_build_jarvis(
     if fallback_runner and fallback_runner not in runners:
         runners.append(fallback_runner)
     for runner in runners:
-        started = time.perf_counter()
-        try:
-            graph, usage_index = build_jarvis_project_graph(
-                project_root,
-                JarvisOptions(
-                    jarvis_root=jarvis_root,
-                    runner=runner,
-                    scope=scope,
-                    mode=mode,
-                    timeout_s=timeout,
-                ),
-            )
-        except Exception as exc:
+        # Docker Desktop can be alive while its Linux engine named pipe is
+        # still coming up.  Retry that infrastructure condition briefly; do
+        # not retry analyzer failures or hide them as timeouts.
+        docker_attempts = 3 if runner == "docker" else 1
+        for attempt_number in range(1, docker_attempts + 1):
+            started = time.perf_counter()
+            try:
+                graph, usage_index = build_jarvis_project_graph(
+                    project_root,
+                    JarvisOptions(
+                        jarvis_root=jarvis_root,
+                        runner=runner,
+                        scope=scope,
+                        mode=mode,
+                        timeout_s=timeout,
+                    ),
+                )
+            except Exception as exc:
+                error_text = f"{type(exc).__name__}: {exc}"
+                attempts.append(
+                    {
+                        "runner": runner,
+                        "attempt": attempt_number,
+                        "status": "failed",
+                        "elapsed_s": round(time.perf_counter() - started, 3),
+                        "error": error_text,
+                    }
+                )
+                docker_pipe_error = runner == "docker" and any(
+                    marker in error_text.lower()
+                    for marker in ("docker api", "dockerdesktoplinuxengine", "docker daemon")
+                )
+                if docker_pipe_error and attempt_number < docker_attempts:
+                    time.sleep(5)
+                    continue
+                break
             attempts.append(
                 {
                     "runner": runner,
-                    "status": "failed",
+                    "attempt": attempt_number,
+                    "status": "success",
                     "elapsed_s": round(time.perf_counter() - started, 3),
-                    "error": f"{type(exc).__name__}: {exc}",
                 }
             )
-            continue
-        attempts.append(
-            {
-                "runner": runner,
-                "status": "success",
-                "elapsed_s": round(time.perf_counter() - started, 3),
-            }
-        )
-        return graph, usage_index, attempts
+            return graph, usage_index, attempts
     return None, None, attempts
 
 

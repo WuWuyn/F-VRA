@@ -168,7 +168,7 @@ def main() -> int:
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--project-root", type=Path, default=DEFAULT_PROJECT_ROOT)
     parser.add_argument("--clone", action="store_true", help="Clone/fetch each project and checkout snapshot_sha.")
-    parser.add_argument("--limit", type=int, default=0, help="Limit number of projects for smoke testing.")
+    parser.add_argument("--limit", type=int, default=0, help="Limit the number of projects to fetch.")
     args = parser.parse_args()
 
     _load_dotenv(REPO_ROOT / ".env")

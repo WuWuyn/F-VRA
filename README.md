@@ -57,40 +57,6 @@ See the [documentation index](docs/index.md) or the
 [localization guide](docs/localization.md)
 for environment variables, diagnostics, patch-present and patch-absent modes.
 
-## Offline Transitive VF Smoke Test
-
-PyShare can be tested without a live vulnerability database by using the mock
-case committed in this repository:
-
-```text
-mock_transitive_project.run
-  -> mocklib_a.safe_entry
-  -> mocklib_b.bridge
-  -> mockvuln.dangerous_sink
-```
-
-Run it with:
-
-```powershell
-python .\experiments\run_mock_transitive.py
-```
-
-Expected output:
-
-```text
-PASS mock-transitive-vf
-report: results\metrics\mock_transitive_report.json
-mocklib_a.safe_entry -> mocklib_b.bridge -> mockvuln.dangerous_sink
-```
-
-The mock input is split across:
-
-- `configs/mock_transitive.json`
-- `data/raw/projects/mock_transitive_project/`
-- `data/annotations/mock_vf_transitive.json`
-- `artifacts/package_summaries/mocklib_a.json`
-- `artifacts/package_summaries/mocklib_b.json`
-
 `pyshare scan` is already present as a CLI boundary, but the current scan
 service still returns `UNKNOWN` until the project analyzer, KB, and persisted
 package-summary loader are wired together. Use the experiment script above for
@@ -150,7 +116,7 @@ storage, and CVE/VF helpers live under that package instead of separate
 top-level namespaces. API services, workers, web UI, Docker application shells,
 and server database adapters are intentionally left out.
 
-For source-tree smoke checks without installation:
+For a source-tree import check without installation:
 
 ```powershell
 $env:PYTHONPATH="src"
@@ -198,7 +164,7 @@ Run Jarvis through Docker's Python 3.8 image:
   --timeout 300
 ```
 
-Expected smoke result on the pinned Alerta commit:
+Expected result on the pinned Alerta commit:
 
 ```text
 PASS jarvis alerta

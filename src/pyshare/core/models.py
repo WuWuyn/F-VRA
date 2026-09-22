@@ -272,8 +272,14 @@ class DependencyRecord(ContractModel):
     dev: bool = False
     source_file: str = ""
     source_type: str = ""
+    # Lockfile identity dimensions.  Keeping these fields prevents a
+    # platform/index-specific record from being flattened into a package-name
+    # only record during dependency graph construction.
+    marker: str = ""
+    source: str = ""
     source_path: str = ""
     dependencies: list[str] = Field(default_factory=list)
+    dependency_edges: list[dict[str, str]] = Field(default_factory=list)
     purl: str = ""
 
 

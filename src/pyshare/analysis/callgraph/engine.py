@@ -62,7 +62,7 @@ import os
 import symtable as py_symtable
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Callable, Dict, Iterator, List, Optional, Set, Tuple, Union
+from typing import Callable, Dict, Iterable, Iterator, List, Optional, Set, Tuple, Union
 
 from pyshare.core.models import (
     CallEdge,
@@ -230,6 +230,39 @@ class Candidate:
     confidence: float = 1.0
     resolver: str = "static"
     reason: str = ""
+
+
+class LazyMethodCandidates:
+    """Lazy broad-net candidates for an object-method call.
+
+    The exhaustive dispatch set is intentionally conservative, but retaining a
+    ``Candidate`` object for every visible class at every ``x.m()`` site can
+    multiply into millions of short-lived objects in large packages.  Keep the
+    indexed target pairs and materialize one candidate only while the call site
+    is being resolved.  This preserves the same Layer-1 candidate semantics
+    without retaining the cartesian product in ``ASTCandidateGenerator.sites``.
+    """
+
+    def __init__(self, index: "LibraryIndex", scope: ModuleScope,
+                 method: str, call_node: ast.Call, base_var: str) -> None:
+        self.index = index
+        self.scope = scope
+        self.method = method
+        self.call_node = call_node
+        self.base_var = base_var
+
+    def __bool__(self) -> bool:
+        return bool(self.index.method_dispatch_targets(self.scope, self.method))
+
+    def __iter__(self) -> Iterator[Candidate]:
+        for owner, callee in self.index.method_dispatch_targets(self.scope, self.method):
+            yield Candidate(
+                callee,
+                owner=owner.qualified,
+                base_var=self.base_var,
+                call_node=self.call_node,
+                prunable=True,
+            )
 
 
 @dataclass
@@ -414,6 +447,13 @@ class LibraryIndex:
         self._func_suffix: Dict[str, Tuple[str, FunctionNode]] = {}
         self._class_ambig: Set[str] = set()
         self._func_ambig: Set[str] = set()
+        # These indexes are immutable after ``build`` and avoid repeating the
+        # same MRO walk for every syntactic call site in a module.
+        self._mro_cache: Dict[str, Tuple[ClassInfo, ...]] = {}
+        self._method_cache: Dict[Tuple[str, str], Optional[FunctionNode]] = {}
+        self._dispatch_cache: Dict[
+            Tuple[Path, str], Tuple[Tuple[ClassInfo, FunctionNode], ...]
+        ] = {}
 
     # -- public build entry ---------------------------------------
 
@@ -473,6 +513,14 @@ class LibraryIndex:
     # -- filesystem walk ------------------------------------------
 
     def _iter_py_files(self) -> Iterator[Path]:
+        # A distribution can expose a single top-level module such as
+        # ``mypy_extensions.py`` rather than a package directory.  In that
+        # case the captured runtime source is the file itself; never widen the
+        # analysis root to its parent site-packages directory.
+        if self.root.is_file():
+            if self.root.suffix == ".py":
+                yield self.root
+            return
         for dirpath, dirnames, filenames in os.walk(self.root):
             dirnames[:] = [d for d in dirnames
                            if not d.startswith(".") and d not in IGNORE_DIRS]
@@ -482,6 +530,8 @@ class LibraryIndex:
 
     def module_dotted(self, path: Path) -> str:
         """Dotted module name of *path* relative to the root (``__init__`` dropped)."""
+        if self.root.is_file():
+            return self.root.parent.name if self.root.stem == "__init__" else self.root.stem
         try:
             rel = path.resolve().relative_to(self.root)
         except ValueError:
@@ -870,6 +920,9 @@ class LibraryIndex:
         for static dispatch and robust against the malformed / cyclic hierarchies
         that turn up in real third-party code.
         """
+        cached = self._mro_cache.get(info.qualified)
+        if cached is not None:
+            return list(cached)
         order: List[ClassInfo] = []
         seen: Set[str] = set()
         queue: List[ClassInfo] = [info]
@@ -880,17 +933,50 @@ class LibraryIndex:
             seen.add(cur.qualified)
             order.append(cur)
             queue.extend(self.iter_bases(cur))
+        self._mro_cache[info.qualified] = tuple(order)
         return order
 
     def resolve_method_mro(self, info: ClassInfo,
                            method: str) -> Optional[FunctionNode]:
         """First definition of *method* found walking *info*'s MRO (own then
         inherited), or ``None`` if no ancestor defines it."""
+        key = (info.qualified, method)
+        if key in self._method_cache:
+            return self._method_cache[key]
         for cls in self.mro_classes(info):
             node = cls.methods.get(method)
             if node is not None:
+                self._method_cache[key] = node
                 return node
+        self._method_cache[key] = None
         return None
+
+    def method_dispatch_targets(
+        self, scope: ModuleScope, method: str
+    ) -> Tuple[Tuple[ClassInfo, FunctionNode], ...]:
+        """Return the broad-net targets for ``x.method()`` in *scope*.
+
+        The returned immutable tuples contain only canonical owner/callee
+        references.  Call-specific ``Candidate`` objects are created lazily by
+        :class:`LazyMethodCandidates`, so a large package does not retain one
+        object per owner per call site.
+        """
+        key = (scope.file_path, method)
+        cached = self._dispatch_cache.get(key)
+        if cached is not None:
+            return cached
+        out: List[Tuple[ClassInfo, FunctionNode]] = []
+        seen: Set[str] = set()
+        for ci in scope.classes.values():
+            if ci.qualified in seen:
+                continue
+            callee = self.resolve_method_mro(ci, method)
+            if callee is not None:
+                seen.add(ci.qualified)
+                out.append((ci, callee))
+        result = tuple(out)
+        self._dispatch_cache[key] = result
+        return result
 
     # -- public API aliases --------------------------------------
 
@@ -1232,10 +1318,10 @@ class ASTCandidateGenerator(ast.NodeVisitor):
         self.index = index
         self.scope = scope
         self.enclosing = enclosing          # class owning this def (for super())
-        self.sites: Dict[int, List[Candidate]] = {}
+        self.sites: Dict[int, Iterable[Candidate]] = {}
         self.unresolved: Dict[int, ast.Call] = {}
 
-    def generate(self, func_def: _FuncDef) -> Dict[int, List[Candidate]]:
+    def generate(self, func_def: _FuncDef) -> Dict[int, Iterable[Candidate]]:
         for stmt in func_def.body:
             self.visit(stmt)
         return self.sites
@@ -1265,7 +1351,7 @@ class ASTCandidateGenerator(ast.NodeVisitor):
 
     # -- candidate construction -----------------------------------
 
-    def _candidates(self, node: ast.Call) -> List[Candidate]:
+    def _candidates(self, node: ast.Call) -> Iterable[Candidate]:
         func = node.func
         literal_getattr = self._literal_getattr_target(func)
         if literal_getattr is not None:
@@ -1352,7 +1438,7 @@ class ASTCandidateGenerator(ast.NodeVisitor):
         return []
 
     def _candidates_attr(self, base: str, method: str,
-                         node: ast.Call) -> List[Candidate]:
+                         node: ast.Call) -> Iterable[Candidate]:
         # 1. Module-qualified call ``mod.func()`` / ``mod.Class()``.
         dotted = self._resolve_module_alias(self.scope.module_aliases, base)
         if dotted is not None:
@@ -1385,17 +1471,7 @@ class ASTCandidateGenerator(ast.NodeVisitor):
         #    defining node: so when Layer 2 proves ``pt(x) = {Child}`` and ``Child``
         #    only inherits `m` from ``Base``, the edge ``owner=Child`` survives and
         #    correctly points at ``Base.m`` rather than being wrongly pruned away.
-        out: List[Candidate] = []
-        seen: Set[str] = set()
-        for ci in self.scope.classes.values():
-            if ci.qualified in seen:
-                continue
-            meth = self.index.resolve_method_mro(ci, method)
-            if meth is not None:
-                seen.add(ci.qualified)
-                out.append(Candidate(meth, owner=ci.qualified, base_var=base,
-                                     call_node=node, prunable=True))
-        return out
+        return LazyMethodCandidates(self.index, self.scope, method, node, base)
 
     @staticmethod
     def _resolve_module_alias(aliases: Dict[str, str], base: str) -> Optional[str]:
@@ -2417,8 +2493,9 @@ class CallGraphConstructionPipeline:
     analysis feeds reachable definitions from a worklist.
     """
 
-    def __init__(self, index: LibraryIndex) -> None:
+    def __init__(self, index: LibraryIndex, *, retain_analysis_details: bool = True) -> None:
         self.index = index
+        self.retain_analysis_details = retain_analysis_details
         self.unresolved_calls: List[UnresolvedCall] = []
         self.candidate_edges: List[CandidateEdge] = []
         self.llm_kept_edges: List[CandidateEdge] = []
@@ -2474,28 +2551,32 @@ class CallGraphConstructionPipeline:
             entry_type_provider=self.entry_types_for,
         )
         pt = analyzer.compute(func_def)
-        self.assignment_type_facts.extend(
-            {**fact, "function": caller_name}
-            for fact in analyzer.assignment_type_facts
-        )
-        self.return_type_facts.extend(
-            {**fact, "function": caller_name}
-            for fact in analyzer.return_type_facts
-        )
-        self.external_model_facts.extend(
-            {**fact, "function": caller_name}
-            for fact in analyzer.external_model_facts
-        )
+        if self.retain_analysis_details:
+            self.assignment_type_facts.extend(
+                {**fact, "function": caller_name}
+                for fact in analyzer.assignment_type_facts
+            )
+            self.return_type_facts.extend(
+                {**fact, "function": caller_name}
+                for fact in analyzer.return_type_facts
+            )
+            self.external_model_facts.extend(
+                {**fact, "function": caller_name}
+                for fact in analyzer.external_model_facts
+            )
         summary = FunctionSummary(
             param_types={key: set(value) for key, value in analyzer.entry_types.items()},
             return_types=set(analyzer.return_types),
-            evidence=list(analyzer.return_type_facts),
+            evidence=list(analyzer.return_type_facts) if self.retain_analysis_details else [],
             context_signature=context_signature,
-            function_type_graph=analyzer.function_type_graph,
+            function_type_graph=analyzer.function_type_graph if self.retain_analysis_details else None,
         )
         self.function_context_summaries[(caller_name, context_signature)] = summary
         self.function_summaries[caller_name] = _merge_function_summary(self.function_summaries.get(caller_name), summary)
-        self.function_type_graphs[(caller_name, context_signature)] = analyzer.function_type_graph
+        if self.retain_analysis_details:
+            self.function_type_graphs[(caller_name, context_signature)] = analyzer.function_type_graph
+        else:
+            self._drop_type_graphs()
         callees: List[FunctionNode] = []
         for site_id, cands in sites.items():
             resolved = self.resolve_call_site(cands, pt.get(site_id))
@@ -2513,17 +2594,18 @@ class CallGraphConstructionPipeline:
             for callee, evidence in pattern:
                 self._record_edge_evidence(caller, callee, evidence)
                 if evidence.get("resolver") == "external_type_model":
-                    self.external_model_facts.append(
-                        {
-                            "function": caller_name,
-                            "target": getattr(callee, "identity_string", "") or (callee.qualified_name or callee.function_name),
-                            "kind": "method",
-                            "line_number": evidence.get("line_number", 0),
-                            "call_expr": evidence.get("call_expr", ""),
-                            "return_types": list(evidence.get("return_types", [])),
-                            "reason": "deterministic external type model",
-                        }
-                    )
+                    if self.retain_analysis_details:
+                        self.external_model_facts.append(
+                            {
+                                "function": caller_name,
+                                "target": getattr(callee, "identity_string", "") or (callee.qualified_name or callee.function_name),
+                                "kind": "method",
+                                "line_number": evidence.get("line_number", 0),
+                                "call_expr": evidence.get("call_expr", ""),
+                                "return_types": list(evidence.get("return_types", [])),
+                                "reason": "deterministic external type model",
+                            }
+                        )
                 callees.append(callee)
             self.last_changed_entry_functions.update(
                 self._record_parameter_flows(caller, [callee for callee, _evidence in pattern], analyzer.call_arg_types.get(site_id, []))
@@ -2538,6 +2620,15 @@ class CallGraphConstructionPipeline:
                 )
         return callees
 
+    def _drop_type_graphs(self) -> None:
+        """Release per-function diagnostic graphs in compact package mode."""
+        for summary in self.function_summaries.values():
+            summary.function_type_graph = None
+            summary.evidence.clear()
+        for summary in self.function_context_summaries.values():
+            summary.function_type_graph = None
+            summary.evidence.clear()
+
     def entry_types_for(self, fn_name: str) -> Dict[str, PointsToSet]:
         return {
             key: set(value)
@@ -2548,6 +2639,11 @@ class CallGraphConstructionPipeline:
         return _context_signature(self.function_entry_types.get(fn_name))
 
     def _record_edge_evidence(self, caller: FunctionNode, callee: FunctionNode, evidence: dict) -> None:
+        if not self.retain_analysis_details and not callee.is_external:
+            # Package summaries only expose evidence for outer/external edges.
+            # Retaining a dict keyed by every internal caller/callee pair can
+            # duplicate a very large exhaustive graph (notably pip/Pygments).
+            return
         caller_name = caller.qualified_name or caller.function_name
         callee_name = callee.qualified_name or callee.function_name
         allowed = {"edge_type", "confidence", "resolver", "reason", "call_expr", "line_number"}
@@ -2754,15 +2850,16 @@ class CallGraphConstructionPipeline:
                 entry.setdefault(param, set()).update(types)
                 if entry[param] != before:
                     changed.add(callee_name)
-                    self.parameter_type_facts.append(
-                        {
-                            "caller": caller_name,
-                            "callee": callee_name,
-                            "parameter": param,
-                            "types": sorted(types),
-                            "reason": "argument propagated from callsite",
-                        }
-                    )
+                    if self.retain_analysis_details:
+                        self.parameter_type_facts.append(
+                            {
+                                "caller": caller_name,
+                                "callee": callee_name,
+                                "parameter": param,
+                                "types": sorted(types),
+                                "reason": "argument propagated from callsite",
+                            }
+                        )
         return changed
 
     def _record_unresolved(self, caller: FunctionNode, calls: Dict[int, ast.Call]) -> None:
@@ -2914,10 +3011,31 @@ class CallGraphConstructionPipeline:
 
     def resolve_call_site(
         self,
-        cands: List[Candidate],
+        cands: Iterable[Candidate],
         receiver_pt: Optional[PointsToSet],
     ) -> List[FunctionNode]:
         """Resolve one call site's candidate set using Layer-2 points-to facts."""
+        if isinstance(cands, LazyMethodCandidates):
+            # Avoid materializing the broad dispatch set.  With a known
+            # receiver, only matching owners need to become Candidate objects;
+            # with an unknown receiver, stream all conservative targets into
+            # the result exactly as the eager implementation did.
+            if receiver_pt is None:
+                resolved = self.resolve_dynamic_call(cands.call_node)
+                if resolved is not None:
+                    return [resolved]
+                return [candidate.callee for candidate in cands]
+            matched = [
+                callee
+                for owner, callee in self.index.method_dispatch_targets(cands.scope, cands.method)
+                if owner.qualified in receiver_pt
+            ]
+            if matched:
+                return matched
+            resolved = self.resolve_dynamic_call(cands.call_node)
+            return [resolved] if resolved is not None else []
+
+        cands = list(cands)
         keep: List[FunctionNode] = [c.callee for c in cands if not c.prunable]
         prunable = [c for c in cands if c.prunable]
         if not prunable:
@@ -3011,9 +3129,10 @@ class LibraryAnalyzer:
     """Coordinate exhaustive indexing, candidate generation and points-to pruning
     into a single library call graph (G_L)."""
 
-    def __init__(self) -> None:
+    def __init__(self, *, retain_analysis_details: bool = True) -> None:
         self.index: Optional[LibraryIndex] = None
         self.pipeline: Optional[CallGraphConstructionPipeline] = None
+        self.retain_analysis_details = retain_analysis_details
         self._seen_edges: Set[Tuple[FunctionNode, FunctionNode]] = set()
 
     # -- public API -----------------------------------------------
@@ -3028,11 +3147,14 @@ class LibraryAnalyzer:
         root = Path(library_root)
         if not root.exists():
             raise FileNotFoundError(f"Library root does not exist: {root}")
-        if not root.is_dir():
-            raise NotADirectoryError(f"Library root is not a directory: {root}")
+        if not root.is_dir() and not (root.is_file() and root.suffix == ".py"):
+            raise NotADirectoryError(f"Library root is not a Python directory or file: {root}")
 
         self.index = LibraryIndex(root).build()
-        self.pipeline = CallGraphConstructionPipeline(self.index)
+        self.pipeline = CallGraphConstructionPipeline(
+            self.index,
+            retain_analysis_details=self.retain_analysis_details,
+        )
         graph = CallGraph()
 
         # Seed the graph with the full API surface + internal functions so even

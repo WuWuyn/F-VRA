@@ -56,6 +56,9 @@ def dependency_record(
     source_file: Path,
     source_type: str,
     dependencies: list[str] | None = None,
+    dependency_edges: list[dict[str, str]] | None = None,
+    marker: str = "",
+    source: str = "",
     installed: dict[str, metadata.Distribution],
 ) -> DependencyRecord | None:
     clean_name = str(name or "").strip()
@@ -72,8 +75,11 @@ def dependency_record(
         dev=dev,
         source_file=str(source_file),
         source_type=source_type,
+        marker=str(marker or ""),
+        source=str(source or ""),
         source_path=distribution_source_path(dist),
         dependencies=sorted({normalize_name(item) for item in dependencies or [] if item}),
+        dependency_edges=list(dependency_edges or []),
         purl=purl(clean_name, str(version or "")),
     )
 
@@ -230,8 +236,18 @@ def parse_poetry_lock(
             continue
         deps = []
         raw_deps = package.get("dependencies", {}) or {}
+        dependency_edges = []
         if isinstance(raw_deps, dict):
             deps = [str(name) for name in raw_deps]
+            dependency_edges = [
+                {
+                    "name": normalize_name(str(name)),
+                    "specifier": str(value.get("version") or "") if isinstance(value, dict) else str(value or ""),
+                    "marker": str(value.get("markers") or "") if isinstance(value, dict) else "",
+                }
+                for name, value in raw_deps.items()
+                if str(name).strip()
+            ]
         record = dependency_record(
             str(package.get("name") or ""),
             version=str(package.get("version") or ""),
@@ -240,6 +256,7 @@ def parse_poetry_lock(
             source_file=path,
             source_type="poetry.lock",
             dependencies=deps,
+            dependency_edges=dependency_edges,
             installed=installed,
         )
         if record:
@@ -260,7 +277,17 @@ def parse_uv_lock(
         if not isinstance(package, dict):
             continue
         raw_deps = package.get("dependencies", []) or []
-        deps = [str(dep.get("name")) for dep in raw_deps if isinstance(dep, dict) and dep.get("name")]
+        dependency_edges = [
+            {
+                "name": normalize_name(str(dep.get("name"))),
+                "specifier": str(dep.get("version") or ""),
+                "marker": str(dep.get("marker") or ""),
+                "source": str((dep.get("source") or {}).get("registry") or "") if isinstance(dep.get("source"), dict) else "",
+            }
+            for dep in raw_deps
+            if isinstance(dep, dict) and dep.get("name")
+        ]
+        deps = [edge["name"] for edge in dependency_edges]
         dev = bool(package.get("dev", False))
         if dev and not include_dev:
             continue
@@ -272,6 +299,9 @@ def parse_uv_lock(
             source_file=path,
             source_type="uv.lock",
             dependencies=deps,
+            dependency_edges=dependency_edges,
+            marker="; ".join(str(item) for item in package.get("resolution-markers", []) or []),
+            source=str((package.get("source") or {}).get("registry") or "") if isinstance(package.get("source"), dict) else "",
             installed=installed,
         )
         if record:

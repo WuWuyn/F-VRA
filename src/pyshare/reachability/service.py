@@ -31,6 +31,7 @@ from pyshare.analysis.package.summary import (
 from pyshare.analysis.project.project_graph import build_project_graph
 from pyshare.reachability.engine import ReachabilityQueryEngine
 from pyshare.storage.client import ClientCache
+from pyshare.runtime.conda import RuntimeEnvironment, RuntimePackage
 
 
 @dataclass
@@ -302,6 +303,15 @@ def _summary_warning_related_roots(
 ) -> list[str]:
     roots = _usage_roots(usage_index)
     summary_roots = set(summaries)
+    warning_roots = getattr(summaries, "warning_roots", None)
+    if warning_roots is not None:
+        candidate_roots = sorted(set(warning_roots) & roots)
+        return [
+            root
+            for root in candidate_roots
+            if (summary := summaries.get(root)) is not None
+            and _summary_has_verdict_affecting_warning(root, summary, usage_index, targets, summary_roots)
+        ]
     return sorted(
         root
         for root, summary in summaries.items()
@@ -663,8 +673,39 @@ def _build_package_summary(root: str) -> tuple[str, PackageSummaryArtifact] | No
     source, package, version = _source_for_root(root)
     if source is None or not source.exists():
         return None
-    analysis_root = source if source.is_dir() else source.parent
-    analyzer = LibraryAnalyzer()
+    return _build_package_summary_from_source(
+        root,
+        source,
+        package,
+        version,
+        provenance={"source": "installed_distribution", "root": root},
+        python_version=f"{sys.version_info.major}.{sys.version_info.minor}",
+    )
+
+
+def _build_package_summary_from_source(
+    root: str,
+    source: Path,
+    package: str,
+    version: str,
+    *,
+    provenance: Mapping[str, Any] | None = None,
+    python_version: str = "",
+) -> tuple[str, PackageSummaryArtifact]:
+    """Build a summary from an explicitly captured source path.
+
+    The runtime-aware benchmark uses this entry point so the analyzer never
+    asks the pyshare environment which distribution owns an import root.
+    """
+    # Keep a single-module distribution scoped to its captured file.  Using
+    # ``source.parent`` here would analyze the entire runtime site-packages
+    # directory for modules such as ``mypy_extensions.py``.
+    analysis_root = source
+    # Package summaries only consume the call graph and verdict-affecting
+    # warnings.  Per-function type graphs and assignment/return diagnostics
+    # are not serialized into ``LibrarySummary``; avoid retaining them across
+    # thousands of definitions in large distributions such as pip.
+    analyzer = LibraryAnalyzer(retain_analysis_details=False)
     graph = analyzer.build_library_graph(analysis_root)
     public_apis = analyzer.index.public_api if analyzer.index is not None else []
     summary = build_library_summary(
@@ -677,16 +718,69 @@ def _build_package_summary(root: str) -> tuple[str, PackageSummaryArtifact] | No
         name=package or root,
         normalized_name=_normalize_name(package or root),
         version=version,
-        python_version=f"{sys.version_info.major}.{sys.version_info.minor}",
+        python_version=python_version or f"{sys.version_info.major}.{sys.version_info.minor}",
     )
     artifact = PackageSummaryArtifact(
         package=identity,
-        fingerprint=AnalysisFingerprint(python_version=f"{sys.version_info.major}.{sys.version_info.minor}"),
+        fingerprint=AnalysisFingerprint(python_version=identity.python_version),
         summary=summary,
-        source_path=str(analysis_root),
-        provenance={"source": "installed_distribution", "root": root},
+        source_path=str(source),
+        provenance=dict(provenance or {"source": "explicit_source", "root": root}),
     )
     return _package_key(identity), artifact
+
+
+def _build_package_summary_from_runtime(
+    root: str,
+    runtime: RuntimeEnvironment,
+) -> tuple[str, PackageSummaryArtifact] | None:
+    package = runtime.package_by_root().get(root)
+    if package is None or not package.python_source or not package.source_path:
+        return None
+    source = _runtime_source_for_root(root, package)
+    if source is None or not source.exists():
+        return None
+    return _build_package_summary_from_source(
+        root,
+        source,
+        package.name,
+        package.version,
+        provenance={
+            "source": "conda_runtime",
+            "root": root,
+            "project_id": runtime.project_id,
+            "conda_prefix": runtime.prefix,
+            "environment_fingerprint": runtime.fingerprint,
+            "source_fingerprint": package.source_fingerprint,
+        },
+        python_version=runtime.python_version,
+    )
+
+
+def _runtime_source_for_root(root: str, package: RuntimePackage) -> Path | None:
+    """Resolve the captured source belonging to one import root.
+
+    A distribution may publish many top-level roots (notably ``pywin32``).
+    ``importlib.metadata`` gives us one preferred source path for the
+    distribution, but using that same path for every root would analyze the
+    wrong module.  Resolve each root relative to the distribution's
+    site-packages parent and return ``None`` when the root is binary-only.
+    """
+    preferred = Path(package.source_path)
+    root_value = str(root).replace("\\", "/").strip("/")
+    if not root_value:
+        return None
+    root_path = Path(*[part for part in root_value.split("/") if part])
+    if preferred.exists() and preferred.is_file() and preferred.stem == root_path.name:
+        return preferred
+    if preferred.exists() and preferred.is_dir() and preferred.name == root_path.name and len(root_path.parts) == 1:
+        return preferred
+    base = preferred.parent
+    candidates = [base / root_path, base / f"{root_path}.py"]
+    for candidate in candidates:
+        if candidate.exists() and (candidate.is_dir() or candidate.suffix == ".py"):
+            return candidate
+    return None
 
 
 def _load_or_build_summaries(usage_index, cache: ClientCache) -> dict[str, LibrarySummary]:

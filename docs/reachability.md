@@ -1,5 +1,4 @@
 # Reachability
-
 This module composes:
 
 - the project Usage Index
@@ -65,23 +64,3 @@ pytest tests/unit/test_reachability.py
 ```
 
 Tests cover direct vulnerable usage and summary-based cross-library expansion.
-
-## Offline Mock Transitive Case
-
-Run the repository-level smoke test:
-
-```powershell
-python .\experiments\run_mock_transitive.py
-```
-
-It loads:
-
-- project usage from `configs/mock_transitive.json`
-- VF annotation from `data/annotations/mock_vf_transitive.json`
-- package summaries from `artifacts/package_summaries/`
-
-The expected witness is:
-
-```text
-mocklib_a.safe_entry -> mocklib_b.bridge -> mockvuln.dangerous_sink
-```

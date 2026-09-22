@@ -36,6 +36,7 @@ from pyshare.core.models import (
     DependencyRecord,
     ProjectIdentity,
 )
+from pyshare.runtime.conda import RuntimeEnvironment
 
 
 def project_fingerprint(project: Path, files: list[Path]) -> str:
@@ -61,9 +62,14 @@ def discover_dependency_files(project: Path) -> list[Path]:
 
 
 def dedupe_records(records: list[DependencyRecord]) -> list[DependencyRecord]:
-    merged: dict[tuple[str, str], DependencyRecord] = {}
+    merged: dict[tuple[str, str, str, str], DependencyRecord] = {}
     for record in records:
-        key = (record.normalized_name, record.version or record.specifier)
+        key = (
+            record.normalized_name,
+            record.version or record.specifier,
+            record.marker,
+            record.source,
+        )
         existing = merged.get(key)
         if existing is None:
             merged[key] = record
@@ -74,8 +80,11 @@ def dedupe_records(records: list[DependencyRecord]) -> list[DependencyRecord]:
                 "dev": existing.dev and record.dev,
                 "source_file": existing.source_file if existing.version else record.source_file,
                 "source_type": existing.source_type if existing.version else record.source_type,
+                "marker": existing.marker or record.marker,
+                "source": existing.source or record.source,
                 "source_path": existing.source_path or record.source_path,
                 "dependencies": sorted(set(existing.dependencies) | set(record.dependencies)),
+                "dependency_edges": [*existing.dependency_edges, *record.dependency_edges],
             }
         )
     return sorted(merged.values(), key=lambda item: (not item.direct, item.normalized_name, item.version, item.specifier))
@@ -427,7 +436,6 @@ def _resolve_with_pip_report(project: Path, selected_files: list[Path], direct_n
                 text=True,
                 capture_output=True,
                 check=True,
-                timeout=int(os.getenv("F_VRA_PIP_RESOLVE_TIMEOUT_SECONDS", "300")),
             )
             payload = json.loads(report_path.read_text(encoding="utf-8"))
         except Exception as exc:
@@ -524,4 +532,54 @@ def resolve_dependency_graph(
         source_files=[str(path) for path in selected_files if path.exists()],
         dependencies=dedupe_records(records),
         analysis_warnings={"warnings": warnings} if warnings else {},
+    )
+
+
+def resolve_dependency_graph_from_runtime(
+    project: Path,
+    runtime: RuntimeEnvironment,
+    *,
+    runtime_manifest: Path | None = None,
+) -> DependencyGraphArtifact:
+    """Create the dependency graph from one project's captured interpreter.
+
+    Unlike the static resolver above, this function has exactly one record per
+    distribution/version observed by ``importlib.metadata`` in the project's
+    own Conda prefix.  It never consults the pyshare environment or selects a
+    version from a lockfile after installation.
+    """
+    project = project.resolve()
+    selected_files = [path for path in discover_dependency_files(project) if path.exists()]
+    direct_names: set[str] = set()
+    pyproject = project / "pyproject.toml"
+    if pyproject.exists():
+        direct_names = direct_names_from_pyproject(pyproject, include_dev=True)
+    source_file = str(runtime_manifest or (project / "runtime_environment.json"))
+    records: list[DependencyRecord] = []
+    for package in runtime.packages:
+        dependencies = _requires_dist_names(list(package.requires_dist))
+        records.append(
+            DependencyRecord(
+                name=package.name,
+                normalized_name=package.normalized_name,
+                version=package.version,
+                specifier=f"=={package.version}" if package.version else "",
+                direct=package.normalized_name in direct_names,
+                source_file=source_file,
+                source_type="conda-runtime",
+                source_path=package.source_path,
+                dependencies=dependencies,
+                purl=purl(package.name, package.version),
+            )
+        )
+    return DependencyGraphArtifact(
+        project=ProjectIdentity(root=str(project), fingerprint=project_fingerprint(project, selected_files)),
+        fingerprint=AnalysisFingerprint(
+            python_version=runtime.python_version,
+            config_hash=runtime.fingerprint,
+        ),
+        source_files=[str(path) for path in selected_files] + [source_file],
+        resolver="conda-runtime",
+        dependencies=sorted(records, key=lambda item: (item.normalized_name, item.version)),
+        analysis_warnings={},
     )
