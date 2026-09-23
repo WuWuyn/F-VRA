@@ -26,7 +26,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source-dataset", type=Path, default=Path(".tmp/frozen-dataset2"))
     parser.add_argument("--output", type=Path, default=Path(".tmp/eager-e2e"))
-    parser.add_argument("--jarvis-root", type=Path, default=Path(".tools/pythonJaRvis/Jarvis"))
+    parser.add_argument("--jarvis-root", type=Path, default=Path("vendor/pythonJaRvis/Jarvis"))
     args = parser.parse_args()
 
     source_packages = read_parquet(args.source_dataset / "packages.parquet")

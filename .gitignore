@@ -18,7 +18,12 @@ MANIFEST
 venv/
 env/
 ENV/
+# Local runtimes, downloaded tools, and caches
 .tools/
+
+# Vendored JARVIS source is intentionally tracked under vendor/.
+vendor/pythonJaRvis/**/__pycache__/
+vendor/pythonJaRvis/**/*.py[cod]
 
 # Environment variables
 .env

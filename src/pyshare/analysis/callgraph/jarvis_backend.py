@@ -6,7 +6,7 @@ import os
 import subprocess
 import sys
 import tempfile
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -15,16 +15,32 @@ from pyshare.core.paths import resolve_workspace_executable, resolve_workspace_p
 from pyshare.analysis.project.entrypoints import scan_project
 
 
+def _default_jarvis_python() -> str:
+    """Prefer the repository-local Python 3.8 runtime required by JARVIS."""
+    candidates = (
+        Path(".tools/jarvis-py38/python.exe"),
+        Path(".tools/jarvis-py38/bin/python"),
+    )
+    for candidate in candidates:
+        if candidate.exists():
+            return str(candidate.resolve())
+    return sys.executable
+
+
 @dataclass(frozen=True)
 class JarvisOptions:
     jarvis_root: Path | None = None
     mode: str = "EA"
     runner: str = "docker"
-    python_executable: str = sys.executable
+    python_executable: str = field(default_factory=_default_jarvis_python)
     timeout_s: int = 240
     scope: str = "entrypoints"
     precision: bool = True
     pip_install: str = ""
+    # The upstream CLI calls this option ``--entry_point``.  Keep the
+    # selection explicit in the adapter instead of approximating demand mode
+    # by filtering an exhaustive graph after JARVIS has finished.
+    entry_point_names: tuple[str, ...] = ()
 
 
 def build_jarvis_project_graph(project_root: Path, options: JarvisOptions | None = None) -> tuple[CallGraph, list[ExternalNode]]:
@@ -35,9 +51,10 @@ def build_jarvis_project_graph(project_root: Path, options: JarvisOptions | None
         raise FileNotFoundError(f"Project root does not exist: {root}")
     if not root.is_dir():
         raise NotADirectoryError(f"Project root is not a directory: {root}")
-    jarvis_root = options.jarvis_root or _env_jarvis_root()
+    jarvis_root = (options.jarvis_root or _env_jarvis_root())
     if jarvis_root is None:
         raise RuntimeError("Jarvis root is required; pass --jarvis-root or set PYSHARE_JARVIS_ROOT")
+    jarvis_root = Path(jarvis_root).resolve()
     jarvis_cli = jarvis_root / "tool" / "Jarvis" / "jarvis_cli.py"
     if not jarvis_cli.exists():
         raise RuntimeError(f"Jarvis CLI not found: {jarvis_cli}")
@@ -47,9 +64,11 @@ def build_jarvis_project_graph(project_root: Path, options: JarvisOptions | None
         graph = CallGraph(metadata={"analysis_mode": "jarvis", "jarvis_warning": "no Python files found"})
         return graph, []
 
-    raw_graph, run_meta = _run_jarvis(root, jarvis_root, jarvis_cli, modules, options)
-    if options.scope == "entrypoints" and scope_meta.get("entrypoint_names"):
-        raw_graph = _reachable_adjacency(raw_graph, set(scope_meta["entrypoint_names"]))
+    entry_point_names = list(options.entry_point_names or scope_meta.get("entrypoint_names", []))
+    raw_graph, run_meta = _run_jarvis(
+        root, jarvis_root, jarvis_cli, modules, options,
+        entry_point_names=entry_point_names if options.scope == "entrypoints" else [],
+    )
     graph, usage_index = _convert_adjacency_graph(
         root,
         raw_graph,
@@ -64,6 +83,7 @@ def build_jarvis_project_graph(project_root: Path, options: JarvisOptions | None
             "jarvis_mode": options.mode,
             "jarvis_scope": options.scope,
             "jarvis_scope_meta": scope_meta,
+            "jarvis_entry_point_names": entry_point_names,
             "jarvis": run_meta,
             "function_type_graphs": {},
             "unresolved_calls": [],
@@ -82,9 +102,10 @@ def build_jarvis_package_graph(package_root: Path, options: JarvisOptions | None
         raise FileNotFoundError(f"Package root does not exist: {root}")
     if not root.is_dir():
         raise NotADirectoryError(f"Package root is not a directory: {root}")
-    jarvis_root = options.jarvis_root or _env_jarvis_root()
+    jarvis_root = (options.jarvis_root or _env_jarvis_root())
     if jarvis_root is None:
         raise RuntimeError("Jarvis root is required; pass --jarvis-root or set PYSHARE_JARVIS_ROOT")
+    jarvis_root = Path(jarvis_root).resolve()
     jarvis_cli = jarvis_root / "tool" / "Jarvis" / "jarvis_cli.py"
     if not jarvis_cli.exists():
         raise RuntimeError(f"Jarvis CLI not found: {jarvis_cli}")
@@ -93,7 +114,7 @@ def build_jarvis_package_graph(package_root: Path, options: JarvisOptions | None
     if not modules:
         return CallGraph(metadata={"analysis_mode": "jarvis", "jarvis_warning": "no Python files found"})
 
-    raw_graph, run_meta = _run_jarvis(root, jarvis_root, jarvis_cli, modules, options)
+    raw_graph, run_meta = _run_jarvis(root, jarvis_root, jarvis_cli, modules, options, entry_point_names=[])
     graph, _usage_index = _convert_adjacency_graph(
         root,
         raw_graph,
@@ -120,10 +141,13 @@ def build_jarvis_package_graph(package_root: Path, options: JarvisOptions | None
 
 def _env_jarvis_root() -> Path | None:
     value = os.getenv("PYSHARE_JARVIS_ROOT")
-    if not value:
-        return None
-    root = resolve_workspace_path(value)
-    return root if root.exists() else None
+    if value:
+        root = resolve_workspace_path(value)
+        return root if root.exists() else None
+    # The engine is vendored in the repository; the environment variable is
+    # still supported as an override for experiments using another checkout.
+    bundled = Path(__file__).resolve().parents[4] / "vendor" / "pythonJaRvis" / "Jarvis"
+    return bundled if bundled.exists() else None
 
 
 def _select_modules(root: Path, scope: str) -> tuple[list[Path], dict[str, Any]]:
@@ -159,13 +183,18 @@ def _run_jarvis(
     jarvis_cli: Path,
     modules: list[Path],
     options: JarvisOptions,
+    *,
+    entry_point_names: list[str],
 ) -> tuple[dict[str, list[str]], dict[str, Any]]:
     tmp_root = Path(os.getenv("PYSHARE_TMP_DIR", ".tmp")).resolve()
     tmp_root.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="pyshare-jarvis-", dir=str(tmp_root)) as tmp:
         output = Path(tmp) / "callgraph.json"
         if options.runner == "docker":
-            command = _docker_command(project_root, jarvis_root, jarvis_cli, modules, output, options)
+            command = _docker_command(
+                project_root, jarvis_root, jarvis_cli, modules, output, options,
+                entry_point_names,
+            )
             cwd = _common_mount([project_root, jarvis_root, output.parent])
             env = None
         elif options.runner == "local":
@@ -175,13 +204,14 @@ def _run_jarvis(
                 *[str(path) for path in modules],
                 "--package",
                 str(project_root),
-                "-o",
-                str(output),
             ]
             if options.precision:
                 command.append("--precision")
             if options.mode.upper() in {"DW", "AW"}:
                 command.append("--decy")
+            if entry_point_names:
+                command.extend(["--entry_point", *entry_point_names])
+            command.extend(["-o", str(output)])
             cwd = jarvis_root
             env = os.environ.copy()
         else:
@@ -213,6 +243,8 @@ def _run_jarvis(
                 "runner": options.runner,
                 "mode": options.mode,
                 "precision": options.precision,
+                "entry_point_names": entry_point_names,
+                "dependency_traversal": options.mode.upper() in {"DW", "AW"},
                 "jarvis_root": str(jarvis_root),
                 "timeout_s": options.timeout_s,
                 "module_count": len(modules),
@@ -230,6 +262,7 @@ def _docker_command(
     modules: list[Path],
     output: Path,
     options: JarvisOptions,
+    entry_point_names: list[str],
 ) -> list[str]:
     mount_root = _common_mount([project_root, jarvis_root, output.parent])
     modules_file = output.parent / "jarvis-modules.txt"
@@ -252,6 +285,7 @@ parser.add_argument("--package", required=True)
 parser.add_argument("--output", required=True)
 parser.add_argument("--precision", action="store_true")
 parser.add_argument("--decy", action="store_true")
+parser.add_argument("--entry-point", nargs="*")
 args = parser.parse_args()
 
 modules = [
@@ -271,6 +305,8 @@ if args.precision:
     sys.argv.append("--precision")
 if args.decy:
     sys.argv.append("--decy")
+if args.entry_point:
+    sys.argv.extend(["--entry_point", *args.entry_point])
 os.chdir(os.path.dirname(args.jarvis_cli))
 sys.path.insert(0, os.path.dirname(args.jarvis_cli))
 runpy.run_path(args.jarvis_cli, run_name="__main__")
@@ -293,6 +329,8 @@ runpy.run_path(args.jarvis_cli, run_name="__main__")
         python_cmd.append("--precision")
     if options.mode.upper() in {"DW", "AW"}:
         python_cmd.append("--decy")
+    if entry_point_names:
+        python_cmd.extend(["--entry-point", *entry_point_names])
     if options.pip_install:
         shell = f"pip install -q {options.pip_install} && " + " ".join(_sh_quote(part) for part in python_cmd)
         return [

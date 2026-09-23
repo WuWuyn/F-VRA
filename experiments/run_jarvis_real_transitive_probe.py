@@ -61,7 +61,7 @@ def _default_jarvis_root() -> Path | None:
     env_value = os.getenv("PYSHARE_JARVIS_ROOT")
     if env_value:
         return _resolve(env_value)
-    bundled = REPO_ROOT / ".tools" / "pythonJaRvis" / "Jarvis"
+    bundled = REPO_ROOT / "vendor" / "pythonJaRvis" / "Jarvis"
     return bundled if (bundled / "tool" / "Jarvis" / "jarvis_cli.py").exists() else None
 
 

@@ -21,7 +21,7 @@ app = typer.Typer(help="Freeze, run and report PyShare research experiments", no
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_DATASET = REPO_ROOT / "experiments" / "dataset" / "v13-lock-universe"
 DEFAULT_RUNS = REPO_ROOT / "experiments" / "runs"
-DEFAULT_JARVIS = REPO_ROOT / ".tools" / "pythonJaRvis" / "Jarvis"
+DEFAULT_JARVIS = REPO_ROOT / "vendor" / "pythonJaRvis" / "Jarvis"
 
 
 @app.command("freeze")

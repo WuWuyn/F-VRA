@@ -149,11 +149,30 @@ git -C .\data\raw\projects\alerta rev-parse HEAD
 ```
 
 Jarvis is expected at `tool/Jarvis/jarvis_cli.py` under
-`PYSHARE_JARVIS_ROOT`. For the cached pythonJaRvis artifact used locally:
+`PYSHARE_JARVIS_ROOT`. For the vendored pythonJaRvis engine:
 
 ```powershell
-$env:PYSHARE_JARVIS_ROOT=".tools/pythonJaRvis/Jarvis"
+$env:PYSHARE_JARVIS_ROOT="vendor/pythonJaRvis/Jarvis"
 ```
+
+The repository vendors the engine at upstream commit
+`8871b86494a1aec0095686ffa543994a7361af88`. The local runner uses the
+separate Conda environment `.tools/jarvis-py38` (Python 3.8.20, `networkx`
+3.1, and `setuptools<81`); this avoids running the upstream import hook under
+the host Python version. The adapter prefers this interpreter automatically.
+
+The two package-scoped graph policies are independent in upstream JARVIS:
+
+```text
+EA-like: package modules, no --entry_point
+AA-like: package modules, --entry_point <qualified function names>
+EW-like: package modules, --decy
+AW-like: package modules, --decy --entry_point <qualified function names>
+```
+
+For a local smoke run, use `--runner local`; the Docker runner is the
+paper-faithful option for dependency traversal and requires Docker Desktop to
+be running.
 
 Run Jarvis through Docker's Python 3.8 image:
 
