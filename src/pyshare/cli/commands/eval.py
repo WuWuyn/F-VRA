@@ -16,7 +16,6 @@ from pyshare.evaluation.metrics import vf_input_quality
 from pyshare.evaluation.oracle import adjudicate_oracle, import_oracle
 from pyshare.evaluation.reports import generate_report
 from pyshare.evaluation.runner import ExperimentRunner
-from pyshare.evaluation.reachability_benchmark import run_reachability_benchmark
 from pyshare.evaluation.rq3 import (
     audit_rq3_benchmark,
     build_rq3_vf_variants,
@@ -965,6 +964,8 @@ def reachability_benchmark(
     resume: bool = typer.Option(True, "--resume/--no-resume"),
 ) -> None:
     """Run the direct binary reachability benchmark using its frozen VF sets."""
+    from pyshare.evaluation.reachability_benchmark import run_reachability_benchmark
+
     result = run_reachability_benchmark(
         dataset,
         jarvis_root,

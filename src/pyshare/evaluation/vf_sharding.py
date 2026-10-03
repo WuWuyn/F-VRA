@@ -27,6 +27,7 @@ from pyshare.evaluation.vf_experiment import (
     _resolve_input_path,
     _sha256,
     _normalized_source_bytes,
+    _portable_mode_summary,
     _write_jsonl,
     run_vf_mode,
 )
@@ -34,7 +35,7 @@ from pyshare.evaluation.vf_metrics import MODES
 
 SHARD_MODES = ("D_LEX", "D_SEM", "P_DUAL_PRESENT", "P_DUAL_HIDDEN")
 SHARD_SCHEMA = "pyshare.vf.machine-shard.v1"
-SHARD_RUN_SCHEMA = "pyshare.vf.machine-run.v1"
+SHARD_RUN_SCHEMA = "pyshare.vf.machine-run.v2"
 INDEX_SHARD_SCHEMA = "pyshare.vf.index-shard.v1"
 
 
@@ -901,7 +902,7 @@ def run_vf_machine_shard(
         )
         mode_meta = json.loads((machine_result_dir / f"{mode}.meta.json").read_text(encoding="utf-8"))
         mode_summaries[mode] = {
-            **summary,
+            **_portable_mode_summary(summary),
             "code_fingerprint": mode_meta["code_fingerprint"],
             "run_fingerprint": mode_meta["run_fingerprint"],
             "input_sha256": mode_meta["input_sha256"],
@@ -1032,7 +1033,7 @@ def run_vf_index_shard(
         )
         mode_meta = json.loads((machine_result_dir / f"{mode}.meta.json").read_text(encoding="utf-8"))
         mode_summaries[mode] = {
-            **summary,
+            **_portable_mode_summary(summary),
             "code_fingerprint": mode_meta["code_fingerprint"],
             "run_fingerprint": mode_meta["run_fingerprint"],
             "input_sha256": mode_meta["input_sha256"],

@@ -512,6 +512,18 @@ def _result_row(mode: str, case_id: str, group_id: str, status: str, **values: A
     return contract.to_dict()
 
 
+def _portable_mode_summary(summary: dict[str, Any]) -> dict[str, Any]:
+    """Return the persisted summary with paths relative to its run directory."""
+    portable = dict(summary)
+    portable["schema_version"] = "pyshare.vf.mode-run-summary.v1"
+    portable["artifact_path_base"] = "."
+    for field in ("results", "checkpoint"):
+        value = portable.get(field)
+        if value:
+            portable[field] = Path(str(value)).name
+    return portable
+
+
 def _compact_checkpoint(checkpoint: Path, output: Path, ordered_case_ids: list[str]) -> list[dict[str, Any]]:
     latest = {}
     if checkpoint.exists():
@@ -797,7 +809,7 @@ def run_vf_mode(
         "workers": workers,
         **statuses, "results": str(output_path.resolve()), "checkpoint": str(checkpoint_path.resolve()),
     }
-    write_json(run_dir / f"{mode}.summary.json", summary)
+    write_json(run_dir / f"{mode}.summary.json", _portable_mode_summary(summary))
     return summary
 
 
