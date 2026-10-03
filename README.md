@@ -81,13 +81,15 @@ The full frozen input set currently used for the experiment is:
 
 Keep this input ID and its checksums identical across workers and the
 aggregation machine. Do not edit the frozen mode JSONL files or `manifest.json`.
-Prepared inputs, source snapshots, catalogs, caches, and shard plans are runtime
-artifacts and may not be present in a Git clone; transfer the required files
-separately. Docker is not required for this localization workflow.
-The manifest and mode inputs are small (about 49 MB together); the `catalogs/`
-and `inventory_cache/` directories are much larger and should be reused from
-local storage when already installed. Workers also need every source snapshot
-referenced by the mode inputs. This input uses
+The frozen manifest, mode JSONL files, normalized ground truth, oracle control,
+and six shard plans are checked into Git at the paths shown below. They total
+about 55 MB plus 0.36 MB for the plans, so a normal clone includes the run
+inputs. Docker is not required for this localization workflow. Source snapshots,
+the 32.8 GB `catalogs/` directory, and the 12.0 GB `inventory_cache/` directory
+are runtime artifacts and are intentionally excluded from Git. Reuse the
+matching caches already installed on each worker; a clean machine without them
+must first obtain the source snapshots and prepare the catalogs/caches.
+Workers also need every source snapshot referenced by the mode inputs. This input uses
 `experiments/vf/source_cache/snapshots/`,
 `experiments/vf/source_cache/release_snapshots/`, and an external
 `~/rq3-snapshots/` cache. If that last cache is stored elsewhere, set
@@ -120,11 +122,11 @@ python -m pip install --no-deps --editable .
 python --version
 ```
 
-Use the same repository revision and RQ3 code on every worker; the merge checks
-code and environment fingerprints. Transfer this exact source snapshot,
-including untracked/modified RQ3 files, or use a commit that contains them. A
-plain clone is insufficient if it omits these changes. The Python version
-should report 3.11.x.
+Use the same pushed repository revision on every worker; the merge checks code
+and environment fingerprints. The RQ3 runner code, frozen mode inputs, and
+shard plans are committed, so clone or pull that revision on each machine and
+record it with `git rev-parse HEAD`. Do not copy local uncommitted files. The
+Python version should report 3.11.x.
 
 Configure chat and embedding API credentials locally on each worker, in its
 own `.env` at the repository root. Do not transfer this file or commit secrets.
@@ -145,20 +147,21 @@ LOCAL_EMBEDDING_MODEL=your-embedding-model
 
 ### Create and distribute six shard plans
 
-The six plans generated for this workspace are under
-`experiments/vf/shard-plans/vf-input-aa79242b904b7c68/`; these runtime artifacts
-may not be included in a source-only checkout. To recreate them on the
-coordinator (this reads the small inputs only and makes no model/API calls):
+The six plans generated for this workspace are committed under
+`experiments/vf/shard-plans/vf-input-aa79242b904b7c68/`. Each machine can use its
+plan directly after cloning; no separate plan transfer is needed. To recreate
+the plans on the coordinator (this reads the small inputs only and makes no
+model/API calls):
 
 ```sh
 python -m pyshare.cli.main eval vf-shard-plan experiments/vf/inputs/vf-input-aa79242b904b7c68 --shard-count 6 --output-root experiments/vf/shard-plans/vf-input-aa79242b904b7c68
 ```
 
-Transfer only each machine's `shard_manifest.json`; do not recreate source,
+Each machine uses its own `shard_manifest.json`; do not recreate source,
 catalog, or parser-cache artifacts that are already present. The prepared
-`manifest.json` and four worker mode files must also be available under the same
-input ID on each worker. Frozen Windows paths are resolved against the local
-repository layout and `PYSHARE_RQ3_SNAPSHOT_ROOT`.
+`manifest.json` and four worker mode files are committed under the same input
+ID. Frozen Windows paths are resolved against the local repository layout and
+`PYSHARE_RQ3_SNAPSHOT_ROOT`.
 
 | Worker | Eligible cases | P_DUAL cases |
 | --- | ---: | ---: |

@@ -15,6 +15,7 @@ MANIFEST
 
 # Virtual environments
 .venv/
+.venv-rq3/
 venv/
 env/
 ENV/
@@ -71,6 +72,16 @@ artifacts/patch_diffs/**
 docs/output_file/**
 
 # Experiment outputs
+experiments/vf/source_cache/**
+experiments/vf/inventory_cache/**
+experiments/vf/inputs/**/catalogs/**
+experiments/vf/inputs/**/inventory_cache/**
+experiments/vf/inputs/**/embedding_cache.sqlite*
+experiments/vf/embedding_cache.sqlite*
+experiments/dataset/current/**
+!experiments/dataset/current/.gitkeep
+experiments/dependency_build/current/**
+!experiments/dependency_build/current/.gitkeep
 results/logs/**
 !results/logs/
 !results/logs/.gitkeep
