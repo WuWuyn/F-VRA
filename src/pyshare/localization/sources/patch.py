@@ -9,6 +9,7 @@ from pathlib import Path
 class PatchFileChange:
     file_path: str
     old_lines: set[int] = field(default_factory=set)
+    old_hunk_lines: set[int] = field(default_factory=set)
     new_lines: set[int] = field(default_factory=set)
     added: list[str] = field(default_factory=list)
     deleted: list[str] = field(default_factory=list)
@@ -29,7 +30,7 @@ class PatchAnalysis:
 _CALL = re.compile(r"\b([A-Za-z_][A-Za-z0-9_\.]*)\s*\(")
 _NAME = re.compile(r"\b[A-Za-z_][A-Za-z0-9_]*\b")
 _ASSIGN = re.compile(r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*(?::[^=]+)?=")
-_HUNK = re.compile(r"@@\s+-(\d+)(?:,\d+)?\s+\+(\d+)(?:,\d+)?\s+@@\s*(.*)")
+_HUNK = re.compile(r"@@\s+-(\d+)(?:,(\d+))?\s+\+(\d+)(?:,\d+)?\s+@@\s*(.*)")
 _DEF_CLASS = re.compile(r"\b(?:def|class)\s+([A-Za-z_][A-Za-z0-9_]*)")
 _IMPORT_FROM = re.compile(r"^\s*from\s+[\w\.]+\s+import\s+(.+)")
 _IMPORT = re.compile(r"^\s*import\s+(.+)")
@@ -56,9 +57,15 @@ def parse_patch_text(text: str) -> PatchAnalysis:
             continue
         match = _HUNK.match(line)
         if match:
-            old_line, new_line = int(match.group(1)), int(match.group(2))
+            old_line, new_line = int(match.group(1)), int(match.group(3))
+            old_count = int(match.group(2) or "1")
             if current is not None:
-                current.hunk_headers.append(match.group(3).strip())
+                current.hunk_headers.append(match.group(4).strip())
+                if old_count:
+                    current.old_hunk_lines.update(range(old_line, old_line + old_count))
+                else:
+                    # Map insertion-only hunks to adjacent lines in the old tree.
+                    current.old_hunk_lines.update({max(1, old_line), max(1, old_line + 1)})
             continue
         if current is None or line.startswith(("diff ", "index ", "--- ")):
             continue

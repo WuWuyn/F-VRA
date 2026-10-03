@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -20,11 +21,16 @@ class Settings(BaseSettings):
     repo_cache_dir: Path = Path.home() / ".pyshare" / "repos"
     client_cache_dir: Path = Path.home() / ".pyshare" / "client"
     server_store_dir: Path = Path.home() / ".pyshare" / "server"
+    pyshare_rq3_snapshot_root: Path = Field(
+        default_factory=lambda: Path.home() / "rq3-snapshots",
+        validation_alias="PYSHARE_RQ3_SNAPSHOT_ROOT",
+    )
 
     bm25_top_k: int = 100
     llm_top_k: int = 20
     llm_batch_size: int = 10
     embedding_batch_size: int = 16
+    embedding_max_workers: int = Field(default=1, ge=1, le=8)
     github_token: str = ""
     nvd_api_key: str = ""
     local_llm_api_key: str = ""

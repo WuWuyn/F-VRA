@@ -1,18 +1,27 @@
 from __future__ import annotations
 
+import hashlib
+import json
 import math
+import sqlite3
 import time
+import zlib
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
+from contextvars import copy_context
+from pathlib import Path
 from typing import Protocol
 
 import requests
 from tqdm import tqdm
 
 from pyshare.core.config import settings
-from pyshare.localization.providers.llm_client import provider_headers
+from pyshare.localization.providers.llm_client import provider_headers, record_embedding_usage
 from pyshare.localization.models import FunctionInfo
 
 
 class EmbeddingBackend(Protocol):
+    """Embedding provider; must tolerate concurrent calls when workers > 1."""
+
     model_name: str
 
     def embed(self, texts: list[str]) -> list[list[float]]: ...
@@ -66,6 +75,7 @@ class OpenAICompatibleEmbeddingBackend:
         if response is None:
             raise RuntimeError(f"{self.provider_name} embeddings request did not produce a response")
         payload = response.json()
+        record_embedding_usage(payload)
         data = sorted(payload.get("data", []), key=lambda item: item.get("index", 0))
         if len(data) != len(texts):
             raise RuntimeError(
@@ -135,21 +145,134 @@ def _cosine(left: list[float], right: list[float]) -> float:
     return dot / denominator if denominator else 0.0
 
 
+def _embedding_key(model_name: str, text: str) -> str:
+    digest = hashlib.sha256()
+    digest.update(b"pyshare.embedding-cache.v1\0")
+    digest.update(model_name.encode("utf-8"))
+    digest.update(b"\0")
+    digest.update(text.encode("utf-8"))
+    return digest.hexdigest()
+
+
+def _read_cached_vectors(connection: sqlite3.Connection, keys: list[str]) -> dict[str, list[float]]:
+    cached: dict[str, list[float]] = {}
+    for start in range(0, len(keys), 500):
+        chunk = keys[start : start + 500]
+        placeholders = ",".join("?" for _ in chunk)
+        for key, compressed in connection.execute(
+            f"SELECT cache_key, vector FROM embedding_vectors WHERE cache_key IN ({placeholders})", chunk,
+        ):
+            cached[str(key)] = json.loads(zlib.decompress(compressed))
+    return cached
+
+
+def _store_cached_vectors(
+    connection: sqlite3.Connection, rows: list[tuple[str, list[float]]],
+) -> None:
+    connection.executemany(
+        "INSERT OR IGNORE INTO embedding_vectors(cache_key, vector) VALUES (?, ?)",
+        [
+            (key, zlib.compress(json.dumps(vector, separators=(",", ":")).encode("utf-8"), level=1))
+            for key, vector in rows
+        ],
+    )
+    connection.commit()
+
+
 def embedding_scores(
     description: str,
     functions: list[FunctionInfo],
     *,
     backend: EmbeddingBackend | None = None,
+    cache_path: Path | None = None,
 ) -> tuple[dict[str, float], str]:
     if not functions:
         return {}, "not_run"
 
     active_backend = backend or AutoEmbeddingBackend()
     texts = [description, *(function_embedding_text(function) for function in functions)]
-    vectors: list[list[float]] = []
-    batches = range(0, len(texts), settings.embedding_batch_size)
-    for start in tqdm(batches, desc="Embedding batches"):
-        vectors.extend(active_backend.embed(texts[start : start + settings.embedding_batch_size]))
+    cache_model = "\0".join((
+        active_backend.model_name,
+        str(getattr(active_backend, "provider_name", "")),
+        str(getattr(active_backend, "base_url", "")),
+    ))
+    keys = [_embedding_key(cache_model, text) for text in texts]
+    connection: sqlite3.Connection | None = None
+    try:
+        cached: dict[str, list[float]] = {}
+        if cache_path is not None:
+            cache_path.parent.mkdir(parents=True, exist_ok=True)
+            connection = sqlite3.connect(str(cache_path), timeout=60)
+            connection.execute("PRAGMA busy_timeout=60000")
+            connection.execute(
+                "CREATE TABLE IF NOT EXISTS embedding_vectors ("
+                "cache_key TEXT PRIMARY KEY, vector BLOB NOT NULL)"
+            )
+            cached = _read_cached_vectors(connection, keys)
+
+        vectors_by_key = dict(cached)
+        missing_positions = [index for index, key in enumerate(keys) if key not in cached]
+        batch_size = max(1, int(settings.embedding_batch_size))
+        batches = [
+            missing_positions[start : start + batch_size]
+            for start in range(0, len(missing_positions), batch_size)
+        ]
+        max_workers = max(1, int(settings.embedding_max_workers))
+
+        def persist_batch(positions: list[int], batch_vectors: list[list[float]]) -> None:
+            if len(batch_vectors) != len(positions):
+                raise RuntimeError(
+                    f"embedding backend returned {len(batch_vectors)} vectors for {len(positions)} inputs"
+                )
+            new_rows = [(keys[index], vector) for index, vector in zip(positions, batch_vectors)]
+            vectors_by_key.update(new_rows)
+            if connection is not None:
+                _store_cached_vectors(connection, new_rows)
+
+        if max_workers == 1 or len(batches) <= 1:
+            for positions in tqdm(batches, desc="Embedding batches"):
+                persist_batch(positions, active_backend.embed([texts[index] for index in positions]))
+        else:
+            bar = tqdm(total=len(batches), desc=f"Embedding batches ({max_workers} workers)")
+            batch_iterator = iter(batches)
+            pending = {}
+            failure: Exception | None = None
+            with ThreadPoolExecutor(max_workers=max_workers, thread_name_prefix="pyshare-embedding") as executor:
+                def submit_next() -> bool:
+                    try:
+                        positions = next(batch_iterator)
+                    except StopIteration:
+                        return False
+                    payload = [texts[index] for index in positions]
+                    context = copy_context()
+                    future = executor.submit(context.run, active_backend.embed, payload)
+                    pending[future] = positions
+                    return True
+
+                for _ in range(max_workers):
+                    if not submit_next():
+                        break
+                while pending:
+                    completed, _ = wait(tuple(pending), return_when=FIRST_COMPLETED)
+                    for future in completed:
+                        positions = pending.pop(future)
+                        try:
+                            persist_batch(positions, future.result())
+                        except Exception as exc:
+                            if failure is None:
+                                failure = exc
+                        finally:
+                            bar.update(1)
+                    if failure is None:
+                        while len(pending) < max_workers and submit_next():
+                            pass
+            bar.close()
+            if failure is not None:
+                raise failure
+        vectors = [vectors_by_key[key] for key in keys]
+    finally:
+        if connection is not None:
+            connection.close()
 
     query_vector = vectors[0]
     scores = {

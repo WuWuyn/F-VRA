@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import ast
+import os
+from functools import lru_cache
 from pathlib import Path
 
 from pyshare.localization.models import FunctionInfo
@@ -19,6 +21,21 @@ SKIP_DIRS = {
     "tests",
     "test",
 }
+
+
+def filesystem_path(path: str | Path) -> Path:
+    """Use Windows extended-length paths so deep source trees index consistently."""
+    resolved = Path(path).resolve()
+    if os.name != "nt":
+        return resolved
+    value = str(resolved)
+    if value.startswith("\\\\?\\"):
+        return resolved
+    if value.startswith("\\\\"):
+        return Path("\\\\?\\UNC\\" + value[2:])
+    if len(value) >= 3 and value[1:3] == ":\\":
+        return Path("\\\\?\\" + value)
+    return resolved
 
 
 def _dotted_name(node: ast.AST) -> str | None:
@@ -42,6 +59,17 @@ def _target_names(node: ast.AST) -> set[str]:
         name = _dotted_name(node)
         return {name} if name else set()
     return set()
+
+
+@lru_cache(maxsize=1)
+def _python2_refactorer():
+    """Load the stdlib Python-2 grammar only when an old source file needs it."""
+    try:
+        from lib2to3.refactor import RefactoringTool, get_fixers_from_package
+
+        return RefactoringTool(get_fixers_from_package("lib2to3.fixes"))
+    except (ImportError, ModuleNotFoundError):
+        return None
 
 
 class _FunctionCollector(ast.NodeVisitor):
@@ -139,8 +167,23 @@ class _FunctionCollector(ast.NodeVisitor):
 def extract_functions_from_file(path: Path, repo_root: Path) -> list[FunctionInfo]:
     try:
         source = path.read_text(encoding="utf-8-sig", errors="ignore")
+    except OSError:
+        return []
+    try:
         tree = ast.parse(source, filename=str(path))
-    except (OSError, SyntaxError, ValueError, RecursionError):
+    except SyntaxError:
+        # The benchmark includes historical Python-2 repositories. Convert only
+        # files rejected by the native parser, then keep source line numbers and
+        # function bodies from the original text for patch-to-function mapping.
+        refactorer = _python2_refactorer()
+        if refactorer is None:
+            return []
+        try:
+            converted = str(refactorer.refactor_string(source if source.endswith("\n") else source + "\n", str(path)))
+            tree = ast.parse(converted, filename=str(path))
+        except Exception:
+            return []
+    except (ValueError, RecursionError):
         return []
 
     relative = path.relative_to(repo_root).as_posix()
@@ -150,7 +193,7 @@ def extract_functions_from_file(path: Path, repo_root: Path) -> list[FunctionInf
 
 
 def parse_repository(repo_root: str | Path) -> list[FunctionInfo]:
-    root = Path(repo_root).resolve()
+    root = filesystem_path(repo_root)
     if not root.is_dir():
         raise NotADirectoryError(f"Repository path is not a directory: {root}")
 
