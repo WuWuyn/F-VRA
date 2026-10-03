@@ -95,5 +95,3 @@ python -m pyshare.cli.main eval vf-metrics \
 ```
 
 The metrics command produces `metrics.json`, `metrics.csv`, `report.md`, `paired_deltas.csv`, and `paired_deltas.md`. The report separates `root_cause_only` from `all_valid_anchors`, includes Hit@1/3/5/10 and MRR, case-level P_DUAL CandidateRecall@100 (at least one valid VF in Top-100) plus anchor-level recall, D_SEM extraction coverage/failure/fallback, runtime and provider usage, and paired PRESENT-minus-HIDDEN deltas over common case IDs. Failed or missing records score zero in quality metrics; the tables report status counts and each metric's denominator. Provider token cost remains null when the provider does not expose pricing.
-
-\n

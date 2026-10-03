@@ -830,5 +830,3 @@ def dispatch_vf_mode(
         inputs_dir, results_root, run_id=run_id, progress=progress,
         workers=workers, case_limit=case_limit, case_ids=case_ids,
     )
-
-\n

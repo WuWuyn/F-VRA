@@ -469,5 +469,3 @@ def compute_vf_report(inputs_dir: Path, results_dir: Path, output_dir: Path) -> 
     }
     write_json(output_dir / "metrics.json", payload)
     return payload
-
-\n

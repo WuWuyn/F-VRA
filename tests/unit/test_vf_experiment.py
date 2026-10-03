@@ -331,5 +331,3 @@ def test_vf_cli_exposes_separated_prepare_run_and_offline_metrics(monkeypatch, t
     report = runner.invoke(app, ["eval", "vf-metrics", str(inputs_dir), str(results_dir)])
     assert report.exit_code == 0, report.output
     assert json.loads(report.stdout)["report"].endswith("results\\report")
-
-\n
